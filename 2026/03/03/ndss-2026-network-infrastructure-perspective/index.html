@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>NDSS 2026 论文精选 - 网络与基础设施视角 | Tom&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="从网络&#x2F;基础设施视角看 NDSS 2026: 涵盖互联网路由、DNS、Web 安全、电子邮件协议  Perspective: Network &amp; Infrastructure Security | Focus: Routing, DNS, Web, Email, Wi-Fi  一、互联网路由安全 (RPKI)1. Crack in the Armor: Infrastructu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NDSS 2026 论文精选 - 网络与基础设施视角">
+<meta property="og:url" content="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-network-infrastructure-perspective/index.html">
+<meta property="og:site_name" content="Tom&#39;s Blog">
+<meta property="og:description" content="从网络&#x2F;基础设施视角看 NDSS 2026: 涵盖互联网路由、DNS、Web 安全、电子邮件协议  Perspective: Network &amp; Infrastructure Security | Focus: Routing, DNS, Web, Email, Wi-Fi  一、互联网路由安全 (RPKI)1. Crack in the Armor: Infrastructu">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-03-03T01:45:00.000Z">
+<meta property="article:modified_time" content="2026-03-03T09:06:03.255Z">
+<meta property="article:author" content="Tom">
+<meta property="article:tag" content="DNS">
+<meta property="article:tag" content="NDSS">
+<meta property="article:tag" content="RPKI">
+<meta property="article:tag" content="Web security">
+<meta property="article:tag" content="email">
+<meta property="article:tag" content="network security">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Tom's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Tom&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://sgwaterwoods.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ndss-2026-network-infrastructure-perspective" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/03/03/ndss-2026-network-infrastructure-perspective/" class="article-date">
+  <time class="dt-published" datetime="2026-03-03T01:45:00.000Z" itemprop="datePublished">2026-03-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Research/">Research</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      NDSS 2026 论文精选 - 网络与基础设施视角
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>从网络&#x2F;基础设施视角看 NDSS 2026</strong>: 涵盖互联网路由、DNS、Web 安全、电子邮件协议</p>
+</blockquote>
+<p><strong>Perspective</strong>: Network &amp; Infrastructure Security | <strong>Focus</strong>: Routing, DNS, Web, Email, Wi-Fi</p>
+<hr>
+<h2 id="一、互联网路由安全-RPKI"><a href="#一、互联网路由安全-RPKI" class="headerlink" title="一、互联网路由安全 (RPKI)"></a>一、互联网路由安全 (RPKI)</h2><h3 id="1-Crack-in-the-Armor-Infrastructure-Threats-to-RPKI-Publication-Points"><a href="#1-Crack-in-the-Armor-Infrastructure-Threats-to-RPKI-Publication-Points" class="headerlink" title="1. Crack in the Armor: Infrastructure Threats to RPKI Publication Points"></a>1. Crack in the Armor: Infrastructure Threats to RPKI Publication Points</h3><p><strong>Authors</strong>: Yunhao Liu et al. (Tsinghua University, Fudan University)</p>
+<p><strong>English</strong>: Identifies underlying infrastructure threats to RPKI publication point reachability that could undermine internet routing security.</p>
+<p><strong>中文</strong>: 识别对 RPKI 发布点可达性的底层基础设施威胁，可能破坏互联网路由安全。</p>
+<hr>
+<h3 id="2-Demystifying-RPKI-Invalid-Prefixes-Hidden-Causes-and-Risks"><a href="#2-Demystifying-RPKI-Invalid-Prefixes-Hidden-Causes-and-Risks" class="headerlink" title="2. Demystifying RPKI-Invalid Prefixes: Hidden Causes and Risks"></a>2. Demystifying RPKI-Invalid Prefixes: Hidden Causes and Risks</h3><p><strong>Authors</strong>: Weitong Li et al. (Virginia Tech, CableLabs)</p>
+<p><strong>English</strong>: Uncovers hidden causes of RPKI-invalid prefixes and analyzes their security risks in global routing systems.</p>
+<p><strong>中文</strong>: 揭示 RPKI 无效前缀的隐藏原因并分析其在全球路由系统中的安全风险。</p>
+<hr>
+<h2 id="二、DNS-与缓存攻击"><a href="#二、DNS-与缓存攻击" class="headerlink" title="二、DNS 与缓存攻击"></a>二、DNS 与缓存攻击</h2><h3 id="3-Continuous-User-Behavior-Monitoring-via-DNS-Cache-Timing-Attacks"><a href="#3-Continuous-User-Behavior-Monitoring-via-DNS-Cache-Timing-Attacks" class="headerlink" title="3. Continuous User Behavior Monitoring via DNS Cache Timing Attacks"></a>3. Continuous User Behavior Monitoring via DNS Cache Timing Attacks</h3><p><strong>Authors</strong>: Hannes Weissteiner et al. (Graz University of Technology, University of Vienna)</p>
+<p><strong>English</strong>: Demonstrates continuous user behavior monitoring through DNS cache timing attacks without network access or malware.</p>
+<p><strong>中文</strong>: 展示通过 DNS 缓存时序攻击进行持续用户行为监控，无需网络访问或恶意软件。</p>
+<hr>
+<h2 id="三、Web-应用安全"><a href="#三、Web-应用安全" class="headerlink" title="三、Web 应用安全"></a>三、Web 应用安全</h2><h3 id="4-Achieving-Interpretable-DL-based-Web-Attack-Detection"><a href="#4-Achieving-Interpretable-DL-based-Web-Attack-Detection" class="headerlink" title="4. Achieving Interpretable DL-based Web Attack Detection"></a>4. Achieving Interpretable DL-based Web Attack Detection</h3><p><strong>Authors</strong>: Peiyang Li et al. (Tsinghua University, Ant Group, et al.)</p>
+<p><strong>English</strong>: Achieves interpretable deep learning-based web attack detection by localizing malicious payloads for analyst verification.</p>
+<p><strong>中文</strong>: 通过定位恶意载荷实现可解释的基于深度学习的 Web 攻击检测，供分析师验证。</p>
+<hr>
+<h3 id="5-DOM-XSS-Detection-via-Webpage-Interaction-Fuzzing"><a href="#5-DOM-XSS-Detection-via-Webpage-Interaction-Fuzzing" class="headerlink" title="5. DOM-XSS Detection via Webpage Interaction Fuzzing"></a>5. DOM-XSS Detection via Webpage Interaction Fuzzing</h3><p><strong>Authors</strong>: Nuno Sabino et al. (CMU, IST Lisbon, et al.)</p>
+<p><strong>English</strong>: Detects DOM-based XSS vulnerabilities through automated webpage interaction fuzzing and URL component synthesis.</p>
+<p><strong>中文</strong>: 通过自动化网页交互模糊测试和 URL 组件合成检测基于 DOM 的 XSS 漏洞。</p>
+<hr>
+<h3 id="6-Anota-Identifying-Business-Logic-Vulnerabilities"><a href="#6-Anota-Identifying-Business-Logic-Vulnerabilities" class="headerlink" title="6. Anota: Identifying Business Logic Vulnerabilities"></a>6. Anota: Identifying Business Logic Vulnerabilities</h3><p><strong>Authors</strong>: Meng Wang et al. (CISPA, Max Planck, UESTC)</p>
+<p><strong>English</strong>: Identifies business logic vulnerabilities via annotation-based sanitization in web applications.</p>
+<p><strong>中文</strong>: 通过 Web 应用中基于注释的清理识别业务逻辑漏洞。</p>
+<hr>
+<h3 id="7-Bullseye-Detecting-Prototype-Pollution-in-NPM-Packages"><a href="#7-Bullseye-Detecting-Prototype-Pollution-in-NPM-Packages" class="headerlink" title="7. Bullseye: Detecting Prototype Pollution in NPM Packages"></a>7. Bullseye: Detecting Prototype Pollution in NPM Packages</h3><p><strong>Authors</strong>: Tariq Houis et al. (Concordia University)</p>
+<p><strong>English</strong>: Detects prototype pollution vulnerabilities in NPM packages with proof-of-concept exploits.</p>
+<p><strong>中文</strong>: 检测 NPM 包中的原型污染漏洞并提供概念验证利用。</p>
+<hr>
+<h2 id="四、电子邮件安全"><a href="#四、电子邮件安全" class="headerlink" title="四、电子邮件安全"></a>四、电子邮件安全</h2><h3 id="8-CoordMail-SMTP-Timeout-Coordination-for-Amplification-Attacks"><a href="#8-CoordMail-SMTP-Timeout-Coordination-for-Amplification-Attacks" class="headerlink" title="8. CoordMail: SMTP Timeout Coordination for Amplification Attacks"></a>8. CoordMail: SMTP Timeout Coordination for Amplification Attacks</h3><p><strong>Authors</strong>: Ruixuan Li et al. (Tsinghua, Zhongguancun Lab, Coremail)</p>
+<p><strong>English</strong>: Exploits SMTP timeout and command interaction to coordinate email middleware for convergence amplification attacks.</p>
+<p><strong>中文</strong>: 利用 SMTP 超时和命令交互协调电子邮件中间件进行收敛放大攻击。</p>
+<hr>
+<h2 id="五、Wi-Fi-与无线安全"><a href="#五、Wi-Fi-与无线安全" class="headerlink" title="五、Wi-Fi 与无线安全"></a>五、Wi-Fi 与无线安全</h2><h3 id="9-AirSnitch-Breaking-Client-Isolation-in-Wi-Fi-Networks"><a href="#9-AirSnitch-Breaking-Client-Isolation-in-Wi-Fi-Networks" class="headerlink" title="9. AirSnitch: Breaking Client Isolation in Wi-Fi Networks"></a>9. AirSnitch: Breaking Client Isolation in Wi-Fi Networks</h3><p><strong>Authors</strong>: Xin’an Zhou et al. (UC Riverside, KU Leuven)</p>
+<p><strong>English</strong>: Demystifies and breaks Wi-Fi client isolation mechanisms, exposing vulnerabilities in public Wi-Fi security.</p>
+<p><strong>中文</strong>: 揭秘并打破 Wi-Fi 客户端隔离机制，暴露公共 Wi-Fi 安全漏洞。</p>
+<hr>
+<h2 id="六、网络测量与分析"><a href="#六、网络测量与分析" class="headerlink" title="六、网络测量与分析"></a>六、网络测量与分析</h2><h3 id="10-Aliens-Among-Us-Observing-Private-IPs-on-the-Public-Internet"><a href="#10-Aliens-Among-Us-Observing-Private-IPs-on-the-Public-Internet" class="headerlink" title="10. Aliens Among Us: Observing Private IPs on the Public Internet"></a>10. Aliens Among Us: Observing Private IPs on the Public Internet</h3><p><strong>Authors</strong>: Radu Anghel et al. (TU Delft, ICANN, RIPE NCC, CAIDA)</p>
+<p><strong>English</strong>: Measurement study observing prevalence of private&#x2F;reserved IP addresses on the public internet and their security implications.</p>
+<p><strong>中文</strong>: 测量研究观察公共互联网上私有&#x2F;保留 IP 地址的流行度及其安全影响。</p>
+<hr>
+<h3 id="11-Enhancing-Website-Fingerprinting-Attacks-Against-Traffic-Drift"><a href="#11-Enhancing-Website-Fingerprinting-Attacks-Against-Traffic-Drift" class="headerlink" title="11. Enhancing Website Fingerprinting Attacks Against Traffic Drift"></a>11. Enhancing Website Fingerprinting Attacks Against Traffic Drift</h3><p><strong>Authors</strong>: Xinhao Deng et al. (Tsinghua University, Ant Group)</p>
+<p><strong>English</strong>: Enhances website fingerprinting attacks to remain effective even when traffic patterns change over time.</p>
+<p><strong>中文</strong>: 增强网站指纹攻击以在流量模式随时间变化时保持有效。</p>
+<hr>
+<h3 id="12-Cease-at-the-Ultimate-Goodness-Efficient-Website-Fingerprinting-Defense"><a href="#12-Cease-at-the-Ultimate-Goodness-Efficient-Website-Fingerprinting-Defense" class="headerlink" title="12. Cease at the Ultimate Goodness: Efficient Website Fingerprinting Defense"></a>12. Cease at the Ultimate Goodness: Efficient Website Fingerprinting Defense</h3><p><strong>Authors</strong>: Rong Wang et al. (Southeast University, UMass Lowell)</p>
+<p><strong>English</strong>: Efficient website fingerprinting defense via iterative mutual information minimization.</p>
+<p><strong>中文</strong>: 通过迭代互信息最小化实现高效的网站指纹防御。</p>
+<hr>
+<h2 id="七、网络隐私"><a href="#七、网络隐私" class="headerlink" title="七、网络隐私"></a>七、网络隐私</h2><h3 id="13-Beyond-RTT-Adversarially-Robust-Residential-Proxy-Detection"><a href="#13-Beyond-RTT-Adversarially-Robust-Residential-Proxy-Detection" class="headerlink" title="13. Beyond RTT: Adversarially Robust Residential Proxy Detection"></a>13. Beyond RTT: Adversarially Robust Residential Proxy Detection</h3><p><strong>Authors</strong>: Temoor Ali et al. (Qatar Computing Research Institute, HBKU)</p>
+<p><strong>English</strong>: Adversarially robust two-tiered approach for residential proxy detection beyond simple RTT measurements.</p>
+<p><strong>中文</strong>: 超越简单 RTT 测量的对抗鲁棒双层住宅代理检测方法。</p>
+<hr>
+<h3 id="14-Connecting-the-Dots-Linking-Private-Data-Across-Messaging-Apps"><a href="#14-Connecting-the-Dots-Linking-Private-Data-Across-Messaging-Apps" class="headerlink" title="14. Connecting the Dots: Linking Private Data Across Messaging Apps"></a>14. Connecting the Dots: Linking Private Data Across Messaging Apps</h3><p><strong>Authors</strong>: Junkyu Kang et al. (KAIST, University of Maryland)</p>
+<p><strong>English</strong>: Investigative study on linking private user data across different messaging applications.</p>
+<p><strong>中文</strong>: 跨不同消息应用链接私有用户数据的调查研究。</p>
+<hr>
+<h2 id="八、网络协议与标准"><a href="#八、网络协议与标准" class="headerlink" title="八、网络协议与标准"></a>八、网络协议与标准</h2><h3 id="15-ACTS-Attestations-of-Contents-in-TLS-Sessions"><a href="#15-ACTS-Attestations-of-Contents-in-TLS-Sessions" class="headerlink" title="15. ACTS: Attestations of Contents in TLS Sessions"></a>15. ACTS: Attestations of Contents in TLS Sessions</h3><p><strong>Authors</strong>: Pierpaolo Della Monica et al. (Sapienza University of Rome)</p>
+<p><strong>English</strong>: Enables attestations of contents in TLS sessions for verifiable secure communications.</p>
+<p><strong>中文</strong>: 为 TLS 会话中的内容启用证明以实现可验证的安全通信。</p>
+<hr>
+<h3 id="16-CTng-Secure-Certificate-and-Revocation-Transparency"><a href="#16-CTng-Secure-Certificate-and-Revocation-Transparency" class="headerlink" title="16. CTng: Secure Certificate and Revocation Transparency"></a>16. CTng: Secure Certificate and Revocation Transparency</h3><p><strong>Authors</strong>: Jie Kong et al. (University of Connecticut, et al.)</p>
+<p><strong>English</strong>: Improves certificate transparency with stronger security guarantees against malicious certificate authorities.</p>
+<p><strong>中文</strong>: 通过针对恶意证书颁发机构的更强安全保证改进证书透明度。</p>
+<hr>
+<h2 id="研究趋势"><a href="#研究趋势" class="headerlink" title="研究趋势"></a>研究趋势</h2><h3 id="🌐-互联网基础设施"><a href="#🌐-互联网基础设施" class="headerlink" title="🌐 互联网基础设施"></a>🌐 互联网基础设施</h3><ol>
+<li><strong>RPKI 部署与安全</strong>: 全球 RPKI 部署增加,但底层基础设施威胁不容忽视</li>
+<li><strong>DNS 仍是攻击向量</strong>: 缓存时序攻击等新型 DNS 利用方式持续出现</li>
+<li><strong>证书透明度进化</strong>: CT 日志安全性和可靠性持续改进</li>
+</ol>
+<h3 id="🔒-Web-安全"><a href="#🔒-Web-安全" class="headerlink" title="🔒 Web 安全"></a>🔒 Web 安全</h3><ol>
+<li><strong>可解释性需求</strong>: 从黑盒检测转向可解释的威胁分析</li>
+<li><strong>业务逻辑漏洞</strong>: 超越传统注入攻击,关注业务逻辑缺陷</li>
+<li><strong>供应链安全</strong>: NPM、开源包中的漏洞成为重点</li>
+<li><strong>DOM-XSS 持续</strong>: 客户端漏洞仍然是主要威胁</li>
+</ol>
+<h3 id="📧-电子邮件与通信"><a href="#📧-电子邮件与通信" class="headerlink" title="📧 电子邮件与通信"></a>📧 电子邮件与通信</h3><ol>
+<li><strong>协议级攻击</strong>: SMTP 等老协议的新型利用方式</li>
+<li><strong>放大攻击</strong>: 利用协议机制实现流量放大</li>
+</ol>
+<h3 id="📶-无线网络"><a href="#📶-无线网络" class="headerlink" title="📶 无线网络"></a>📶 无线网络</h3><ol>
+<li><strong>隔离机制失效</strong>: Wi-Fi 客户端隔离等安全边界被突破</li>
+<li><strong>隐私威胁</strong>: 网站指纹、流量分析等隐私攻击持续演进</li>
+</ol>
+<h3 id="💡-技术洞察"><a href="#💡-技术洞察" class="headerlink" title="💡 技术洞察"></a>💡 技术洞察</h3><ul>
+<li><strong>基础设施脆弱性</strong>: 互联网关键基础设施(路由、DNS、PKI)仍存在系统性风险</li>
+<li><strong>隐私与安全矛盾</strong>: 网站指纹等攻击凸显隐私保护的挑战</li>
+<li><strong>协议老化问题</strong>: SMTP、BACnet 等老协议难以修复</li>
+<li><strong>测量研究价值</strong>: 大规模测量研究揭示真实世界的安全态势</li>
+</ul>
+<h3 id="🏢-实际影响"><a href="#🏢-实际影响" class="headerlink" title="🏢 实际影响"></a>🏢 实际影响</h3><p><strong>企业</strong>:</p>
+<ul>
+<li>Web 应用安全检测工具的可解释性需求</li>
+<li>供应链安全(NPM、开源包)管理</li>
+</ul>
+<p><strong>ISP&#x2F;运营商</strong>:</p>
+<ul>
+<li>RPKI 部署和基础设施安全</li>
+<li>DNS 服务的抗攻击能力</li>
+</ul>
+<p><strong>用户隐私</strong>:</p>
+<ul>
+<li>网站指纹威胁浏览隐私</li>
+<li>DNS 缓存攻击泄露行为</li>
+</ul>
+<p><strong>公共场所</strong>:</p>
+<ul>
+<li>Wi-Fi 客户端隔离失效影响咖啡馆、机场等场所安全</li>
+</ul>
+<hr>
+<p><strong>其他视角</strong>:</p>
+<ul>
+<li><a href="#">AI 与机器学习安全视角</a></li>
+<li><a href="#">系统安全视角</a></li>
+<li><a href="#">IoT 与嵌入式系统视角</a></li>
+<li><a href="#">密码学与隐私视角</a></li>
+</ul>
+<p><strong>完整论文列表</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/accepted-papers/">NDSS 2026 Accepted Papers</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-network-infrastructure-perspective/" data-id="cuid8THoxIAGhl-41AaxJhQyt" data-title="NDSS 2026 论文精选 - 网络与基础设施视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DNS/" rel="tag">DNS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RPKI/" rel="tag">RPKI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web-security/" rel="tag">Web security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/email/" rel="tag">email</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/network-security/" rel="tag">network security</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2026/03/03/ndss-2026-crypto-privacy-perspective/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          NDSS 2026 论文精选 - 密码学与隐私视角
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2026/03/03/ndss-2026-iot-embedded-perspective/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">NDSS 2026 论文精选 - IoT 与嵌入式系统视角</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI-security/" rel="tag">AI security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/" rel="tag">DNS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/" rel="tag">Deep Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IoT/" rel="tag">IoT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM-security/" rel="tag">LLM security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PLC/" rel="tag">PLC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RPKI/" rel="tag">RPKI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web-security/" rel="tag">Web security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automotive/" rel="tag">automotive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/binary-analysis/" rel="tag">binary analysis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blockchain/" rel="tag">blockchain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cryptography/" rel="tag">cryptography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cybersecurity/" rel="tag">cybersecurity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deep-learning/" rel="tag">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/email/" rel="tag">email</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/embedded-systems/" rel="tag">embedded systems</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/encryption/" rel="tag">encryption</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firmware/" rel="tag">firmware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kernel/" rel="tag">kernel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/" rel="tag">machine learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network-security/" rel="tag">network security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/operating-systems/" rel="tag">operating systems</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/privacy/" rel="tag">privacy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/research/" rel="tag">research</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scam-detection/" rel="tag">scam detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system-security/" rel="tag">system security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zero-knowledge/" rel="tag">zero-knowledge</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/AI-security/" style="font-size: 10px;">AI security</a> <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/Deep-Learning/" style="font-size: 10px;">Deep Learning</a> <a href="/tags/IoT/" style="font-size: 15px;">IoT</a> <a href="/tags/LLM/" style="font-size: 10px;">LLM</a> <a href="/tags/LLM-security/" style="font-size: 10px;">LLM security</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/NDSS/" style="font-size: 20px;">NDSS</a> <a href="/tags/PLC/" style="font-size: 10px;">PLC</a> <a href="/tags/RPKI/" style="font-size: 10px;">RPKI</a> <a href="/tags/Web-security/" style="font-size: 10px;">Web security</a> <a href="/tags/automotive/" style="font-size: 10px;">automotive</a> <a href="/tags/binary-analysis/" style="font-size: 10px;">binary analysis</a> <a href="/tags/blockchain/" style="font-size: 10px;">blockchain</a> <a href="/tags/cryptography/" style="font-size: 10px;">cryptography</a> <a href="/tags/cybersecurity/" style="font-size: 10px;">cybersecurity</a> <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/tags/email/" style="font-size: 10px;">email</a> <a href="/tags/embedded-systems/" style="font-size: 10px;">embedded systems</a> <a href="/tags/encryption/" style="font-size: 10px;">encryption</a> <a href="/tags/firmware/" style="font-size: 10px;">firmware</a> <a href="/tags/kernel/" style="font-size: 10px;">kernel</a> <a href="/tags/machine-learning/" style="font-size: 10px;">machine learning</a> <a href="/tags/network-security/" style="font-size: 10px;">network security</a> <a href="/tags/operating-systems/" style="font-size: 10px;">operating systems</a> <a href="/tags/privacy/" style="font-size: 10px;">privacy</a> <a href="/tags/research/" style="font-size: 10px;">research</a> <a href="/tags/scam-detection/" style="font-size: 10px;">scam detection</a> <a href="/tags/system-security/" style="font-size: 10px;">system security</a> <a href="/tags/zero-knowledge/" style="font-size: 10px;">zero-knowledge</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/03/">March 2026</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-crypto-privacy-perspective/">NDSS 2026 论文精选 - 密码学与隐私视角</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-network-infrastructure-perspective/">NDSS 2026 论文精选 - 网络与基础设施视角</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-iot-embedded-perspective/">NDSS 2026 论文精选 - IoT 与嵌入式系统视角</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-system-security-perspective/">NDSS 2026 论文精选 - 系统安全视角</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-ai-ml-perspective/">NDSS 2026 论文精选 - AI 与机器学习安全视角</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 Tom<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

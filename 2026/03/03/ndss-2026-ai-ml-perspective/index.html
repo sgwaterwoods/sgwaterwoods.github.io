@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>NDSS 2026 论文精选 - AI 与机器学习安全视角 | Tom&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="从 AI&#x2F;ML 视角看 NDSS 2026: 涵盖 LLM 安全、机器学习攻防、AI 驱动的安全分析  Conference: NDSS 2026 | Perspective: AI &amp; Machine Learning SecurityTotal Papers in this perspective: 25+ papers  一、大型语言模型 (LLM) 安全1. A Cau">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NDSS 2026 论文精选 - AI 与机器学习安全视角">
+<meta property="og:url" content="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-ai-ml-perspective/index.html">
+<meta property="og:site_name" content="Tom&#39;s Blog">
+<meta property="og:description" content="从 AI&#x2F;ML 视角看 NDSS 2026: 涵盖 LLM 安全、机器学习攻防、AI 驱动的安全分析  Conference: NDSS 2026 | Perspective: AI &amp; Machine Learning SecurityTotal Papers in this perspective: 25+ papers  一、大型语言模型 (LLM) 安全1. A Cau">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-03-03T01:30:00.000Z">
+<meta property="article:modified_time" content="2026-03-03T09:03:29.572Z">
+<meta property="article:author" content="Tom">
+<meta property="article:tag" content="AI security">
+<meta property="article:tag" content="LLM">
+<meta property="article:tag" content="NDSS">
+<meta property="article:tag" content="deep learning">
+<meta property="article:tag" content="machine learning">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Tom's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Tom&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://sgwaterwoods.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ndss-2026-ai-ml-perspective" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/03/03/ndss-2026-ai-ml-perspective/" class="article-date">
+  <time class="dt-published" datetime="2026-03-03T01:30:00.000Z" itemprop="datePublished">2026-03-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Research/">Research</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      NDSS 2026 论文精选 - AI 与机器学习安全视角
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>从 AI&#x2F;ML 视角看 NDSS 2026</strong>: 涵盖 LLM 安全、机器学习攻防、AI 驱动的安全分析</p>
+</blockquote>
+<p><strong>Conference</strong>: NDSS 2026 | <strong>Perspective</strong>: AI &amp; Machine Learning Security<br><strong>Total Papers in this perspective</strong>: 25+ papers</p>
+<hr>
+<h2 id="一、大型语言模型-LLM-安全"><a href="#一、大型语言模型-LLM-安全" class="headerlink" title="一、大型语言模型 (LLM) 安全"></a>一、大型语言模型 (LLM) 安全</h2><h3 id="1-A-Causal-Perspective-for-Enhancing-Jailbreak-Attack-and-Defense"><a href="#1-A-Causal-Perspective-for-Enhancing-Jailbreak-Attack-and-Defense" class="headerlink" title="1. A Causal Perspective for Enhancing Jailbreak Attack and Defense"></a>1. A Causal Perspective for Enhancing Jailbreak Attack and Defense</h3><p><strong>Authors</strong>: Licheng Pan (Zhejiang University), Yunsheng Lu (University of Chicago), Jiexi Liu (Alibaba Group), et al.</p>
+<p><strong>English</strong>: Applies causal analysis to LLM jailbreak attacks and defenses, identifying causal relationships between prompts and outputs to improve both attack effectiveness and defense mechanisms.</p>
+<p><strong>中文</strong>: 将因果分析应用于 LLM 越狱攻击和防御，识别提示和输出之间的因果关系以提高攻击有效性和防御机制。</p>
+<hr>
+<h3 id="2-ACE-A-Security-Architecture-for-LLM-Integrated-App-Systems"><a href="#2-ACE-A-Security-Architecture-for-LLM-Integrated-App-Systems" class="headerlink" title="2. ACE: A Security Architecture for LLM-Integrated App Systems"></a>2. ACE: A Security Architecture for LLM-Integrated App Systems</h3><p><strong>Authors</strong>: Evan Li et al. (Northeastern University)</p>
+<p><strong>English</strong>: Proposes comprehensive security architecture for LLM-integrated applications, addressing data leakage, prompt injection, and API access control challenges.</p>
+<p><strong>中文</strong>: 为 LLM 集成应用提出全面的安全架构，解决数据泄露、提示注入和 API 访问控制挑战。</p>
+<hr>
+<h3 id="3-Attention-is-All-You-Need-to-Defend-Against-Indirect-Prompt-Injection"><a href="#3-Attention-is-All-You-Need-to-Defend-Against-Indirect-Prompt-Injection" class="headerlink" title="3. Attention is All You Need to Defend Against Indirect Prompt Injection"></a>3. Attention is All You Need to Defend Against Indirect Prompt Injection</h3><p><strong>Authors</strong>: Yinan Zhong et al. (Zhejiang University)</p>
+<p><strong>English</strong>: Demonstrates that attention mechanisms alone can effectively defend against indirect prompt injection without additional overhead.</p>
+<p><strong>中文</strong>: 证明仅使用注意力机制就可以有效防御间接提示注入，无需额外开销。</p>
+<hr>
+<h3 id="4-Beyond-Jailbreak-Unveiling-Risks-from-Blurred-Capability-Boundaries"><a href="#4-Beyond-Jailbreak-Unveiling-Risks-from-Blurred-Capability-Boundaries" class="headerlink" title="4. Beyond Jailbreak: Unveiling Risks from Blurred Capability Boundaries"></a>4. Beyond Jailbreak: Unveiling Risks from Blurred Capability Boundaries</h3><p><strong>Authors</strong>: Yunyi Zhang et al. (Tsinghua University)</p>
+<p><strong>English</strong>: Identifies security risks arising from unclear boundaries between different LLM capabilities, leading to privilege escalation and information leakage.</p>
+<p><strong>中文</strong>: 识别因不同 LLM 能力之间界限模糊而产生的安全风险，导致权限提升和信息泄露。</p>
+<hr>
+<h3 id="5-Bleeding-Pathways-Vanishing-Discriminability-in-LLM-Hidden-States"><a href="#5-Bleeding-Pathways-Vanishing-Discriminability-in-LLM-Hidden-States" class="headerlink" title="5. Bleeding Pathways: Vanishing Discriminability in LLM Hidden States"></a>5. Bleeding Pathways: Vanishing Discriminability in LLM Hidden States</h3><p><strong>Authors</strong>: Yingjie Zhang et al. (IIE, CAS; Ant Group)</p>
+<p><strong>English</strong>: Reveals how vanishing discriminability in LLM hidden states enables jailbreak attacks, providing theoretical analysis and practical demonstrations.</p>
+<p><strong>中文</strong>: 揭示 LLM 隐藏状态中消失的可辨别性如何启用越狱攻击，提供理论分析和实际演示。</p>
+<hr>
+<h3 id="6-Cache-Me-Catch-You-Cache-Threats-in-LLM-Serving-Frameworks"><a href="#6-Cache-Me-Catch-You-Cache-Threats-in-LLM-Serving-Frameworks" class="headerlink" title="6. Cache Me, Catch You: Cache Threats in LLM Serving Frameworks"></a>6. Cache Me, Catch You: Cache Threats in LLM Serving Frameworks</h3><p><strong>Authors</strong>: XiangFan Wu (Ocean University of China; QI-ANXIN)</p>
+<p><strong>English</strong>: Uncovers cache-related vulnerabilities in LLM serving frameworks that leak sensitive information across user sessions.</p>
+<p><strong>中文</strong>: 揭示 LLM 服务框架中与缓存相关的漏洞，可在用户会话之间泄露敏感信息。</p>
+<hr>
+<h3 id="7-Character-Level-Perturbations-Disrupt-LLM-Watermarks"><a href="#7-Character-Level-Perturbations-Disrupt-LLM-Watermarks" class="headerlink" title="7. Character-Level Perturbations Disrupt LLM Watermarks"></a>7. Character-Level Perturbations Disrupt LLM Watermarks</h3><p><strong>Authors</strong>: Zhaoxi Zhang et al. (UTS, Griffith University)</p>
+<p><strong>English</strong>: Shows character-level perturbations can remove watermarks from LLM-generated text, challenging content attribution systems.</p>
+<p><strong>中文</strong>: 展示字符级扰动可以从 LLM 生成的文本中移除水印，挑战内容归属系统。</p>
+<hr>
+<h3 id="8-Characterizing-Censorship-in-Chinese-LLM-Services"><a href="#8-Characterizing-Censorship-in-Chinese-LLM-Services" class="headerlink" title="8. Characterizing Censorship in Chinese LLM Services"></a>8. Characterizing Censorship in Chinese LLM Services</h3><p><strong>Authors</strong>: Anna Ablove et al. (University of Michigan, UC Berkeley)</p>
+<p><strong>English</strong>: Empirical study of censorship implementation in Chinese LLM services, revealing filtering techniques and effectiveness.</p>
+<p><strong>中文</strong>: 对中国 LLM 服务中审查实施的实证研究，揭示过滤技术和有效性。</p>
+<hr>
+<h3 id="9-Chasing-Shadows-Pitfalls-in-LLM-Security-Research"><a href="#9-Chasing-Shadows-Pitfalls-in-LLM-Security-Research" class="headerlink" title="9. Chasing Shadows: Pitfalls in LLM Security Research"></a>9. Chasing Shadows: Pitfalls in LLM Security Research</h3><p><strong>Authors</strong>: Jonathan Evertz et al. (CISPA, Max Planck, et al.)</p>
+<p><strong>English</strong>: Meta-analysis identifying common methodological pitfalls in LLM security research, providing guidance for rigorous evaluation.</p>
+<p><strong>中文</strong>: 元分析识别 LLM 安全研究中常见的方法论陷阱，为严格评估提供指导。</p>
+<hr>
+<h3 id="10-DUALBREACH-Efficient-Dual-Jailbreaking-via-Multi-Target-Optimization"><a href="#10-DUALBREACH-Efficient-Dual-Jailbreaking-via-Multi-Target-Optimization" class="headerlink" title="10. DUALBREACH: Efficient Dual-Jailbreaking via Multi-Target Optimization"></a>10. DUALBREACH: Efficient Dual-Jailbreaking via Multi-Target Optimization</h3><p><strong>Authors</strong>: Xinzhe Huang et al. (Zhejiang University)</p>
+<p><strong>English</strong>: Efficient dual-jailbreaking approach attacking multiple LLM safety mechanisms simultaneously through multi-target optimization.</p>
+<p><strong>中文</strong>: 通过多目标优化同时攻击多个 LLM 安全机制的高效双重越狱方法。</p>
+<hr>
+<h2 id="二、机器学习模型安全"><a href="#二、机器学习模型安全" class="headerlink" title="二、机器学习模型安全"></a>二、机器学习模型安全</h2><h3 id="11-A-Hard-Label-Black-Box-Evasion-Attack-Against-ML-Traffic-Detection"><a href="#11-A-Hard-Label-Black-Box-Evasion-Attack-Against-ML-Traffic-Detection" class="headerlink" title="11. A Hard-Label Black-Box Evasion Attack Against ML Traffic Detection"></a>11. A Hard-Label Black-Box Evasion Attack Against ML Traffic Detection</h3><p><strong>Authors</strong>: Zixuan Liu et al. (Tsinghua University, Beijing Institute of Technology)</p>
+<p><strong>English</strong>: Hard-label black-box attack fooling ML-based malicious traffic detection with minimal queries and no model knowledge.</p>
+<p><strong>中文</strong>: 用最少查询和不了解模型的硬标签黑盒攻击欺骗基于 ML 的恶意流量检测。</p>
+<hr>
+<h3 id="12-Achieving-Zen-Mathematical-and-Programmatic-Model-Representations"><a href="#12-Achieving-Zen-Mathematical-and-Programmatic-Model-Representations" class="headerlink" title="12. Achieving Zen: Mathematical and Programmatic Model Representations"></a>12. Achieving Zen: Mathematical and Programmatic Model Representations</h3><p><strong>Authors</strong>: David Oygenblik et al. (Georgia Tech)</p>
+<p><strong>English</strong>: Combines mathematical and programmatic deep learning model representations for better attribution and reuse detection, addressing IP concerns.</p>
+<p><strong>中文</strong>: 结合数学和程序化深度学习模型表示以更好地归属和检测重用，解决知识产权问题。</p>
+<hr>
+<h3 id="13-Unified-Defense-Against-Membership-Inference-in-Federated-Learning"><a href="#13-Unified-Defense-Against-Membership-Inference-in-Federated-Learning" class="headerlink" title="13. Unified Defense Against Membership Inference in Federated Learning"></a>13. Unified Defense Against Membership Inference in Federated Learning</h3><p><strong>Authors</strong>: Liwei Zhang et al. (Beijing University of Posts and Telecommunications)</p>
+<p><strong>English</strong>: Unified framework combining distillation and contribution-aware aggregation to defend against membership inference in FL.</p>
+<p><strong>中文</strong>: 结合蒸馏和贡献感知聚合的统一框架，防御联邦学习中的成员推理攻击。</p>
+<hr>
+<h3 id="14-Beyond-Raw-Bytes-Towards-Large-Malware-Language-Models"><a href="#14-Beyond-Raw-Bytes-Towards-Large-Malware-Language-Models" class="headerlink" title="14. Beyond Raw Bytes: Towards Large Malware Language Models"></a>14. Beyond Raw Bytes: Towards Large Malware Language Models</h3><p><strong>Authors</strong>: Luke Kurlandski et al. (Rochester Institute of Technology)</p>
+<p><strong>English</strong>: Explores LLMs specifically trained on malware data, moving beyond raw byte analysis to understand malicious code semantics.</p>
+<p><strong>中文</strong>: 探索专门在恶意软件数据上训练的 LLM，超越原始字节分析以理解恶意代码语义。</p>
+<hr>
+<h3 id="15-Cascading-and-Proxy-Membership-Inference-Attacks"><a href="#15-Cascading-and-Proxy-Membership-Inference-Attacks" class="headerlink" title="15. Cascading and Proxy Membership Inference Attacks"></a>15. Cascading and Proxy Membership Inference Attacks</h3><p><strong>Authors</strong>: Yuntao Du et al. (Purdue University)</p>
+<p><strong>English</strong>: Cascading and proxy membership inference attacks improving success rates while requiring less target information.</p>
+<p><strong>中文</strong>: 级联和代理成员推理攻击提高成功率，同时需要更少的目标信息。</p>
+<hr>
+<h3 id="16-CatBack-Universal-Backdoor-Attacks-on-Tabular-Data"><a href="#16-CatBack-Universal-Backdoor-Attacks-on-Tabular-Data" class="headerlink" title="16. CatBack: Universal Backdoor Attacks on Tabular Data"></a>16. CatBack: Universal Backdoor Attacks on Tabular Data</h3><p><strong>Authors</strong>: Behrad Tajalli et al. (Radboud University, Delft University)</p>
+<p><strong>English</strong>: Universal backdoor attacks on tabular data via categorical encoding manipulation, affecting financial&#x2F;healthcare ML models.</p>
+<p><strong>中文</strong>: 通过分类编码操纵对表格数据的通用后门攻击，影响金融&#x2F;医疗 ML 模型。</p>
+<hr>
+<h3 id="17-Causal-Guided-Detoxify-Backdoor-Attack-of-Open-Weight-LoRA-Models"><a href="#17-Causal-Guided-Detoxify-Backdoor-Attack-of-Open-Weight-LoRA-Models" class="headerlink" title="17. Causal-Guided Detoxify Backdoor Attack of Open-Weight LoRA Models"></a>17. Causal-Guided Detoxify Backdoor Attack of Open-Weight LoRA Models</h3><p><strong>Authors</strong>: Linzhi Chen et al. (ShanghaiTech University)</p>
+<p><strong>English</strong>: Causal-guided approach to inject and detoxify backdoors in open-weight LoRA models, revealing parameter-efficient fine-tuning vulnerabilities.</p>
+<p><strong>中文</strong>: 因果引导方法在开放权重 LoRA 模型中注入和解毒后门，揭示参数高效微调漏洞。</p>
+<hr>
+<h3 id="18-Constructive-Noise-Defeats-Adversarial-Noise"><a href="#18-Constructive-Noise-Defeats-Adversarial-Noise" class="headerlink" title="18. Constructive Noise Defeats Adversarial Noise"></a>18. Constructive Noise Defeats Adversarial Noise</h3><p><strong>Authors</strong>: Meng Shen et al. (Beijing Institute of Technology)</p>
+<p><strong>English</strong>: Uses constructive noise to defeat adversarial noise, providing effective adversarial example detection for commercial DNN services.</p>
+<p><strong>中文</strong>: 使用建设性噪声对抗对抗性噪声，为商业 DNN 服务提供有效的对抗样本检测。</p>
+<hr>
+<h3 id="19-Dataset-Reduction-and-Watermark-Removal-via-Self-supervised-Learning"><a href="#19-Dataset-Reduction-and-Watermark-Removal-via-Self-supervised-Learning" class="headerlink" title="19. Dataset Reduction and Watermark Removal via Self-supervised Learning"></a>19. Dataset Reduction and Watermark Removal via Self-supervised Learning</h3><p><strong>Authors</strong>: Hao Luan et al. (Fudan University, Worcester Polytechnic Institute)</p>
+<p><strong>English</strong>: Demonstrates using self-supervised learning to reduce dataset requirements and remove watermarks in model extraction attacks.</p>
+<p><strong>中文</strong>: 展示使用自监督学习减少数据集需求并在模型提取攻击中移除水印。</p>
+<hr>
+<h3 id="20-DNN-Latency-Sequencing-Extracting-Architectures-from-SGX-Enclaves"><a href="#20-DNN-Latency-Sequencing-Extracting-Architectures-from-SGX-Enclaves" class="headerlink" title="20. DNN Latency Sequencing: Extracting Architectures from SGX Enclaves"></a>20. DNN Latency Sequencing: Extracting Architectures from SGX Enclaves</h3><p><strong>Authors</strong>: Minkyung Park et al. (UT Dallas, Purdue University)</p>
+<p><strong>English</strong>: Extracts DNN architectures from Intel SGX enclaves using single-stepping attacks based on latency sequencing patterns.</p>
+<p><strong>中文</strong>: 使用基于延迟序列模式的单步攻击从 Intel SGX 安全区提取 DNN 架构。</p>
+<hr>
+<h2 id="三、AI-驱动的安全分析"><a href="#三、AI-驱动的安全分析" class="headerlink" title="三、AI 驱动的安全分析"></a>三、AI 驱动的安全分析</h2><h3 id="21-An-LLM-Driven-Fuzzing-Framework-for-Detecting-PLC-Logic-Bugs"><a href="#21-An-LLM-Driven-Fuzzing-Framework-for-Detecting-PLC-Logic-Bugs" class="headerlink" title="21. An LLM-Driven Fuzzing Framework for Detecting PLC Logic Bugs"></a>21. An LLM-Driven Fuzzing Framework for Detecting PLC Logic Bugs</h3><p><strong>Authors</strong>: Jiaxing Cheng et al. (IIE CAS, NJUST, Virginia Tech)</p>
+<p><strong>English</strong>: Leverages LLMs to drive PLC fuzzing, detecting critical logic instruction bugs in industrial control systems.</p>
+<p><strong>中文</strong>: 利用 LLM 驱动 PLC 模糊测试，检测工业控制系统中的关键逻辑指令错误。</p>
+<hr>
+<h3 id="22-FirmAgent-LLM-Agents-for-IoT-Firmware-Vulnerability-Discovery"><a href="#22-FirmAgent-LLM-Agents-for-IoT-Firmware-Vulnerability-Discovery" class="headerlink" title="22. FirmAgent: LLM Agents for IoT Firmware Vulnerability Discovery"></a>22. FirmAgent: LLM Agents for IoT Firmware Vulnerability Discovery</h3><p><strong>Authors</strong>: Jiangan Ji et al. (Information Engineering University, Tsinghua)</p>
+<p><strong>English</strong>: Combines fuzzing with LLM agents to enhance IoT firmware vulnerability discovery through intelligent analysis.</p>
+<p><strong>中文</strong>: 结合模糊测试与 LLM 代理通过智能分析增强物联网固件漏洞发现。</p>
+<hr>
+<h3 id="23-CHAMELEOSCAN-LLM-Powered-iOS-Chameleon-App-Detection"><a href="#23-CHAMELEOSCAN-LLM-Powered-iOS-Chameleon-App-Detection" class="headerlink" title="23. CHAMELEOSCAN: LLM-Powered iOS Chameleon App Detection"></a>23. CHAMELEOSCAN: LLM-Powered iOS Chameleon App Detection</h3><p><strong>Authors</strong>: Hongyu Lin et al. (Zhejiang University)</p>
+<p><strong>English</strong>: Uses LLM-powered UI exploration to detect iOS apps that change behavior after App Store review.</p>
+<p><strong>中文</strong>: 使用 LLM 驱动的 UI 探索检测在 App Store 审核后改变行为的 iOS 应用。</p>
+<hr>
+<h3 id="24-Chimera-Multi-Agent-LLMs-for-Automatic-Insider-Threat-Simulation"><a href="#24-Chimera-Multi-Agent-LLMs-for-Automatic-Insider-Threat-Simulation" class="headerlink" title="24. Chimera: Multi-Agent LLMs for Automatic Insider Threat Simulation"></a>24. Chimera: Multi-Agent LLMs for Automatic Insider Threat Simulation</h3><p><strong>Authors</strong>: Jiongchi Yu et al. (Singapore Management University, Tianjin University)</p>
+<p><strong>English</strong>: Harnesses multi-agent LLMs to automatically simulate insider threats, improving security testing and training.</p>
+<p><strong>中文</strong>: 利用多智能体 LLM 自动模拟内部威胁，改进安全测试和培训。</p>
+<hr>
+<h3 id="25-Decompiling-the-Synergy-Human-LLM-Teaming-in-Reverse-Engineering"><a href="#25-Decompiling-the-Synergy-Human-LLM-Teaming-in-Reverse-Engineering" class="headerlink" title="25. Decompiling the Synergy: Human-LLM Teaming in Reverse Engineering"></a>25. Decompiling the Synergy: Human-LLM Teaming in Reverse Engineering</h3><p><strong>Authors</strong>: Zion Basque et al. (Arizona State University, University of Padua)</p>
+<p><strong>English</strong>: Empirical study of human-LLM collaboration in software reverse engineering, revealing synergies and challenges.</p>
+<p><strong>中文</strong>: 人类-LLM 协作在软件逆向工程中的实证研究，揭示协同效应和挑战。</p>
+<hr>
+<h2 id="研究趋势与洞察"><a href="#研究趋势与洞察" class="headerlink" title="研究趋势与洞察"></a>研究趋势与洞察</h2><h3 id="🔥-热点趋势"><a href="#🔥-热点趋势" class="headerlink" title="🔥 热点趋势"></a>🔥 热点趋势</h3><ol>
+<li><strong>LLM 安全成为主流</strong>: 从越狱攻击到防御机制，LLM 安全研究占据重要位置</li>
+<li><strong>AI 赋能安全分析</strong>: LLM 被广泛用于漏洞发现、固件分析、逆向工程</li>
+<li><strong>模型窃取与保护</strong>: 模型归属、水印、知识产权保护成为关键议题</li>
+<li><strong>联邦学习隐私</strong>: 成员推理、贡献感知等 FL 特有安全问题</li>
+<li><strong>跨模态攻击</strong>: 从文本到代码、从图像到表格数据的攻击多样化</li>
+</ol>
+<h3 id="💡-关键洞察"><a href="#💡-关键洞察" class="headerlink" title="💡 关键洞察"></a>💡 关键洞察</h3><ul>
+<li><strong>防御机制创新</strong>: 从架构设计(如 ACE)到注意力机制的原生防御</li>
+<li><strong>攻击技术进化</strong>: 黑盒攻击更高效、后门攻击更隐蔽、越狱攻击更系统化</li>
+<li><strong>可解释性需求</strong>: 研究开始关注方法论的科学性和可重现性</li>
+<li><strong>实用化趋势</strong>: 从学术原型到可部署系统的转变</li>
+</ul>
+<h3 id="🌍-实际应用"><a href="#🌍-实际应用" class="headerlink" title="🌍 实际应用"></a>🌍 实际应用</h3><ul>
+<li><strong>企业 AI 安全</strong>: LLM 集成应用的安全架构设计</li>
+<li><strong>模型版权保护</strong>: 模型归属检测、水印技术</li>
+<li><strong>隐私保护 ML</strong>: 联邦学习、差分隐私</li>
+<li><strong>AI 辅助安全</strong>: 固件分析、漏洞发现、恶意软件检测</li>
+</ul>
+<hr>
+<p><strong>其他视角文章</strong>:</p>
+<ul>
+<li><a href="#">系统安全视角</a></li>
+<li><a href="#">IoT 与嵌入式系统视角</a></li>
+<li><a href="#">网络与基础设施视角</a></li>
+<li><a href="#">密码学与隐私视角</a></li>
+</ul>
+<p><strong>完整论文列表</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/accepted-papers/">NDSS 2026 Accepted Papers</a><br><strong>会议官网</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/">NDSS Symposium 2026</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-ai-ml-perspective/" data-id="cuid7YrKcBBZ9bISdZ-EBY4qv" data-title="NDSS 2026 论文精选 - AI 与机器学习安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI-security/" rel="tag">AI security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deep-learning/" rel="tag">deep learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/machine-learning/" rel="tag">machine learning</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2026/03/03/ndss-2026-system-security-perspective/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          NDSS 2026 论文精选 - 系统安全视角
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2026/03/02/latest-cybersecurity-research-march-2026/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Latest Cybersecurity Research Highlights - March 2026</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI-security/" rel="tag">AI security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/" rel="tag">DNS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/" rel="tag">Deep Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IoT/" rel="tag">IoT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM-security/" rel="tag">LLM security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PLC/" rel="tag">PLC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RPKI/" rel="tag">RPKI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web-security/" rel="tag">Web security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automotive/" rel="tag">automotive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/binary-analysis/" rel="tag">binary analysis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blockchain/" rel="tag">blockchain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cryptography/" rel="tag">cryptography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cybersecurity/" rel="tag">cybersecurity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deep-learning/" rel="tag">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/email/" rel="tag">email</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/embedded-systems/" rel="tag">embedded systems</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/encryption/" rel="tag">encryption</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firmware/" rel="tag">firmware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kernel/" rel="tag">kernel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/" rel="tag">machine learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network-security/" rel="tag">network security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/operating-systems/" rel="tag">operating systems</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/privacy/" rel="tag">privacy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/research/" rel="tag">research</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scam-detection/" rel="tag">scam detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system-security/" rel="tag">system security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zero-knowledge/" rel="tag">zero-knowledge</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/AI-security/" style="font-size: 10px;">AI security</a> <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/Deep-Learning/" style="font-size: 10px;">Deep Learning</a> <a href="/tags/IoT/" style="font-size: 15px;">IoT</a> <a href="/tags/LLM/" style="font-size: 10px;">LLM</a> <a href="/tags/LLM-security/" style="font-size: 10px;">LLM security</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/NDSS/" style="font-size: 20px;">NDSS</a> <a href="/tags/PLC/" style="font-size: 10px;">PLC</a> <a href="/tags/RPKI/" style="font-size: 10px;">RPKI</a> <a href="/tags/Web-security/" style="font-size: 10px;">Web security</a> <a href="/tags/automotive/" style="font-size: 10px;">automotive</a> <a href="/tags/binary-analysis/" style="font-size: 10px;">binary analysis</a> <a href="/tags/blockchain/" style="font-size: 10px;">blockchain</a> <a href="/tags/cryptography/" style="font-size: 10px;">cryptography</a> <a href="/tags/cybersecurity/" style="font-size: 10px;">cybersecurity</a> <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/tags/email/" style="font-size: 10px;">email</a> <a href="/tags/embedded-systems/" style="font-size: 10px;">embedded systems</a> <a href="/tags/encryption/" style="font-size: 10px;">encryption</a> <a href="/tags/firmware/" style="font-size: 10px;">firmware</a> <a href="/tags/kernel/" style="font-size: 10px;">kernel</a> <a href="/tags/machine-learning/" style="font-size: 10px;">machine learning</a> <a href="/tags/network-security/" style="font-size: 10px;">network security</a> <a href="/tags/operating-systems/" style="font-size: 10px;">operating systems</a> <a href="/tags/privacy/" style="font-size: 10px;">privacy</a> <a href="/tags/research/" style="font-size: 10px;">research</a> <a href="/tags/scam-detection/" style="font-size: 10px;">scam detection</a> <a href="/tags/system-security/" style="font-size: 10px;">system security</a> <a href="/tags/zero-knowledge/" style="font-size: 10px;">zero-knowledge</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/03/">March 2026</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-crypto-privacy-perspective/">NDSS 2026 论文精选 - 密码学与隐私视角</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-network-infrastructure-perspective/">NDSS 2026 论文精选 - 网络与基础设施视角</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-iot-embedded-perspective/">NDSS 2026 论文精选 - IoT 与嵌入式系统视角</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-system-security-perspective/">NDSS 2026 论文精选 - 系统安全视角</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-ai-ml-perspective/">NDSS 2026 论文精选 - AI 与机器学习安全视角</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 Tom<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

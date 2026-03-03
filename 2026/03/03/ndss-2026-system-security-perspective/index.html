@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>NDSS 2026 论文精选 - 系统安全视角 | Tom&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="从系统安全视角看 NDSS 2026: 涵盖操作系统、内核、虚拟化、内存安全、二进制分析  Perspective: System Security | Focus: OS, Kernel, Binary, Memory, Virtualization  一、操作系统与内核安全1. DirtyFree: Simplified Data-Oriented Programming in Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NDSS 2026 论文精选 - 系统安全视角">
+<meta property="og:url" content="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-system-security-perspective/index.html">
+<meta property="og:site_name" content="Tom&#39;s Blog">
+<meta property="og:description" content="从系统安全视角看 NDSS 2026: 涵盖操作系统、内核、虚拟化、内存安全、二进制分析  Perspective: System Security | Focus: OS, Kernel, Binary, Memory, Virtualization  一、操作系统与内核安全1. DirtyFree: Simplified Data-Oriented Programming in Linux">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-03-03T01:35:00.000Z">
+<meta property="article:modified_time" content="2026-03-03T09:04:19.501Z">
+<meta property="article:author" content="Tom">
+<meta property="article:tag" content="NDSS">
+<meta property="article:tag" content="binary analysis">
+<meta property="article:tag" content="kernel">
+<meta property="article:tag" content="operating systems">
+<meta property="article:tag" content="system security">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Tom's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Tom&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://sgwaterwoods.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ndss-2026-system-security-perspective" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/03/03/ndss-2026-system-security-perspective/" class="article-date">
+  <time class="dt-published" datetime="2026-03-03T01:35:00.000Z" itemprop="datePublished">2026-03-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Research/">Research</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      NDSS 2026 论文精选 - 系统安全视角
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>从系统安全视角看 NDSS 2026</strong>: 涵盖操作系统、内核、虚拟化、内存安全、二进制分析</p>
+</blockquote>
+<p><strong>Perspective</strong>: System Security | <strong>Focus</strong>: OS, Kernel, Binary, Memory, Virtualization</p>
+<hr>
+<h2 id="一、操作系统与内核安全"><a href="#一、操作系统与内核安全" class="headerlink" title="一、操作系统与内核安全"></a>一、操作系统与内核安全</h2><h3 id="1-DirtyFree-Simplified-Data-Oriented-Programming-in-Linux-Kernel"><a href="#1-DirtyFree-Simplified-Data-Oriented-Programming-in-Linux-Kernel" class="headerlink" title="1. DirtyFree: Simplified Data-Oriented Programming in Linux Kernel"></a>1. DirtyFree: Simplified Data-Oriented Programming in Linux Kernel</h3><p><strong>Authors</strong>: Yoochan Lee (Max Planck), Hyuk Kwon (Theori), Thorsten Holz</p>
+<p><strong>English</strong>: Simplifies data-oriented programming attacks in Linux kernel, demonstrating practical exploitation without control-flow hijacking.</p>
+<p><strong>中文</strong>: 简化 Linux 内核中的数据导向编程攻击，演示无需控制流劫持的实际利用。</p>
+<hr>
+<h3 id="2-Cross-Cache-Attacks-via-PCP-Massaging"><a href="#2-Cross-Cache-Attacks-via-PCP-Massaging" class="headerlink" title="2. Cross-Cache Attacks via PCP Massaging"></a>2. Cross-Cache Attacks via PCP Massaging</h3><p><strong>Authors</strong>: Claudio Migliorelli et al. (IBM Research Europe)</p>
+<p><strong>English</strong>: Novel cross-cache attacks on Linux kernel via per-CPU pages (PCP) massaging, bypassing traditional cache isolation.</p>
+<p><strong>中文</strong>: 通过每 CPU 页面 (PCP) 按摩对 Linux 内核的新型跨缓存攻击，绕过传统缓存隔离。</p>
+<hr>
+<h3 id="3-Demystifying-ESXi-VMKernel-Access-Control-Mechanism"><a href="#3-Demystifying-ESXi-VMKernel-Access-Control-Mechanism" class="headerlink" title="3. Demystifying ESXi VMKernel Access Control Mechanism"></a>3. Demystifying ESXi VMKernel Access Control Mechanism</h3><p><strong>Authors</strong>: Yue Liu et al. (Southeast University, NUDT, Zhejiang University)</p>
+<p><strong>English</strong>: In-depth analysis of ESXi VMKernel’s access control, revealing design weaknesses and potential attack surfaces.</p>
+<p><strong>中文</strong>: 深入分析 ESXi VMKernel 的访问控制，揭示设计弱点和潜在攻击面。</p>
+<hr>
+<h3 id="4-Eviction-Notice-Reviving-Page-Cache-Attacks"><a href="#4-Eviction-Notice-Reviving-Page-Cache-Attacks" class="headerlink" title="4. Eviction Notice: Reviving Page Cache Attacks"></a>4. Eviction Notice: Reviving Page Cache Attacks</h3><p><strong>Authors</strong>: Sudheendra Neela et al. (Graz University of Technology)</p>
+<p><strong>English</strong>: Revives and advances page cache attacks with new techniques applicable to modern operating systems.</p>
+<p><strong>中文</strong>: 用适用于现代操作系统的新技术复兴和推进页缓存攻击。</p>
+<hr>
+<h2 id="二、虚拟化与隔离"><a href="#二、虚拟化与隔离" class="headerlink" title="二、虚拟化与隔离"></a>二、虚拟化与隔离</h2><h3 id="5-Breaking-Isolation-Cross-Domain-Hypervisor-Attacks"><a href="#5-Breaking-Isolation-Cross-Domain-Hypervisor-Attacks" class="headerlink" title="5. Breaking Isolation: Cross-Domain Hypervisor Attacks"></a>5. Breaking Isolation: Cross-Domain Hypervisor Attacks</h3><p><strong>Authors</strong>: Gaoning Pan et al. (Hangzhou Dianzi University, Zhejiang University)</p>
+<p><strong>English</strong>: New perspective on hypervisor exploitation via cross-domain attacks, breaking VM isolation boundaries.</p>
+<p><strong>中文</strong>: 通过跨域攻击对虚拟机管理程序利用的新视角，打破虚拟机隔离边界。</p>
+<hr>
+<h3 id="6-Bit-of-a-Close-Talker-Serverless-Cloud-Co-Location-Attacks"><a href="#6-Bit-of-a-Close-Talker-Serverless-Cloud-Co-Location-Attacks" class="headerlink" title="6. Bit of a Close Talker: Serverless Cloud Co-Location Attacks"></a>6. Bit of a Close Talker: Serverless Cloud Co-Location Attacks</h3><p><strong>Authors</strong>: Wei Shao et al. (UC Davis, George Mason University)</p>
+<p><strong>English</strong>: Practical guide to serverless cloud co-location attacks, demonstrating side-channel vulnerabilities in AWS Lambda and similar platforms.</p>
+<p><strong>中文</strong>: 无服务器云共处攻击的实用指南，演示 AWS Lambda 和类似平台中的侧信道漏洞。</p>
+<hr>
+<h3 id="7-EXIA-Trusted-Transitions-for-Enclaves-via-External-Input-Attestation"><a href="#7-EXIA-Trusted-Transitions-for-Enclaves-via-External-Input-Attestation" class="headerlink" title="7. EXIA: Trusted Transitions for Enclaves via External-Input Attestation"></a>7. EXIA: Trusted Transitions for Enclaves via External-Input Attestation</h3><p><strong>Authors</strong>: Zhen Huang et al. (Shanghai Jiao Tong University, Auburn University)</p>
+<p><strong>English</strong>: Ensures trusted transitions for secure enclaves through external-input attestation mechanisms.</p>
+<p><strong>中文</strong>: 通过外部输入证明机制确保安全区的可信转换。</p>
+<hr>
+<h3 id="8-Exploiting-TLBs-in-Virtualized-GPUs-for-Cross-VM-Attacks"><a href="#8-Exploiting-TLBs-in-Virtualized-GPUs-for-Cross-VM-Attacks" class="headerlink" title="8. Exploiting TLBs in Virtualized GPUs for Cross-VM Attacks"></a>8. Exploiting TLBs in Virtualized GPUs for Cross-VM Attacks</h3><p><strong>Authors</strong>: Hongyue Jin et al. (Clemson University, University of Rochester)</p>
+<p><strong>English</strong>: Exploits TLB vulnerabilities in virtualized GPUs to perform cross-VM side-channel attacks.</p>
+<p><strong>中文</strong>: 利用虚拟化 GPU 中的 TLB 漏洞执行跨虚拟机侧信道攻击。</p>
+<hr>
+<h2 id="三、二进制分析与逆向工程"><a href="#三、二进制分析与逆向工程" class="headerlink" title="三、二进制分析与逆向工程"></a>三、二进制分析与逆向工程</h2><h3 id="9-A-Deep-Dive-into-Function-Inlining-for-ML-based-Binary-Analysis"><a href="#9-A-Deep-Dive-into-Function-Inlining-for-ML-based-Binary-Analysis" class="headerlink" title="9. A Deep Dive into Function Inlining for ML-based Binary Analysis"></a>9. A Deep Dive into Function Inlining for ML-based Binary Analysis</h3><p><strong>Authors</strong>: Omar Abusabha et al. (Sungkyunkwan University)</p>
+<p><strong>English</strong>: Investigates how function inlining affects ML-based binary analysis, revealing compiler optimization impacts on malware detection.</p>
+<p><strong>中文</strong>: 调查函数内联如何影响基于 ML 的二进制分析，揭示编译器优化对恶意软件检测的影响。</p>
+<hr>
+<h3 id="10-BINALIGNER-Cross-Compilation-Environment-Diffing"><a href="#10-BINALIGNER-Cross-Compilation-Environment-Diffing" class="headerlink" title="10. BINALIGNER: Cross-Compilation Environment Diffing"></a>10. BINALIGNER: Cross-Compilation Environment Diffing</h3><p><strong>Authors</strong>: Yiran Zhu et al. (Zhejiang University, UCL)</p>
+<p><strong>English</strong>: Aligns binary code across different compilation environments to enable accurate binary diffing and analysis.</p>
+<p><strong>中文</strong>: 跨不同编译环境对齐二进制代码以实现准确的二进制差异和分析。</p>
+<hr>
+<h3 id="11-Enhancing-Semantic-Aware-Binary-Diffing"><a href="#11-Enhancing-Semantic-Aware-Binary-Diffing" class="headerlink" title="11. Enhancing Semantic-Aware Binary Diffing"></a>11. Enhancing Semantic-Aware Binary Diffing</h3><p><strong>Authors</strong>: Chengfan Ye et al. (HKUST)</p>
+<p><strong>English</strong>: Enhances binary diffing with high-confidence dynamic instruction alignment for better semantic understanding.</p>
+<p><strong>中文</strong>: 通过高置信度动态指令对齐增强二进制差异以更好地理解语义。</p>
+<hr>
+<h3 id="12-FidelityGPT-Correcting-Decompilation-Distortions"><a href="#12-FidelityGPT-Correcting-Decompilation-Distortions" class="headerlink" title="12. FidelityGPT: Correcting Decompilation Distortions"></a>12. FidelityGPT: Correcting Decompilation Distortions</h3><p><strong>Authors</strong>: Zhiping Zhou et al. (Tianjin University, Southern Cross University)</p>
+<p><strong>English</strong>: Uses retrieval-augmented generation to correct decompilation distortions, improving code reconstruction fidelity.</p>
+<p><strong>中文</strong>: 使用检索增强生成纠正反编译失真，提高代码重建保真度。</p>
+<hr>
+<h2 id="四、内存安全"><a href="#四、内存安全" class="headerlink" title="四、内存安全"></a>四、内存安全</h2><h3 id="13-Fast-Pointer-Nullification-for-Use-After-Free-Prevention"><a href="#13-Fast-Pointer-Nullification-for-Use-After-Free-Prevention" class="headerlink" title="13. Fast Pointer Nullification for Use-After-Free Prevention"></a>13. Fast Pointer Nullification for Use-After-Free Prevention</h3><p><strong>Authors</strong>: Yubo Du et al. (University of Pittsburgh)</p>
+<p><strong>English</strong>: Fast pointer nullification mechanism to prevent use-after-free vulnerabilities with minimal performance overhead.</p>
+<p><strong>中文</strong>: 快速指针归零机制以最小性能开销防止释放后使用漏洞。</p>
+<hr>
+<h3 id="14-FLIPPYRAM-Large-Scale-Rowhammer-Prevalence-Study"><a href="#14-FLIPPYRAM-Large-Scale-Rowhammer-Prevalence-Study" class="headerlink" title="14. FLIPPYRAM: Large-Scale Rowhammer Prevalence Study"></a>14. FLIPPYRAM: Large-Scale Rowhammer Prevalence Study</h3><p><strong>Authors</strong>: Martin Heckel et al. (Hof University, Graz University)</p>
+<p><strong>English</strong>: Large-scale study of Rowhammer vulnerability prevalence across different DRAM modules and systems.</p>
+<p><strong>中文</strong>: 跨不同 DRAM 模块和系统的 Rowhammer 漏洞流行度大规模研究。</p>
+<hr>
+<h2 id="五、可信执行环境-TEE"><a href="#五、可信执行环境-TEE" class="headerlink" title="五、可信执行环境 (TEE)"></a>五、可信执行环境 (TEE)</h2><h3 id="15-Automated-Code-Annotation-with-LLMs-for-Establishing-TEE-Boundaries"><a href="#15-Automated-Code-Annotation-with-LLMs-for-Establishing-TEE-Boundaries" class="headerlink" title="15. Automated Code Annotation with LLMs for Establishing TEE Boundaries"></a>15. Automated Code Annotation with LLMs for Establishing TEE Boundaries</h3><p><strong>Authors</strong>: Varun Gadey et al. (University of Würzburg, Huawei)</p>
+<p><strong>English</strong>: Uses LLMs to automate code annotation for establishing Trusted Execution Environment boundaries.</p>
+<p><strong>中文</strong>: 使用 LLM 自动化代码注释以建立可信执行环境边界。</p>
+<hr>
+<h2 id="研究趋势"><a href="#研究趋势" class="headerlink" title="研究趋势"></a>研究趋势</h2><h3 id="🔍-核心主题"><a href="#🔍-核心主题" class="headerlink" title="🔍 核心主题"></a>🔍 核心主题</h3><ol>
+<li><strong>数据导向攻击</strong>: 从控制流到数据流的攻击转移</li>
+<li><strong>跨域攻击</strong>: 打破虚拟化、容器、云环境的隔离边界</li>
+<li><strong>侧信道进化</strong>: TLB、页缓存、GPU 等新型侧信道</li>
+<li><strong>二进制分析现代化</strong>: AI&#x2F;LLM 辅助的反编译和分析</li>
+<li><strong>内存安全持续关注</strong>: Rowhammer、UAF 等经典问题的新解决方案</li>
+</ol>
+<h3 id="💡-技术洞察"><a href="#💡-技术洞察" class="headerlink" title="💡 技术洞察"></a>💡 技术洞察</h3><ul>
+<li><strong>从控制流到数据流</strong>: DOP (Data-Oriented Programming) 成为主流攻击方式</li>
+<li><strong>隔离失效</strong>: 虚拟机、容器、serverless 的隔离机制被持续挑战</li>
+<li><strong>AI 赋能逆向</strong>: LLM 应用于反编译、二进制分析、代码重建</li>
+<li><strong>硬件漏洞持久性</strong>: Rowhammer 等硬件级漏洞难以根除</li>
+</ul>
+<h3 id="🛠️-实际影响"><a href="#🛠️-实际影响" class="headerlink" title="🛠️ 实际影响"></a>🛠️ 实际影响</h3><ul>
+<li><strong>云安全</strong>: 跨虚拟机、serverless 攻击威胁云服务提供商</li>
+<li><strong>企业系统</strong>: Linux 内核、VMware ESXi 等企业基础设施的安全</li>
+<li><strong>安全审计</strong>: 二进制分析工具的准确性和效率提升</li>
+<li><strong>内存安全</strong>: UAF、Rowhammer 防护对关键系统至关重要</li>
+</ul>
+<hr>
+<p><strong>其他视角</strong>:</p>
+<ul>
+<li><a href="#">AI 与机器学习安全视角</a></li>
+<li><a href="#">IoT 与嵌入式系统视角</a></li>
+<li><a href="#">网络与基础设施视角</a></li>
+<li><a href="#">密码学与隐私视角</a></li>
+</ul>
+<p><strong>完整论文列表</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/accepted-papers/">NDSS 2026 Accepted Papers</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-system-security-perspective/" data-id="cuidAa49ZTuPY29vvtc8OAGYk" data-title="NDSS 2026 论文精选 - 系统安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/binary-analysis/" rel="tag">binary analysis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kernel/" rel="tag">kernel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/operating-systems/" rel="tag">operating systems</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system-security/" rel="tag">system security</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2026/03/03/ndss-2026-iot-embedded-perspective/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          NDSS 2026 论文精选 - IoT 与嵌入式系统视角
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2026/03/03/ndss-2026-ai-ml-perspective/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">NDSS 2026 论文精选 - AI 与机器学习安全视角</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI-security/" rel="tag">AI security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/" rel="tag">DNS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/" rel="tag">Deep Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IoT/" rel="tag">IoT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM-security/" rel="tag">LLM security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PLC/" rel="tag">PLC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RPKI/" rel="tag">RPKI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web-security/" rel="tag">Web security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automotive/" rel="tag">automotive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/binary-analysis/" rel="tag">binary analysis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blockchain/" rel="tag">blockchain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cryptography/" rel="tag">cryptography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cybersecurity/" rel="tag">cybersecurity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deep-learning/" rel="tag">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/email/" rel="tag">email</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/embedded-systems/" rel="tag">embedded systems</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/encryption/" rel="tag">encryption</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firmware/" rel="tag">firmware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kernel/" rel="tag">kernel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/" rel="tag">machine learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network-security/" rel="tag">network security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/operating-systems/" rel="tag">operating systems</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/privacy/" rel="tag">privacy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/research/" rel="tag">research</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scam-detection/" rel="tag">scam detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system-security/" rel="tag">system security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zero-knowledge/" rel="tag">zero-knowledge</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/AI-security/" style="font-size: 10px;">AI security</a> <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/Deep-Learning/" style="font-size: 10px;">Deep Learning</a> <a href="/tags/IoT/" style="font-size: 15px;">IoT</a> <a href="/tags/LLM/" style="font-size: 10px;">LLM</a> <a href="/tags/LLM-security/" style="font-size: 10px;">LLM security</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/NDSS/" style="font-size: 20px;">NDSS</a> <a href="/tags/PLC/" style="font-size: 10px;">PLC</a> <a href="/tags/RPKI/" style="font-size: 10px;">RPKI</a> <a href="/tags/Web-security/" style="font-size: 10px;">Web security</a> <a href="/tags/automotive/" style="font-size: 10px;">automotive</a> <a href="/tags/binary-analysis/" style="font-size: 10px;">binary analysis</a> <a href="/tags/blockchain/" style="font-size: 10px;">blockchain</a> <a href="/tags/cryptography/" style="font-size: 10px;">cryptography</a> <a href="/tags/cybersecurity/" style="font-size: 10px;">cybersecurity</a> <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/tags/email/" style="font-size: 10px;">email</a> <a href="/tags/embedded-systems/" style="font-size: 10px;">embedded systems</a> <a href="/tags/encryption/" style="font-size: 10px;">encryption</a> <a href="/tags/firmware/" style="font-size: 10px;">firmware</a> <a href="/tags/kernel/" style="font-size: 10px;">kernel</a> <a href="/tags/machine-learning/" style="font-size: 10px;">machine learning</a> <a href="/tags/network-security/" style="font-size: 10px;">network security</a> <a href="/tags/operating-systems/" style="font-size: 10px;">operating systems</a> <a href="/tags/privacy/" style="font-size: 10px;">privacy</a> <a href="/tags/research/" style="font-size: 10px;">research</a> <a href="/tags/scam-detection/" style="font-size: 10px;">scam detection</a> <a href="/tags/system-security/" style="font-size: 10px;">system security</a> <a href="/tags/zero-knowledge/" style="font-size: 10px;">zero-knowledge</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/03/">March 2026</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-crypto-privacy-perspective/">NDSS 2026 论文精选 - 密码学与隐私视角</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-network-infrastructure-perspective/">NDSS 2026 论文精选 - 网络与基础设施视角</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-iot-embedded-perspective/">NDSS 2026 论文精选 - IoT 与嵌入式系统视角</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-system-security-perspective/">NDSS 2026 论文精选 - 系统安全视角</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-ai-ml-perspective/">NDSS 2026 论文精选 - AI 与机器学习安全视角</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 Tom<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
