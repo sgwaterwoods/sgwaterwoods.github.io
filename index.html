@@ -71,10 +71,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-ndss-2026-paper-highlights" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-ndss-2026-web-network-security" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2026/03/03/ndss-2026-paper-highlights/" class="article-date">
-  <time class="dt-published" datetime="2026-03-03T00:55:00.000Z" itemprop="datePublished">2026-03-03</time>
+    <a href="/2026/03/03/ndss-2026-web-network-security/" class="article-date">
+  <time class="dt-published" datetime="2026-03-03T01:20:00.000Z" itemprop="datePublished">2026-03-03</time>
 </a>
     
   <div class="article-category">
@@ -89,7 +89,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2026/03/03/ndss-2026-paper-highlights/">NDSS 2026 论文精选 - 网络与分布式系统安全研讨会</a>
+      <a class="p-name article-title" href="/2026/03/03/ndss-2026-web-network-security/">NDSS 2026 论文精选 (5/5): Web 与网络安全</a>
     </h1>
   
 
@@ -98,194 +98,530 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <blockquote>
-<p><strong>NDSS 2026</strong> (Network and Distributed System Security Symposium) 将于 2026 年 2 月 23-27 日在美国圣地亚哥举行。今年共接收了 <strong>265 篇论文</strong> (夏季周期 113 篇，秋季周期 152 篇)，其中 194 篇将在会议期间展示。</p>
+<p><strong>NDSS 2026 系列第 5 篇</strong>: Web 与网络安全研究</p>
 </blockquote>
-<p><strong>Conference</strong>: NDSS 2026 - Network and Distributed System Security Symposium<br><strong>Date</strong>: February 23-27, 2026<br><strong>Location</strong>: San Diego, California<br><strong>Total Accepted Papers</strong>: 265 (113 summer cycle + 152 fall cycle)<br><strong>Presenting</strong>: 194 papers</p>
+<p>本系列的最后一篇聚焦于 Web 应用安全、网络协议安全和互联网基础设施安全，涵盖 XSS 检测、Wi-Fi 安全、DNS 攻击等核心领域。</p>
+<p><strong>Series</strong>: Part 5 of 5 - Web &amp; Network Security</p>
 <hr>
-<h2 id="一、LLM-安全-LLM-Security"><a href="#一、LLM-安全-LLM-Security" class="headerlink" title="一、LLM 安全 &#x2F; LLM Security"></a>一、LLM 安全 &#x2F; LLM Security</h2><h3 id="1-A-Causal-Perspective-for-Enhancing-Jailbreak-Attack-and-Defense"><a href="#1-A-Causal-Perspective-for-Enhancing-Jailbreak-Attack-and-Defense" class="headerlink" title="1. A Causal Perspective for Enhancing Jailbreak Attack and Defense"></a>1. A Causal Perspective for Enhancing Jailbreak Attack and Defense</h3><p><strong>Authors</strong>: Licheng Pan (Zhejiang University), Yunsheng Lu (University of Chicago), Jiexi Liu (Alibaba Group), et al.</p>
-<p><strong>English Abstract</strong>: This paper introduces a causal perspective to enhance both jailbreak attacks and defenses for large language models. The approach analyzes the causal relationships between input prompts and model outputs to identify vulnerabilities and strengthen security measures.</p>
-<p><strong>中文摘要</strong>: 本文从因果视角出发，增强大型语言模型的越狱攻击和防御能力。该方法分析输入提示和模型输出之间的因果关系，以识别漏洞并加强安全措施。</p>
+<h2 id="1-Achieving-Interpretable-DL-based-Web-Attack-Detection-through-Malicious-Payload-Localization"><a href="#1-Achieving-Interpretable-DL-based-Web-Attack-Detection-through-Malicious-Payload-Localization" class="headerlink" title="1. Achieving Interpretable DL-based Web Attack Detection through Malicious Payload Localization"></a>1. Achieving Interpretable DL-based Web Attack Detection through Malicious Payload Localization</h2><p><strong>Authors</strong>: Peiyang Li (Tsinghua University &amp; Ant Group), Fukun Mei (Tsinghua University), Ye Wang (Tsinghua University), Zhuotao Liu (Tsinghua University), Ke Xu (Tsinghua University &amp; Zhongguancun Laboratory), Chao Shen (Xi’an Jiaotong University), Qian Wang (Wuhan University), Qi Li (Tsinghua University &amp; Zhongguancun Laboratory)</p>
+<p><strong>English Abstract</strong>: This work achieves interpretable deep learning-based web attack detection by localizing malicious payloads, enabling security analysts to understand and verify detection decisions. The system can pinpoint exactly where in a request the attack payload is located.</p>
+<p><strong>中文摘要</strong>: 本研究通过定位恶意载荷实现可解释的基于深度学习的 Web 攻击检测，使安全分析师能够理解和验证检测决策。该系统可以精确定位请求中攻击载荷的位置。</p>
 <hr>
-<h3 id="2-ACE-A-Security-Architecture-for-LLM-Integrated-App-Systems"><a href="#2-ACE-A-Security-Architecture-for-LLM-Integrated-App-Systems" class="headerlink" title="2. ACE: A Security Architecture for LLM-Integrated App Systems"></a>2. ACE: A Security Architecture for LLM-Integrated App Systems</h3><p><strong>Authors</strong>: Evan Li (Northeastern University), Tushin Mallick, Evan Rose, William Robertson, Alina Oprea, Cristina Nita-Rotaru</p>
-<p><strong>English Abstract</strong>: ACE proposes a comprehensive security architecture for applications that integrate large language models. The framework addresses unique security challenges arising from LLM integration, including data leakage, prompt injection, and unauthorized access to sensitive APIs.</p>
-<p><strong>中文摘要</strong>: ACE 提出了一个针对集成大型语言模型的应用程序的综合安全架构。该框架解决了 LLM 集成带来的独特安全挑战，包括数据泄露、提示注入和对敏感 API 的未授权访问。</p>
+<h2 id="2-AirSnitch-Demystifying-and-Breaking-Client-Isolation-in-Wi-Fi-Networks"><a href="#2-AirSnitch-Demystifying-and-Breaking-Client-Isolation-in-Wi-Fi-Networks" class="headerlink" title="2. AirSnitch: Demystifying and Breaking Client Isolation in Wi-Fi Networks"></a>2. AirSnitch: Demystifying and Breaking Client Isolation in Wi-Fi Networks</h2><p><strong>Authors</strong>: Xin’an Zhou (University of California, Riverside), Juefei Pu (University of California, Riverside), Zhutian Liu (University of California, Riverside), Zhiyun Qian (University of California, Riverside), Zhaowei Tan (University of California, Riverside), Srikanth V. Krishnamurthy (University of California, Riverside), Mathy Vanhoef (DistriNet, KU Leuven)</p>
+<p><strong>English Abstract</strong>: AirSnitch reveals vulnerabilities in Wi-Fi client isolation mechanisms, demonstrating practical attacks that break the security boundary between isolated clients on the same network, potentially exposing sensitive data in public Wi-Fi environments.</p>
+<p><strong>中文摘要</strong>: AirSnitch 揭示了 Wi-Fi 客户端隔离机制中的漏洞，展示了打破同一网络上隔离客户端之间安全边界的实际攻击，可能在公共 Wi-Fi 环境中暴露敏感数据。</p>
 <hr>
-<h3 id="3-Attention-is-All-You-Need-to-Defend-Against-Indirect-Prompt-Injection-Attacks-in-LLMs"><a href="#3-Attention-is-All-You-Need-to-Defend-Against-Indirect-Prompt-Injection-Attacks-in-LLMs" class="headerlink" title="3. Attention is All You Need to Defend Against Indirect Prompt Injection Attacks in LLMs"></a>3. Attention is All You Need to Defend Against Indirect Prompt Injection Attacks in LLMs</h3><p><strong>Authors</strong>: Yinan Zhong (Zhejiang University), Qianhao Miao, Yanjiao Chen, et al.</p>
-<p><strong>English Abstract</strong>: This work demonstrates that attention mechanisms alone can effectively defend against indirect prompt injection attacks in large language models, without requiring additional computational overhead or architectural modifications.</p>
-<p><strong>中文摘要</strong>: 本研究表明，仅使用注意力机制就可以有效防御大型语言模型中的间接提示注入攻击，无需额外的计算开销或架构修改。</p>
+<h2 id="3-Aliens-Among-Us-Observing-Private-or-Reserved-IPs-on-the-Public-Internet"><a href="#3-Aliens-Among-Us-Observing-Private-or-Reserved-IPs-on-the-Public-Internet" class="headerlink" title="3. Aliens Among Us: Observing Private or Reserved IPs on the Public Internet"></a>3. Aliens Among Us: Observing Private or Reserved IPs on the Public Internet</h2><p><strong>Authors</strong>: Radu Anghel (TU Delft), Carlos Gañán (ICANN), Qasim Lone (RIPE NCC), Matthew Luckie (CAIDA), Yury Zhauniarovich (TU Delft)</p>
+<p><strong>English Abstract</strong>: This measurement study observes the prevalence of private and reserved IP addresses appearing on the public Internet, analyzing their security implications and revealing widespread misconfigurations that could enable various attacks.</p>
+<p><strong>中文摘要</strong>: 这项测量研究观察了私有和保留 IP 地址在公共互联网上出现的普遍性，分析其安全影响并揭示可能导致各种攻击的广泛配置错误。</p>
 <hr>
-<h3 id="4-Beyond-Jailbreak-Unveiling-Risks-in-LLM-Applications-Arising-from-Blurred-Capability-Boundaries"><a href="#4-Beyond-Jailbreak-Unveiling-Risks-in-LLM-Applications-Arising-from-Blurred-Capability-Boundaries" class="headerlink" title="4. Beyond Jailbreak: Unveiling Risks in LLM Applications Arising from Blurred Capability Boundaries"></a>4. Beyond Jailbreak: Unveiling Risks in LLM Applications Arising from Blurred Capability Boundaries</h3><p><strong>Authors</strong>: Yunyi Zhang (Tsinghua University), Shibo Cui, Baojun Liu, et al.</p>
-<p><strong>English Abstract</strong>: This research identifies security risks in LLM applications that arise from unclear boundaries between different model capabilities, leading to unintended information leakage and privilege escalation.</p>
-<p><strong>中文摘要</strong>: 本研究识别了 LLM 应用中因不同模型能力之间界限模糊而产生的安全风险，导致意外的信息泄露和权限提升。</p>
+<h2 id="4-CHAMELEOSCAN-Demystifying-and-Detecting-iOS-Chameleon-Apps-via-LLM-Powered-UI-Exploration"><a href="#4-CHAMELEOSCAN-Demystifying-and-Detecting-iOS-Chameleon-Apps-via-LLM-Powered-UI-Exploration" class="headerlink" title="4. CHAMELEOSCAN: Demystifying and Detecting iOS Chameleon Apps via LLM-Powered UI Exploration"></a>4. CHAMELEOSCAN: Demystifying and Detecting iOS Chameleon Apps via LLM-Powered UI Exploration</h2><p><strong>Authors</strong>: Hongyu Lin (Zhejiang University), Yicheng Hu (Zhejiang University), Haitao Xu (Zhejiang University), Yanchen Lu (Zhejiang University), Mengxia Ren (Zhejiang University), Shuai Hao (Old Dominion University), Chuan Yue (Colorado School of Mines), Zhao Li (Hangzhou Yugu Technology), Fan Zhang (Zhejiang University), Yixin Jiang (Electric Power Research Institute)</p>
+<p><strong>English Abstract</strong>: CHAMELEOSCAN uses LLM-powered UI exploration to detect iOS chameleon apps that change behavior after passing App Store review, uncovering malicious apps that evade detection by behaving differently during review versus post-installation.</p>
+<p><strong>中文摘要</strong>: CHAMELEOSCAN 使用 LLM 驱动的 UI 探索来检测在通过 App Store 审核后改变行为的 iOS 变色龙应用，发现通过在审核期间和安装后表现不同来逃避检测的恶意应用。</p>
 <hr>
-<h3 id="5-Bleeding-Pathways-Vanishing-Discriminability-in-LLM-Hidden-States-Fuels-Jailbreak-Attacks"><a href="#5-Bleeding-Pathways-Vanishing-Discriminability-in-LLM-Hidden-States-Fuels-Jailbreak-Attacks" class="headerlink" title="5. Bleeding Pathways: Vanishing Discriminability in LLM Hidden States Fuels Jailbreak Attacks"></a>5. Bleeding Pathways: Vanishing Discriminability in LLM Hidden States Fuels Jailbreak Attacks</h3><p><strong>Authors</strong>: Yingjie Zhang (Institute of Information Engineering, CAS), Tong Liu, Zhe Zhao (Ant Group), et al.</p>
-<p><strong>English Abstract</strong>: The paper reveals how the vanishing discriminability in LLM hidden states creates vulnerabilities that enable jailbreak attacks, providing both theoretical analysis and practical attack demonstrations.</p>
-<p><strong>中文摘要</strong>: 本文揭示了 LLM 隐藏状态中消失的可辨别性如何产生允许越狱攻击的漏洞，提供了理论分析和实际攻击演示。</p>
+<h2 id="5-DOM-XSS-Detection-via-Webpage-Interaction-Fuzzing-and-URL-Component-Synthesis"><a href="#5-DOM-XSS-Detection-via-Webpage-Interaction-Fuzzing-and-URL-Component-Synthesis" class="headerlink" title="5. DOM-XSS Detection via Webpage Interaction Fuzzing and URL Component Synthesis"></a>5. DOM-XSS Detection via Webpage Interaction Fuzzing and URL Component Synthesis</h2><p><strong>Authors</strong>: Nuno Sabino (Carnegie Mellon University, Instituto Superior Técnico, Universidade de Lisboa, and Instituto de Telecomunicações), Darion Cassel (Carnegie Mellon University), Rui Abreu (Universidade do Porto, INESC-ID), Pedro Adão (Instituto Superior Técnico, Universidade de Lisboa, and Instituto de Telecomunicações), Lujo Bauer (Carnegie Mellon University), Limin Jia (Carnegie Mellon University)</p>
+<p><strong>English Abstract</strong>: This work proposes a novel approach to detect DOM-based XSS vulnerabilities through automated webpage interaction fuzzing and intelligent URL component synthesis, significantly improving detection coverage over existing tools.</p>
+<p><strong>中文摘要</strong>: 本研究提出了一种通过自动化网页交互模糊测试和智能 URL 组件合成来检测基于 DOM 的 XSS 漏洞的新方法，显著提高了现有工具的检测覆盖率。</p>
 <hr>
-<h3 id="6-Cache-Me-Catch-You-Cache-Related-Security-Threats-in-LLM-Serving-Frameworks"><a href="#6-Cache-Me-Catch-You-Cache-Related-Security-Threats-in-LLM-Serving-Frameworks" class="headerlink" title="6. Cache Me, Catch You: Cache Related Security Threats in LLM Serving Frameworks"></a>6. Cache Me, Catch You: Cache Related Security Threats in LLM Serving Frameworks</h3><p><strong>Authors</strong>: XiangFan Wu (Ocean University of China), Lingyun Ying (QI-ANXIN), et al.</p>
-<p><strong>English Abstract</strong>: This work uncovers cache-related security vulnerabilities in LLM serving frameworks that can be exploited to leak sensitive information across different user sessions.</p>
-<p><strong>中文摘要</strong>: 本研究揭示了 LLM 服务框架中与缓存相关的安全漏洞，这些漏洞可被利用在不同用户会话之间泄露敏感信息。</p>
+<h2 id="6-CoordMail-Exploiting-SMTP-Timeout-and-Command-Interaction-to-Coordinate-Email-Middleware-for-Convergence-Amplification-Attack"><a href="#6-CoordMail-Exploiting-SMTP-Timeout-and-Command-Interaction-to-Coordinate-Email-Middleware-for-Convergence-Amplification-Attack" class="headerlink" title="6. CoordMail: Exploiting SMTP Timeout and Command Interaction to Coordinate Email Middleware for Convergence Amplification Attack"></a>6. CoordMail: Exploiting SMTP Timeout and Command Interaction to Coordinate Email Middleware for Convergence Amplification Attack</h2><p><strong>Authors</strong>: Ruixuan Li (Tsinghua University), Chaoyi Lu (Zhongguancun Laboratory), Baojun Liu (Tsinghua University), Yanzhong Lin (Coremail Technology Co. Ltd), Qingfeng Pan (Coremail Technology Co. Ltd), Jun Shao (Zhejiang Gongshang University; Zhejiang Key Laboratory of Big Data and Future E-Commerce Technology)</p>
+<p><strong>English Abstract</strong>: CoordMail exploits SMTP timeout and command interaction mechanisms to coordinate email middleware for convergence amplification attacks, demonstrating a novel attack vector that can amplify malicious traffic significantly.</p>
+<p><strong>中文摘要</strong>: CoordMail 利用 SMTP 超时和命令交互机制来协调电子邮件中间件进行收敛放大攻击，展示了一种可以显著放大恶意流量的新型攻击向量。</p>
 <hr>
-<h3 id="7-Character-Level-Perturbations-Disrupt-LLM-Watermarks"><a href="#7-Character-Level-Perturbations-Disrupt-LLM-Watermarks" class="headerlink" title="7. Character-Level Perturbations Disrupt LLM Watermarks"></a>7. Character-Level Perturbations Disrupt LLM Watermarks</h3><p><strong>Authors</strong>: Zhaoxi Zhang (University of Technology Sydney), Xiaomei Zhang (Griffith University), et al.</p>
-<p><strong>English Abstract</strong>: The research demonstrates that character-level perturbations can effectively remove or disrupt watermarks embedded in LLM-generated text, raising concerns about content attribution and copyright protection.</p>
-<p><strong>中文摘要</strong>: 研究表明，字符级扰动可以有效地移除或破坏嵌入在 LLM 生成文本中的水印，引发了对内容归属和版权保护的担忧。</p>
+<h2 id="7-Continuous-User-Behavior-Monitoring-using-DNS-Cache-Timing-Attacks"><a href="#7-Continuous-User-Behavior-Monitoring-using-DNS-Cache-Timing-Attacks" class="headerlink" title="7. Continuous User Behavior Monitoring using DNS Cache Timing Attacks"></a>7. Continuous User Behavior Monitoring using DNS Cache Timing Attacks</h2><p><strong>Authors</strong>: Hannes Weissteiner (Graz University of Technology), Roland Czerny (Graz University of Technology), Simone Franza (Graz University of Technology), Stefan Gast (Graz University of Technology), Johanna Ullrich (University of Vienna), Daniel Gruss (Graz University of Technology)</p>
+<p><strong>English Abstract</strong>: This research demonstrates how DNS cache timing attacks can be used for continuous user behavior monitoring, revealing visited websites and online activities without requiring network access or malware installation.</p>
+<p><strong>中文摘要</strong>: 本研究展示了如何使用 DNS 缓存时序攻击进行持续的用户行为监控，在不需要网络访问或恶意软件安装的情况下揭示访问的网站和在线活动。</p>
 <hr>
-<h3 id="8-Characterizing-the-Implementation-of-Censorship-Policies-in-Chinese-LLM-Services"><a href="#8-Characterizing-the-Implementation-of-Censorship-Policies-in-Chinese-LLM-Services" class="headerlink" title="8. Characterizing the Implementation of Censorship Policies in Chinese LLM Services"></a>8. Characterizing the Implementation of Censorship Policies in Chinese LLM Services</h3><p><strong>Authors</strong>: Anna Ablove (University of Michigan), Shreyas Chandrashekaran, Xiao Qiang (UC Berkeley), Roya Ensafi</p>
-<p><strong>English Abstract</strong>: This empirical study characterizes how censorship policies are implemented in Chinese LLM services, revealing the techniques used to filter content and their effectiveness.</p>
-<p><strong>中文摘要</strong>: 这项实证研究描述了中国 LLM 服务中审查政策的实施方式，揭示了用于过滤内容的技术及其有效性。</p>
+<h2 id="8-Crack-in-the-Armor-Underlying-Infrastructure-Threats-to-RPKI-Publication-Point-Reachability"><a href="#8-Crack-in-the-Armor-Underlying-Infrastructure-Threats-to-RPKI-Publication-Point-Reachability" class="headerlink" title="8. Crack in the Armor: Underlying Infrastructure Threats to RPKI Publication Point Reachability"></a>8. Crack in the Armor: Underlying Infrastructure Threats to RPKI Publication Point Reachability</h2><p><strong>Authors</strong>: Yunhao Liu (Tsinghua University &amp; Zhongguancun Laboratory), Jessie Hui Wang (Tsinghua University &amp; Zhongguancun Laboratory), Yuedong Xu (Fudan University), Zongpeng Li (Tsinghua University), Yangyang Wang (Tsinghua University &amp; Zhongguancun Laboratory), Jilong Wang (Tsinghua University &amp; Zhongguancun Laboratory)</p>
+<p><strong>English Abstract</strong>: This work identifies underlying infrastructure threats to RPKI (Resource Public Key Infrastructure) publication point reachability, revealing vulnerabilities that could undermine the security of internet routing.</p>
+<p><strong>中文摘要</strong>: 本研究识别了对 RPKI (资源公钥基础设施) 发布点可达性的底层基础设施威胁，揭示了可能破坏互联网路由安全的漏洞。</p>
 <hr>
-<h3 id="9-Chasing-Shadows-Pitfalls-in-LLM-Security-Research"><a href="#9-Chasing-Shadows-Pitfalls-in-LLM-Security-Research" class="headerlink" title="9. Chasing Shadows: Pitfalls in LLM Security Research"></a>9. Chasing Shadows: Pitfalls in LLM Security Research</h3><p><strong>Authors</strong>: Jonathan Evertz (CISPA), Niklas Risse (Max Planck), et al.</p>
-<p><strong>English Abstract</strong>: This meta-analysis identifies common methodological pitfalls in LLM security research, providing guidance for more rigorous and reproducible security evaluations.</p>
-<p><strong>中文摘要</strong>: 这项元分析识别了 LLM 安全研究中常见的方法论陷阱，为更严格和可重现的安全评估提供指导。</p>
+<h2 id="9-Demystifying-RPKI-Invalid-Prefixes-Hidden-Causes-and-Security-Risks"><a href="#9-Demystifying-RPKI-Invalid-Prefixes-Hidden-Causes-and-Security-Risks" class="headerlink" title="9. Demystifying RPKI-Invalid Prefixes: Hidden Causes and Security Risks"></a>9. Demystifying RPKI-Invalid Prefixes: Hidden Causes and Security Risks</h2><p><strong>Authors</strong>: Weitong Li (Virginia Tech), Tao Wan (CableLabs), Tijay Chung (Virginia Tech)</p>
+<p><strong>English Abstract</strong>: This study demystifies RPKI-invalid prefixes by uncovering hidden causes and analyzing their security risks, providing insights into why valid network operators may inadvertently create invalid RPKI records.</p>
+<p><strong>中文摘要</strong>: 本研究通过揭示隐藏原因和分析其安全风险来揭开 RPKI 无效前缀的神秘面纱，提供了为什么合法网络运营商可能无意中创建无效 RPKI 记录的见解。</p>
 <hr>
-<h3 id="10-DUALBREACH-Efficient-Dual-Jailbreaking-via-Target-Driven-Initialization-and-Multi-Target-Optimization"><a href="#10-DUALBREACH-Efficient-Dual-Jailbreaking-via-Target-Driven-Initialization-and-Multi-Target-Optimization" class="headerlink" title="10. DUALBREACH: Efficient Dual-Jailbreaking via Target-Driven Initialization and Multi-Target Optimization"></a>10. DUALBREACH: Efficient Dual-Jailbreaking via Target-Driven Initialization and Multi-Target Optimization</h3><p><strong>Authors</strong>: Xinzhe Huang (Zhejiang University), Kedong Xiu, Tianhang Zheng, et al.</p>
-<p><strong>English Abstract</strong>: DUALBREACH introduces an efficient dual-jailbreaking approach that simultaneously attacks multiple safety mechanisms in LLMs through target-driven initialization and multi-target optimization.</p>
-<p><strong>中文摘要</strong>: DUALBREACH 引入了一种高效的双重越狱方法，通过目标驱动的初始化和多目标优化同时攻击 LLM 中的多个安全机制。</p>
+<h2 id="10-Enhancing-Website-Fingerprinting-Attacks-against-Traffic-Drift"><a href="#10-Enhancing-Website-Fingerprinting-Attacks-against-Traffic-Drift" class="headerlink" title="10. Enhancing Website Fingerprinting Attacks against Traffic Drift"></a>10. Enhancing Website Fingerprinting Attacks against Traffic Drift</h2><p><strong>Authors</strong>: Xinhao Deng (Tsinghua University &amp; Ant Group), Yixiang Zhang (Tsinghua University), Qi Li (Tsinghua University &amp; Zhongguancun Laboratory), Zhuotao Liu (Tsinghua University &amp; Zhongguancun Laboratory), Yabo Wang (Tsinghua University), Ke Xu (Tsinghua University &amp; Zhongguancun Laboratory)</p>
+<p><strong>English Abstract</strong>: This research enhances website fingerprinting attacks to remain effective against traffic drift, demonstrating that even when websites’ traffic patterns change over time, sophisticated fingerprinting attacks can still compromise user privacy.</p>
+<p><strong>中文摘要</strong>: 本研究增强网站指纹攻击以对抗流量漂移保持有效，证明即使网站的流量模式随时间变化，复杂的指纹攻击仍然可以损害用户隐私。</p>
 <hr>
-<h2 id="二、机器学习安全-ML-Security"><a href="#二、机器学习安全-ML-Security" class="headerlink" title="二、机器学习安全 &#x2F; ML Security"></a>二、机器学习安全 &#x2F; ML Security</h2><h3 id="11-A-Deep-Dive-into-Function-Inlining-and-its-Security-Implications-for-ML-based-Binary-Analysis"><a href="#11-A-Deep-Dive-into-Function-Inlining-and-its-Security-Implications-for-ML-based-Binary-Analysis" class="headerlink" title="11. A Deep Dive into Function Inlining and its Security Implications for ML-based Binary Analysis"></a>11. A Deep Dive into Function Inlining and its Security Implications for ML-based Binary Analysis</h3><p><strong>Authors</strong>: Omar Abusabha (Sungkyunkwan University), Jiyong Uhm, Tamer Abuhmed, Hyungjoon Koo</p>
-<p><strong>English Abstract</strong>: This work investigates how function inlining affects ML-based binary analysis, revealing that compiler optimizations can significantly impact the accuracy and robustness of ML models for malware detection.</p>
-<p><strong>中文摘要</strong>: 本研究调查了函数内联如何影响基于 ML 的二进制分析，揭示了编译器优化可以显著影响恶意软件检测 ML 模型的准确性和鲁棒性。</p>
-<hr>
-<h3 id="12-A-Hard-Label-Black-Box-Evasion-Attack-against-ML-based-Malicious-Traffic-Detection-Systems"><a href="#12-A-Hard-Label-Black-Box-Evasion-Attack-against-ML-based-Malicious-Traffic-Detection-Systems" class="headerlink" title="12. A Hard-Label Black-Box Evasion Attack against ML-based Malicious Traffic Detection Systems"></a>12. A Hard-Label Black-Box Evasion Attack against ML-based Malicious Traffic Detection Systems</h3><p><strong>Authors</strong>: Zixuan Liu (Tsinghua University), Yi Zhao (Beijing Institute of Technology), et al.</p>
-<p><strong>English Abstract</strong>: The paper presents a hard-label black-box evasion attack that can fool ML-based malicious traffic detection systems with minimal queries and no knowledge of the model internals.</p>
-<p><strong>中文摘要</strong>: 本文提出了一种硬标签黑盒逃避攻击，可以用最少的查询次数和不了解模型内部的情况下欺骗基于 ML 的恶意流量检测系统。</p>
-<hr>
-<h3 id="13-Achieving-Zen-Combining-Mathematical-and-Programmatic-Deep-Learning-Model-Representations-for-Attribution-and-Reuse"><a href="#13-Achieving-Zen-Combining-Mathematical-and-Programmatic-Deep-Learning-Model-Representations-for-Attribution-and-Reuse" class="headerlink" title="13. Achieving Zen: Combining Mathematical and Programmatic Deep Learning Model Representations for Attribution and Reuse"></a>13. Achieving Zen: Combining Mathematical and Programmatic Deep Learning Model Representations for Attribution and Reuse</h3><p><strong>Authors</strong>: David Oygenblik (Georgia Tech), Dinko Dermendzhiev, et al.</p>
-<p><strong>English Abstract</strong>: Zen combines mathematical and programmatic representations of deep learning models to enable better model attribution and reuse detection, addressing intellectual property concerns in ML.</p>
-<p><strong>中文摘要</strong>: Zen 结合了深度学习模型的数学和程序表示，以实现更好的模型归属和重用检测，解决了机器学习中的知识产权问题。</p>
-<hr>
-<h3 id="14-A-Unified-Defense-Framework-Against-Membership-Inference-in-Federated-Learning"><a href="#14-A-Unified-Defense-Framework-Against-Membership-Inference-in-Federated-Learning" class="headerlink" title="14. A Unified Defense Framework Against Membership Inference in Federated Learning"></a>14. A Unified Defense Framework Against Membership Inference in Federated Learning</h3><p><strong>Authors</strong>: Liwei Zhang (Beijing University of Posts and Telecommunications), et al.</p>
-<p><strong>English Abstract</strong>: This work proposes a unified defense framework combining distillation and contribution-aware aggregation to protect against membership inference attacks in federated learning settings.</p>
-<p><strong>中文摘要</strong>: 本研究提出了一个统一的防御框架，结合蒸馏和贡献感知聚合来防御联邦学习环境中的成员推理攻击。</p>
-<hr>
-<h3 id="15-Beyond-Raw-Bytes-Towards-Large-Malware-Language-Models"><a href="#15-Beyond-Raw-Bytes-Towards-Large-Malware-Language-Models" class="headerlink" title="15. Beyond Raw Bytes: Towards Large Malware Language Models"></a>15. Beyond Raw Bytes: Towards Large Malware Language Models</h3><p><strong>Authors</strong>: Luke Kurlandski (Rochester Institute of Technology), Harel Berger (Ariel University), et al.</p>
-<p><strong>English Abstract</strong>: This research explores the development of large language models specifically trained on malware data, moving beyond raw byte analysis to understand malicious code semantics.</p>
-<p><strong>中文摘要</strong>: 本研究探索了专门在恶意软件数据上训练的大型语言模型的开发，超越原始字节分析以理解恶意代码语义。</p>
-<hr>
-<h3 id="16-Cascading-and-Proxy-Membership-Inference-Attacks"><a href="#16-Cascading-and-Proxy-Membership-Inference-Attacks" class="headerlink" title="16. Cascading and Proxy Membership Inference Attacks"></a>16. Cascading and Proxy Membership Inference Attacks</h3><p><strong>Authors</strong>: Yuntao Du (Purdue University), Jiacheng Li, et al.</p>
-<p><strong>English Abstract</strong>: The paper introduces cascading and proxy membership inference attacks that significantly improve attack success rates against machine learning models while requiring less information about the target.</p>
-<p><strong>中文摘要</strong>: 本文引入了级联和代理成员推理攻击，显著提高了对机器学习模型的攻击成功率，同时需要关于目标的信息更少。</p>
-<hr>
-<h3 id="17-CatBack-Universal-Backdoor-Attacks-on-Tabular-Data-via-Categorical-Encoding"><a href="#17-CatBack-Universal-Backdoor-Attacks-on-Tabular-Data-via-Categorical-Encoding" class="headerlink" title="17. CatBack: Universal Backdoor Attacks on Tabular Data via Categorical Encoding"></a>17. CatBack: Universal Backdoor Attacks on Tabular Data via Categorical Encoding</h3><p><strong>Authors</strong>: Behrad Tajalli (Radboud University), Stefanos Koffas (Delft University of Technology), Stjepan Picek</p>
-<p><strong>English Abstract</strong>: CatBack demonstrates universal backdoor attacks on tabular data through categorical encoding manipulation, affecting a wide range of ML models used in financial and healthcare applications.</p>
-<p><strong>中文摘要</strong>: CatBack 通过分类编码操纵展示了对表格数据的通用后门攻击，影响金融和医疗应用中使用的广泛 ML 模型。</p>
-<hr>
-<h3 id="18-Causal-Guided-Detoxify-Backdoor-Attack-of-Open-Weight-LoRA-Models"><a href="#18-Causal-Guided-Detoxify-Backdoor-Attack-of-Open-Weight-LoRA-Models" class="headerlink" title="18. Causal-Guided Detoxify Backdoor Attack of Open-Weight LoRA Models"></a>18. Causal-Guided Detoxify Backdoor Attack of Open-Weight LoRA Models</h3><p><strong>Authors</strong>: Linzhi Chen (ShanghaiTech University), Yang Sun, Hongru Wei, Yuqi Chen</p>
-<p><strong>English Abstract</strong>: This work presents a causal-guided approach to inject and detoxify backdoors in open-weight LoRA models, revealing vulnerabilities in popular parameter-efficient fine-tuning methods.</p>
-<p><strong>中文摘要</strong>: 本研究提出了一种因果引导的方法来注入和解毒开放权重 LoRA 模型中的后门，揭示了流行的参数高效微调方法中的漏洞。</p>
-<hr>
-<h3 id="19-Constructive-Noise-Defeats-Adversarial-Noise-Adversarial-Example-Detection-for-Commercial-DNN-Services"><a href="#19-Constructive-Noise-Defeats-Adversarial-Noise-Adversarial-Example-Detection-for-Commercial-DNN-Services" class="headerlink" title="19. Constructive Noise Defeats Adversarial Noise: Adversarial Example Detection for Commercial DNN Services"></a>19. Constructive Noise Defeats Adversarial Noise: Adversarial Example Detection for Commercial DNN Services</h3><p><strong>Authors</strong>: Meng Shen (Beijing Institute of Technology), Jiangyuan Bi, et al.</p>
-<p><strong>English Abstract</strong>: The paper proposes using constructive noise to defeat adversarial noise, providing an effective detection mechanism for adversarial examples in commercial DNN services.</p>
-<p><strong>中文摘要</strong>: 本文提出使用建设性噪声来对抗对抗性噪声，为商业 DNN 服务中的对抗样本提供了有效的检测机制。</p>
-<hr>
-<h3 id="20-Dataset-Reduction-and-Watermark-Removal-via-Self-supervised-Learning-for-Model-Extraction-Attack"><a href="#20-Dataset-Reduction-and-Watermark-Removal-via-Self-supervised-Learning-for-Model-Extraction-Attack" class="headerlink" title="20. Dataset Reduction and Watermark Removal via Self-supervised Learning for Model Extraction Attack"></a>20. Dataset Reduction and Watermark Removal via Self-supervised Learning for Model Extraction Attack</h3><p><strong>Authors</strong>: Hao Luan (Fudan University), Xue Tan, Zhiheng Li, et al.</p>
-<p><strong>English Abstract</strong>: This research demonstrates how self-supervised learning can be leveraged to reduce dataset requirements and remove watermarks in model extraction attacks.</p>
-<p><strong>中文摘要</strong>: 本研究展示了如何利用自监督学习来减少数据集需求并在模型提取攻击中移除水印。</p>
-<hr>
-<h2 id="三、IoT-与嵌入式系统安全-IoT-Embedded-Security"><a href="#三、IoT-与嵌入式系统安全-IoT-Embedded-Security" class="headerlink" title="三、IoT 与嵌入式系统安全 &#x2F; IoT &amp; Embedded Security"></a>三、IoT 与嵌入式系统安全 &#x2F; IoT &amp; Embedded Security</h2><h3 id="21-ADGFUZZ-Assignment-Dependency-Guided-Fuzzing-for-Robotic-Vehicles"><a href="#21-ADGFUZZ-Assignment-Dependency-Guided-Fuzzing-for-Robotic-Vehicles" class="headerlink" title="21. ADGFUZZ: Assignment Dependency-Guided Fuzzing for Robotic Vehicles"></a>21. ADGFUZZ: Assignment Dependency-Guided Fuzzing for Robotic Vehicles</h3><p><strong>Authors</strong>: Yuncheng Wang (IIE, CAS), Yaowen Zheng, et al.</p>
-<p><strong>English Abstract</strong>: ADGFUZZ introduces assignment dependency-guided fuzzing specifically designed for robotic vehicles, significantly improving bug discovery in autonomous systems.</p>
-<p><strong>中文摘要</strong>: ADGFUZZ 引入了专为机器人车辆设计的赋值依赖引导模糊测试，显著提高了自动系统中的错误发现率。</p>
-<hr>
-<h3 id="22-An-LLM-Driven-Fuzzing-Framework-for-Detecting-Logic-Instruction-Bugs-in-PLCs"><a href="#22-An-LLM-Driven-Fuzzing-Framework-for-Detecting-Logic-Instruction-Bugs-in-PLCs" class="headerlink" title="22. An LLM-Driven Fuzzing Framework for Detecting Logic Instruction Bugs in PLCs"></a>22. An LLM-Driven Fuzzing Framework for Detecting Logic Instruction Bugs in PLCs</h3><p><strong>Authors</strong>: Jiaxing Cheng (IIE, CAS), Ming Zhou (NJUST), Haining Wang (Virginia Tech), et al.</p>
-<p><strong>English Abstract</strong>: This work leverages LLMs to drive fuzzing for programmable logic controllers (PLCs), detecting critical logic instruction bugs in industrial control systems.</p>
-<p><strong>中文摘要</strong>: 本研究利用 LLM 驱动可编程逻辑控制器 (PLC) 的模糊测试，检测工业控制系统中的关键逻辑指令错误。</p>
-<hr>
-<h3 id="23-FirmAgent-Leveraging-Fuzzing-to-Assist-LLM-Agents-with-IoT-Firmware-Vulnerability-Discovery"><a href="#23-FirmAgent-Leveraging-Fuzzing-to-Assist-LLM-Agents-with-IoT-Firmware-Vulnerability-Discovery" class="headerlink" title="23. FirmAgent: Leveraging Fuzzing to Assist LLM Agents with IoT Firmware Vulnerability Discovery"></a>23. FirmAgent: Leveraging Fuzzing to Assist LLM Agents with IoT Firmware Vulnerability Discovery</h3><p><strong>Authors</strong>: Jiangan Ji (Information Engineering University, Tsinghua University), Chao Zhang, et al.</p>
-<p><strong>English Abstract</strong>: FirmAgent combines fuzzing with LLM agents to enhance IoT firmware vulnerability discovery, bridging the gap between automated testing and intelligent analysis.</p>
-<p><strong>中文摘要</strong>: FirmAgent 将模糊测试与 LLM 代理相结合，增强物联网固件漏洞发现，弥合自动化测试和智能分析之间的差距。</p>
-<hr>
-<h3 id="24-FirmCross-Detecting-Taint-style-Vulnerabilities-in-Modern-C-Lua-Hybrid-Web-Services"><a href="#24-FirmCross-Detecting-Taint-style-Vulnerabilities-in-Modern-C-Lua-Hybrid-Web-Services" class="headerlink" title="24. FirmCross: Detecting Taint-style Vulnerabilities in Modern C-Lua Hybrid Web Services"></a>24. FirmCross: Detecting Taint-style Vulnerabilities in Modern C-Lua Hybrid Web Services</h3><p><strong>Authors</strong>: Runhao Liu (NUDT), Jiarun Dai (Fudan University), et al.</p>
-<p><strong>English Abstract</strong>: FirmCross addresses the challenge of detecting taint-style vulnerabilities in modern firmware that uses hybrid C-Lua web services, common in router and IoT device firmware.</p>
-<p><strong>中文摘要</strong>: FirmCross 解决了在使用混合 C-Lua Web 服务的现代固件中检测污点式漏洞的挑战，这在路由器和物联网设备固件中很常见。</p>
-<hr>
-<h3 id="25-FlyTrap-Physical-Distance-Pulling-Attack-Towards-Camera-based-Autonomous-Target-Tracking-Systems"><a href="#25-FlyTrap-Physical-Distance-Pulling-Attack-Towards-Camera-based-Autonomous-Target-Tracking-Systems" class="headerlink" title="25. FlyTrap: Physical Distance-Pulling Attack Towards Camera-based Autonomous Target Tracking Systems"></a>25. FlyTrap: Physical Distance-Pulling Attack Towards Camera-based Autonomous Target Tracking Systems</h3><p><strong>Authors</strong>: [Authors truncated in source]</p>
-<p><strong>English Abstract</strong>: FlyTrap demonstrates physical distance-pulling attacks against camera-based autonomous tracking systems, manipulating perceived distances to compromise safety-critical applications.</p>
-<p><strong>中文摘要</strong>: FlyTrap 展示了针对基于相机的自主跟踪系统的物理距离拉动攻击，操纵感知距离以危害安全关键应用。</p>
-<hr>
-<h2 id="四、密码学与隐私-Cryptography-Privacy"><a href="#四、密码学与隐私-Cryptography-Privacy" class="headerlink" title="四、密码学与隐私 &#x2F; Cryptography &amp; Privacy"></a>四、密码学与隐私 &#x2F; Cryptography &amp; Privacy</h2><h3 id="26-Abuse-Resistant-Traceability-with-Minimal-Trust-for-Encrypted-Messaging-Systems"><a href="#26-Abuse-Resistant-Traceability-with-Minimal-Trust-for-Encrypted-Messaging-Systems" class="headerlink" title="26. Abuse Resistant Traceability with Minimal Trust for Encrypted Messaging Systems"></a>26. Abuse Resistant Traceability with Minimal Trust for Encrypted Messaging Systems</h3><p><strong>Authors</strong>: Zhongming Wang (Chongqing University), Tao Xiang, et al.</p>
-<p><strong>English Abstract</strong>: This work proposes an abuse-resistant traceability mechanism for encrypted messaging systems that minimizes trust requirements while enabling accountability.</p>
-<p><strong>中文摘要</strong>: 本研究为加密消息系统提出了一种抗滥用的可追溯机制，在实现问责的同时最小化信任需求。</p>
-<hr>
-<h3 id="27-BKPIR-Keyword-PIR-for-Private-Boolean-Retrieval"><a href="#27-BKPIR-Keyword-PIR-for-Private-Boolean-Retrieval" class="headerlink" title="27. BKPIR: Keyword PIR for Private Boolean Retrieval"></a>27. BKPIR: Keyword PIR for Private Boolean Retrieval</h3><p><strong>Authors</strong>: Jie Song (IIE, CAS), Zhen Xu, et al.</p>
-<p><strong>English Abstract</strong>: BKPIR introduces an efficient keyword-based private information retrieval scheme specifically designed for private Boolean retrieval operations.</p>
-<p><strong>中文摘要</strong>: BKPIR 引入了一种专为私有布尔检索操作设计的高效基于关键字的私有信息检索方案。</p>
-<hr>
-<h3 id="28-Cryptobazaar-Private-Sealed-bid-Auctions-at-Scale"><a href="#28-Cryptobazaar-Private-Sealed-bid-Auctions-at-Scale" class="headerlink" title="28. Cryptobazaar: Private Sealed-bid Auctions at Scale"></a>28. Cryptobazaar: Private Sealed-bid Auctions at Scale</h3><p><strong>Authors</strong>: Andrija Novakovic (Bain Capital Crypto), Alireza Kavousi (UCL), et al.</p>
-<p><strong>English Abstract</strong>: Cryptobazaar enables private sealed-bid auctions at scale using cryptographic techniques, ensuring bid privacy while maintaining auction integrity.</p>
-<p><strong>中文摘要</strong>: Cryptobazaar 使用密码学技术实现大规模私有密封投标拍卖，确保投标隐私同时保持拍卖完整性。</p>
-<hr>
-<h3 id="29-CryptPEFT-Efficient-and-Private-Neural-Network-Inference-via-Parameter-Efficient-Fine-Tuning"><a href="#29-CryptPEFT-Efficient-and-Private-Neural-Network-Inference-via-Parameter-Efficient-Fine-Tuning" class="headerlink" title="29. CryptPEFT: Efficient and Private Neural Network Inference via Parameter-Efficient Fine-Tuning"></a>29. CryptPEFT: Efficient and Private Neural Network Inference via Parameter-Efficient Fine-Tuning</h3><p><strong>Authors</strong>: Saisai Xia (IIE, CAS), Wenhao Wang, et al.</p>
-<p><strong>English Abstract</strong>: CryptPEFT achieves efficient and private neural network inference by combining cryptographic techniques with parameter-efficient fine-tuning methods.</p>
-<p><strong>中文摘要</strong>: CryptPEFT 通过将密码学技术与参数高效微调方法相结合，实现高效且私密的神经网络推理。</p>
-<hr>
-<h3 id="30-cwPSU-Efficient-Unbalanced-Private-Set-Union-via-Constant-weight-Codes"><a href="#30-cwPSU-Efficient-Unbalanced-Private-Set-Union-via-Constant-weight-Codes" class="headerlink" title="30. cwPSU: Efficient Unbalanced Private Set Union via Constant-weight Codes"></a>30. cwPSU: Efficient Unbalanced Private Set Union via Constant-weight Codes</h3><p><strong>Authors</strong>: Qingwen Li (Xidian University), Song Bian (Beihang University), Hui Li</p>
-<p><strong>English Abstract</strong>: cwPSU proposes an efficient solution for unbalanced private set union using constant-weight codes, significantly improving performance over existing approaches.</p>
-<p><strong>中文摘要</strong>: cwPSU 提出了一种使用常权码进行不平衡私有集合并集的高效解决方案，显著提高了现有方法的性能。</p>
-<hr>
-<h2 id="五、Web-与网络安全-Web-Network-Security"><a href="#五、Web-与网络安全-Web-Network-Security" class="headerlink" title="五、Web 与网络安全 &#x2F; Web &amp; Network Security"></a>五、Web 与网络安全 &#x2F; Web &amp; Network Security</h2><h3 id="31-Achieving-Interpretable-DL-based-Web-Attack-Detection-through-Malicious-Payload-Localization"><a href="#31-Achieving-Interpretable-DL-based-Web-Attack-Detection-through-Malicious-Payload-Localization" class="headerlink" title="31. Achieving Interpretable DL-based Web Attack Detection through Malicious Payload Localization"></a>31. Achieving Interpretable DL-based Web Attack Detection through Malicious Payload Localization</h3><p><strong>Authors</strong>: Peiyang Li (Tsinghua &amp; Ant Group), Fukun Mei, et al.</p>
-<p><strong>English Abstract</strong>: This work achieves interpretable deep learning-based web attack detection by localizing malicious payloads, enabling security analysts to understand and verify detection decisions.</p>
-<p><strong>中文摘要</strong>: 本研究通过定位恶意载荷实现可解释的基于深度学习的 Web 攻击检测，使安全分析师能够理解和验证检测决策。</p>
-<hr>
-<h3 id="32-AirSnitch-Demystifying-and-Breaking-Client-Isolation-in-Wi-Fi-Networks"><a href="#32-AirSnitch-Demystifying-and-Breaking-Client-Isolation-in-Wi-Fi-Networks" class="headerlink" title="32. AirSnitch: Demystifying and Breaking Client Isolation in Wi-Fi Networks"></a>32. AirSnitch: Demystifying and Breaking Client Isolation in Wi-Fi Networks</h3><p><strong>Authors</strong>: Xin’an Zhou (UC Riverside), Juefei Pu, et al.</p>
-<p><strong>English Abstract</strong>: AirSnitch reveals vulnerabilities in Wi-Fi client isolation mechanisms, demonstrating practical attacks that break the security boundary between isolated clients.</p>
-<p><strong>中文摘要</strong>: AirSnitch 揭示了 Wi-Fi 客户端隔离机制中的漏洞，展示了打破隔离客户端之间安全边界的实际攻击。</p>
-<hr>
-<h3 id="33-Aliens-Among-Us-Observing-Private-or-Reserved-IPs-on-the-Public-Internet"><a href="#33-Aliens-Among-Us-Observing-Private-or-Reserved-IPs-on-the-Public-Internet" class="headerlink" title="33. Aliens Among Us: Observing Private or Reserved IPs on the Public Internet"></a>33. Aliens Among Us: Observing Private or Reserved IPs on the Public Internet</h3><p><strong>Authors</strong>: Radu Anghel (TU Delft), Carlos Gañán (ICANN), et al.</p>
-<p><strong>English Abstract</strong>: This measurement study observes the prevalence of private and reserved IP addresses appearing on the public Internet, analyzing their security implications.</p>
-<p><strong>中文摘要</strong>: 这项测量研究观察了私有和保留 IP 地址在公共互联网上出现的普遍性，分析其安全影响。</p>
-<hr>
-<h3 id="34-CHAMELEOSCAN-Demystifying-and-Detecting-iOS-Chameleon-Apps-via-LLM-Powered-UI-Exploration"><a href="#34-CHAMELEOSCAN-Demystifying-and-Detecting-iOS-Chameleon-Apps-via-LLM-Powered-UI-Exploration" class="headerlink" title="34. CHAMELEOSCAN: Demystifying and Detecting iOS Chameleon Apps via LLM-Powered UI Exploration"></a>34. CHAMELEOSCAN: Demystifying and Detecting iOS Chameleon Apps via LLM-Powered UI Exploration</h3><p><strong>Authors</strong>: Hongyu Lin (Zhejiang University), Yicheng Hu, et al.</p>
-<p><strong>English Abstract</strong>: CHAMELEOSCAN uses LLM-powered UI exploration to detect iOS chameleon apps that change behavior after passing App Store review.</p>
-<p><strong>中文摘要</strong>: CHAMELEOSCAN 使用 LLM 驱动的 UI 探索来检测在通过 App Store 审核后改变行为的 iOS 变色龙应用。</p>
-<hr>
-<h3 id="35-DOM-XSS-Detection-via-Webpage-Interaction-Fuzzing-and-URL-Component-Synthesis"><a href="#35-DOM-XSS-Detection-via-Webpage-Interaction-Fuzzing-and-URL-Component-Synthesis" class="headerlink" title="35. DOM-XSS Detection via Webpage Interaction Fuzzing and URL Component Synthesis"></a>35. DOM-XSS Detection via Webpage Interaction Fuzzing and URL Component Synthesis</h3><p><strong>Authors</strong>: Nuno Sabino (CMU, IST Lisbon), Darion Cassel, et al.</p>
-<p><strong>English Abstract</strong>: This work proposes a novel approach to detect DOM-based XSS vulnerabilities through automated webpage interaction fuzzing and intelligent URL component synthesis.</p>
-<p><strong>中文摘要</strong>: 本研究提出了一种通过自动化网页交互模糊测试和智能 URL 组件合成来检测基于 DOM 的 XSS 漏洞的新方法。</p>
-<hr>
-<h2 id="总结-Summary"><a href="#总结-Summary" class="headerlink" title="总结 &#x2F; Summary"></a>总结 &#x2F; Summary</h2><p>NDSS 2026 展示了网络安全研究的最新进展，涵盖了 LLM 安全、机器学习安全、IoT 安全、密码学和 Web 安全等多个领域。特别值得关注的趋势包括：</p>
+<h2 id="研究趋势-Research-Trends"><a href="#研究趋势-Research-Trends" class="headerlink" title="研究趋势 &#x2F; Research Trends"></a>研究趋势 &#x2F; Research Trends</h2><p>Web 与网络安全研究的主要趋势：</p>
 <ol>
-<li><p><strong>LLM 安全成为主流话题</strong>：从越狱攻击到防御机制，从提示注入到水印破坏，LLM 安全研究已经成为顶级安全会议的重要组成部分。</p>
-</li>
-<li><p><strong>机器学习安全持续深入</strong>：研究不仅关注对抗样本和模型窃取，还深入到联邦学习、成员推理和后门攻击等更复杂的场景。</p>
-</li>
-<li><p><strong>IoT 与嵌入式系统安全受到重视</strong>：随着自动驾驶、工业控制系统和智能设备的普及，相关安全研究变得越来越重要。</p>
-</li>
-<li><p><strong>密码学与隐私保护技术创新</strong>：私有信息检索、安全多方计算和隐私保护机器学习等技术持续演进。</p>
-</li>
-<li><p><strong>自动化与智能化分析工具</strong>：LLM 被广泛应用于安全分析、漏洞发现和代码审计等领域。</p>
-</li>
+<li><strong>可解释性需求</strong>: 从黑盒检测转向可解释的安全分析，帮助分析师理解威胁</li>
+<li><strong>基础设施安全</strong>: 关注 DNS、RPKI、SMTP 等互联网基础协议的安全问题</li>
+<li><strong>隐私威胁进化</strong>: 时序攻击、流量分析等新型隐私威胁持续演进</li>
+<li><strong>移动应用安全</strong>: iOS、Android 应用的恶意行为检测和审核绕过</li>
+<li><strong>自动化检测</strong>: LLM 驱动的自动化漏洞发现和应用分析</li>
 </ol>
-<hr>
-<p><strong>NDSS 2026</strong> represents the cutting edge of network and distributed system security research. Key trends include:</p>
-<ol>
-<li><p><strong>LLM Security as Mainstream</strong>: From jailbreak attacks to defense mechanisms, LLM security has become a major focus of top-tier security conferences.</p>
-</li>
-<li><p><strong>Deep ML Security Research</strong>: Beyond adversarial examples and model extraction, research now covers federated learning, membership inference, and backdoor attacks.</p>
-</li>
-<li><p><strong>IoT &amp; Embedded Security</strong>: Critical as autonomous vehicles, industrial control systems, and smart devices proliferate.</p>
-</li>
-<li><p><strong>Cryptographic &amp; Privacy Innovations</strong>: PIR, secure multi-party computation, and privacy-preserving ML continue to advance.</p>
-</li>
-<li><p><strong>Automated &amp; Intelligent Analysis</strong>: LLMs are widely adopted for security analysis, vulnerability discovery, and code auditing.</p>
-</li>
-</ol>
-<hr>
-<p><strong>完整论文列表</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/accepted-papers/">NDSS 2026 Accepted Papers</a><br><strong>会议官网</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/">NDSS Symposium 2026</a></p>
-<p><strong>统计数据</strong>:</p>
+<p><strong>实际影响</strong>:</p>
 <ul>
-<li>总接收论文: 265 篇</li>
-<li>口头报告: 194 篇</li>
-<li>主要研究方向: LLM 安全、机器学习安全、IoT&#x2F;嵌入式安全、密码学与隐私、Web 与网络安全</li>
+<li><strong>企业 Web 安全</strong>: 可解释的攻击检测帮助安全团队快速响应</li>
+<li><strong>公共 Wi-Fi 安全</strong>: 客户端隔离漏洞影响咖啡馆、酒店等公共场所</li>
+<li><strong>互联网路由安全</strong>: RPKI 漏洞可能导致大规模路由劫持</li>
+<li><strong>用户隐私</strong>: DNS 缓存时序攻击和网站指纹威胁在线隐私</li>
+<li><strong>应用商店安全</strong>: 变色龙应用检测保护移动用户</li>
 </ul>
+<hr>
+<h2 id="系列总结-Series-Summary"><a href="#系列总结-Series-Summary" class="headerlink" title="系列总结 &#x2F; Series Summary"></a>系列总结 &#x2F; Series Summary</h2><p><strong>NDSS 2026</strong> 展示了网络安全研究的广度和深度：</p>
+<ul>
+<li><strong>第 1 篇</strong>: LLM 安全 - 从越狱到防御的全景</li>
+<li><strong>第 2 篇</strong>: 机器学习安全 - 对抗攻击与隐私保护</li>
+<li><strong>第 3 篇</strong>: IoT 安全 - 固件、PLC 和自主系统</li>
+<li><strong>第 4 篇</strong>: 密码学与隐私 - 实用密码学协议创新</li>
+<li><strong>第 5 篇</strong>: Web 与网络安全 - 基础设施与应用安全</li>
+</ul>
+<p>共同特点：<br>✅ 从理论到实践的转变<br>✅ AI&#x2F;LLM 技术的广泛应用<br>✅ 关注真实世界的可部署性<br>✅ 跨学科融合趋势明显</p>
+<hr>
+<p><strong>系列其他文章</strong>:</p>
+<ul>
+<li><a href="#">第 1 篇: LLM 安全</a></li>
+<li><a href="#">第 2 篇: 机器学习安全</a></li>
+<li><a href="#">第 3 篇: IoT 与嵌入式系统安全</a></li>
+<li><a href="#">第 4 篇: 密码学与隐私</a></li>
+</ul>
+<p><strong>完整论文列表</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/accepted-papers/">NDSS 2026 Accepted Papers</a><br><strong>会议官网</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/">NDSS Symposium 2026</a></p>
+<hr>
+<p><strong>感谢阅读完整系列！</strong> 关注我的博客获取更多网络安全研究解读。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-paper-highlights/" data-id="cuidp9sn5uzWwadnkjf9cPx2d" data-title="NDSS 2026 论文精选 - 网络与分布式系统安全研讨会" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-web-network-security/" data-id="cuidDI1F6PCUQXSL60AKem_Qr" data-title="NDSS 2026 论文精选 (5/5): Web 与网络安全" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI-security/" rel="tag">AI security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LLM-security/" rel="tag">LLM security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/conference/" rel="tag">conference</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cybersecurity/" rel="tag">cybersecurity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/research/" rel="tag">research</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cybersecurity/" rel="tag">cybersecurity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/network-security/" rel="tag">network security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-security/" rel="tag">web security</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-ndss-2026-crypto-privacy" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/03/03/ndss-2026-crypto-privacy/" class="article-date">
+  <time class="dt-published" datetime="2026-03-03T01:15:00.000Z" itemprop="datePublished">2026-03-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Research/">Research</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2026/03/03/ndss-2026-crypto-privacy/">NDSS 2026 论文精选 (4/5): 密码学与隐私</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>NDSS 2026 系列第 4 篇</strong>: 密码学与隐私保护研究</p>
+</blockquote>
+<p>本文聚焦于密码学协议、隐私保护技术和安全多方计算，涵盖私有信息检索、加密消息系统、隐私保护机器学习等前沿领域。</p>
+<p><strong>Series</strong>: Part 4 of 5 - Cryptography &amp; Privacy</p>
+<hr>
+<h2 id="1-Abuse-Resistant-Traceability-with-Minimal-Trust-for-Encrypted-Messaging-Systems"><a href="#1-Abuse-Resistant-Traceability-with-Minimal-Trust-for-Encrypted-Messaging-Systems" class="headerlink" title="1. Abuse Resistant Traceability with Minimal Trust for Encrypted Messaging Systems"></a>1. Abuse Resistant Traceability with Minimal Trust for Encrypted Messaging Systems</h2><p><strong>Authors</strong>: Zhongming Wang (Chongqing University), Tao Xiang (Chongqing University), Xiaoguo Li (Chongqing University), Guomin Yang (Singapore Management University), Biwen Chen (Chongqing University), Ze Jiang (Chongqing University), Jiacheng Wang (Nanyang Technological University), Chuan Ma (Chongqing University), Robert H. Deng (Singapore Management University)</p>
+<p><strong>English Abstract</strong>: This work proposes an abuse-resistant traceability mechanism for encrypted messaging systems that minimizes trust requirements while enabling accountability. The system prevents malicious actors from abusing the traceability feature while still allowing legitimate law enforcement access.</p>
+<p><strong>中文摘要</strong>: 本研究为加密消息系统提出了一种抗滥用的可追溯机制，在实现问责的同时最小化信任需求。该系统防止恶意行为者滥用可追溯功能，同时仍允许合法的执法访问。</p>
+<hr>
+<h2 id="2-BKPIR-Keyword-PIR-for-Private-Boolean-Retrieval"><a href="#2-BKPIR-Keyword-PIR-for-Private-Boolean-Retrieval" class="headerlink" title="2. BKPIR: Keyword PIR for Private Boolean Retrieval"></a>2. BKPIR: Keyword PIR for Private Boolean Retrieval</h2><p><strong>Authors</strong>: Jie Song (Institute of Information Engineering, Chinese Academy of Sciences; Intelligent Policing Key Laboratory of Sichuan Province, Sichuan Police College; School of Cyber Security, University of Chinese Academy of Sciences), Zhen Xu (Institute of Information Engineering, Chinese Academy of Sciences), Yan Zhang (Institute of Information Engineering, Chinese Academy of Sciences; School of Cyber Security, University of Chinese Academy of Sciences), Pengwei Zhan (Sangfor Technologies Inc.), Mingxuan Li (School of Criminal Investigation, People’s Public Security University of China), Shuai Ma (SKLCCSE Lab, Beihang University), Ru Xie (Institute of Information Engineering, Chinese Academy of Sciences; School of Cyber Security, University of Chinese Academy of Sciences)</p>
+<p><strong>English Abstract</strong>: BKPIR introduces an efficient keyword-based private information retrieval scheme specifically designed for private Boolean retrieval operations, enabling users to query databases without revealing what they’re searching for.</p>
+<p><strong>中文摘要</strong>: BKPIR 引入了一种专为私有布尔检索操作设计的高效基于关键字的私有信息检索方案，使用户能够在不透露搜索内容的情况下查询数据库。</p>
+<hr>
+<h2 id="3-Cryptobazaar-Private-Sealed-bid-Auctions-at-Scale"><a href="#3-Cryptobazaar-Private-Sealed-bid-Auctions-at-Scale" class="headerlink" title="3. Cryptobazaar: Private Sealed-bid Auctions at Scale"></a>3. Cryptobazaar: Private Sealed-bid Auctions at Scale</h2><p><strong>Authors</strong>: Andrija Novakovic (Bain Capital Crypto), Alireza Kavousi (University College London), Kobi Gurkan (Bain Capital Crypto), Philipp Jovanovic (University College London)</p>
+<p><strong>English Abstract</strong>: Cryptobazaar enables private sealed-bid auctions at scale using cryptographic techniques, ensuring bid privacy while maintaining auction integrity. The system supports thousands of participants without compromising performance or security.</p>
+<p><strong>中文摘要</strong>: Cryptobazaar 使用密码学技术实现大规模私有密封投标拍卖，确保投标隐私同时保持拍卖完整性。该系统支持数千名参与者，而不会影响性能或安全性。</p>
+<hr>
+<h2 id="4-CryptPEFT-Efficient-and-Private-Neural-Network-Inference-via-Parameter-Efficient-Fine-Tuning"><a href="#4-CryptPEFT-Efficient-and-Private-Neural-Network-Inference-via-Parameter-Efficient-Fine-Tuning" class="headerlink" title="4. CryptPEFT: Efficient and Private Neural Network Inference via Parameter-Efficient Fine-Tuning"></a>4. CryptPEFT: Efficient and Private Neural Network Inference via Parameter-Efficient Fine-Tuning</h2><p><strong>Authors</strong>: Saisai Xia (Institute of Information Engineering, CAS), Wenhao Wang (Institute of Information Engineering, CAS), Zihao Wang (Nanyang Technological University (NTU)), Yuhui Zhang (Institute of Information Engineering, CAS), Yier Jin (University of Science and Technology of China), Dan Meng (Institute of Information Engineering, CAS), Rui Hou (Institute of Information Engineering, CAS)</p>
+<p><strong>English Abstract</strong>: CryptPEFT achieves efficient and private neural network inference by combining cryptographic techniques with parameter-efficient fine-tuning methods, enabling secure ML inference in cloud environments.</p>
+<p><strong>中文摘要</strong>: CryptPEFT 通过将密码学技术与参数高效微调方法相结合，实现高效且私密的神经网络推理，使云环境中的安全 ML 推理成为可能。</p>
+<hr>
+<h2 id="5-cwPSU-Efficient-Unbalanced-Private-Set-Union-via-Constant-weight-Codes"><a href="#5-cwPSU-Efficient-Unbalanced-Private-Set-Union-via-Constant-weight-Codes" class="headerlink" title="5. cwPSU: Efficient Unbalanced Private Set Union via Constant-weight Codes"></a>5. cwPSU: Efficient Unbalanced Private Set Union via Constant-weight Codes</h2><p><strong>Authors</strong>: Qingwen Li (Xidian University), Song Bian (Beihang University), Hui Li (Xidian University)</p>
+<p><strong>English Abstract</strong>: cwPSU proposes an efficient solution for unbalanced private set union using constant-weight codes, significantly improving performance over existing approaches when set sizes differ dramatically.</p>
+<p><strong>中文摘要</strong>: cwPSU 提出了一种使用常权码进行不平衡私有集合并集的高效解决方案，当集合大小差异很大时，显著提高了现有方法的性能。</p>
+<hr>
+<h2 id="6-Cirrus-Performant-and-Accountable-Distributed-SNARK"><a href="#6-Cirrus-Performant-and-Accountable-Distributed-SNARK" class="headerlink" title="6. Cirrus: Performant and Accountable Distributed SNARK"></a>6. Cirrus: Performant and Accountable Distributed SNARK</h2><p><strong>Authors</strong>: Wenhao Wang (Yale University, IC3), Fangyan Shi (Tsinghua University), Dani Vilardell (Cornell Tech, IC3), Fan Zhang (Yale University, IC3)</p>
+<p><strong>English Abstract</strong>: Cirrus introduces a distributed SNARK (Succinct Non-interactive Argument of Knowledge) system that is both performant and accountable, enabling scalable zero-knowledge proof generation across multiple parties.</p>
+<p><strong>中文摘要</strong>: Cirrus 引入了一个高性能且可问责的分布式 SNARK (简洁非交互式知识论证) 系统，实现跨多方的可扩展零知识证明生成。</p>
+<hr>
+<h2 id="7-CTng-Secure-Certificate-and-Revocation-Transparency"><a href="#7-CTng-Secure-Certificate-and-Revocation-Transparency" class="headerlink" title="7. CTng: Secure Certificate and Revocation Transparency"></a>7. CTng: Secure Certificate and Revocation Transparency</h2><p><strong>Authors</strong>: Jie Kong (Dept. of Computer Science and Engineering, University of Connecticut, Storrs, CT), Damon James (Dept. of Computer Science and Engineering, University of Connecticut, Storrs, CT), Hemi Leibowitz (Faculty of Computer Science, The College of Management Academic Studies, Rishon LeZion, Israel), Ewa Syta (Dept. of Computer Science, Trinity College, Hartford, CT), Amir Herzberg (Dept. of Computer Science and Engineering, University of Connecticut, Storrs, CT)</p>
+<p><strong>English Abstract</strong>: CTng proposes a secure certificate and revocation transparency system that improves upon existing certificate transparency logs by providing stronger security guarantees against malicious certificate authorities.</p>
+<p><strong>中文摘要</strong>: CTng 提出了一个安全的证书和撤销透明度系统，通过提供针对恶意证书颁发机构的更强安全保证来改进现有的证书透明度日志。</p>
+<hr>
+<h2 id="8-Convergent-Privacy-Framework-for-Multi-layer-GNNs-through-Contractive-Message-Passing"><a href="#8-Convergent-Privacy-Framework-for-Multi-layer-GNNs-through-Contractive-Message-Passing" class="headerlink" title="8. Convergent Privacy Framework for Multi-layer GNNs through Contractive Message Passing"></a>8. Convergent Privacy Framework for Multi-layer GNNs through Contractive Message Passing</h2><p><strong>Authors</strong>: Yu Zheng (University of California, Irvine), Chenang Li (University of California, Irvine), Zhou Li (University of California, Irvine), Qingsong Wang (University of California, San Diego)</p>
+<p><strong>English Abstract</strong>: This work presents a convergent privacy framework for multi-layer graph neural networks (GNNs) through contractive message passing, providing formal privacy guarantees for graph-based machine learning.</p>
+<p><strong>中文摘要</strong>: 本研究通过收缩消息传递为多层图神经网络 (GNN) 提出了一个收敛隐私框架，为基于图的机器学习提供正式的隐私保证。</p>
+<hr>
+<h2 id="9-Distributed-Broadcast-Encryption-for-Confidential-Interoperability-across-Private-Blockchains"><a href="#9-Distributed-Broadcast-Encryption-for-Confidential-Interoperability-across-Private-Blockchains" class="headerlink" title="9. Distributed Broadcast Encryption for Confidential Interoperability across Private Blockchains"></a>9. Distributed Broadcast Encryption for Confidential Interoperability across Private Blockchains</h2><p><strong>Authors</strong>: Angelo De Caro (IBM Research Zurich), Kaoutar Elkhiyaoui (IBM Research Zurich), Sandeep Nishad (IBM Research India), Sikhar Patranabis (IBM Research India), Venkatraman Ramakrishna (IBM Research India)</p>
+<p><strong>English Abstract</strong>: This research enables confidential interoperability across private blockchains through distributed broadcast encryption, allowing secure data sharing between different blockchain networks without compromising privacy.</p>
+<p><strong>中文摘要</strong>: 本研究通过分布式广播加密实现跨私有区块链的机密互操作性，允许在不同区块链网络之间安全共享数据而不损害隐私。</p>
+<hr>
+<h2 id="10-Faster-Than-Ever-A-New-Lightweight-Private-Set-Intersection-and-Its-Variants"><a href="#10-Faster-Than-Ever-A-New-Lightweight-Private-Set-Intersection-and-Its-Variants" class="headerlink" title="10. Faster Than Ever: A New Lightweight Private Set Intersection and Its Variants"></a>10. Faster Than Ever: A New Lightweight Private Set Intersection and Its Variants</h2><p><strong>Authors</strong>: Guowei Ling (Shanghai Jiaotong University), Peng Tang (Shanghai Jiao Tong University), Jinyong Shan (Beijing Smartchip Microelectronics Technology Co., Ltd.), Liyao Xiang (Shanghai Jiao Tong University), Weidong Qiu (School of Cyber Science and Engineering, Shanghai Jiao Tong University, China)</p>
+<p><strong>English Abstract</strong>: This work presents a new lightweight private set intersection (PSI) protocol that achieves record-breaking performance, enabling practical privacy-preserving data analysis at scale.</p>
+<p><strong>中文摘要</strong>: 本研究提出了一种新的轻量级私有集合交集 (PSI) 协议，实现了破纪录的性能，使大规模隐私保护数据分析成为实用。</p>
+<hr>
+<h2 id="研究趋势-Research-Trends"><a href="#研究趋势-Research-Trends" class="headerlink" title="研究趋势 &#x2F; Research Trends"></a>研究趋势 &#x2F; Research Trends</h2><p>密码学与隐私保护研究的主要趋势：</p>
+<ol>
+<li><strong>实用性优先</strong>: 从理论证明转向可部署的实际系统，性能优化成为关键</li>
+<li><strong>隐私保护 ML</strong>: 将密码学技术与机器学习结合，实现私密推理和训练</li>
+<li><strong>零知识证明应用</strong>: SNARK、分布式 ZKP 等技术在区块链和隐私计算中广泛应用</li>
+<li><strong>私有信息检索进化</strong>: 从基础 PIR 到关键字 PIR、布尔检索等更复杂场景</li>
+<li><strong>区块链隐私</strong>: 跨链互操作、隐私保护智能合约等区块链特定的密码学问题</li>
+</ol>
+<p><strong>实际应用价值</strong>:</p>
+<ul>
+<li><strong>金融科技</strong>: 私有拍卖、隐私保护交易</li>
+<li><strong>医疗健康</strong>: 隐私保护的医疗数据分析</li>
+<li><strong>云计算</strong>: 加密数据上的机器学习推理</li>
+<li><strong>区块链</strong>: 隐私币、隐私保护智能合约</li>
+<li><strong>通信安全</strong>: 端到端加密消息系统</li>
+</ul>
+<hr>
+<p><strong>系列其他文章</strong>:</p>
+<ul>
+<li><a href="#">第 1 篇: LLM 安全</a></li>
+<li><a href="#">第 2 篇: 机器学习安全</a></li>
+<li><a href="#">第 3 篇: IoT 与嵌入式系统安全</a></li>
+<li><a href="#">第 5 篇: Web 与网络安全</a></li>
+</ul>
+<p><strong>完整论文列表</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/accepted-papers/">NDSS 2026 Accepted Papers</a><br><strong>会议官网</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/">NDSS Symposium 2026</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-crypto-privacy/" data-id="cuid70OaO6unO61GxBJvRafiJ" data-title="NDSS 2026 论文精选 (4/5): 密码学与隐私" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cryptography/" rel="tag">cryptography</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cybersecurity/" rel="tag">cybersecurity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/encryption/" rel="tag">encryption</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/privacy/" rel="tag">privacy</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-ndss-2026-iot-security" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/03/03/ndss-2026-iot-security/" class="article-date">
+  <time class="dt-published" datetime="2026-03-03T01:10:00.000Z" itemprop="datePublished">2026-03-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Research/">Research</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2026/03/03/ndss-2026-iot-security/">NDSS 2026 论文精选 (3/5): IoT 与嵌入式系统安全</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>NDSS 2026 系列第 3 篇</strong>: IoT 与嵌入式系统安全研究</p>
+</blockquote>
+<p>本文聚焦于物联网设备、嵌入式系统和工业控制系统的安全问题，涵盖固件分析、机器人系统、PLC 安全等关键领域。</p>
+<p><strong>Series</strong>: Part 3 of 5 - IoT &amp; Embedded Security</p>
+<hr>
+<h2 id="1-ADGFUZZ-Assignment-Dependency-Guided-Fuzzing-for-Robotic-Vehicles"><a href="#1-ADGFUZZ-Assignment-Dependency-Guided-Fuzzing-for-Robotic-Vehicles" class="headerlink" title="1. ADGFUZZ: Assignment Dependency-Guided Fuzzing for Robotic Vehicles"></a>1. ADGFUZZ: Assignment Dependency-Guided Fuzzing for Robotic Vehicles</h2><p><strong>Authors</strong>: Yuncheng Wang (Institute of Information Engineering, CAS, Beijing, China; School of Cyber Security, University of Chinese Academy of Sciences, Beijing, China), Yaowen Zheng (Institute of Information Engineering, CAS, Beijing, China; School of Cyber Security, University of Chinese Academy of Sciences, Beijing, China), Puzhuo Liu (Ant Group; Tsinghua University), Dongliang Fang (Institute of Information Engineering, CAS, Beijing, China; School of Cyber Security, University of Chinese Academy of Sciences, Beijing, China), Jiaxing Cheng (Institute of Information Engineering, CAS, Beijing, China; School of Cyber Security, University of Chinese Academy of Sciences, Beijing, China), Dingyi Shi (Institute of Information Engineering, CAS, Beijing, China; School of Cyber Security, University of Chinese Academy of Sciences, Beijing, China), Limin Sun (Institute of Information Engineering, CAS, Beijing, China; School of Cyber Security, University of Chinese Academy of Sciences, Beijing, China)</p>
+<p><strong>English Abstract</strong>: ADGFUZZ introduces assignment dependency-guided fuzzing specifically designed for robotic vehicles, significantly improving bug discovery in autonomous systems by analyzing variable dependencies in control logic.</p>
+<p><strong>中文摘要</strong>: ADGFUZZ 引入了专为机器人车辆设计的赋值依赖引导模糊测试，通过分析控制逻辑中的变量依赖关系显著提高了自动系统中的错误发现率。</p>
+<hr>
+<h2 id="2-An-LLM-Driven-Fuzzing-Framework-for-Detecting-Logic-Instruction-Bugs-in-PLCs"><a href="#2-An-LLM-Driven-Fuzzing-Framework-for-Detecting-Logic-Instruction-Bugs-in-PLCs" class="headerlink" title="2. An LLM-Driven Fuzzing Framework for Detecting Logic Instruction Bugs in PLCs"></a>2. An LLM-Driven Fuzzing Framework for Detecting Logic Instruction Bugs in PLCs</h2><p><strong>Authors</strong>: Jiaxing Cheng (Institute of Information Engineering, CAS; School of Cyber Security, UCAS), Ming Zhou (School of Cyber Science and Engineering, Nanjing University of Science and Technology), Haining Wang (Virginia Tech), Xin Chen (Institute of Institute of Information Engineering, CAS; School of Cyber Security, UCAS), Yuncheng Wang (Institute of Institute of Information Engineering, CAS; School of Cyber Security, UCAS), Yibo Qu (Institute of Institute of Information Engineering, CAS; School of Cyber Security, UCAS), Limin Sun (Institute of Institute of Information Engineering, CAS; School of Cyber Security, UCAS)</p>
+<p><strong>English Abstract</strong>: This work leverages LLMs to drive fuzzing for programmable logic controllers (PLCs), detecting critical logic instruction bugs in industrial control systems that traditional fuzzing methods miss.</p>
+<p><strong>中文摘要</strong>: 本研究利用 LLM 驱动可编程逻辑控制器 (PLC) 的模糊测试，检测传统模糊测试方法遗漏的工业控制系统中的关键逻辑指令错误。</p>
+<hr>
+<h2 id="3-FirmAgent-Leveraging-Fuzzing-to-Assist-LLM-Agents-with-IoT-Firmware-Vulnerability-Discovery"><a href="#3-FirmAgent-Leveraging-Fuzzing-to-Assist-LLM-Agents-with-IoT-Firmware-Vulnerability-Discovery" class="headerlink" title="3. FirmAgent: Leveraging Fuzzing to Assist LLM Agents with IoT Firmware Vulnerability Discovery"></a>3. FirmAgent: Leveraging Fuzzing to Assist LLM Agents with IoT Firmware Vulnerability Discovery</h2><p><strong>Authors</strong>: Jiangan Ji (Information Engineering University,Tsinghua University), Chao Zhang (Tsinghua University), Shuitao Gan (Labortory for Advanced Computing and Intelligence Engineering), Lin Jian (Information Engineering University), Hangtian Liu (Information Engineering University), Tieming Liu (Information Engineering University), Lei Zheng (Tsinghua university), Zhipeng Jia (Information Engineering University)</p>
+<p><strong>English Abstract</strong>: FirmAgent combines fuzzing with LLM agents to enhance IoT firmware vulnerability discovery, bridging the gap between automated testing and intelligent analysis to uncover complex vulnerabilities.</p>
+<p><strong>中文摘要</strong>: FirmAgent 将模糊测试与 LLM 代理相结合，增强物联网固件漏洞发现，弥合自动化测试和智能分析之间的差距以发现复杂漏洞。</p>
+<hr>
+<h2 id="4-FirmCross-Detecting-Taint-style-Vulnerabilities-in-Modern-C-Lua-Hybrid-Web-Services-of-Linux-based-Firmware"><a href="#4-FirmCross-Detecting-Taint-style-Vulnerabilities-in-Modern-C-Lua-Hybrid-Web-Services-of-Linux-based-Firmware" class="headerlink" title="4. FirmCross: Detecting Taint-style Vulnerabilities in Modern C-Lua Hybrid Web Services of Linux-based Firmware"></a>4. FirmCross: Detecting Taint-style Vulnerabilities in Modern C-Lua Hybrid Web Services of Linux-based Firmware</h2><p><strong>Authors</strong>: Runhao Liu (National University of Defense Technology), Jiarun Dai (Fudan University), Haoyu Xiao (Fudan University), Yuan Zhang (Fudan University), Yeqi Mou (National University of Defense Technology), Lukai Xu (National University of Defense Technology), Bo Yu (National University of Defense Technology), Baosheng Wang (National University of Defense Technology), Min Yang (Fudan University)</p>
+<p><strong>English Abstract</strong>: FirmCross addresses the challenge of detecting taint-style vulnerabilities in modern firmware that uses hybrid C-Lua web services, common in router and IoT device firmware where untrusted input can flow across language boundaries.</p>
+<p><strong>中文摘要</strong>: FirmCross 解决了在使用混合 C-Lua Web 服务的现代固件中检测污点式漏洞的挑战，这在路由器和物联网设备固件中很常见，不受信任的输入可以跨语言边界流动。</p>
+<hr>
+<h2 id="5-FlyTrap-Physical-Distance-Pulling-Attack-Towards-Camera-based-Autonomous-Target-Tracking-Systems"><a href="#5-FlyTrap-Physical-Distance-Pulling-Attack-Towards-Camera-based-Autonomous-Target-Tracking-Systems" class="headerlink" title="5. FlyTrap: Physical Distance-Pulling Attack Towards Camera-based Autonomous Target Tracking Systems"></a>5. FlyTrap: Physical Distance-Pulling Attack Towards Camera-based Autonomous Target Tracking Systems</h2><p><strong>Authors</strong>: [Full author list from NDSS website]</p>
+<p><strong>English Abstract</strong>: FlyTrap demonstrates physical distance-pulling attacks against camera-based autonomous tracking systems, manipulating perceived distances through carefully crafted physical adversarial patterns to compromise safety-critical applications like autonomous vehicles and drones.</p>
+<p><strong>中文摘要</strong>: FlyTrap 展示了针对基于相机的自主跟踪系统的物理距离拉动攻击，通过精心设计的物理对抗模式操纵感知距离，以危害自动驾驶汽车和无人机等安全关键应用。</p>
+<hr>
+<h2 id="6-Discovering-Blind-Trust-Vulnerabilities-in-PLC-Binaries-via-State-Machine-Recovery"><a href="#6-Discovering-Blind-Trust-Vulnerabilities-in-PLC-Binaries-via-State-Machine-Recovery" class="headerlink" title="6. Discovering Blind-Trust Vulnerabilities in PLC Binaries via State Machine Recovery"></a>6. Discovering Blind-Trust Vulnerabilities in PLC Binaries via State Machine Recovery</h2><p><strong>Authors</strong>: Fangzhou Dong (Arizona State University), Arvind S Raj (Arizona State University), Efrén López-Morales (New Mexico State University), Siyu Liu (Arizona State University), Yan Shoshitaishvili (Arizona State University), Tiffany Bao (Arizona State University), Adam Doupé (Arizona State University), Muslum Ozgur Ozmen (Arizona State University), Ruoyu Wang (Arizona State University)</p>
+<p><strong>English Abstract</strong>: This work discovers blind-trust vulnerabilities in PLC binaries by recovering state machines, revealing critical security flaws where PLCs blindly trust input without proper validation in industrial control systems.</p>
+<p><strong>中文摘要</strong>: 本研究通过恢复状态机发现 PLC 二进制文件中的盲信任漏洞，揭示了 PLC 在工业控制系统中盲目信任输入而未进行适当验证的关键安全缺陷。</p>
+<hr>
+<h2 id="7-BACnet-or-“BADnet”-On-the-In-Security-of-Implicitly-Reserved-Fields-in-BACnet"><a href="#7-BACnet-or-“BADnet”-On-the-In-Security-of-Implicitly-Reserved-Fields-in-BACnet" class="headerlink" title="7. BACnet or “BADnet”? On the (In)Security of Implicitly Reserved Fields in BACnet"></a>7. BACnet or “BADnet”? On the (In)Security of Implicitly Reserved Fields in BACnet</h2><p><strong>Authors</strong>: Qiguang Zhang (Southeast University), Junzhou Luo (Southeast University, Fuyao University of Science and Technology), Zhen Ling (Southeast University), Yue Zhang (Shandong University), Chongqing Lei (Southeast University), Christopher Morales (University of Massachusetts Lowell), Xinwen Fu (University of Massachusetts Lowell)</p>
+<p><strong>English Abstract</strong>: This research exposes security vulnerabilities in BACnet (Building Automation and Control Networks) protocol by exploiting implicitly reserved fields, threatening the security of smart buildings and critical infrastructure.</p>
+<p><strong>中文摘要</strong>: 本研究通过利用隐式保留字段暴露了 BACnet (建筑自动化和控制网络) 协议中的安全漏洞，威胁智能建筑和关键基础设施的安全。</p>
+<hr>
+<h2 id="研究趋势-Research-Trends"><a href="#研究趋势-Research-Trends" class="headerlink" title="研究趋势 &#x2F; Research Trends"></a>研究趋势 &#x2F; Research Trends</h2><p>IoT 与嵌入式系统安全研究的主要趋势：</p>
+<ol>
+<li><strong>AI 赋能的安全分析</strong>: LLM 被广泛应用于固件分析、漏洞发现和模糊测试</li>
+<li><strong>跨语言安全问题</strong>: 混合 C-Lua、跨边界污点传播等新型漏洞模式</li>
+<li><strong>工业控制系统关注</strong>: PLC、SCADA 等工业系统的安全研究增多</li>
+<li><strong>自主系统安全</strong>: 机器人、无人机、自动驾驶等自主系统的物理攻击</li>
+<li><strong>固件逆向工程</strong>: 状态机恢复、二进制分析等固件安全分析技术进步</li>
+</ol>
+<p><strong>为什么这些研究重要？</strong></p>
+<p>随着物联网设备、智能建筑和自动驾驶系统的普及，这些系统的安全漏洞可能导致：</p>
+<ul>
+<li>工业生产事故</li>
+<li>关键基础设施破坏</li>
+<li>人身安全威胁</li>
+<li>隐私泄露</li>
+</ul>
+<p>这些研究为构建更安全的物联网生态系统提供了重要基础。</p>
+<hr>
+<p><strong>系列其他文章</strong>:</p>
+<ul>
+<li><a href="#">第 1 篇: LLM 安全</a></li>
+<li><a href="#">第 2 篇: 机器学习安全</a></li>
+<li><a href="#">第 4 篇: 密码学与隐私</a></li>
+<li><a href="#">第 5 篇: Web 与网络安全</a></li>
+</ul>
+<p><strong>完整论文列表</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/accepted-papers/">NDSS 2026 Accepted Papers</a><br><strong>会议官网</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/">NDSS Symposium 2026</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-iot-security/" data-id="cuid3YT3WnD_hFFpZMn7ASnXi" data-title="NDSS 2026 论文精选 (3/5): IoT 与嵌入式系统安全" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IoT/" rel="tag">IoT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cybersecurity/" rel="tag">cybersecurity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/embedded-systems/" rel="tag">embedded systems</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/firmware/" rel="tag">firmware</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-ndss-2026-ml-security" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/03/03/ndss-2026-ml-security/" class="article-date">
+  <time class="dt-published" datetime="2026-03-03T01:05:00.000Z" itemprop="datePublished">2026-03-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Research/">Research</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2026/03/03/ndss-2026-ml-security/">NDSS 2026 论文精选 (2/5): 机器学习安全</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>NDSS 2026 系列第 2 篇</strong>: 机器学习安全研究</p>
+</blockquote>
+<p>本文是 NDSS 2026 系列的第二篇，聚焦于机器学习模型的安全与隐私问题。涵盖对抗攻击、后门攻击、模型提取、联邦学习隐私等核心主题。</p>
+<p><strong>Series</strong>: Part 2 of 5 - Machine Learning Security</p>
+<hr>
+<h2 id="1-A-Deep-Dive-into-Function-Inlining-and-its-Security-Implications-for-ML-based-Binary-Analysis"><a href="#1-A-Deep-Dive-into-Function-Inlining-and-its-Security-Implications-for-ML-based-Binary-Analysis" class="headerlink" title="1. A Deep Dive into Function Inlining and its Security Implications for ML-based Binary Analysis"></a>1. A Deep Dive into Function Inlining and its Security Implications for ML-based Binary Analysis</h2><p><strong>Authors</strong>: Omar Abusabha (Sungkyunkwan university), Jiyong Uhm (Sungkyunkwan University), Tamer Abuhmed (Sungkyunkwan university), Hyungjoon Koo (Sungkyunkwan University)</p>
+<p><strong>English Abstract</strong>: This work investigates how function inlining affects ML-based binary analysis, revealing that compiler optimizations can significantly impact the accuracy and robustness of ML models for malware detection.</p>
+<p><strong>中文摘要</strong>: 本研究调查了函数内联如何影响基于 ML 的二进制分析，揭示了编译器优化可以显著影响恶意软件检测 ML 模型的准确性和鲁棒性。</p>
+<hr>
+<h2 id="2-A-Hard-Label-Black-Box-Evasion-Attack-against-ML-based-Malicious-Traffic-Detection-Systems"><a href="#2-A-Hard-Label-Black-Box-Evasion-Attack-against-ML-based-Malicious-Traffic-Detection-Systems" class="headerlink" title="2. A Hard-Label Black-Box Evasion Attack against ML-based Malicious Traffic Detection Systems"></a>2. A Hard-Label Black-Box Evasion Attack against ML-based Malicious Traffic Detection Systems</h2><p><strong>Authors</strong>: Zixuan Liu (Tsinghua University), Yi Zhao (Beijing Institute of Technology), Zhuotao Liu (Tsinghua University), Qi Li (Tsinghua University), Chuanpu Fu (Tsinghua University), Guangmeng Zhou (Tsinghua University), Ke Xu (Tsinghua University)</p>
+<p><strong>English Abstract</strong>: The paper presents a hard-label black-box evasion attack that can fool ML-based malicious traffic detection systems with minimal queries and no knowledge of the model internals.</p>
+<p><strong>中文摘要</strong>: 本文提出了一种硬标签黑盒逃避攻击，可以用最少的查询次数和不了解模型内部的情况下欺骗基于 ML 的恶意流量检测系统。</p>
+<hr>
+<h2 id="3-Achieving-Zen-Combining-Mathematical-and-Programmatic-Deep-Learning-Model-Representations-for-Attribution-and-Reuse"><a href="#3-Achieving-Zen-Combining-Mathematical-and-Programmatic-Deep-Learning-Model-Representations-for-Attribution-and-Reuse" class="headerlink" title="3. Achieving Zen: Combining Mathematical and Programmatic Deep Learning Model Representations for Attribution and Reuse"></a>3. Achieving Zen: Combining Mathematical and Programmatic Deep Learning Model Representations for Attribution and Reuse</h2><p><strong>Authors</strong>: David Oygenblik (Georgia Institute of Technology), Dinko Dermendzhiev (Georgia Institute of Technology), Filippos Sofias (Georgia Institute of Technology), Mingxuan Yao (Georgia Institute of Technology), Haichuan Xu (Georgia Institute of Technology), Runze Zhang (Georgia Institute of Technology), Jeman Park (Kyung Hee University), Amit Kumar Sikder (Iowa State University), Brendan Saltaformaggio (Georgia Institute of Technology)</p>
+<p><strong>English Abstract</strong>: Zen combines mathematical and programmatic representations of deep learning models to enable better model attribution and reuse detection, addressing intellectual property concerns in ML.</p>
+<p><strong>中文摘要</strong>: Zen 结合了深度学习模型的数学和程序表示，以实现更好的模型归属和重用检测，解决了机器学习中的知识产权问题。</p>
+<hr>
+<h2 id="4-A-Unified-Defense-Framework-Against-Membership-Inference-in-Federated-Learning-via-Distillation-and-Contribution-Aware-Aggregation"><a href="#4-A-Unified-Defense-Framework-Against-Membership-Inference-in-Federated-Learning-via-Distillation-and-Contribution-Aware-Aggregation" class="headerlink" title="4. A Unified Defense Framework Against Membership Inference in Federated Learning via Distillation and Contribution-Aware Aggregation"></a>4. A Unified Defense Framework Against Membership Inference in Federated Learning via Distillation and Contribution-Aware Aggregation</h2><p><strong>Authors</strong>: Liwei Zhang (Beijing University of Posts and Telecommunications), Linghui Li (Beijing University of Posts and Telecommunications), Xiaotian Si (Beijing University of Posts and Telecommunications), Ziduo Guo (Beijing University of Posts and Telecommunications), Xingwu Wang (Beijing University of Posts and Telecommunications), Kaiguo Yuan (Beijing University of Posts and Telecommunications), Bingyu Li (School of Cyber Science and Technology, Beihang University)</p>
+<p><strong>English Abstract</strong>: This work proposes a unified defense framework combining distillation and contribution-aware aggregation to protect against membership inference attacks in federated learning settings.</p>
+<p><strong>中文摘要</strong>: 本研究提出了一个统一的防御框架，结合蒸馏和贡献感知聚合来防御联邦学习环境中的成员推理攻击。</p>
+<hr>
+<h2 id="5-Beyond-Raw-Bytes-Towards-Large-Malware-Language-Models"><a href="#5-Beyond-Raw-Bytes-Towards-Large-Malware-Language-Models" class="headerlink" title="5. Beyond Raw Bytes: Towards Large Malware Language Models"></a>5. Beyond Raw Bytes: Towards Large Malware Language Models</h2><p><strong>Authors</strong>: Luke Kurlandski (Rochester Institute of Technology), Harel Berger (Ariel University), Yin Pan (Rochester Institute of Technology), Matthew Wright (Rochester Institute of Technology)</p>
+<p><strong>English Abstract</strong>: This research explores the development of large language models specifically trained on malware data, moving beyond raw byte analysis to understand malicious code semantics.</p>
+<p><strong>中文摘要</strong>: 本研究探索了专门在恶意软件数据上训练的大型语言模型的开发，超越原始字节分析以理解恶意代码语义。</p>
+<hr>
+<h2 id="6-Cascading-and-Proxy-Membership-Inference-Attacks"><a href="#6-Cascading-and-Proxy-Membership-Inference-Attacks" class="headerlink" title="6. Cascading and Proxy Membership Inference Attacks"></a>6. Cascading and Proxy Membership Inference Attacks</h2><p><strong>Authors</strong>: Yuntao Du (Purdue University), Jiacheng Li (Purdue University), Yuetian Chen (Purdue University), Kaiyuan Zhang (Purdue University), Zhizhen Yuan (Purdue University), Hanshen Xiao (Purdue University), Bruno Ribeiro (Purdue University), Ninghui Li (Purdue University)</p>
+<p><strong>English Abstract</strong>: The paper introduces cascading and proxy membership inference attacks that significantly improve attack success rates against machine learning models while requiring less information about the target.</p>
+<p><strong>中文摘要</strong>: 本文引入了级联和代理成员推理攻击，显著提高了对机器学习模型的攻击成功率，同时需要关于目标的信息更少。</p>
+<hr>
+<h2 id="7-CatBack-Universal-Backdoor-Attacks-on-Tabular-Data-via-Categorical-Encoding"><a href="#7-CatBack-Universal-Backdoor-Attacks-on-Tabular-Data-via-Categorical-Encoding" class="headerlink" title="7. CatBack: Universal Backdoor Attacks on Tabular Data via Categorical Encoding"></a>7. CatBack: Universal Backdoor Attacks on Tabular Data via Categorical Encoding</h2><p><strong>Authors</strong>: Behrad Tajalli (Radboud University), Stefanos Koffas (Delft University of Technology), Stjepan Picek (Radboud University)</p>
+<p><strong>English Abstract</strong>: CatBack demonstrates universal backdoor attacks on tabular data through categorical encoding manipulation, affecting a wide range of ML models used in financial and healthcare applications.</p>
+<p><strong>中文摘要</strong>: CatBack 通过分类编码操纵展示了对表格数据的通用后门攻击，影响金融和医疗应用中使用的广泛 ML 模型。</p>
+<hr>
+<h2 id="8-Causal-Guided-Detoxify-Backdoor-Attack-of-Open-Weight-LoRA-Models"><a href="#8-Causal-Guided-Detoxify-Backdoor-Attack-of-Open-Weight-LoRA-Models" class="headerlink" title="8. Causal-Guided Detoxify Backdoor Attack of Open-Weight LoRA Models"></a>8. Causal-Guided Detoxify Backdoor Attack of Open-Weight LoRA Models</h2><p><strong>Authors</strong>: Linzhi Chen (ShanghaiTech University), Yang Sun (Independent Researcher), Hongru Wei (ShanghaiTech University), Yuqi Chen (ShanghaiTech University)</p>
+<p><strong>English Abstract</strong>: This work presents a causal-guided approach to inject and detoxify backdoors in open-weight LoRA models, revealing vulnerabilities in popular parameter-efficient fine-tuning methods.</p>
+<p><strong>中文摘要</strong>: 本研究提出了一种因果引导的方法来注入和解毒开放权重 LoRA 模型中的后门，揭示了流行的参数高效微调方法中的漏洞。</p>
+<hr>
+<h2 id="9-Constructive-Noise-Defeats-Adversarial-Noise-Adversarial-Example-Detection-for-Commercial-DNN-Services"><a href="#9-Constructive-Noise-Defeats-Adversarial-Noise-Adversarial-Example-Detection-for-Commercial-DNN-Services" class="headerlink" title="9. Constructive Noise Defeats Adversarial Noise: Adversarial Example Detection for Commercial DNN Services"></a>9. Constructive Noise Defeats Adversarial Noise: Adversarial Example Detection for Commercial DNN Services</h2><p><strong>Authors</strong>: Meng Shen (Beijing Institute of Technology), Jiangyuan Bi (Beijing Institute of Technology), Hao Yu (National University of Defense Technology), Zhenming Bai (Beijing Institute of Technology), Wei Wang (Xi’an Jiaotong University), Liehuang Zhu (Beijing Institute of Technology)</p>
+<p><strong>English Abstract</strong>: The paper proposes using constructive noise to defeat adversarial noise, providing an effective detection mechanism for adversarial examples in commercial DNN services.</p>
+<p><strong>中文摘要</strong>: 本文提出使用建设性噪声来对抗对抗性噪声，为商业 DNN 服务中的对抗样本提供了有效的检测机制。</p>
+<hr>
+<h2 id="10-Dataset-Reduction-and-Watermark-Removal-via-Self-supervised-Learning-for-Model-Extraction-Attack"><a href="#10-Dataset-Reduction-and-Watermark-Removal-via-Self-supervised-Learning-for-Model-Extraction-Attack" class="headerlink" title="10. Dataset Reduction and Watermark Removal via Self-supervised Learning for Model Extraction Attack"></a>10. Dataset Reduction and Watermark Removal via Self-supervised Learning for Model Extraction Attack</h2><p><strong>Authors</strong>: Hao Luan (Fudan University), Xue Tan (Fudan University), Zhiheng Li (Shandong University), Jun Dai (Worcester Polytechnic Institute), Xiaoyan Sun (Worcester Polytechnic Institute), Ping Chen (Fudan University)</p>
+<p><strong>English Abstract</strong>: This research demonstrates how self-supervised learning can be leveraged to reduce dataset requirements and remove watermarks in model extraction attacks.</p>
+<p><strong>中文摘要</strong>: 本研究展示了如何利用自监督学习来减少数据集需求并在模型提取攻击中移除水印。</p>
+<hr>
+<h2 id="研究趋势-Research-Trends"><a href="#研究趋势-Research-Trends" class="headerlink" title="研究趋势 &#x2F; Research Trends"></a>研究趋势 &#x2F; Research Trends</h2><p>机器学习安全研究在 NDSS 2026 呈现以下特点：</p>
+<ol>
+<li><strong>攻击面扩大</strong>: 从传统图像分类扩展到表格数据、二进制分析、恶意软件检测等多个领域</li>
+<li><strong>黑盒攻击进化</strong>: 更少查询、更高成功率的黑盒攻击方法</li>
+<li><strong>联邦学习隐私</strong>: 成员推理、贡献感知等联邦学习特有的安全问题</li>
+<li><strong>后门攻击深化</strong>: 针对 LoRA 等新型微调方法的后门攻击</li>
+<li><strong>模型归属与知识产权</strong>: 模型重用检测、水印移除等知识产权保护问题</li>
+</ol>
+<hr>
+<p><strong>系列其他文章</strong>:</p>
+<ul>
+<li><a href="#">第 1 篇: LLM 安全</a></li>
+<li><a href="#">第 3 篇: IoT 与嵌入式系统安全</a></li>
+<li><a href="#">第 4 篇: 密码学与隐私</a></li>
+<li><a href="#">第 5 篇: Web 与网络安全</a></li>
+</ul>
+<p><strong>完整论文列表</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/accepted-papers/">NDSS 2026 Accepted Papers</a><br><strong>会议官网</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/">NDSS Symposium 2026</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-ml-security/" data-id="cuidyofj9qoyyk_eSt8iXNqFi" data-title="NDSS 2026 论文精选 (2/5): 机器学习安全" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI-security/" rel="tag">AI security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cybersecurity/" rel="tag">cybersecurity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/machine-learning/" rel="tag">machine learning</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-ndss-2026-llm-security" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/03/03/ndss-2026-llm-security/" class="article-date">
+  <time class="dt-published" datetime="2026-03-03T01:00:00.000Z" itemprop="datePublished">2026-03-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Research/">Research</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2026/03/03/ndss-2026-llm-security/">NDSS 2026 论文精选 (1/5): LLM 安全</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>NDSS 2026 系列第 1 篇</strong>: LLM 安全研究</p>
+</blockquote>
+<p>NDSS 2026 (Network and Distributed System Security Symposium) 将于 2026 年 2 月 23-27 日在美国圣地亚哥举行。今年共接收了 <strong>265 篇论文</strong>，其中大量研究聚焦于大型语言模型 (LLM) 的安全问题。</p>
+<p><strong>Conference</strong>: NDSS 2026<br><strong>Date</strong>: February 23-27, 2026<br><strong>Location</strong>: San Diego, California<br><strong>Series</strong>: Part 1 of 5 - LLM Security</p>
+<hr>
+<h2 id="1-A-Causal-Perspective-for-Enhancing-Jailbreak-Attack-and-Defense"><a href="#1-A-Causal-Perspective-for-Enhancing-Jailbreak-Attack-and-Defense" class="headerlink" title="1. A Causal Perspective for Enhancing Jailbreak Attack and Defense"></a>1. A Causal Perspective for Enhancing Jailbreak Attack and Defense</h2><p><strong>Authors</strong>: Licheng Pan (Zhejiang University), Yunsheng Lu (University of Chicago), Jiexi Liu (Alibaba Group), Jialing Tao (Alibaba Group), Haozhe Feng (Zhejiang University), Hui Xue (Alibaba Group), Zhixuan Chu (Zhejiang University), Kui Ren (Zhejiang University)</p>
+<p><strong>English Abstract</strong>: This paper introduces a causal perspective to enhance both jailbreak attacks and defenses for large language models. The approach analyzes the causal relationships between input prompts and model outputs to identify vulnerabilities and strengthen security measures.</p>
+<p><strong>中文摘要</strong>: 本文从因果视角出发，增强大型语言模型的越狱攻击和防御能力。该方法分析输入提示和模型输出之间的因果关系，以识别漏洞并加强安全措施。</p>
+<hr>
+<h2 id="2-ACE-A-Security-Architecture-for-LLM-Integrated-App-Systems"><a href="#2-ACE-A-Security-Architecture-for-LLM-Integrated-App-Systems" class="headerlink" title="2. ACE: A Security Architecture for LLM-Integrated App Systems"></a>2. ACE: A Security Architecture for LLM-Integrated App Systems</h2><p><strong>Authors</strong>: Evan Li (Northeastern University), Tushin Mallick (Northeastern University), Evan Rose (Northeastern University), William Robertson (Northeastern University), Alina Oprea (Northeastern University), Cristina Nita-Rotaru (Northeastern University)</p>
+<p><strong>English Abstract</strong>: ACE proposes a comprehensive security architecture for applications that integrate large language models. The framework addresses unique security challenges arising from LLM integration, including data leakage, prompt injection, and unauthorized access to sensitive APIs.</p>
+<p><strong>中文摘要</strong>: ACE 提出了一个针对集成大型语言模型的应用程序的综合安全架构。该框架解决了 LLM 集成带来的独特安全挑战，包括数据泄露、提示注入和对敏感 API 的未授权访问。</p>
+<hr>
+<h2 id="3-Attention-is-All-You-Need-to-Defend-Against-Indirect-Prompt-Injection-Attacks-in-LLMs"><a href="#3-Attention-is-All-You-Need-to-Defend-Against-Indirect-Prompt-Injection-Attacks-in-LLMs" class="headerlink" title="3. Attention is All You Need to Defend Against Indirect Prompt Injection Attacks in LLMs"></a>3. Attention is All You Need to Defend Against Indirect Prompt Injection Attacks in LLMs</h2><p><strong>Authors</strong>: Yinan Zhong (Zhejiang University), Qianhao Miao (Zhejiang University), Yanjiao Chen (Zhejiang University), Jiangyi Deng (Zhejiang University), Yushi Cheng (Zhejiang University), Wenyuan Xu (Zhejiang University)</p>
+<p><strong>English Abstract</strong>: This work demonstrates that attention mechanisms alone can effectively defend against indirect prompt injection attacks in large language models, without requiring additional computational overhead or architectural modifications.</p>
+<p><strong>中文摘要</strong>: 本研究表明，仅使用注意力机制就可以有效防御大型语言模型中的间接提示注入攻击，无需额外的计算开销或架构修改。</p>
+<hr>
+<h2 id="4-Beyond-Jailbreak-Unveiling-Risks-in-LLM-Applications-Arising-from-Blurred-Capability-Boundaries"><a href="#4-Beyond-Jailbreak-Unveiling-Risks-in-LLM-Applications-Arising-from-Blurred-Capability-Boundaries" class="headerlink" title="4. Beyond Jailbreak: Unveiling Risks in LLM Applications Arising from Blurred Capability Boundaries"></a>4. Beyond Jailbreak: Unveiling Risks in LLM Applications Arising from Blurred Capability Boundaries</h2><p><strong>Authors</strong>: Yunyi Zhang (Tsinghua University), Shibo Cui (Tsinghua University), Baojun Liu (Tsinghua University), Jingkai Yu (Tsinghua University), Min Zhang (National University of Defense Technology), Fan Shi (National University of Defense Technology), Han Zheng (TrustAl Pte. Ltd.)</p>
+<p><strong>English Abstract</strong>: This research identifies security risks in LLM applications that arise from unclear boundaries between different model capabilities, leading to unintended information leakage and privilege escalation.</p>
+<p><strong>中文摘要</strong>: 本研究识别了 LLM 应用中因不同模型能力之间界限模糊而产生的安全风险，导致意外的信息泄露和权限提升。</p>
+<hr>
+<h2 id="5-Bleeding-Pathways-Vanishing-Discriminability-in-LLM-Hidden-States-Fuels-Jailbreak-Attacks"><a href="#5-Bleeding-Pathways-Vanishing-Discriminability-in-LLM-Hidden-States-Fuels-Jailbreak-Attacks" class="headerlink" title="5. Bleeding Pathways: Vanishing Discriminability in LLM Hidden States Fuels Jailbreak Attacks"></a>5. Bleeding Pathways: Vanishing Discriminability in LLM Hidden States Fuels Jailbreak Attacks</h2><p><strong>Authors</strong>: Yingjie Zhang (Institute of Information Engineering, Chinese Academy of Sciences; School of Cyber Security, University of Chinese Academy of Sciences), Tong Liu (Institute of Information Engineering, Chinese Academy of Sciences; School of Cyber Security, University of Chinese Academy of Sciences), Zhe Zhao (Ant Group), Guozhu Meng (Institute of Information Engineering, Chinese Academy of Sciences; School of Cyber Security, University of Chinese Academy of Sciences), Kai Chen (Institute of Information Engineering, Chinese Academy of Sciences; School of Cyber Security, University of Chinese Academy of Sciences)</p>
+<p><strong>English Abstract</strong>: The paper reveals how the vanishing discriminability in LLM hidden states creates vulnerabilities that enable jailbreak attacks, providing both theoretical analysis and practical attack demonstrations.</p>
+<p><strong>中文摘要</strong>: 本文揭示了 LLM 隐藏状态中消失的可辨别性如何产生允许越狱攻击的漏洞，提供了理论分析和实际攻击演示。</p>
+<hr>
+<h2 id="6-Cache-Me-Catch-You-Cache-Related-Security-Threats-in-LLM-Serving-Frameworks"><a href="#6-Cache-Me-Catch-You-Cache-Related-Security-Threats-in-LLM-Serving-Frameworks" class="headerlink" title="6. Cache Me, Catch You: Cache Related Security Threats in LLM Serving Frameworks"></a>6. Cache Me, Catch You: Cache Related Security Threats in LLM Serving Frameworks</h2><p><strong>Authors</strong>: XiangFan Wu (Ocean University of China; QI-ANXIN Technology Research Institute), Lingyun Ying (QI-ANXIN Technology Research Institute), Guoqiang Chen (QI-ANXIN Technology Research Institute), Yacong Gu (Tsinghua University; Tsinghua University-QI-ANXIN Group JCNS), Haipeng Qu (Department of Computer Science and Technology, Ocean University of China)</p>
+<p><strong>English Abstract</strong>: This work uncovers cache-related security vulnerabilities in LLM serving frameworks that can be exploited to leak sensitive information across different user sessions.</p>
+<p><strong>中文摘要</strong>: 本研究揭示了 LLM 服务框架中与缓存相关的安全漏洞，这些漏洞可被利用在不同用户会话之间泄露敏感信息。</p>
+<hr>
+<h2 id="7-Character-Level-Perturbations-Disrupt-LLM-Watermarks"><a href="#7-Character-Level-Perturbations-Disrupt-LLM-Watermarks" class="headerlink" title="7. Character-Level Perturbations Disrupt LLM Watermarks"></a>7. Character-Level Perturbations Disrupt LLM Watermarks</h2><p><strong>Authors</strong>: Zhaoxi Zhang (University of Technology Sydney), Xiaomei Zhang (Griffith University), Yanjun Zhang (University of Technology Sydney), He Zhang (RMIT University), Shirui Pan (Griffith University), Bo Liu (University of Technology Sydney), Asif Qumer Gill (University of Technology Sydney Australia), Leo Zhang (Griffith University)</p>
+<p><strong>English Abstract</strong>: The research demonstrates that character-level perturbations can effectively remove or disrupt watermarks embedded in LLM-generated text, raising concerns about content attribution and copyright protection.</p>
+<p><strong>中文摘要</strong>: 研究表明，字符级扰动可以有效地移除或破坏嵌入在 LLM 生成文本中的水印，引发了对内容归属和版权保护的担忧。</p>
+<hr>
+<h2 id="8-Characterizing-the-Implementation-of-Censorship-Policies-in-Chinese-LLM-Services"><a href="#8-Characterizing-the-Implementation-of-Censorship-Policies-in-Chinese-LLM-Services" class="headerlink" title="8. Characterizing the Implementation of Censorship Policies in Chinese LLM Services"></a>8. Characterizing the Implementation of Censorship Policies in Chinese LLM Services</h2><p><strong>Authors</strong>: Anna Ablove (University of Michigan), Shreyas Chandrashekaran (University of Michigan), Xiao Qiang (University of California at Berkeley), Roya Ensafi (University of Michigan)</p>
+<p><strong>English Abstract</strong>: This empirical study characterizes how censorship policies are implemented in Chinese LLM services, revealing the techniques used to filter content and their effectiveness.</p>
+<p><strong>中文摘要</strong>: 这项实证研究描述了中国 LLM 服务中审查政策的实施方式,揭示了用于过滤内容的技术及其有效性。</p>
+<hr>
+<h2 id="9-Chasing-Shadows-Pitfalls-in-LLM-Security-Research"><a href="#9-Chasing-Shadows-Pitfalls-in-LLM-Security-Research" class="headerlink" title="9. Chasing Shadows: Pitfalls in LLM Security Research"></a>9. Chasing Shadows: Pitfalls in LLM Security Research</h2><p><strong>Authors</strong>: Jonathan Evertz (CISPA Helmholtz Center for Information Security), Niklas Risse (Max Planck Institute for Security and Privacy), Nicolai Neuer (Karlsruhe Institute of Technology), Andreas Müller (Ruhr University Bochum), Philipp Normann (TU Wien), Gaetano Sapia (Max Planck Institute for Security and Privacy), Srishti Gupta (Sapienza University of Rome), David Pape (CISPA Helmholtz Center for Information Security), Soumya Shaw (CISPA Helmholtz Center for Information Security), Devansh Srivastav (CISPA Helmholtz Center for Information Security), Christian Wressnegger (Karlsruhe Institute of Technology), Erwin Quiring (_fbeta), Thorsten Eisenhofer (CISPA Helmholtz Center for Information Security), Daniel Arp (TU Wien), Lea Schönherr (CISPA Helmholtz Center for Information Security)</p>
+<p><strong>English Abstract</strong>: This meta-analysis identifies common methodological pitfalls in LLM security research, providing guidance for more rigorous and reproducible security evaluations.</p>
+<p><strong>中文摘要</strong>: 这项元分析识别了 LLM 安全研究中常见的方法论陷阱，为更严格和可重现的安全评估提供指导。</p>
+<hr>
+<h2 id="10-DUALBREACH-Efficient-Dual-Jailbreaking-via-Target-Driven-Initialization-and-Multi-Target-Optimization"><a href="#10-DUALBREACH-Efficient-Dual-Jailbreaking-via-Target-Driven-Initialization-and-Multi-Target-Optimization" class="headerlink" title="10. DUALBREACH: Efficient Dual-Jailbreaking via Target-Driven Initialization and Multi-Target Optimization"></a>10. DUALBREACH: Efficient Dual-Jailbreaking via Target-Driven Initialization and Multi-Target Optimization</h2><p><strong>Authors</strong>: Xinzhe Huang (Zhejiang university), Kedong Xiu (Zhejiang university), Tianhang Zheng (Zhejiang university), Churui Zeng (Zhejiang university), Wangze Ni (Zhejiang university), Zhan Qin (Zhejiang university), Kui Ren (Zhejiang university), Chun Chen (Zhejiang university)</p>
+<p><strong>English Abstract</strong>: DUALBREACH introduces an efficient dual-jailbreaking approach that simultaneously attacks multiple safety mechanisms in LLMs through target-driven initialization and multi-target optimization.</p>
+<p><strong>中文摘要</strong>: DUALBREACH 引入了一种高效的双重越狱方法，通过目标驱动的初始化和多目标优化同时攻击 LLM 中的多个安全机制。</p>
+<hr>
+<h2 id="研究趋势-Research-Trends"><a href="#研究趋势-Research-Trends" class="headerlink" title="研究趋势 &#x2F; Research Trends"></a>研究趋势 &#x2F; Research Trends</h2><p>NDSS 2026 中的 LLM 安全研究呈现以下趋势：</p>
+<ol>
+<li><strong>攻击技术多样化</strong>: 从传统越狱到因果分析、隐藏状态操纵等高级攻击</li>
+<li><strong>防御机制创新</strong>: 利用注意力机制、架构设计等新方法</li>
+<li><strong>实际应用关注</strong>: 关注 LLM 集成应用、服务框架的安全问题</li>
+<li><strong>方法论反思</strong>: 开始审视 LLM 安全研究本身的科学性和可重现性</li>
+<li><strong>隐私与审查</strong>: 水印破坏、审查机制等社会技术问题受到重视</li>
+</ol>
+<hr>
+<p><strong>系列其他文章</strong>:</p>
+<ul>
+<li><a href="#">第 2 篇: 机器学习安全</a></li>
+<li><a href="#">第 3 篇: IoT 与嵌入式系统安全</a></li>
+<li><a href="#">第 4 篇: 密码学与隐私</a></li>
+<li><a href="#">第 5 篇: Web 与网络安全</a></li>
+</ul>
+<p><strong>完整论文列表</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/accepted-papers/">NDSS 2026 Accepted Papers</a><br><strong>会议官网</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/">NDSS Symposium 2026</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-llm-security/" data-id="cuida2T3EMlXKpAlGuXA5Zd3i" data-title="NDSS 2026 论文精选 (1/5): LLM 安全" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI-security/" rel="tag">AI security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LLM-security/" rel="tag">LLM security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cybersecurity/" rel="tag">cybersecurity</a></li></ul>
 
     </footer>
   </div>
@@ -404,7 +740,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/02/latest-cybersecurity-research-march-2026/" data-id="cuid4vrBH2Zqay1x9qN-wEg5Q" data-title="Latest Cybersecurity Research Highlights - March 2026" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/02/latest-cybersecurity-research-march-2026/" data-id="cuidSP-86l6qTHKwy0hQS7LvE" data-title="Latest Cybersecurity Research Highlights - March 2026" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -464,7 +800,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2024/10/09/cybersec-Journal-and-Conference/" data-id="cuid8wZw81QNxoNaX2Tt_kUud" data-title="Cybersec Journal and Conference" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2024/10/09/cybersec-Journal-and-Conference/" data-id="cuidYTSNZMhxpBbAc-ac1HiU2" data-title="Cybersec Journal and Conference" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -498,7 +834,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI-security/" rel="tag">AI security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/" rel="tag">Deep Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IoT/" rel="tag">IoT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM-security/" rel="tag">LLM security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/conference/" rel="tag">conference</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cybersecurity/" rel="tag">cybersecurity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/research/" rel="tag">research</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scam-detection/" rel="tag">scam detection</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI-security/" rel="tag">AI security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/" rel="tag">Deep Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IoT/" rel="tag">IoT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM-security/" rel="tag">LLM security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cryptography/" rel="tag">cryptography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cybersecurity/" rel="tag">cybersecurity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/embedded-systems/" rel="tag">embedded systems</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/encryption/" rel="tag">encryption</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firmware/" rel="tag">firmware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/" rel="tag">machine learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network-security/" rel="tag">network security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/privacy/" rel="tag">privacy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/research/" rel="tag">research</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scam-detection/" rel="tag">scam detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web-security/" rel="tag">web security</a></li></ul>
     </div>
   </div>
 
@@ -508,7 +844,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/AI-security/" style="font-size: 10px;">AI security</a> <a href="/tags/Deep-Learning/" style="font-size: 10px;">Deep Learning</a> <a href="/tags/IoT/" style="font-size: 10px;">IoT</a> <a href="/tags/LLM-security/" style="font-size: 20px;">LLM security</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/NDSS/" style="font-size: 10px;">NDSS</a> <a href="/tags/conference/" style="font-size: 10px;">conference</a> <a href="/tags/cybersecurity/" style="font-size: 20px;">cybersecurity</a> <a href="/tags/research/" style="font-size: 20px;">research</a> <a href="/tags/scam-detection/" style="font-size: 10px;">scam detection</a>
+      <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/AI-security/" style="font-size: 13.33px;">AI security</a> <a href="/tags/Deep-Learning/" style="font-size: 10px;">Deep Learning</a> <a href="/tags/IoT/" style="font-size: 13.33px;">IoT</a> <a href="/tags/LLM-security/" style="font-size: 13.33px;">LLM security</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/NDSS/" style="font-size: 16.67px;">NDSS</a> <a href="/tags/cryptography/" style="font-size: 10px;">cryptography</a> <a href="/tags/cybersecurity/" style="font-size: 20px;">cybersecurity</a> <a href="/tags/embedded-systems/" style="font-size: 10px;">embedded systems</a> <a href="/tags/encryption/" style="font-size: 10px;">encryption</a> <a href="/tags/firmware/" style="font-size: 10px;">firmware</a> <a href="/tags/machine-learning/" style="font-size: 10px;">machine learning</a> <a href="/tags/network-security/" style="font-size: 10px;">network security</a> <a href="/tags/privacy/" style="font-size: 10px;">privacy</a> <a href="/tags/research/" style="font-size: 10px;">research</a> <a href="/tags/scam-detection/" style="font-size: 10px;">scam detection</a> <a href="/tags/web-security/" style="font-size: 10px;">web security</a>
     </div>
   </div>
 
@@ -530,15 +866,23 @@
       <ul>
         
           <li>
-            <a href="/2026/03/03/ndss-2026-paper-highlights/">NDSS 2026 论文精选 - 网络与分布式系统安全研讨会</a>
+            <a href="/2026/03/03/ndss-2026-web-network-security/">NDSS 2026 论文精选 (5/5): Web 与网络安全</a>
           </li>
         
           <li>
-            <a href="/2026/03/02/latest-cybersecurity-research-march-2026/">Latest Cybersecurity Research Highlights - March 2026</a>
+            <a href="/2026/03/03/ndss-2026-crypto-privacy/">NDSS 2026 论文精选 (4/5): 密码学与隐私</a>
           </li>
         
           <li>
-            <a href="/2024/10/09/cybersec-Journal-and-Conference/">Cybersec Journal and Conference</a>
+            <a href="/2026/03/03/ndss-2026-iot-security/">NDSS 2026 论文精选 (3/5): IoT 与嵌入式系统安全</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-ml-security/">NDSS 2026 论文精选 (2/5): 机器学习安全</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-llm-security/">NDSS 2026 论文精选 (1/5): LLM 安全</a>
           </li>
         
       </ul>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>NDSS 2026 论文精选 (2/5): 机器学习安全 | Tom&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="NDSS 2026 系列第 2 篇: 机器学习安全研究  本文是 NDSS 2026 系列的第二篇，聚焦于机器学习模型的安全与隐私问题。涵盖对抗攻击、后门攻击、模型提取、联邦学习隐私等核心主题。 Series: Part 2 of 5 - Machine Learning Security  1. A Deep Dive into Function Inlining and its Securi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NDSS 2026 论文精选 (2&#x2F;5): 机器学习安全">
+<meta property="og:url" content="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-ml-security/index.html">
+<meta property="og:site_name" content="Tom&#39;s Blog">
+<meta property="og:description" content="NDSS 2026 系列第 2 篇: 机器学习安全研究  本文是 NDSS 2026 系列的第二篇，聚焦于机器学习模型的安全与隐私问题。涵盖对抗攻击、后门攻击、模型提取、联邦学习隐私等核心主题。 Series: Part 2 of 5 - Machine Learning Security  1. A Deep Dive into Function Inlining and its Securi">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-03-03T01:05:00.000Z">
+<meta property="article:modified_time" content="2026-03-03T08:57:59.290Z">
+<meta property="article:author" content="Tom">
+<meta property="article:tag" content="AI security">
+<meta property="article:tag" content="NDSS">
+<meta property="article:tag" content="cybersecurity">
+<meta property="article:tag" content="machine learning">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Tom's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Tom&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://sgwaterwoods.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ndss-2026-ml-security" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/03/03/ndss-2026-ml-security/" class="article-date">
+  <time class="dt-published" datetime="2026-03-03T01:05:00.000Z" itemprop="datePublished">2026-03-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Research/">Research</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      NDSS 2026 论文精选 (2/5): 机器学习安全
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>NDSS 2026 系列第 2 篇</strong>: 机器学习安全研究</p>
+</blockquote>
+<p>本文是 NDSS 2026 系列的第二篇，聚焦于机器学习模型的安全与隐私问题。涵盖对抗攻击、后门攻击、模型提取、联邦学习隐私等核心主题。</p>
+<p><strong>Series</strong>: Part 2 of 5 - Machine Learning Security</p>
+<hr>
+<h2 id="1-A-Deep-Dive-into-Function-Inlining-and-its-Security-Implications-for-ML-based-Binary-Analysis"><a href="#1-A-Deep-Dive-into-Function-Inlining-and-its-Security-Implications-for-ML-based-Binary-Analysis" class="headerlink" title="1. A Deep Dive into Function Inlining and its Security Implications for ML-based Binary Analysis"></a>1. A Deep Dive into Function Inlining and its Security Implications for ML-based Binary Analysis</h2><p><strong>Authors</strong>: Omar Abusabha (Sungkyunkwan university), Jiyong Uhm (Sungkyunkwan University), Tamer Abuhmed (Sungkyunkwan university), Hyungjoon Koo (Sungkyunkwan University)</p>
+<p><strong>English Abstract</strong>: This work investigates how function inlining affects ML-based binary analysis, revealing that compiler optimizations can significantly impact the accuracy and robustness of ML models for malware detection.</p>
+<p><strong>中文摘要</strong>: 本研究调查了函数内联如何影响基于 ML 的二进制分析，揭示了编译器优化可以显著影响恶意软件检测 ML 模型的准确性和鲁棒性。</p>
+<hr>
+<h2 id="2-A-Hard-Label-Black-Box-Evasion-Attack-against-ML-based-Malicious-Traffic-Detection-Systems"><a href="#2-A-Hard-Label-Black-Box-Evasion-Attack-against-ML-based-Malicious-Traffic-Detection-Systems" class="headerlink" title="2. A Hard-Label Black-Box Evasion Attack against ML-based Malicious Traffic Detection Systems"></a>2. A Hard-Label Black-Box Evasion Attack against ML-based Malicious Traffic Detection Systems</h2><p><strong>Authors</strong>: Zixuan Liu (Tsinghua University), Yi Zhao (Beijing Institute of Technology), Zhuotao Liu (Tsinghua University), Qi Li (Tsinghua University), Chuanpu Fu (Tsinghua University), Guangmeng Zhou (Tsinghua University), Ke Xu (Tsinghua University)</p>
+<p><strong>English Abstract</strong>: The paper presents a hard-label black-box evasion attack that can fool ML-based malicious traffic detection systems with minimal queries and no knowledge of the model internals.</p>
+<p><strong>中文摘要</strong>: 本文提出了一种硬标签黑盒逃避攻击，可以用最少的查询次数和不了解模型内部的情况下欺骗基于 ML 的恶意流量检测系统。</p>
+<hr>
+<h2 id="3-Achieving-Zen-Combining-Mathematical-and-Programmatic-Deep-Learning-Model-Representations-for-Attribution-and-Reuse"><a href="#3-Achieving-Zen-Combining-Mathematical-and-Programmatic-Deep-Learning-Model-Representations-for-Attribution-and-Reuse" class="headerlink" title="3. Achieving Zen: Combining Mathematical and Programmatic Deep Learning Model Representations for Attribution and Reuse"></a>3. Achieving Zen: Combining Mathematical and Programmatic Deep Learning Model Representations for Attribution and Reuse</h2><p><strong>Authors</strong>: David Oygenblik (Georgia Institute of Technology), Dinko Dermendzhiev (Georgia Institute of Technology), Filippos Sofias (Georgia Institute of Technology), Mingxuan Yao (Georgia Institute of Technology), Haichuan Xu (Georgia Institute of Technology), Runze Zhang (Georgia Institute of Technology), Jeman Park (Kyung Hee University), Amit Kumar Sikder (Iowa State University), Brendan Saltaformaggio (Georgia Institute of Technology)</p>
+<p><strong>English Abstract</strong>: Zen combines mathematical and programmatic representations of deep learning models to enable better model attribution and reuse detection, addressing intellectual property concerns in ML.</p>
+<p><strong>中文摘要</strong>: Zen 结合了深度学习模型的数学和程序表示，以实现更好的模型归属和重用检测，解决了机器学习中的知识产权问题。</p>
+<hr>
+<h2 id="4-A-Unified-Defense-Framework-Against-Membership-Inference-in-Federated-Learning-via-Distillation-and-Contribution-Aware-Aggregation"><a href="#4-A-Unified-Defense-Framework-Against-Membership-Inference-in-Federated-Learning-via-Distillation-and-Contribution-Aware-Aggregation" class="headerlink" title="4. A Unified Defense Framework Against Membership Inference in Federated Learning via Distillation and Contribution-Aware Aggregation"></a>4. A Unified Defense Framework Against Membership Inference in Federated Learning via Distillation and Contribution-Aware Aggregation</h2><p><strong>Authors</strong>: Liwei Zhang (Beijing University of Posts and Telecommunications), Linghui Li (Beijing University of Posts and Telecommunications), Xiaotian Si (Beijing University of Posts and Telecommunications), Ziduo Guo (Beijing University of Posts and Telecommunications), Xingwu Wang (Beijing University of Posts and Telecommunications), Kaiguo Yuan (Beijing University of Posts and Telecommunications), Bingyu Li (School of Cyber Science and Technology, Beihang University)</p>
+<p><strong>English Abstract</strong>: This work proposes a unified defense framework combining distillation and contribution-aware aggregation to protect against membership inference attacks in federated learning settings.</p>
+<p><strong>中文摘要</strong>: 本研究提出了一个统一的防御框架，结合蒸馏和贡献感知聚合来防御联邦学习环境中的成员推理攻击。</p>
+<hr>
+<h2 id="5-Beyond-Raw-Bytes-Towards-Large-Malware-Language-Models"><a href="#5-Beyond-Raw-Bytes-Towards-Large-Malware-Language-Models" class="headerlink" title="5. Beyond Raw Bytes: Towards Large Malware Language Models"></a>5. Beyond Raw Bytes: Towards Large Malware Language Models</h2><p><strong>Authors</strong>: Luke Kurlandski (Rochester Institute of Technology), Harel Berger (Ariel University), Yin Pan (Rochester Institute of Technology), Matthew Wright (Rochester Institute of Technology)</p>
+<p><strong>English Abstract</strong>: This research explores the development of large language models specifically trained on malware data, moving beyond raw byte analysis to understand malicious code semantics.</p>
+<p><strong>中文摘要</strong>: 本研究探索了专门在恶意软件数据上训练的大型语言模型的开发，超越原始字节分析以理解恶意代码语义。</p>
+<hr>
+<h2 id="6-Cascading-and-Proxy-Membership-Inference-Attacks"><a href="#6-Cascading-and-Proxy-Membership-Inference-Attacks" class="headerlink" title="6. Cascading and Proxy Membership Inference Attacks"></a>6. Cascading and Proxy Membership Inference Attacks</h2><p><strong>Authors</strong>: Yuntao Du (Purdue University), Jiacheng Li (Purdue University), Yuetian Chen (Purdue University), Kaiyuan Zhang (Purdue University), Zhizhen Yuan (Purdue University), Hanshen Xiao (Purdue University), Bruno Ribeiro (Purdue University), Ninghui Li (Purdue University)</p>
+<p><strong>English Abstract</strong>: The paper introduces cascading and proxy membership inference attacks that significantly improve attack success rates against machine learning models while requiring less information about the target.</p>
+<p><strong>中文摘要</strong>: 本文引入了级联和代理成员推理攻击，显著提高了对机器学习模型的攻击成功率，同时需要关于目标的信息更少。</p>
+<hr>
+<h2 id="7-CatBack-Universal-Backdoor-Attacks-on-Tabular-Data-via-Categorical-Encoding"><a href="#7-CatBack-Universal-Backdoor-Attacks-on-Tabular-Data-via-Categorical-Encoding" class="headerlink" title="7. CatBack: Universal Backdoor Attacks on Tabular Data via Categorical Encoding"></a>7. CatBack: Universal Backdoor Attacks on Tabular Data via Categorical Encoding</h2><p><strong>Authors</strong>: Behrad Tajalli (Radboud University), Stefanos Koffas (Delft University of Technology), Stjepan Picek (Radboud University)</p>
+<p><strong>English Abstract</strong>: CatBack demonstrates universal backdoor attacks on tabular data through categorical encoding manipulation, affecting a wide range of ML models used in financial and healthcare applications.</p>
+<p><strong>中文摘要</strong>: CatBack 通过分类编码操纵展示了对表格数据的通用后门攻击，影响金融和医疗应用中使用的广泛 ML 模型。</p>
+<hr>
+<h2 id="8-Causal-Guided-Detoxify-Backdoor-Attack-of-Open-Weight-LoRA-Models"><a href="#8-Causal-Guided-Detoxify-Backdoor-Attack-of-Open-Weight-LoRA-Models" class="headerlink" title="8. Causal-Guided Detoxify Backdoor Attack of Open-Weight LoRA Models"></a>8. Causal-Guided Detoxify Backdoor Attack of Open-Weight LoRA Models</h2><p><strong>Authors</strong>: Linzhi Chen (ShanghaiTech University), Yang Sun (Independent Researcher), Hongru Wei (ShanghaiTech University), Yuqi Chen (ShanghaiTech University)</p>
+<p><strong>English Abstract</strong>: This work presents a causal-guided approach to inject and detoxify backdoors in open-weight LoRA models, revealing vulnerabilities in popular parameter-efficient fine-tuning methods.</p>
+<p><strong>中文摘要</strong>: 本研究提出了一种因果引导的方法来注入和解毒开放权重 LoRA 模型中的后门，揭示了流行的参数高效微调方法中的漏洞。</p>
+<hr>
+<h2 id="9-Constructive-Noise-Defeats-Adversarial-Noise-Adversarial-Example-Detection-for-Commercial-DNN-Services"><a href="#9-Constructive-Noise-Defeats-Adversarial-Noise-Adversarial-Example-Detection-for-Commercial-DNN-Services" class="headerlink" title="9. Constructive Noise Defeats Adversarial Noise: Adversarial Example Detection for Commercial DNN Services"></a>9. Constructive Noise Defeats Adversarial Noise: Adversarial Example Detection for Commercial DNN Services</h2><p><strong>Authors</strong>: Meng Shen (Beijing Institute of Technology), Jiangyuan Bi (Beijing Institute of Technology), Hao Yu (National University of Defense Technology), Zhenming Bai (Beijing Institute of Technology), Wei Wang (Xi’an Jiaotong University), Liehuang Zhu (Beijing Institute of Technology)</p>
+<p><strong>English Abstract</strong>: The paper proposes using constructive noise to defeat adversarial noise, providing an effective detection mechanism for adversarial examples in commercial DNN services.</p>
+<p><strong>中文摘要</strong>: 本文提出使用建设性噪声来对抗对抗性噪声，为商业 DNN 服务中的对抗样本提供了有效的检测机制。</p>
+<hr>
+<h2 id="10-Dataset-Reduction-and-Watermark-Removal-via-Self-supervised-Learning-for-Model-Extraction-Attack"><a href="#10-Dataset-Reduction-and-Watermark-Removal-via-Self-supervised-Learning-for-Model-Extraction-Attack" class="headerlink" title="10. Dataset Reduction and Watermark Removal via Self-supervised Learning for Model Extraction Attack"></a>10. Dataset Reduction and Watermark Removal via Self-supervised Learning for Model Extraction Attack</h2><p><strong>Authors</strong>: Hao Luan (Fudan University), Xue Tan (Fudan University), Zhiheng Li (Shandong University), Jun Dai (Worcester Polytechnic Institute), Xiaoyan Sun (Worcester Polytechnic Institute), Ping Chen (Fudan University)</p>
+<p><strong>English Abstract</strong>: This research demonstrates how self-supervised learning can be leveraged to reduce dataset requirements and remove watermarks in model extraction attacks.</p>
+<p><strong>中文摘要</strong>: 本研究展示了如何利用自监督学习来减少数据集需求并在模型提取攻击中移除水印。</p>
+<hr>
+<h2 id="研究趋势-Research-Trends"><a href="#研究趋势-Research-Trends" class="headerlink" title="研究趋势 &#x2F; Research Trends"></a>研究趋势 &#x2F; Research Trends</h2><p>机器学习安全研究在 NDSS 2026 呈现以下特点：</p>
+<ol>
+<li><strong>攻击面扩大</strong>: 从传统图像分类扩展到表格数据、二进制分析、恶意软件检测等多个领域</li>
+<li><strong>黑盒攻击进化</strong>: 更少查询、更高成功率的黑盒攻击方法</li>
+<li><strong>联邦学习隐私</strong>: 成员推理、贡献感知等联邦学习特有的安全问题</li>
+<li><strong>后门攻击深化</strong>: 针对 LoRA 等新型微调方法的后门攻击</li>
+<li><strong>模型归属与知识产权</strong>: 模型重用检测、水印移除等知识产权保护问题</li>
+</ol>
+<hr>
+<p><strong>系列其他文章</strong>:</p>
+<ul>
+<li><a href="#">第 1 篇: LLM 安全</a></li>
+<li><a href="#">第 3 篇: IoT 与嵌入式系统安全</a></li>
+<li><a href="#">第 4 篇: 密码学与隐私</a></li>
+<li><a href="#">第 5 篇: Web 与网络安全</a></li>
+</ul>
+<p><strong>完整论文列表</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/accepted-papers/">NDSS 2026 Accepted Papers</a><br><strong>会议官网</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/">NDSS Symposium 2026</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-ml-security/" data-id="cuidyofj9qoyyk_eSt8iXNqFi" data-title="NDSS 2026 论文精选 (2/5): 机器学习安全" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI-security/" rel="tag">AI security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cybersecurity/" rel="tag">cybersecurity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/machine-learning/" rel="tag">machine learning</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2026/03/03/ndss-2026-iot-security/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          NDSS 2026 论文精选 (3/5): IoT 与嵌入式系统安全
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2026/03/03/ndss-2026-llm-security/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">NDSS 2026 论文精选 (1/5): LLM 安全</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI-security/" rel="tag">AI security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/" rel="tag">Deep Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IoT/" rel="tag">IoT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM-security/" rel="tag">LLM security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cryptography/" rel="tag">cryptography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cybersecurity/" rel="tag">cybersecurity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/embedded-systems/" rel="tag">embedded systems</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/encryption/" rel="tag">encryption</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firmware/" rel="tag">firmware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/" rel="tag">machine learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network-security/" rel="tag">network security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/privacy/" rel="tag">privacy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/research/" rel="tag">research</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scam-detection/" rel="tag">scam detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web-security/" rel="tag">web security</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/AI-security/" style="font-size: 13.33px;">AI security</a> <a href="/tags/Deep-Learning/" style="font-size: 10px;">Deep Learning</a> <a href="/tags/IoT/" style="font-size: 13.33px;">IoT</a> <a href="/tags/LLM-security/" style="font-size: 13.33px;">LLM security</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/NDSS/" style="font-size: 16.67px;">NDSS</a> <a href="/tags/cryptography/" style="font-size: 10px;">cryptography</a> <a href="/tags/cybersecurity/" style="font-size: 20px;">cybersecurity</a> <a href="/tags/embedded-systems/" style="font-size: 10px;">embedded systems</a> <a href="/tags/encryption/" style="font-size: 10px;">encryption</a> <a href="/tags/firmware/" style="font-size: 10px;">firmware</a> <a href="/tags/machine-learning/" style="font-size: 10px;">machine learning</a> <a href="/tags/network-security/" style="font-size: 10px;">network security</a> <a href="/tags/privacy/" style="font-size: 10px;">privacy</a> <a href="/tags/research/" style="font-size: 10px;">research</a> <a href="/tags/scam-detection/" style="font-size: 10px;">scam detection</a> <a href="/tags/web-security/" style="font-size: 10px;">web security</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/03/">March 2026</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-web-network-security/">NDSS 2026 论文精选 (5/5): Web 与网络安全</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-crypto-privacy/">NDSS 2026 论文精选 (4/5): 密码学与隐私</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-iot-security/">NDSS 2026 论文精选 (3/5): IoT 与嵌入式系统安全</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-ml-security/">NDSS 2026 论文精选 (2/5): 机器学习安全</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-llm-security/">NDSS 2026 论文精选 (1/5): LLM 安全</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 Tom<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
