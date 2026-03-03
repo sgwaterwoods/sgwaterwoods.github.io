@@ -6,22 +6,24 @@
   
   <title>NDSS 2026 论文精选 - 密码学与隐私视角 | Tom&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="从密码学&#x2F;隐私视角看 NDSS 2026: 涵盖加密协议、隐私保护、零知识证明、区块链安全  📄 Complete Paper List with Download Links: NDSS 2026 Accepted Papers Perspective: Cryptography &amp; Privacy | Focus: Encryption, PIR, ZKP, Blockc">
+  <meta name="description" content="从密码学&#x2F;隐私视角看 NDSS 2026: 完整摘要深度解读 | 18 papers with full abstracts  Conference: NDSS 2026 | Perspective: Cryptography &amp; PrivacyTotal Papers: 18 papers with complete NDSS abstracts  一、隐私保护计算 (Pri">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NDSS 2026 论文精选 - 密码学与隐私视角">
 <meta property="og:url" content="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-crypto-privacy-perspective/index.html">
 <meta property="og:site_name" content="Tom&#39;s Blog">
-<meta property="og:description" content="从密码学&#x2F;隐私视角看 NDSS 2026: 涵盖加密协议、隐私保护、零知识证明、区块链安全  📄 Complete Paper List with Download Links: NDSS 2026 Accepted Papers Perspective: Cryptography &amp; Privacy | Focus: Encryption, PIR, ZKP, Blockc">
+<meta property="og:description" content="从密码学&#x2F;隐私视角看 NDSS 2026: 完整摘要深度解读 | 18 papers with full abstracts  Conference: NDSS 2026 | Perspective: Cryptography &amp; PrivacyTotal Papers: 18 papers with complete NDSS abstracts  一、隐私保护计算 (Pri">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2026-03-03T01:50:00.000Z">
-<meta property="article:modified_time" content="2026-03-03T10:11:14.974Z">
+<meta property="article:published_time" content="2026-03-03T15:50:00.000Z">
+<meta property="article:modified_time" content="2026-03-03T23:54:36.727Z">
 <meta property="article:author" content="Tom">
+<meta property="article:tag" content="MPC">
 <meta property="article:tag" content="NDSS">
 <meta property="article:tag" content="blockchain">
+<meta property="article:tag" content="consensus">
 <meta property="article:tag" content="cryptography">
-<meta property="article:tag" content="encryption">
+<meta property="article:tag" content="differential privacy">
+<meta property="article:tag" content="homomorphic encryption">
 <meta property="article:tag" content="privacy">
-<meta property="article:tag" content="zero-knowledge">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Tom's Blog" type="application/atom+xml">
@@ -82,7 +84,7 @@
         <section id="main"><article id="post-ndss-2026-crypto-privacy-perspective" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2026/03/03/ndss-2026-crypto-privacy-perspective/" class="article-date">
-  <time class="dt-published" datetime="2026-03-03T01:50:00.000Z" itemprop="datePublished">2026-03-03</time>
+  <time class="dt-published" datetime="2026-03-03T15:50:00.000Z" itemprop="datePublished">2026-03-03</time>
 </a>
     
   <div class="article-category">
@@ -106,182 +108,241 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <blockquote>
-<p><strong>从密码学&#x2F;隐私视角看 NDSS 2026</strong>: 涵盖加密协议、隐私保护、零知识证明、区块链安全</p>
+<p><strong>从密码学&#x2F;隐私视角看 NDSS 2026</strong>: 完整摘要深度解读 | 18 papers with full abstracts</p>
 </blockquote>
-<p><strong>📄 Complete Paper List with Download Links</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/accepted-papers/">NDSS 2026 Accepted Papers</a></p>
-<p><strong>Perspective</strong>: Cryptography &amp; Privacy | <strong>Focus</strong>: Encryption, PIR, ZKP, Blockchain, Privacy-Preserving ML</p>
+<p><strong>Conference</strong>: NDSS 2026 | <strong>Perspective</strong>: Cryptography &amp; Privacy<br><strong>Total Papers</strong>: 18 papers with complete NDSS abstracts</p>
 <hr>
-<h2 id="一、私有信息检索-PIR"><a href="#一、私有信息检索-PIR" class="headerlink" title="一、私有信息检索 (PIR)"></a>一、私有信息检索 (PIR)</h2><h3 id="1-BKPIR-Keyword-PIR-for-Private-Boolean-Retrieval"><a href="#1-BKPIR-Keyword-PIR-for-Private-Boolean-Retrieval" class="headerlink" title="1. BKPIR: Keyword PIR for Private Boolean Retrieval"></a>1. BKPIR: Keyword PIR for Private Boolean Retrieval</h3><p><strong>Authors</strong>: Jie Song et al. (IIE CAS, Sichuan Police College, et al.)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/bkpir-keyword-pir-for-private-boolean-retrieval/">NDSS 2026</a></p>
-<p><strong>English</strong>: Efficient keyword-based private information retrieval for Boolean retrieval, enabling private database queries.</p>
-<p><strong>中文</strong>: 用于布尔检索的高效基于关键字的私有信息检索,实现私有数据库查询。</p>
+<h2 id="一、隐私保护计算-Private-Set-Operations-PIR"><a href="#一、隐私保护计算-Private-Set-Operations-PIR" class="headerlink" title="一、隐私保护计算 (Private Set Operations &amp; PIR)"></a>一、隐私保护计算 (Private Set Operations &amp; PIR)</h2><h3 id="1-MinBucket-MPSI-Breaking-the-Max-Size-Bottleneck"><a href="#1-MinBucket-MPSI-Breaking-the-Max-Size-Bottleneck" class="headerlink" title="1. MinBucket MPSI: Breaking the Max-Size Bottleneck"></a>1. MinBucket MPSI: Breaking the Max-Size Bottleneck</h3><p><strong>Authors</strong>: Binbin Tu, Boyudong Zhu, Yang Cao, Yu Chen (Shandong University)</p>
+<p><strong>Abstract</strong></p>
+<p>Multi-Party Private Set Intersection (Cardinality) protocol enables $T$ $(T &gt; 2)$ parties, each holding a private set, to jointly compute the intersection (or its cardinality) without revealing any additional information to other parties. To date, all known MPSI (MPSI-Card) protocols require communication complexity that scales linearly with the size of the large set, fundamentally precluding their efficient deployment in real-world applications with heterogeneous input scales.</p>
+<p>In this work, we present a new framework for MPSI based on newly proposed protocols: batched membership conditional randomness generation and joint private equality test. By instantiating this framework, we develop two MPSI protocols with communication complexities that are linear in the size of the small set and logarithmic in the size of the large set. One protocol offers security against an arbitrary number of colluding parties, while the other secures against $(T-2)$ colluding parties. Additionally, we develop a protocol called the joint permuted private equality test and propose the MPSI-Card framework. By instantiating this framework, we derive an MPSI-Card protocol with similar communication efficiency: linear in the small set and logarithmic in the large set, providing security against an arbitrary number of colluding parties.</p>
+<p>We implement our protocols and conduct extensive experiments over both LAN and WAN networks. Experimental results demonstrate that our protocols achieve significantly better performance as the size difference between the sets or the number of participants holding the small set increases. For the setting, where $5$ parties holding large set (size $2^{20}$) and $5$ parties holding small set (size $2^{10}$) with a single thread and a $10$ Mbps bandwidth, our MPSI (MPSI-Card) protocol requires only $12.2$ ($12.2$) MB of communication and $129.86$ ($130.05$) seconds of runtime. Compared with the state-of-the-art MPSI by Wu et al. (USENIX Security 2024) and MPSI-Card by Gao et al. (PETS 2024), our protocol achieves a $157\times$ $(76\times)$ reduction in communication cost and a $12.7\times$ $(3.1\times)$ speedup in runtime.</p>
+<p><strong>摘要</strong></p>
+<p>多方隐私集合交集(基数)协议使得$T$($T &gt; 2$)方各自持有私有集合，能够联合计算交集(或其基数)而不向其他方透露任何额外信息。迄今为止，所有已知的MPSI(MPSI-Card)协议都需要与大集合大小线性相关的通信复杂度，从根本上阻止了它们在具有异构输入规模的真实世界应用中的有效部署。</p>
+<p>在这项工作中，我们基于新提出的协议提出了一个新的MPSI框架：批量成员条件随机性生成和联合私有相等性测试。通过实例化这个框架，我们开发了两个MPSI协议，其通信复杂度与小集合大小线性相关，与大集合大小对数相关。一个协议提供针对任意数量串通方的安全性，而另一个协议针对$(T-2)$串通方提供安全性。此外，我们开发了一个称为联合排列私有相等性测试的协议，并提出了MPSI-Card框架。通过实例化这个框架，我们推导出一个具有类似通信效率的MPSI-Card协议：与小集合线性相关，与大集合对数相关，提供针对任意数量串通方的安全性。</p>
+<p>我们实现了我们的协议，并在LAN和WAN网络上进行了广泛的实验。实验结果表明，随着集合之间大小差异或持有小集合的参与者数量增加，我们的协议取得了显著更好的性能。对于5方持有大集合(大小$2^{20}$)和5方持有小集合(大小$2^{10}$)，使用单线程和10 Mbps带宽的设置，我们的MPSI(MPSI-Card)协议仅需要12.2(12.2)MB通信和129.86(130.05)秒运行时间。与Wu等人(USENIX Security 2024)的最先进MPSI和Gao等人(PETS 2024)的MPSI-Card相比，我们的协议在通信成本方面实现了157倍(76倍)的降低，在运行时间方面实现了12.7倍(3.1倍)的加速。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/minbucket-mpsi-breaking-the-max-size-bottleneck-in-multi-party-private-set-intersection/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
-<h2 id="二、加密消息系统"><a href="#二、加密消息系统" class="headerlink" title="二、加密消息系统"></a>二、加密消息系统</h2><h3 id="2-Abuse-Resistant-Traceability-for-Encrypted-Messaging-Systems"><a href="#2-Abuse-Resistant-Traceability-for-Encrypted-Messaging-Systems" class="headerlink" title="2. Abuse Resistant Traceability for Encrypted Messaging Systems"></a>2. Abuse Resistant Traceability for Encrypted Messaging Systems</h3><p><strong>Authors</strong>: Zhongming Wang et al. (Chongqing University, SMU, NTU)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/abuse-resistant-traceability-with-minimal-trust-for-encrypted-messaging-systems/">NDSS 2026</a></p>
-<p><strong>English</strong>: Abuse-resistant traceability mechanism for encrypted messaging with minimal trust, balancing privacy and accountability.</p>
-<p><strong>中文</strong>: 具有最小信任的加密消息系统的抗滥用可追溯机制,平衡隐私和问责。</p>
+<h3 id="2-Faster-Than-Ever-Lightweight-Private-Set-Intersection"><a href="#2-Faster-Than-Ever-Lightweight-Private-Set-Intersection" class="headerlink" title="2. Faster Than Ever: Lightweight Private Set Intersection"></a>2. Faster Than Ever: Lightweight Private Set Intersection</h3><p><strong>Authors</strong>: Guowei Ling, Peng Tang, Liyao Xiang, Weidong Qiu (Shanghai Jiao Tong), Jinyong Shan (Beijing Smartchip Microelectronics)</p>
+<p><strong>Abstract</strong></p>
+<p>In this work, we present a new lightweight two-party Private Set Intersection (PSI) paradigm in both the semi-honest and malicious models. It requires only a small number of base OTs and a single Oblivious Key-Value Stores (OKVS) encoding and decoding. All computations (except for the base OTs) can be implemented using SIMD-accelerated symmetric cryptographic instructions and efficient bitwise operations. Furthermore, we extend the proposed PSI protocol to circuit PSI and, subsequently, to several PSI variants, including PSI-cardinality, PSI-sum, and Private Join and Compute (PJC).</p>
+<p>All proposed protocols are evaluated under both LAN and WAN settings, with performance compared against existing works. Experimental results show that the proposed PSI outperforms the most efficient VOLE-based PSI by approximately 40% in runtime, while consistently incurring lower communication overhead under the same settings. For circuit PSI, it is up to $3.7\times$ faster and reduces communication by a factor of $1.5$ compared to VOLE-based circuit PSI constructions. In the cases of PSI-cardinality and PSI-sum, it achieves speedups of up to $12.4\times$ and $10\times$, respectively, while incurring only moderate communication overhead. For PJC, the proposed protocol outperforms prior work by $762\times$ in runtime and achieves a $3.2\times$ reduction in communication, maintaining high efficiency even under a low-bandwidth condition.</p>
+<p><strong>摘要</strong></p>
+<p>在这项工作中，我们在半诚实和恶意模型中提出了一个新的轻量级双方隐私集合交集(PSI)范式。它仅需要少量基础OT和单个遗忘键值存储(OKVS)编码和解码。所有计算(除了基础OT)都可以使用SIMD加速的对称加密指令和高效的位运算来实现。此外，我们将提出的PSI协议扩展到电路PSI，随后扩展到几个PSI变体，包括PSI基数、PSI求和和私有连接与计算(PJC)。</p>
+<p>所有提出的协议都在LAN和WAN设置下进行评估，性能与现有工作进行比较。实验结果表明，提出的PSI在运行时间上优于最高效的基于VOLE的PSI约40%，同时在相同设置下始终产生较低的通信开销。对于电路PSI，与基于VOLE的电路PSI构造相比，它快达3.7倍，并将通信减少了1.5倍。在PSI基数和PSI求和的情况下，它分别实现了高达12.4倍和10倍的加速，同时仅产生适度的通信开销。对于PJC，提出的协议在运行时间上优于先前工作762倍，并实现了3.2倍的通信减少，即使在低带宽条件下也能保持高效率。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/faster-than-ever-a-new-lightweight-private-set-intersection-and-its-variants/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
-<h2 id="三、隐私保护计算"><a href="#三、隐私保护计算" class="headerlink" title="三、隐私保护计算"></a>三、隐私保护计算</h2><h3 id="3-Cryptobazaar-Private-Sealed-bid-Auctions-at-Scale"><a href="#3-Cryptobazaar-Private-Sealed-bid-Auctions-at-Scale" class="headerlink" title="3. Cryptobazaar: Private Sealed-bid Auctions at Scale"></a>3. Cryptobazaar: Private Sealed-bid Auctions at Scale</h3><p><strong>Authors</strong>: Andrija Novakovic et al. (Bain Capital Crypto, UCL)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/cryptobazaar-private-sealed-bid-auctions-at-scale/">NDSS 2026</a></p>
-<p><strong>English</strong>: Enables large-scale private sealed-bid auctions using cryptographic techniques while maintaining auction integrity.</p>
-<p><strong>中文</strong>: 使用密码学技术实现大规模私有密封投标拍卖,同时保持拍卖完整性。</p>
+<h3 id="3-cwPSU-Efficient-Unbalanced-Private-Set-Union"><a href="#3-cwPSU-Efficient-Unbalanced-Private-Set-Union" class="headerlink" title="3. cwPSU: Efficient Unbalanced Private Set Union"></a>3. cwPSU: Efficient Unbalanced Private Set Union</h3><p><strong>Authors</strong>: Qingwen Li (Xidian University), Song Bian (Beihang University), Hui Li (Xidian University)</p>
+<p><strong>Abstract</strong></p>
+<p>Private Set Union (PSU) allows two parties to compute the union of their private sets without revealing any additional information. While several PSU protocols have been proposed for the unbalanced setting, these constructions still suffer from substantial communication overhead as the size of the larger set increases. Moreover, their reliance on multiple invocations of oblivious pseudo-random functions results in increased communication rounds, which becomes a practical bottleneck.</p>
+<p>In this work, we present <strong>cwPSU</strong>, a novel unbalanced PSU protocol built upon constant-weight codes and leveled fully homomorphic encryption. To prevent leakage, we introduce a new technique called Batched Ciphertext Shuffle, which enables secure reordering of packed ciphertexts. Additionally, we propose an optimized arithmetic constant-weight equality operator, which reduces the number of non-scalar multiplications to just one-third of those required by the naïve approach. The communication complexity of our protocol scales linearly with the size of the smaller set and remains independent of the larger set. Notably, cwPSU requires only a single round of online communication.</p>
+<p>Experimental results demonstrate that our cwPSU outperforms the state-of-the-art protocol in various network conditions, achieving a $5.1$–$32.4\times$ reduction in communication and a $3.1$–$13.3\times$ speedup in runtime.</p>
+<p><strong>摘要</strong></p>
+<p>隐私集合并集(PSU)允许双方计算其私有集合的并集而不透露任何额外信息。虽然已经为不平衡设置提出了几个PSU协议，但随着较大集合大小的增加，这些构造仍然遭受大量通信开销的困扰。此外，它们依赖于遗忘伪随机函数的多次调用导致通信轮次增加，这成为一个实际瓶颈。</p>
+<p>在这项工作中，我们提出了<strong>cwPSU</strong>，这是一个基于常重码和分级完全同态加密构建的新型不平衡PSU协议。为了防止泄漏，我们引入了一种称为批量密文洗牌的新技术，它能够安全地重新排序打包的密文。此外，我们提出了一个优化的算术常重相等性运算符，它将非标量乘法的数量减少到朴素方法所需数量的仅三分之一。我们协议的通信复杂度与较小集合的大小线性相关，并且与较大集合无关。值得注意的是，cwPSU仅需要一轮在线通信。</p>
+<p>实验结果表明，我们的cwPSU在各种网络条件下优于最先进的协议，实现了5.1至32.4倍的通信减少和3.1至13.3倍的运行时间加速。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/cwpsu-efficient-unbalanced-private-set-union-via-constant-weight-codes/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
-<h3 id="4-CryptPEFT-Efficient-Private-Neural-Network-Inference"><a href="#4-CryptPEFT-Efficient-Private-Neural-Network-Inference" class="headerlink" title="4. CryptPEFT: Efficient Private Neural Network Inference"></a>4. CryptPEFT: Efficient Private Neural Network Inference</h3><p><strong>Authors</strong>: Saisai Xia et al. (IIE CAS, NTU, USTC)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/cryptpeft-efficient-and-private-neural-network-inference-via-parameter-efficient-fine-tuning/">NDSS 2026</a></p>
-<p><strong>English</strong>: Efficient and private neural network inference via parameter-efficient fine-tuning with cryptographic protection.</p>
-<p><strong>中文</strong>: 通过参数高效微调和密码学保护实现高效私密的神经网络推理。</p>
+<h3 id="4-BKPIR-Keyword-PIR-for-Private-Boolean-Retrieval"><a href="#4-BKPIR-Keyword-PIR-for-Private-Boolean-Retrieval" class="headerlink" title="4. BKPIR: Keyword PIR for Private Boolean Retrieval"></a>4. BKPIR: Keyword PIR for Private Boolean Retrieval</h3><p><strong>Authors</strong>: Jie Song, Zhen Xu, Yan Zhang (IIE, CAS), Pengwei Zhan (Sangfor Technologies), Mingxuan Li (PPSUC), Shuai Ma (Beihang), Ru Xie (IIE, CAS)</p>
+<p><strong>Abstract</strong></p>
+<p>Keyword Private Information Retrieval (Keyword PIR) enables users to retrieve data associated with specific keywords from a database while keeping their queries private. However, existing Keyword PIR schemes struggle to support the boolean retrieval model, which is essential for practical applications that require logical combinations of terms.</p>
+<p>This paper proposes a novel keyword PIR scheme leveraging advancements in homomorphic equality operations. It enables privacy-preserving retrieval over databases with many-to-many keyword-value mappings while supporting boolean operators for expressive search logic. Importantly, this extension preserves the core security guarantees of classical PIR. To the best of our knowledge, this is the first work to integrate keyword PIR with the boolean retrieval model.</p>
+<p>Experimental evaluation shows that our scheme achieves a communication cost reduction proportional to the total number of values in the many-to-many keyword-value database, along with aggregate query processing performance gains that scale linearly with the number of values. These improvements enhance its feasibility for real-world applications such as privacy-preserving web search and patent retrieval.</p>
+<p><strong>摘要</strong></p>
+<p>关键词隐私信息检索(Keyword PIR)使用户能够从数据库中检索与特定关键词相关的数据，同时保持其查询的私密性。然而，现有的Keyword PIR方案难以支持布尔检索模型，这对于需要术语逻辑组合的实际应用至关重要。</p>
+<p>本文提出了一种利用同态相等性操作进展的新型关键词PIR方案。它在具有多对多关键词-值映射的数据库上实现隐私保护检索，同时支持用于表达性搜索逻辑的布尔运算符。重要的是，这种扩展保留了经典PIR的核心安全保证。据我们所知，这是第一个将关键词PIR与布尔检索模型集成的工作。</p>
+<p>实验评估表明，我们的方案实现了与多对多关键词-值数据库中值总数成比例的通信成本降低，以及与值数量线性相关的聚合查询处理性能提升。这些改进增强了其在真实世界应用(如隐私保护Web搜索和专利检索)中的可行性。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/bkpir-keyword-pir-for-private-boolean-retrieval/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
-<h3 id="5-cwPSU-Efficient-Unbalanced-Private-Set-Union"><a href="#5-cwPSU-Efficient-Unbalanced-Private-Set-Union" class="headerlink" title="5. cwPSU: Efficient Unbalanced Private Set Union"></a>5. cwPSU: Efficient Unbalanced Private Set Union</h3><p><strong>Authors</strong>: Qingwen Li et al. (Xidian University, Beihang University)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/cwpsu-efficient-unbalanced-private-set-union-via-constant-weight-codes/">NDSS 2026</a></p>
-<p><strong>English</strong>: Efficient solution for unbalanced private set union using constant-weight codes, improving performance dramatically.</p>
-<p><strong>中文</strong>: 使用常权码的不平衡私有集合并集的高效解决方案,显著提高性能。</p>
+<h2 id="二、安全多方计算与同态加密"><a href="#二、安全多方计算与同态加密" class="headerlink" title="二、安全多方计算与同态加密"></a>二、安全多方计算与同态加密</h2><h3 id="5-CryptPEFT-Private-Neural-Network-Inference-via-PEFT"><a href="#5-CryptPEFT-Private-Neural-Network-Inference-via-PEFT" class="headerlink" title="5. CryptPEFT: Private Neural Network Inference via PEFT"></a>5. CryptPEFT: Private Neural Network Inference via PEFT</h3><p><strong>Authors</strong>: Saisai Xia, Wenhao Wang (IIE, CAS), Zihao Wang (NTU), Yuhui Zhang (IIE, CAS), Yier Jin (USTC), Dan Meng, Rui Hou (IIE, CAS)</p>
+<p><strong>Abstract</strong></p>
+<p>Publicly available large pretrained models (i.e., backbones) and lightweight adapters for parameter-efficient fine-tuning (PEFT) have become standard components in modern machine learning pipelines. However, preserving the privacy of both user inputs and fine-tuned adapters—often trained on sensitive data—during inference remains a significant challenge. Applying cryptographic techniques, such as multi-party computation (MPC), to PEFT settings still incurs substantial encrypted computation across both the backbone and adapter, mainly due to the inherent two-way communication between them.</p>
+<p>To address this limitation, we propose <strong>CryptPEFT</strong>, the first PEFT solution specifically designed for private inference scenarios. CryptPEFT introduces a novel <em>one-way communication (OWC)</em> architecture that confines encrypted computation solely to the adapter, significantly reducing both computational and communication overhead. To maintain strong model utility under this constraint, we explore the design space of OWC-compatible adapters and employ an automated architecture search algorithm to optimize the trade-off between private inference efficiency and model utility.</p>
+<p>We evaluated CryptPEFT using Vision Transformer backbones across widely used image classification datasets. Our results show that CryptPEFT significantly outperforms existing baselines, delivering speedups ranging from $20.62\times$ to $291.48\times$ in simulated wide-area network (WAN) and local-area network (LAN) settings. On CIFAR-100, CryptPEFT attains 85.47% accuracy with just 2.26 seconds of inference latency. These findings demonstrate that CryptPEFT offers an efficient and privacy-preserving solution for modern PEFT-based inference.</p>
+<p><strong>摘要</strong></p>
+<p>公开可用的大型预训练模型(即骨干)和用于参数高效微调(PEFT)的轻量级适配器已成为现代机器学习管道中的标准组件。然而，在推理期间保护用户输入和经常在敏感数据上训练的微调适配器的隐私仍然是一个重大挑战。将加密技术(如多方计算MPC)应用于PEFT设置仍然会在骨干和适配器上产生大量加密计算，主要是由于它们之间固有的双向通信。</p>
+<p>为了解决这一限制，我们提出了<strong>CryptPEFT</strong>，这是第一个专门为私有推理场景设计的PEFT解决方案。CryptPEFT引入了一种新颖的*单向通信(OWC)*架构，将加密计算仅限于适配器，显著减少了计算和通信开销。为了在这一约束下保持强大的模型效用，我们探索了OWC兼容适配器的设计空间，并采用自动化架构搜索算法来优化私有推理效率和模型效用之间的权衡。</p>
+<p>我们在广泛使用的图像分类数据集上使用Vision Transformer骨干评估了CryptPEFT。我们的结果表明，CryptPEFT显著优于现有基线，在模拟广域网(WAN)和局域网(LAN)设置中实现了20.62倍至291.48倍的加速。在CIFAR-100上，CryptPEFT以仅2.26秒的推理延迟达到85.47%的准确率。这些发现表明CryptPEFT为现代基于PEFT的推理提供了一个高效且隐私保护的解决方案。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/cryptpeft-efficient-and-private-neural-network-inference-via-parameter-efficient-fine-tuning/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
-<h3 id="6-Faster-Than-Ever-New-Lightweight-Private-Set-Intersection"><a href="#6-Faster-Than-Ever-New-Lightweight-Private-Set-Intersection" class="headerlink" title="6. Faster Than Ever: New Lightweight Private Set Intersection"></a>6. Faster Than Ever: New Lightweight Private Set Intersection</h3><p><strong>Authors</strong>: Guowei Ling et al. (Shanghai Jiaotong University)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/faster-than-ever-a-new-lightweight-private-set-intersection-and-its-variants/">NDSS 2026</a></p>
-<p><strong>English</strong>: Record-breaking lightweight PSI protocol enabling practical privacy-preserving data analysis at scale.</p>
-<p><strong>中文</strong>: 破纪录的轻量级 PSI 协议,实现大规模实用隐私保护数据分析。</p>
-<hr>
-<h2 id="四、零知识证明与区块链"><a href="#四、零知识证明与区块链" class="headerlink" title="四、零知识证明与区块链"></a>四、零知识证明与区块链</h2><h3 id="7-Cirrus-Performant-and-Accountable-Distributed-SNARK"><a href="#7-Cirrus-Performant-and-Accountable-Distributed-SNARK" class="headerlink" title="7. Cirrus: Performant and Accountable Distributed SNARK"></a>7. Cirrus: Performant and Accountable Distributed SNARK</h3><p><strong>Authors</strong>: Wenhao Wang et al. (Yale University, Tsinghua University, Cornell Tech)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/cirrus-performant-and-accountable-distributed-snark/">NDSS 2026</a></p>
-<p><strong>English</strong>: Distributed SNARK system that is both performant and accountable for scalable zero-knowledge proof generation.</p>
-<p><strong>中文</strong>: 高性能且可问责的分布式 SNARK 系统,用于可扩展的零知识证明生成。</p>
-<hr>
-<h3 id="8-Distributed-Broadcast-Encryption-for-Private-Blockchains"><a href="#8-Distributed-Broadcast-Encryption-for-Private-Blockchains" class="headerlink" title="8. Distributed Broadcast Encryption for Private Blockchains"></a>8. Distributed Broadcast Encryption for Private Blockchains</h3><p><strong>Authors</strong>: Angelo De Caro et al. (IBM Research Zurich, IBM Research India)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/distributed-broadcast-encryption-for-confidential-interoperability-across-private-blockchains/">NDSS 2026</a></p>
-<p><strong>English</strong>: Enables confidential interoperability across private blockchains through distributed broadcast encryption.</p>
-<p><strong>中文</strong>: 通过分布式广播加密实现跨私有区块链的机密互操作性。</p>
-<hr>
-<h3 id="9-BunnyFinder-Finding-Incentive-Flaws-for-Ethereum-Consensus"><a href="#9-BunnyFinder-Finding-Incentive-Flaws-for-Ethereum-Consensus" class="headerlink" title="9. BunnyFinder: Finding Incentive Flaws for Ethereum Consensus"></a>9. BunnyFinder: Finding Incentive Flaws for Ethereum Consensus</h3><p><strong>Authors</strong>: Rujia Li et al. (Tsinghua University, Shandong University, Ant Group)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/bunnyfinder-finding-incentive-flaws-for-ethereum-consensus/">NDSS 2026</a></p>
-<p><strong>English</strong>: Systematically finds incentive flaws in Ethereum consensus mechanisms that could lead to attacks.</p>
-<p><strong>中文</strong>: 系统性地发现以太坊共识机制中可能导致攻击的激励缺陷。</p>
-<hr>
-<h3 id="10-Cross-Consensus-Reliable-Broadcast-and-Applications"><a href="#10-Cross-Consensus-Reliable-Broadcast-and-Applications" class="headerlink" title="10. Cross-Consensus Reliable Broadcast and Applications"></a>10. Cross-Consensus Reliable Broadcast and Applications</h3><p><strong>Authors</strong>: Yue Huang et al. (Tsinghua University)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/cross-consensus-reliable-broadcast-and-its-applications/">NDSS 2026</a></p>
-<p><strong>English</strong>: Cross-consensus reliable broadcast protocol enabling secure communication across different blockchain systems.</p>
-<p><strong>中文</strong>: 跨共识可靠广播协议,实现跨不同区块链系统的安全通信。</p>
-<hr>
-<h3 id="11-Consensus-in-Known-Participation-Model-with-Byzantine-Faults"><a href="#11-Consensus-in-Known-Participation-Model-with-Byzantine-Faults" class="headerlink" title="11. Consensus in Known Participation Model with Byzantine Faults"></a>11. Consensus in Known Participation Model with Byzantine Faults</h3><p><strong>Authors</strong>: Chenxu Wang et al. (Shandong University, Tsinghua University)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/consensus-in-the-known-participation-model-with-byzantine-faults-and-sleepy-replicas/">NDSS 2026</a></p>
-<p><strong>English</strong>: Consensus protocol for known participation model tolerating Byzantine faults and sleepy replicas.</p>
-<p><strong>中文</strong>: 已知参与模型的共识协议,容忍拜占庭故障和睡眠副本。</p>
-<hr>
-<h2 id="五、隐私保护机器学习"><a href="#五、隐私保护机器学习" class="headerlink" title="五、隐私保护机器学习"></a>五、隐私保护机器学习</h2><h3 id="12-Convergent-Privacy-Framework-for-Multi-layer-GNNs"><a href="#12-Convergent-Privacy-Framework-for-Multi-layer-GNNs" class="headerlink" title="12. Convergent Privacy Framework for Multi-layer GNNs"></a>12. Convergent Privacy Framework for Multi-layer GNNs</h3><p><strong>Authors</strong>: Yu Zheng et al. (UC Irvine, UCSD)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/convergent-privacy-framework-for-multi-layer-gnns-through-contractive-message-passing/">NDSS 2026</a></p>
-<p><strong>English</strong>: Convergent privacy framework for multi-layer graph neural networks through contractive message passing.</p>
-<p><strong>中文</strong>: 通过收缩消息传递为多层图神经网络提供收敛隐私框架。</p>
-<hr>
-<h3 id="13-CRISP-Efficient-Cryptographic-ML-Inference-Against-Malicious-Clients"><a href="#13-CRISP-Efficient-Cryptographic-ML-Inference-Against-Malicious-Clients" class="headerlink" title="13. CRISP: Efficient Cryptographic ML Inference Against Malicious Clients"></a>13. CRISP: Efficient Cryptographic ML Inference Against Malicious Clients</h3><p><strong>Authors</strong>: Xiaoyu Fang et al. (Beijing University of Posts and Telecommunications)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/crisp-an-efficient-cryptographic-framework-for-ml-inference-against-malicious-clients/">NDSS 2026</a></p>
-<p><strong>English</strong>: Efficient cryptographic framework for ML inference protecting against malicious clients.</p>
-<p><strong>中文</strong>: 针对恶意客户端保护的高效密码学机器学习推理框架。</p>
-<hr>
-<h2 id="六、差分隐私"><a href="#六、差分隐私" class="headerlink" title="六、差分隐私"></a>六、差分隐私</h2><h3 id="14-Augmented-Shuffle-Differential-Privacy-Protocols"><a href="#14-Augmented-Shuffle-Differential-Privacy-Protocols" class="headerlink" title="14. Augmented Shuffle Differential Privacy Protocols"></a>14. Augmented Shuffle Differential Privacy Protocols</h3><p><strong>Authors</strong>: Takao Murakami et al. (ISM, AIST, RIKEN AIP)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/augmented-shuffle-differential-privacy-protocols-for-large-domain-categorical-and-key-value-data/">NDSS 2026</a></p>
-<p><strong>English</strong>: Augmented shuffle differential privacy protocols for large-domain categorical and key-value data.</p>
-<p><strong>中文</strong>: 用于大域分类和键值数据的增强洗牌差分隐私协议。</p>
-<hr>
-<h2 id="七、证书与认证"><a href="#七、证书与认证" class="headerlink" title="七、证书与认证"></a>七、证书与认证</h2><h3 id="15-CTng-Secure-Certificate-and-Revocation-Transparency"><a href="#15-CTng-Secure-Certificate-and-Revocation-Transparency" class="headerlink" title="15. CTng: Secure Certificate and Revocation Transparency"></a>15. CTng: Secure Certificate and Revocation Transparency</h3><p><strong>Authors</strong>: Jie Kong et al. (University of Connecticut, et al.)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/ctng-secure-certificate-and-revocation-transparency/">NDSS 2026</a></p>
-<p><strong>English</strong>: Secure certificate and revocation transparency system with stronger guarantees against malicious CAs.</p>
-<p><strong>中文</strong>: 具有针对恶意 CA 更强保证的安全证书和撤销透明度系统。</p>
-<hr>
-<h2 id="八、去中心化系统安全"><a href="#八、去中心化系统安全" class="headerlink" title="八、去中心化系统安全"></a>八、去中心化系统安全</h2><h3 id="16-CtPhishCapture-Uncovering-Cryptocurrency-Wallet-Phishing"><a href="#16-CtPhishCapture-Uncovering-Cryptocurrency-Wallet-Phishing" class="headerlink" title="16. CtPhishCapture: Uncovering Cryptocurrency Wallet Phishing"></a>16. CtPhishCapture: Uncovering Cryptocurrency Wallet Phishing</h3><p><strong>Authors</strong>: Hui Jiang et al. (Tsinghua, Baidu, Nankai University)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/ctphishcapture-uncovering-credential-theft-based-phishing-scams-targeting-cryptocurrency-wallets/">NDSS 2026</a></p>
-<p><strong>English</strong>: Uncovers credential-theft-based phishing scams targeting cryptocurrency wallets.</p>
-<p><strong>中文</strong>: 揭露针对加密货币钱包的基于凭证盗窃的钓鱼诈骗。</p>
-<hr>
-<h2 id="研究趋势"><a href="#研究趋势" class="headerlink" title="研究趋势"></a>研究趋势</h2><h3 id="🔐-密码学实用化"><a href="#🔐-密码学实用化" class="headerlink" title="🔐 密码学实用化"></a>🔐 密码学实用化</h3><ol>
-<li><strong>性能突破</strong>: PIR、PSI 等隐私保护技术达到实用性能水平</li>
-<li><strong>轻量化设计</strong>: 面向资源受限环境的密码学协议</li>
-<li><strong>分布式 ZKP</strong>: 零知识证明从单点到分布式计算</li>
+<h3 id="6-CRISP-Cryptographic-Framework-Against-Malicious-Clients"><a href="#6-CRISP-Cryptographic-Framework-Against-Malicious-Clients" class="headerlink" title="6. CRISP: Cryptographic Framework Against Malicious Clients"></a>6. CRISP: Cryptographic Framework Against Malicious Clients</h3><p><strong>Authors</strong>: Xiaoyu Fang, Shihui Zheng, Lize Gu (Beijing University of Posts and Telecommunications)</p>
+<p><strong>Abstract</strong></p>
+<p>Machine learning inference protocols based on semi-honest security models are vulnerable to attacks from malicious clients in real-world applications. These attacks can lead to the leakage of machine learning model parameters. Previous works introduced additional MACs computations to ensure correct client behavior. However, this resulted in higher runtime and communication costs during online inference.</p>
+<p>In this work, we present <strong>CRISP</strong>, an efficient two-party cryptographic framework designed to defend against malicious clients. Specifically:</p>
+<ol>
+<li><p>We design protocols for non-linear layers based on a new cryptographic primitive (Function Secret Sharing). The core of our approach focuses on optimizing the reconstruction process of MACs.</p>
+</li>
+<li><p>We propose a complex domain verification mechanism for linear layers. This mechanism eliminates the additional MACs computations by making better use of the complex space in homomorphic encryption CKKS.</p>
+</li>
 </ol>
-<h3 id="⛓️-区块链安全"><a href="#⛓️-区块链安全" class="headerlink" title="⛓️ 区块链安全"></a>⛓️ 区块链安全</h3><ol>
-<li><strong>跨链互操作</strong>: 不同区块链间的安全通信和价值转移</li>
-<li><strong>共识安全性</strong>: 持续发现和修复共识机制的激励缺陷</li>
-<li><strong>隐私保护</strong>: 区块链上的隐私保护技术(广播加密等)</li>
-</ol>
-<h3 id="🤖-隐私保护-ML"><a href="#🤖-隐私保护-ML" class="headerlink" title="🤖 隐私保护 ML"></a>🤖 隐私保护 ML</h3><ol>
-<li><strong>密态推理</strong>: 加密数据上的机器学习推理</li>
-<li><strong>联邦学习隐私</strong>: GNN 等新型模型的隐私保护</li>
-<li><strong>恶意客户端防护</strong>: 保护服务器免受恶意客户端攻击</li>
-</ol>
-<h3 id="📊-差分隐私进展"><a href="#📊-差分隐私进展" class="headerlink" title="📊 差分隐私进展"></a>📊 差分隐私进展</h3><ol>
-<li><strong>Shuffle 模型</strong>: 洗牌差分隐私成为主流</li>
-<li><strong>大规模数据</strong>: 支持大域和高维数据的差分隐私</li>
-</ol>
-<h3 id="💡-技术洞察"><a href="#💡-技术洞察" class="headerlink" title="💡 技术洞察"></a>💡 技术洞察</h3><p><strong>从理论到实践的转变</strong>:</p>
-<ul>
-<li>PIR、PSI 等技术性能达到可部署水平</li>
-<li>密码学与机器学习的深度融合</li>
-<li>区块链从概念验证到生产系统</li>
-</ul>
-<p><strong>隐私与效率的平衡</strong>:</p>
-<ul>
-<li>轻量化设计使隐私保护更实用</li>
-<li>参数高效微调(PEFT)与密码学结合</li>
-<li>Constant-weight codes 等新技术提升效率</li>
-</ul>
-<p><strong>分布式密码学崛起</strong>:</p>
-<ul>
-<li>分布式 SNARK、跨链协议</li>
-<li>多方计算在实际场景中应用</li>
-</ul>
-<h3 id="🏢-实际应用"><a href="#🏢-实际应用" class="headerlink" title="🏢 实际应用"></a>🏢 实际应用</h3><p><strong>金融科技</strong>:</p>
-<ul>
-<li>私有拍卖系统</li>
-<li>加密货币钱包安全</li>
-<li>跨链资产转移</li>
-</ul>
-<p><strong>医疗健康</strong>:</p>
-<ul>
-<li>隐私保护的医疗数据分析(PIR、PSI)</li>
-<li>联邦学习在医疗 AI 中应用</li>
-</ul>
-<p><strong>云计算</strong>:</p>
-<ul>
-<li>加密数据上的 ML 推理</li>
-<li>隐私保护的数据共享</li>
-</ul>
-<p><strong>通信安全</strong>:</p>
-<ul>
-<li>端到端加密消息系统</li>
-<li>可追溯但抗滥用的通信</li>
-</ul>
-<p><strong>区块链</strong>:</p>
-<ul>
-<li>DeFi 隐私保护</li>
-<li>跨链桥安全</li>
-<li>共识机制安全加固</li>
-</ul>
-<h3 id="⚡-性能里程碑"><a href="#⚡-性能里程碑" class="headerlink" title="⚡ 性能里程碑"></a>⚡ 性能里程碑</h3><ul>
-<li><strong>PSI</strong>: “Faster Than Ever” 实现破纪录性能</li>
-<li><strong>PIR</strong>: 关键字 PIR 达到实用级别</li>
-<li><strong>ZKP</strong>: 分布式 SNARK 实现可扩展性</li>
-</ul>
+<p>Furthermore, in previous work (SIMC, USENIX Security’22), we identified compatibility issues in practical applications. The MAC reconstruction process in the nonlinear layers may leak intermediate inputs and outputs of the model when certain garbled circuit optimizations are applied. In contrast, CRISP effectively avoids this problem.</p>
+<p>In secure inference benchmarks considered in SIMC, CRISP reduces the total communication cost of ML inference by up to 94% and cuts inference latency by up to 43%.</p>
+<p><strong>摘要</strong></p>
+<p>基于半诚实安全模型的机器学习推理协议在真实世界应用中容易受到恶意客户端的攻击。这些攻击可能导致机器学习模型参数的泄漏。先前的工作引入了额外的MAC计算以确保正确的客户端行为。然而，这导致在线推理期间更高的运行时间和通信成本。</p>
+<p>在这项工作中，我们提出了<strong>CRISP</strong>，这是一个旨在防御恶意客户端的高效双方加密框架。具体而言：</p>
+<p>1)我们基于新的加密原语(函数秘密共享)设计了非线性层的协议。我们方法的核心集中在优化MAC的重建过程。</p>
+<p>2)我们为线性层提出了复杂域验证机制。这种机制通过更好地利用同态加密CKKS中的复杂空间来消除额外的MAC计算。</p>
+<p>此外，在先前的工作(SIMC，USENIX Security’22)中，我们识别了实际应用中的兼容性问题。当应用某些混淆电路优化时，非线性层中的MAC重建过程可能会泄漏模型的中间输入和输出。相比之下，CRISP有效地避免了这个问题。</p>
+<p>在SIMC中考虑的安全推理基准测试中，CRISP将ML推理的总通信成本降低了高达94%，并将推理延迟降低了高达43%。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/crisp-an-efficient-cryptographic-framework-for-ml-inference-against-malicious-clients/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
-<p><strong>其他视角</strong>:</p>
+<h3 id="7-Cryptobazaar-Private-Sealed-bid-Auctions-at-Scale"><a href="#7-Cryptobazaar-Private-Sealed-bid-Auctions-at-Scale" class="headerlink" title="7. Cryptobazaar: Private Sealed-bid Auctions at Scale"></a>7. Cryptobazaar: Private Sealed-bid Auctions at Scale</h3><p><strong>Authors</strong>: Andrija Novakovic, Kobi Gurkan (Bain Capital Crypto), Alireza Kavousi, Philipp Jovanovic (UCL)</p>
+<p><strong>Abstract</strong></p>
+<p>This work introduces <strong>Cryptobazaar</strong>, a scalable, private, and decentralized sealed-bid auction protocol. In particular, our protocol protects the privacy of losing bidders by preserving the confidentiality of their bids while ensuring public verifiability of the outcome and relying only on a single untrusted auctioneer for coordination. At its core, Cryptobazaar combines an efficient distributed protocol to compute the logical-OR for a list of unary-encoded bids with various novel zero-knowledge succinct arguments of knowledge that may be of independent interest.</p>
+<p>We present protocol variants that can be used for efficient first-, second-, and more generally (p+1)st-price as well as sequential first-price auctions. Finally, the performance evaluation of our Cryptobazaar implementation shows that it is highly practical. For example, a single auction run with 128 bidders and a price range of 1024 values terminates in less than 0.5sec and requires each bidder to send and receive only about 32KB of data.</p>
+<p><strong>摘要</strong></p>
+<p>这项工作介绍了<strong>Cryptobazaar</strong>，这是一个可扩展、私密且去中心化的密封投标拍卖协议。特别是，我们的协议通过保留失败投标人出价的机密性来保护其隐私，同时确保结果的公开可验证性，并仅依赖单个不受信任的拍卖人进行协调。其核心是，Cryptobazaar结合了一个高效的分布式协议，用于计算一元编码出价列表的逻辑或，以及各种新颖的零知识简洁知识论证，这些论证可能具有独立的价值。</p>
+<p>我们提出了可用于高效第一价格、第二价格以及更一般的(p+1)价格以及顺序第一价格拍卖的协议变体。最后，我们Cryptobazaar实现的性能评估表明它非常实用。例如，一次拍卖运行有128个投标人和1024个价格值的范围在不到0.5秒内终止，并且要求每个投标人仅发送和接收约32KB的数据。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/cryptobazaar-private-sealed-bid-auctions-at-scale/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h3 id="8-Cirrus-Performant-and-Accountable-Distributed-SNARK"><a href="#8-Cirrus-Performant-and-Accountable-Distributed-SNARK" class="headerlink" title="8. Cirrus: Performant and Accountable Distributed SNARK"></a>8. Cirrus: Performant and Accountable Distributed SNARK</h3><p><strong>Authors</strong>: Wenhao Wang (Yale, IC3), Fangyan Shi (Tsinghua), Dani Vilardell (Cornell Tech, IC3), Fan Zhang (Yale, IC3)</p>
+<p><strong>Abstract</strong></p>
+<p>Succinct Non-interactive Arguments of Knowledge (SNARKs) can enable efficient verification of computation in many applications. However, generating SNARK proofs for large-scale tasks, such as verifiable machine learning or virtual machines, remains computationally expensive. A promising approach is to distribute the proof generation workload across multiple workers. A practical distributed SNARK protocol should have three properties: horizontal scalability with low overhead (linear computation and logarithmic communication per worker), accountability (efficient detection of malicious workers), and a universal trusted setup independent of circuits and the number of workers. Existing protocols fail to achieve all these properties.</p>
+<p>In this paper, we present <strong>Cirrus</strong>, the first distributed SNARK generation protocol achieving all three desirable properties at once. Our protocol builds on HyperPlonk (EUROCRYPT’23), inheriting its universal trusted setup. It achieves linear computation complexity for both workers and the coordinator, along with low communication overhead. To achieve accountability, we introduce a highly efficient accountability protocol to localize malicious workers. Additionally, we propose a hierarchical aggregation technique to further reduce the coordinator’s workload.</p>
+<p>We implemented and evaluated Cirrus on machines with modest hardware. Our experiments show that Cirrus is highly scalable: it generates proofs for circuits with $33$M gates in under $40$ seconds using $32$ $8$-core machines. Compared to the state-of-the-art accountable protocol Hekaton (CCS’24), Cirrus achieves over $7\times$ faster proof generation for PLONK-friendly circuits such as the Pedersen hash. Our accountability protocol also efficiently identifies faulty workers within just $4$ seconds, making Cirrus particularly suitable for decentralized and outsourced computation scenarios.</p>
+<p><strong>摘要</strong></p>
+<p>简洁非交互式知识论证(SNARK)可以在许多应用中实现计算的高效验证。然而，为大规模任务(如可验证机器学习或虚拟机)生成SNARK证明仍然在计算上很昂贵。一个有前途的方法是将证明生成工作负载分布在多个工作者之间。实用的分布式SNARK协议应该具有三个属性：低开销的水平可扩展性(每个工作者的线性计算和对数通信)、问责制(高效检测恶意工作者)以及独立于电路和工作者数量的通用可信设置。现有协议无法同时实现所有这些属性。</p>
+<p>在本文中，我们提出了<strong>Cirrus</strong>，这是第一个同时实现所有三个理想属性的分布式SNARK生成协议。我们的协议基于HyperPlonk(EUROCRYPT’23)，继承了其通用可信设置。它为工作者和协调器实现了线性计算复杂度，以及低通信开销。为了实现问责制，我们引入了一个高效的问责协议来定位恶意工作者。此外，我们提出了一种分层聚合技术以进一步减少协调器的工作负载。</p>
+<p>我们在具有适度硬件的机器上实现并评估了Cirrus。我们的实验表明Cirrus具有高度可扩展性：它在不到40秒的时间内使用32台8核机器为具有3300万个门的电路生成证明。与最先进的可问责协议Hekaton(CCS’24)相比，Cirrus为Pedersen哈希等PLONK友好电路实现了超过7倍的更快证明生成。我们的问责协议还在仅4秒内高效识别故障工作者，使Cirrus特别适合分散式和外包计算场景。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/cirrus-performant-and-accountable-distributed-snark/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h2 id="三、差分隐私"><a href="#三、差分隐私" class="headerlink" title="三、差分隐私"></a>三、差分隐私</h2><h3 id="9-Augmented-Shuffle-Differential-Privacy-for-Large-Domain-Data"><a href="#9-Augmented-Shuffle-Differential-Privacy-for-Large-Domain-Data" class="headerlink" title="9. Augmented Shuffle Differential Privacy for Large-Domain Data"></a>9. Augmented Shuffle Differential Privacy for Large-Domain Data</h3><p><strong>Authors</strong>: Takao Murakami (ISM&#x2F;AIST&#x2F;RIKEN AIP), Yuichi Sei (UEC), Reo Eriguchi (AIST)</p>
+<p><strong>Abstract</strong></p>
+<p>Shuffle DP (Differential Privacy) protocols provide high accuracy and privacy by introducing a shuffler who randomly shuffles data in a distributed system. However, most shuffle DP protocols are vulnerable to two attacks: collusion attacks by the data collector and users and data poisoning attacks. A recent study addresses this issue by introducing an augmented shuffle DP protocol, where users do not add noise and the shuffler performs random sampling and dummy data addition. However, it focuses on frequency estimation over categorical data with a small domain and cannot be applied to a large domain due to prohibitively high communication and computational costs.</p>
+<p>In this paper, we fill this gap by introducing a novel augmented shuffle DP protocol called the <strong>FME (Filtering-with-Multiple-Encryption) protocol</strong>. Our FME protocol uses a hash function to filter out unpopular items and then accurately calculates frequencies for popular items. To perform this within one round of interaction between users and the shuffler, our protocol carefully communicates within a system using multiple encryption. We also apply our FME protocol to more advanced KV (Key-Value) statistics estimation with an additional technique to reduce bias.</p>
+<p>For both categorical and KV data, we prove that our protocol provides computational DP, high robustness to the above two attacks, accuracy, and efficiency. We show the effectiveness of our proposals through comparisons with twelve existing protocols.</p>
+<p><strong>摘要</strong></p>
+<p>洗牌差分隐私(Shuffle DP)协议通过引入在分布式系统中随机洗牌数据的洗牌器来提供高准确性和隐私。然而，大多数洗牌DP协议容易受到两种攻击：数据收集器和用户的串通攻击以及数据投毒攻击。最近的一项研究通过引入增强洗牌DP协议来解决这个问题，其中用户不添加噪声，洗牌器执行随机采样和虚拟数据添加。然而，它专注于小域上分类数据的频率估计，由于过高的通信和计算成本，无法应用于大域。</p>
+<p>在本文中，我们通过引入一个称为<strong>FME(多重加密过滤)协议</strong>的新型增强洗牌DP协议来填补这一空白。我们的FME协议使用哈希函数过滤掉不受欢迎的项目，然后准确计算受欢迎项目的频率。为了在用户和洗牌器之间的一轮交互中执行此操作，我们的协议使用多重加密在系统内小心地通信。我们还将FME协议应用于更高级的键值(KV)统计估计，并使用额外的技术来减少偏差。</p>
+<p>对于分类数据和KV数据，我们证明我们的协议提供计算DP、对上述两种攻击的高鲁棒性、准确性和效率。我们通过与十二个现有协议的比较展示了我们提案的有效性。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/augmented-shuffle-differential-privacy-protocols-for-large-domain-categorical-and-key-value-data/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h3 id="10-Convergent-Privacy-Framework-for-Multi-layer-GNNs"><a href="#10-Convergent-Privacy-Framework-for-Multi-layer-GNNs" class="headerlink" title="10. Convergent Privacy Framework for Multi-layer GNNs"></a>10. Convergent Privacy Framework for Multi-layer GNNs</h3><p><strong>Authors</strong>: Yu Zheng, Chenang Li, Zhou Li (UC Irvine), Qingsong Wang (UCSD)</p>
+<p><strong>Abstract</strong></p>
+<p>Differential privacy (DP) has been integrated into graph neural networks (GNNs) to protect sensitive structural information, e.g., edges, nodes, and associated features across various applications. A prominent approach is to perturb the message-passing process, which forms the core of most GNN architectures. However, existing methods typically incur a privacy cost that grows linearly with the number of layers (e.g., GAP published in Usenix Security’23), ultimately requiring excessive noise to maintain a reasonable privacy level. This limitation becomes particularly problematic when multi-layer GNNs, which have shown better performance than one-layer GNN, are used to process graph data with sensitive information.</p>
+<p>In this paper, we theoretically establish that the privacy budget converges with respect to the number of layers by applying privacy amplification techniques to the message-passing process, exploiting the contractive properties inherent to standard GNN operations. Motivated by this analysis, we propose a simple yet effective Contractive Graph Layer (CGL) that ensures the contractiveness required for theoretical guarantees while preserving model utility. Our framework, <strong>CARIBOU</strong>, supports both training and inference, equipped with a contractive aggregation module, a privacy allocation module, and a privacy auditing module.</p>
+<p>Experimental evaluations demonstrate that CARIBOU significantly improves the privacy-utility trade-off and achieves superior performance in privacy auditing tasks.</p>
+<p><strong>摘要</strong></p>
+<p>差分隐私(DP)已被集成到图神经网络(GNN)中，以保护各种应用中的敏感结构信息，例如边、节点和相关特征。一个突出的方法是扰动消息传递过程，这构成了大多数GNN架构的核心。然而，现有方法通常会产生与层数线性增长的隐私成本(例如，Usenix Security’23中发布的GAP)，最终需要过多的噪声来维持合理的隐私级别。当使用多层GNN(已显示出比单层GNN更好的性能)处理具有敏感信息的图数据时，这种限制变得特别成问题。</p>
+<p>在本文中，我们理论上确立了隐私预算相对于层数收敛，通过将隐私放大技术应用于消息传递过程，利用标准GNN操作固有的收缩性质。受此分析的启发，我们提出了一个简单但有效的收缩图层(CGL)，它确保理论保证所需的收缩性，同时保持模型效用。我们的框架<strong>CARIBOU</strong>支持训练和推理，配备了收缩聚合模块、隐私分配模块和隐私审计模块。</p>
+<p>实验评估表明，CARIBOU显著改善了隐私-效用权衡，并在隐私审计任务中取得了优越的性能。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/convergent-privacy-framework-for-multi-layer-gnns-through-contractive-message-passing/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h3 id="11-Prεεmpt-Sanitizing-Sensitive-Prompts-for-LLMs"><a href="#11-Prεεmpt-Sanitizing-Sensitive-Prompts-for-LLMs" class="headerlink" title="11. Prεεmpt: Sanitizing Sensitive Prompts for LLMs"></a>11. Prεεmpt: Sanitizing Sensitive Prompts for LLMs</h3><p><strong>Authors</strong>: Amrita Roy Chowdhury (UMich), David Glukhov (Toronto), Divyam Anshumaan (Wisconsin), Prasad Chalasani (Langroid), Nicholas Papernot (Toronto), Somesh Jha (Wisconsin), Mihir Bellare (UCSD)</p>
+<p><strong>Abstract</strong></p>
+<p>The rise of large language models (LLMs) has introduced new privacy challenges, particularly during <em>inference</em> where sensitive information in prompts may be exposed to proprietary LLM APIs. In this paper, we address the problem of formally protecting the sensitive information contained in a prompt while maintaining response quality. To this end, first, we introduce a cryptographically inspired notion of a <em>prompt sanitizer</em> which transforms an input prompt to protect its sensitive tokens. Second, we propose <strong>Prεεmpt</strong>, a novel system that implements a prompt sanitizer, focusing on the sensitive information that can be derived solely from the individual tokens.</p>
+<p>Prεεmpt categorizes sensitive tokens into two types: (1) those where the LLM’s response depends solely on the format (such as SSNs, credit card numbers), for which we use format-preserving encryption (FPE); and (2) those where the response depends on specific values, (such as age, salary) for which we apply metric differential privacy (mDP). Our evaluation demonstrates that Prεεmpt is a practical method to achieve meaningful privacy guarantees, while maintaining high utility compared to unsanitized prompts, and outperforming prior methods.</p>
+<p><strong>摘要</strong></p>
+<p>大型语言模型(LLM)的兴起引入了新的隐私挑战，特别是在<em>推理</em>期间，提示中的敏感信息可能会暴露给专有LLM API。在本文中，我们解决在保持响应质量的同时正式保护提示中包含的敏感信息的问题。为此，首先，我们引入了一个受加密学启发的<em>提示消毒器</em>概念，它转换输入提示以保护其敏感令牌。其次，我们提出了<strong>Prεεmpt</strong>，这是一个实现提示消毒器的新型系统，专注于仅可从单个令牌派生的敏感信息。</p>
+<p>Prεεmpt将敏感令牌分为两类：(1)LLM的响应仅取决于格式的令牌(如SSN、信用卡号)，我们为此使用格式保持加密(FPE)；(2)响应取决于特定值的令牌(如年龄、薪水)，我们为此应用度量差分隐私(mDP)。我们的评估表明，Prεεmpt是一种实用的方法，可以实现有意义的隐私保证，同时与未消毒的提示相比保持高效用，并优于先前的方法。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/pr%ce%b5%ce%b5mpt-sanitizing-sensitive-prompts-for-llms/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h3 id="12-ExpShield-Safeguarding-Web-Text-from-LLM-Exploitation"><a href="#12-ExpShield-Safeguarding-Web-Text-from-LLM-Exploitation" class="headerlink" title="12. ExpShield: Safeguarding Web Text from LLM Exploitation"></a>12. ExpShield: Safeguarding Web Text from LLM Exploitation</h3><p><strong>Authors</strong>: Ruixuan Liu, Toan Tran (Emory), Tianhao Wang (UVA), Hongsheng Hu, Shuo Wang (Shanghai Jiao Tong), Li Xiong (Emory)</p>
+<p><strong>Abstract</strong></p>
+<p>As large language models increasingly memorize web-scraped training content, they risk exposing copyrighted or private information. Existing protections require compliance from crawlers or model developers, fundamentally limiting their effectiveness. We propose <strong>ExpShield</strong>, a proactive self-guard that mitigates memorization while maintaining readability via invisible perturbations, and we formulate it as a constrained optimization problem.</p>
+<p>Due to the lack of an individual-level risk metric for natural text, we first propose instance exploitation, a metric that measures how much training on a specific text increases the chance of guessing that text from a set of candidates—with zero indicating perfect defense. Directly solving the problem is infeasible for defenders without sufficient knowledge, thus we develop two effective proxy solutions: single-level optimization and synthetic perturbation. To enhance the defense, we reveal and verify the memorization trigger hypothesis, which can help to identify key tokens for memorization. Leveraging this insight, we design targeted perturbations that (i) neutralize inherent trigger tokens to reduce memorization and (ii) introduce artificial trigger tokens to misdirect model memorization.</p>
+<p>Experiments validate our defense across attacks, model scales, and tasks in language and vision-to-language modeling. Even with privacy backdoor, the Membership Inference Attack (MIA) AUC drops from 0.95 to 0.55 under the defense, and the instance exploitation approaches zero. This suggests that compared to the ideal no-misuse scenario, the risk of exposing a text instance remains nearly unchanged despite its inclusion in the training data.</p>
+<p><strong>摘要</strong></p>
+<p>随着大型语言模型越来越多地记忆网络抓取的训练内容，它们有暴露版权或私人信息的风险。现有的保护措施需要爬虫或模型开发人员的合规性，从根本上限制了它们的有效性。我们提出了<strong>ExpShield</strong>，这是一个主动的自我保护，通过不可见的扰动减轻记忆化同时保持可读性，我们将其制定为约束优化问题。</p>
+<p>由于缺乏自然文本的个体级风险度量，我们首先提出实例利用，这是一个度量，衡量对特定文本的训练增加从候选集中猜测该文本的机会有多大——零表示完美防御。对于没有足够知识的防御者，直接解决问题是不可行的，因此我们开发了两个有效的代理解决方案：单级优化和合成扰动。为了增强防御，我们揭示并验证了记忆化触发假设，它可以帮助识别记忆化的关键令牌。利用这一洞察力，我们设计了针对性扰动，(i)中和固有触发令牌以减少记忆化，(ii)引入人工触发令牌以误导模型记忆化。</p>
+<p>实验验证了我们的防御在语言和视觉到语言建模的攻击、模型规模和任务中的有效性。即使有隐私后门，在防御下成员推理攻击(MIA) AUC从0.95下降到0.55，实例利用接近零。这表明与理想的无滥用场景相比，尽管文本实例包含在训练数据中，但暴露文本实例的风险几乎保持不变。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/expshield-safeguarding-web-text-from-unauthorized-crawling-and-llm-exploitation/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h2 id="四、区块链与共识协议"><a href="#四、区块链与共识协议" class="headerlink" title="四、区块链与共识协议"></a>四、区块链与共识协议</h2><h3 id="13-Consensus-with-Byzantine-Faults-and-Sleepy-Replicas"><a href="#13-Consensus-with-Byzantine-Faults-and-Sleepy-Replicas" class="headerlink" title="13. Consensus with Byzantine Faults and Sleepy Replicas"></a>13. Consensus with Byzantine Faults and Sleepy Replicas</h3><p><strong>Authors</strong>: Chenxu Wang, Minghui Xu, Feng Li, Xiuzhen Cheng (Shandong University), Sisi Duan (Tsinghua)</p>
+<p><strong>Abstract</strong></p>
+<p>We study consensus in the known participation model with both Byzantine failures and sleepy replicas, where honest replicas may unpredictably fall asleep, and replicas know the minimum number of awake honest replicas. Our main contribution is providing a fine-grained treatment of consensus in such a mixed failure model.</p>
+<p>First, we present a synchronous atomic broadcast protocol with $5\Delta+2\delta$ expected latency and $2\Delta+2\delta$ best-case latency, where $\Delta$ is the bound on network delay and $\delta$ is the actual network delay. Second, in the partially synchronous network (the value of $\Delta$ is unknown), we show that one can make a conventional Byzantine fault-tolerant (BFT) protocol tolerate sleepy replicas but has to make the stable storage assumption (where replicas need to store intermediate consensus parameters in stable storage).</p>
+<p>Finally, in the partially synchronous network but not assuming stable storage, we show several bounds on the relationship between the total number of replicas $n$, the maximum number of Byzantine replicas $f$, and the maximum number of simultaneous sleeping replicas $s$. Using these bounds, we transform HotStuff (PODC’19) into a protocol that tolerates sleepy replicas without sacrificing the performance.</p>
+<p><strong>摘要</strong></p>
+<p>我们在已知参与模型中研究具有拜占庭故障和睡眠副本的共识，其中诚实副本可能不可预测地入睡，并且副本知道清醒诚实副本的最小数量。我们的主要贡献是在这种混合故障模型中提供共识的细粒度处理。</p>
+<p>首先，我们提出了一个同步原子广播协议，具有$5\Delta+2\delta$的预期延迟和$2\Delta+2\delta$的最佳情况延迟，其中$\Delta$是网络延迟的界限，$\delta$是实际网络延迟。其次，在部分同步网络中($\Delta$的值未知)，我们表明可以使传统的拜占庭容错(BFT)协议容忍睡眠副本，但必须做出稳定存储假设(其中副本需要在稳定存储中存储中间共识参数)。</p>
+<p>最后，在部分同步网络中但不假设稳定存储，我们展示了副本总数$n$、拜占庭副本最大数量$f$和同时睡眠副本最大数量$s$之间关系的几个界限。使用这些界限，我们将HotStuff(PODC’19)转换为一个容忍睡眠副本而不牺牲性能的协议。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/consensus-in-the-known-participation-model-with-byzantine-faults-and-sleepy-replicas/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h3 id="14-Cross-Consensus-Reliable-Broadcast-and-Applications"><a href="#14-Cross-Consensus-Reliable-Broadcast-and-Applications" class="headerlink" title="14. Cross-Consensus Reliable Broadcast and Applications"></a>14. Cross-Consensus Reliable Broadcast and Applications</h3><p><strong>Authors</strong>: Yue Huang, Xin Wang (Tsinghua), Haibin Zhang (Yangtze Delta Region Institute of Tsinghua), Sisi Duan (Tsinghua)</p>
+<p><strong>Abstract</strong></p>
+<p>Conventional Byzantine fault-tolerant consensus protocols focus on the workflow within a group of nodes. In recent years, many applications of consensus involve communication across groups. Examples include communication between replicated state machine across different infrastructures, sharding-based protocols where nodes from different shards communicate with each other, and cross-chain bridges. Unfortunately, little effort has been made to model the properties for communication across groups.</p>
+<p>In this work, we propose a new primitive called <strong>cross-consensus reliable broadcast (XRBC)</strong>. The XRBC primitive models the security properties of communication between two groups, where at least one group executes a consensus protocol. We provide three constructions of XRBC under different assumptions and present three different applications for our XRBC protocols: a cross-shard coordination protocol via a case study of Reticulum (NDSS 2024), a protocol for cross-shard transactions via a case study of Chainspace (NDSS 2018), and a solution for cross-chain bridge.</p>
+<p>Our evaluation results show that our protocols are highly efficient and benefit different applications. For example, in our case study on Reticulum, our approach achieves 61.16% lower latency than the vanilla approach.</p>
+<p><strong>摘要</strong></p>
+<p>传统的拜占庭容错共识协议专注于一组节点内的工作流程。近年来，许多共识应用涉及跨组通信。示例包括不同基础设施之间的复制状态机之间的通信、基于分片的协议(其中来自不同分片的节点彼此通信)以及跨链桥。不幸的是，很少努力对跨组通信的属性进行建模。</p>
+<p>在这项工作中，我们提出了一个称为**跨共识可靠广播(XRBC)**的新原语。XRBC原语对两个组之间通信的安全属性进行建模，其中至少一个组执行共识协议。我们在不同假设下提供了三种XRBC构造，并为我们的XRBC协议提出了三个不同的应用：通过Reticulum(NDSS 2024)案例研究的跨分片协调协议、通过Chainspace(NDSS 2018)案例研究的跨分片交易协议以及跨链桥的解决方案。</p>
+<p>我们的评估结果表明，我们的协议非常高效并使不同的应用受益。例如，在我们对Reticulum的案例研究中，我们的方法实现了比原始方法低61.16%的延迟。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/cross-consensus-reliable-broadcast-and-its-applications/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h3 id="15-Distributed-Broadcast-Encryption-for-Private-Blockchains"><a href="#15-Distributed-Broadcast-Encryption-for-Private-Blockchains" class="headerlink" title="15. Distributed Broadcast Encryption for Private Blockchains"></a>15. Distributed Broadcast Encryption for Private Blockchains</h3><p><strong>Authors</strong>: Angelo De Caro, Kaoutar Elkhiyaoui (IBM Research Zurich), Sandeep Nishad, Sikhar Patranabis, Venkatraman Ramakrishna (IBM Research India)</p>
+<p><strong>Abstract</strong></p>
+<p>Interoperation across distributed ledger technology (DLT) networks hinges upon the secure transmission of ledger state from one network to another. This is especially challenging for private networks whose ledger access is limited to enrolled members. Existing approaches rely on a trusted centralized proxy that receives encrypted ledger state of a network, decrypts it, and sends it to members of another network. Though effective, this approach goes against the founding principle of DLT, namely avoiding single points of failure (or single sources of trust).</p>
+<p>In this paper, we leverage fully-distributed broadcast encryption (FDBE in short) to build a fully decentralized protocol for confidential information-sharing across private networks. Compared to traditional broadcast encryption (BE), FDBE is characterized by distributed setup and key generation, where mutually distrusting parties agree on a BE’s public key without a trusted setup, and securely derive their decryption keys. Given any FDBE, two private networks can securely share information as follows: a sender in one network uses the other network’s FDBE public key to encrypt a message for its members. The resulting construction is secure in the simplified universal composability (UC) framework.</p>
+<p>To further demonstrate the practicality of our approach, we present the first instantiation of an FDBE that enjoys constant-sized decryption keys and ciphertexts, and evaluate the resulting performances through a reference implementation that considers two private Hyperledger Fabric networks within the Hyperledger Cacti interoperation framework.</p>
+<p><strong>摘要</strong></p>
+<p>分布式账本技术(DLT)网络之间的互操作依赖于从一个网络到另一个网络的账本状态的安全传输。这对于账本访问仅限于注册成员的私有网络尤其具有挑战性。现有方法依赖于可信的集中式代理，该代理接收网络的加密账本状态，解密它，并将其发送给另一个网络的成员。虽然有效，但这种方法违背了DLT的创始原则，即避免单点故障(或单一信任来源)。</p>
+<p>在本文中，我们利用完全分布式广播加密(简称FDBE)来构建一个完全去中心化的协议，用于私有网络之间的机密信息共享。与传统广播加密(BE)相比，FDBE的特点是分布式设置和密钥生成，其中相互不信任的各方在没有可信设置的情况下就BE的公钥达成一致，并安全地派生其解密密钥。给定任何FDBE，两个私有网络可以安全地共享信息如下：一个网络中的发送者使用另一个网络的FDBE公钥为其成员加密消息。生成的构造在简化的通用可组合性(UC)框架中是安全的。</p>
+<p>为了进一步证明我们方法的实用性，我们提出了第一个享有常量大小解密密钥和密文的FDBE实例化，并通过参考实现评估生成的性能，该实现考虑了Hyperledger Cacti互操作框架内的两个私有Hyperledger Fabric网络。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/distributed-broadcast-encryption-for-confidential-interoperability-across-private-blockchains/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h2 id="五、消息系统与-PKI-安全"><a href="#五、消息系统与-PKI-安全" class="headerlink" title="五、消息系统与 PKI 安全"></a>五、消息系统与 PKI 安全</h2><h3 id="16-Abuse-Resistant-Traceability-for-Encrypted-Messaging"><a href="#16-Abuse-Resistant-Traceability-for-Encrypted-Messaging" class="headerlink" title="16. Abuse Resistant Traceability for Encrypted Messaging"></a>16. Abuse Resistant Traceability for Encrypted Messaging</h3><p><strong>Authors</strong>: Zhongming Wang, Tao Xiang, Xiaoguo Li, Biwen Chen, Ze Jiang, Chuan Ma (Chongqing University), Guomin Yang (SMU), Jiacheng Wang (NTU), Robert H. Deng (SMU)</p>
+<p><strong>Abstract</strong></p>
+<p>Encrypted messaging systems provide end-to-end security for users but obstruct content moderation, making it difficult to combat online abuses. Traceability offers a promising solution by enabling platforms to identify the originator or spreader of messages, yet this capability can be abused for mass surveillance of innocent messages. To mitigate this risk, existing approaches restrict traceability to problematic messages that are reported by multiple users or are on a predefined blocklist. However, these solutions either over-trust a specific entity (e.g., the party defining the blocklist) or rely on the unrealistic assumption of non-collusion between servers run by a single platform.</p>
+<p>In this paper, we propose an abuse-resistant source tracing scheme that distributes traceability across distinct real-world entities. Specifically, we formally define its syntax and prove its security properties. Our scheme realizes two essential principles: minimal trust, which ensures that traceability cannot be abused as long as a single participant involved in tracing is honest, even if all others collude; and minimal information disclosure, which prevents participants from acquiring any information (e.g., communication parties’ identities) unnecessary for tracing.</p>
+<p>We implemented our scheme using techniques deployed by Signal, and our evaluation shows it offers comparable performance to state-of-the-art schemes that are vulnerable to abuse.</p>
+<p><strong>摘要</strong></p>
+<p>加密消息系统为用户提供端到端安全性，但阻碍了内容审核，使得打击在线滥用变得困难。可追溯性通过使平台能够识别消息的发起者或传播者提供了一个有前途的解决方案，但这种能力可能被滥用于对无辜消息的大规模监视。为了减轻这种风险，现有方法将可追溯性限制在由多个用户报告或在预定义黑名单上的有问题的消息。然而，这些解决方案要么过度信任特定实体(例如定义黑名单的一方)，要么依赖于单个平台运行的服务器之间不串通的不切实际假设。</p>
+<p>在本文中，我们提出了一个抗滥用的源追踪方案，它将可追溯性分布在不同的真实世界实体之间。具体而言，我们正式定义了其语法并证明了其安全属性。我们的方案实现了两个基本原则：最小信任，确保只要参与追踪的单个参与者诚实，即使所有其他人串通，可追溯性也不能被滥用；以及最小信息披露，防止参与者获取任何追踪不必要的信息(例如通信方的身份)。</p>
+<p>我们使用Signal部署的技术实现了我们的方案，我们的评估表明它提供了与容易受到滥用的最先进方案相当的性能。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/abuse-resistant-traceability-with-minimal-trust-for-encrypted-messaging-systems/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h3 id="17-CTng-Secure-Certificate-and-Revocation-Transparency"><a href="#17-CTng-Secure-Certificate-and-Revocation-Transparency" class="headerlink" title="17. CTng: Secure Certificate and Revocation Transparency"></a>17. CTng: Secure Certificate and Revocation Transparency</h3><p><strong>Authors</strong>: Jie Kong, Damon James (UConn), Hemi Leibowitz (College of Management, Israel), Ewa Syta (Trinity College), Amir Herzberg (UConn)</p>
+<p><strong>Abstract</strong></p>
+<p>We present <strong>CTng</strong>, an evolutionary and practical PKI design that efficiently addresses multiple key challenges faced by deployed PKI systems. CTng ensures strong security properties, including guaranteed transparency of certificates and guaranteed, unequivocal revocation, achieved under NTTP-security, i.e., without requiring trust in any single CA, logger, or relying party. These guarantees hold even in the presence of arbitrary corruptions of these entities, assuming only a known bound (f) of corrupt monitors (e.g., f&#x3D;8), with minimal performance impact.</p>
+<p>CTng also enables offline certificate validation and preserves relying-party privacy, while providing scalable and efficient distribution of revocation updates. These properties significantly improve upon current PKI designs. In particular, while Certificate Transparency (CT) aims to eliminate single points of trust, the existing specification still assumes benign loggers. Addressing this through log redundancy is possible, but rather inefficient, limiting deployed configurations to f ≤ 2.</p>
+<p>We present a security analysis and an evaluation of our open-source CTng prototype, showing that it is efficient and scalable under realistic deployment conditions.</p>
+<p><strong>摘要</strong></p>
+<p>我们提出了<strong>CTng</strong>，这是一个演化的和实用的PKI设计，有效地解决了部署的PKI系统面临的多个关键挑战。CTng确保强大的安全属性，包括保证证书的透明度和保证的、明确的撤销，在NTTP安全下实现，即不需要信任任何单个CA、日志记录器或依赖方。即使在这些实体的任意损坏存在的情况下，这些保证也成立，仅假设已知的损坏监视器界限(f)(例如f&#x3D;8)，具有最小的性能影响。</p>
+<p>CTng还支持离线证书验证并保护依赖方隐私，同时提供可扩展且高效的撤销更新分发。这些属性显著改进了当前的PKI设计。特别是，虽然证书透明度(CT)旨在消除单点信任，但现有规范仍然假设良性日志记录器。通过日志冗余解决这个问题是可能的，但相当低效，将部署配置限制为f≤2。</p>
+<p>我们提出了安全分析和我们开源CTng原型的评估，表明它在现实部署条件下是高效和可扩展的。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/ctng-secure-certificate-and-revocation-transparency/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h2 id="六、隐写术"><a href="#六、隐写术" class="headerlink" title="六、隐写术"></a>六、隐写术</h2><h3 id="18-ANStega-Breaking-the-Generative-Steganography-Trilemma"><a href="#18-ANStega-Breaking-the-Generative-Steganography-Trilemma" class="headerlink" title="18. ANStega: Breaking the Generative Steganography Trilemma"></a>18. ANStega: Breaking the Generative Steganography Trilemma</h3><p><strong>Authors</strong>: Yaofei Wang, Weilong Pang (Hefei UT), Kejiang Chen, Jinyang Ding, Weiming Zhang, Nenghai Yu (USTC), Donghui Hu (Hefei UT)</p>
+<p><strong>Abstract</strong></p>
+<p>Generative steganography shows immense promise for covert communication, yet existing methods are often constrained by a trilemma of capacity, efficiency, and security. Methods based on Huffman Coding (HC) suffer from poor efficiency and security, while those based on Arithmetic Coding (AC), despite achieving optimal capacity, also pose security risks. Although recent provably secure methods have addressed the security issue, they often do so at the cost of elevated embedding complexity or diminished capacity—failing to match the high capacity exhibited by AC-based methods.</p>
+<p>To address this trilemma, we adapt Asymmetric Numeral Systems (ANS) for steganography. Our core insight is to repurpose the ANS state machine, using its decoding function for embedding and its encoding function for extraction. To translate this concept into a practical system, we introduce several key innovations. First, we incorporate a streaming architecture with state renormalization to enable the stable embedding of arbitrarily long messages. Second, we employ direct floating-point arithmetic, avoiding costly probability-to-frequency conversions to reduce complexity and precision loss.</p>
+<p>More critically, we introduce an innovative cryptographic mask mechanism that ensures the sampling process is driven by a cryptographically secure pseudo-random number generator, thereby achieving provable security. Finally, by optimizing core computations into highly efficient bitwise shift operations, <strong>ANStega</strong> achieves exceptional embedding and extraction speeds.</p>
+<p>Experimental results validate that ANStega simultaneously achieves optimal embedding capacity, optimal efficiency (embedding complexity with $O(1)$) and optimal security, successfully resolving the long-standing trilemma in generative steganography.</p>
+<p><strong>摘要</strong></p>
+<p>生成式隐写术显示出巨大的隐蔽通信前景，但现有方法通常受到容量、效率和安全性三难困境的限制。基于霍夫曼编码(HC)的方法遭受效率和安全性差的困扰，而基于算术编码(AC)的方法尽管实现了最佳容量，但也带来了安全风险。虽然最近可证明安全的方法已经解决了安全问题，但它们通常以提高嵌入复杂性或降低容量为代价——未能匹配基于AC的方法展示的高容量。</p>
+<p>为了解决这个三难困境，我们将非对称数字系统(ANS)应用于隐写术。我们的核心洞察力是重新利用ANS状态机，使用其解码函数进行嵌入，使用其编码函数进行提取。为了将这个概念转化为实用系统，我们引入了几个关键创新。首先，我们结合了具有状态重新规范化的流式架构，以实现任意长消息的稳定嵌入。其次，我们采用直接浮点算术，避免代价高昂的概率到频率转换以减少复杂性和精度损失。</p>
+<p>更关键的是，我们引入了一个创新的加密掩码机制，确保采样过程由加密安全的伪随机数生成器驱动，从而实现可证明的安全性。最后，通过将核心计算优化为高效的位移操作，<strong>ANStega</strong>实现了卓越的嵌入和提取速度。</p>
+<p>实验结果验证了ANStega同时实现了最佳嵌入容量、最佳效率(嵌入复杂度为$O(1)$)和最佳安全性，成功解决了生成式隐写术中长期存在的三难困境。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/breaking-the-generative-steganography-trilemma-anstega-for-optimal-capacity-efficiency-and-security/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h2 id="研究趋势总结"><a href="#研究趋势总结" class="headerlink" title="研究趋势总结"></a>研究趋势总结</h2><p><strong>NDSS 2026 密码学&#x2F;隐私研究呈现六大趋势:</strong></p>
+<ol>
+<li><strong>隐私保护计算实用化</strong> - PSI&#x2F;PSU&#x2F;PIR协议效率大幅提升，支持异构规模和布尔检索</li>
+<li><strong>安全多方计算优化</strong> - 针对恶意模型的高效协议、单向通信架构、PEFT隐私推理</li>
+<li><strong>差分隐私增强</strong> - 洗牌DP扩展到大域数据、GNN隐私预算收敛、LLM提示消毒</li>
+<li><strong>区块链共识创新</strong> - 混合故障模型、跨链通信原语、分布式SNARK加速</li>
+<li><strong>PKI与消息系统</strong> - 抗滥用可追溯性、多方证书透明度、分布式广播加密</li>
+<li><strong>隐写术突破</strong> - ANS实现容量&#x2F;效率&#x2F;安全三位一体最优</li>
+</ol>
+<hr>
+<p><strong>其他视角系列</strong>:</p>
 <ul>
-<li><a href="#">AI 与机器学习安全视角</a></li>
-<li><a href="#">系统安全视角</a></li>
-<li><a href="#">IoT 与嵌入式系统视角</a></li>
-<li><a href="#">网络与基础设施视角</a></li>
+<li><a href="./ndss-2026-ai-ml-perspective.html">AI与机器学习安全视角</a> ✅ 已发布</li>
+<li><a href="./ndss-2026-system-security-perspective.html">系统安全视角</a> ✅ 已发布</li>
+<li><a href="./ndss-2026-iot-embedded-perspective.html">IoT与嵌入式系统视角</a> ✅ 已发布</li>
+<li><a href="./ndss-2026-network-infrastructure-perspective.html">网络与基础设施视角</a> ✅ 已发布</li>
 </ul>
 <p><strong>完整论文列表</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/accepted-papers/">NDSS 2026 Accepted Papers</a><br><strong>会议官网</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/">NDSS Symposium 2026</a></p>
-<hr>
-<h2 id="系列总结"><a href="#系列总结" class="headerlink" title="系列总结"></a>系列总结</h2><p><strong>NDSS 2026 五大视角</strong>全面展现了网络安全研究的现状与未来:</p>
-<p>✅ <strong>AI&#x2F;ML 视角</strong>: LLM 安全与 AI 驱动的安全分析成为主流<br>✅ <strong>系统安全视角</strong>: 从控制流到数据流,从隔离到跨域攻击<br>✅ <strong>IoT 视角</strong>: 固件、工控、自主系统的全方位安全挑战<br>✅ <strong>网络视角</strong>: 互联网基础设施的持续演进与威胁<br>✅ <strong>密码学视角</strong>: 从理论到实践,隐私保护技术走向实用</p>
-<p><strong>共同特征</strong>: 实用化、AI 化、跨领域融合</p>
-<p>感谢阅读完整系列! 🎉</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-crypto-privacy-perspective/" data-id="cuidBGbrWRKvjp610YjG9ZEMk" data-title="NDSS 2026 论文精选 - 密码学与隐私视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-crypto-privacy-perspective/" data-id="cuidwgzD3wrDthnYfZ-3_waUu" data-title="NDSS 2026 论文精选 - 密码学与隐私视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blockchain/" rel="tag">blockchain</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cryptography/" rel="tag">cryptography</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/encryption/" rel="tag">encryption</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/privacy/" rel="tag">privacy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zero-knowledge/" rel="tag">zero-knowledge</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MPC/" rel="tag">MPC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blockchain/" rel="tag">blockchain</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/consensus/" rel="tag">consensus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cryptography/" rel="tag">cryptography</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/differential-privacy/" rel="tag">differential privacy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/homomorphic-encryption/" rel="tag">homomorphic encryption</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/privacy/" rel="tag">privacy</a></li></ul>
 
     </footer>
   </div>
@@ -289,19 +350,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2026/03/03/ndss-2026-ai-ml-perspective/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          NDSS 2026 论文精选 - AI 与机器学习安全视角
-        
-      </div>
-    </a>
   
-  
-    <a href="/2026/03/03/ndss-2026-ai-ml-perspective-backup/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2026/03/03/ndss-2026-network-infrastructure-perspective/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">NDSS 2026 论文精选 - AI 与机器学习安全视角</div>
+      <div class="article-nav-title">NDSS 2026 论文精选 - 网络与基础设施视角</div>
     </a>
   
 </nav>
@@ -328,7 +380,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI-security/" rel="tag">AI security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BGP/" rel="tag">BGP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BLE/" rel="tag">BLE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/" rel="tag">DNS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/" rel="tag">Deep Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IoT/" rel="tag">IoT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM-security/" rel="tag">LLM security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PLC/" rel="tag">PLC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RPKI/" rel="tag">RPKI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TLS/" rel="tag">TLS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automotive/" rel="tag">automotive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/binary-analysis/" rel="tag">binary analysis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blockchain/" rel="tag">blockchain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cryptography/" rel="tag">cryptography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cybersecurity/" rel="tag">cybersecurity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deep-learning/" rel="tag">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/embedded-systems/" rel="tag">embedded systems</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/encryption/" rel="tag">encryption</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firmware/" rel="tag">firmware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/intrusion-detection/" rel="tag">intrusion detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kernel/" rel="tag">kernel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/" rel="tag">machine learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/memory-safety/" rel="tag">memory safety</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network-security/" rel="tag">network security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/privacy/" rel="tag">privacy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/research/" rel="tag">research</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/routing/" rel="tag">routing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scam-detection/" rel="tag">scam detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system-security/" rel="tag">system security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/virtualization/" rel="tag">virtualization</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web-security/" rel="tag">web security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zero-knowledge/" rel="tag">zero-knowledge</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI-security/" rel="tag">AI security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BGP/" rel="tag">BGP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BLE/" rel="tag">BLE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/" rel="tag">DNS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/" rel="tag">Deep Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IoT/" rel="tag">IoT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM-security/" rel="tag">LLM security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MPC/" rel="tag">MPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PLC/" rel="tag">PLC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RPKI/" rel="tag">RPKI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TLS/" rel="tag">TLS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automotive/" rel="tag">automotive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/binary-analysis/" rel="tag">binary analysis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blockchain/" rel="tag">blockchain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/consensus/" rel="tag">consensus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cryptography/" rel="tag">cryptography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cybersecurity/" rel="tag">cybersecurity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deep-learning/" rel="tag">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/differential-privacy/" rel="tag">differential privacy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/embedded-systems/" rel="tag">embedded systems</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firmware/" rel="tag">firmware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/homomorphic-encryption/" rel="tag">homomorphic encryption</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/intrusion-detection/" rel="tag">intrusion detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kernel/" rel="tag">kernel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/" rel="tag">machine learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/memory-safety/" rel="tag">memory safety</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network-security/" rel="tag">network security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/privacy/" rel="tag">privacy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/research/" rel="tag">research</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/routing/" rel="tag">routing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scam-detection/" rel="tag">scam detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system-security/" rel="tag">system security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/virtualization/" rel="tag">virtualization</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web-security/" rel="tag">web security</a></li></ul>
     </div>
   </div>
 
@@ -338,7 +390,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/AI-security/" style="font-size: 16.67px;">AI security</a> <a href="/tags/BGP/" style="font-size: 10px;">BGP</a> <a href="/tags/BLE/" style="font-size: 10px;">BLE</a> <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/Deep-Learning/" style="font-size: 10px;">Deep Learning</a> <a href="/tags/IoT/" style="font-size: 13.33px;">IoT</a> <a href="/tags/LLM/" style="font-size: 16.67px;">LLM</a> <a href="/tags/LLM-security/" style="font-size: 10px;">LLM security</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/NDSS/" style="font-size: 20px;">NDSS</a> <a href="/tags/PLC/" style="font-size: 10px;">PLC</a> <a href="/tags/RPKI/" style="font-size: 10px;">RPKI</a> <a href="/tags/TLS/" style="font-size: 10px;">TLS</a> <a href="/tags/automotive/" style="font-size: 10px;">automotive</a> <a href="/tags/binary-analysis/" style="font-size: 10px;">binary analysis</a> <a href="/tags/blockchain/" style="font-size: 10px;">blockchain</a> <a href="/tags/cryptography/" style="font-size: 10px;">cryptography</a> <a href="/tags/cybersecurity/" style="font-size: 10px;">cybersecurity</a> <a href="/tags/deep-learning/" style="font-size: 16.67px;">deep learning</a> <a href="/tags/embedded-systems/" style="font-size: 10px;">embedded systems</a> <a href="/tags/encryption/" style="font-size: 10px;">encryption</a> <a href="/tags/firmware/" style="font-size: 10px;">firmware</a> <a href="/tags/intrusion-detection/" style="font-size: 10px;">intrusion detection</a> <a href="/tags/kernel/" style="font-size: 10px;">kernel</a> <a href="/tags/machine-learning/" style="font-size: 16.67px;">machine learning</a> <a href="/tags/memory-safety/" style="font-size: 10px;">memory safety</a> <a href="/tags/network-security/" style="font-size: 10px;">network security</a> <a href="/tags/privacy/" style="font-size: 10px;">privacy</a> <a href="/tags/research/" style="font-size: 10px;">research</a> <a href="/tags/routing/" style="font-size: 10px;">routing</a> <a href="/tags/scam-detection/" style="font-size: 10px;">scam detection</a> <a href="/tags/system-security/" style="font-size: 10px;">system security</a> <a href="/tags/virtualization/" style="font-size: 10px;">virtualization</a> <a href="/tags/web-security/" style="font-size: 10px;">web security</a> <a href="/tags/zero-knowledge/" style="font-size: 10px;">zero-knowledge</a>
+      <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/AI-security/" style="font-size: 16.67px;">AI security</a> <a href="/tags/BGP/" style="font-size: 10px;">BGP</a> <a href="/tags/BLE/" style="font-size: 10px;">BLE</a> <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/Deep-Learning/" style="font-size: 10px;">Deep Learning</a> <a href="/tags/IoT/" style="font-size: 13.33px;">IoT</a> <a href="/tags/LLM/" style="font-size: 16.67px;">LLM</a> <a href="/tags/LLM-security/" style="font-size: 10px;">LLM security</a> <a href="/tags/MPC/" style="font-size: 10px;">MPC</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/NDSS/" style="font-size: 20px;">NDSS</a> <a href="/tags/PLC/" style="font-size: 10px;">PLC</a> <a href="/tags/RPKI/" style="font-size: 10px;">RPKI</a> <a href="/tags/TLS/" style="font-size: 10px;">TLS</a> <a href="/tags/automotive/" style="font-size: 10px;">automotive</a> <a href="/tags/binary-analysis/" style="font-size: 10px;">binary analysis</a> <a href="/tags/blockchain/" style="font-size: 10px;">blockchain</a> <a href="/tags/consensus/" style="font-size: 10px;">consensus</a> <a href="/tags/cryptography/" style="font-size: 10px;">cryptography</a> <a href="/tags/cybersecurity/" style="font-size: 10px;">cybersecurity</a> <a href="/tags/deep-learning/" style="font-size: 16.67px;">deep learning</a> <a href="/tags/differential-privacy/" style="font-size: 10px;">differential privacy</a> <a href="/tags/embedded-systems/" style="font-size: 10px;">embedded systems</a> <a href="/tags/firmware/" style="font-size: 10px;">firmware</a> <a href="/tags/homomorphic-encryption/" style="font-size: 10px;">homomorphic encryption</a> <a href="/tags/intrusion-detection/" style="font-size: 10px;">intrusion detection</a> <a href="/tags/kernel/" style="font-size: 10px;">kernel</a> <a href="/tags/machine-learning/" style="font-size: 16.67px;">machine learning</a> <a href="/tags/memory-safety/" style="font-size: 10px;">memory safety</a> <a href="/tags/network-security/" style="font-size: 10px;">network security</a> <a href="/tags/privacy/" style="font-size: 10px;">privacy</a> <a href="/tags/research/" style="font-size: 10px;">research</a> <a href="/tags/routing/" style="font-size: 10px;">routing</a> <a href="/tags/scam-detection/" style="font-size: 10px;">scam detection</a> <a href="/tags/system-security/" style="font-size: 10px;">system security</a> <a href="/tags/virtualization/" style="font-size: 10px;">virtualization</a> <a href="/tags/web-security/" style="font-size: 10px;">web security</a>
     </div>
   </div>
 
@@ -360,6 +412,10 @@
       <ul>
         
           <li>
+            <a href="/2026/03/03/ndss-2026-crypto-privacy-perspective/">NDSS 2026 论文精选 - 密码学与隐私视角</a>
+          </li>
+        
+          <li>
             <a href="/2026/03/03/ndss-2026-network-infrastructure-perspective/">NDSS 2026 论文精选 - 网络与基础设施视角</a>
           </li>
         
@@ -373,10 +429,6 @@
         
           <li>
             <a href="/2026/03/03/ndss-2026-ai-ml-perspective/">NDSS 2026 论文精选 - AI 与机器学习安全视角</a>
-          </li>
-        
-          <li>
-            <a href="/2026/03/03/ndss-2026-crypto-privacy-perspective/">NDSS 2026 论文精选 - 密码学与隐私视角</a>
           </li>
         
       </ul>
