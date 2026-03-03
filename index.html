@@ -111,7 +111,7 @@
 <p>揭示大型语言模型(LLM)中”越狱”背后的机制对于增强其安全性和可靠性至关重要，但这些机制仍然知之甚少。现有研究主要通过探测潜在表示来分析越狱提示，往往忽略了可解释提示特征与越狱发生之间的因果关系。在这项工作中，我们提出了**因果分析师(Causal Analyst)**框架，它将LLM集成到数据驱动的因果发现中，以识别越狱的直接原因并将其用于攻击和防御。我们引入了一个包含35k次越狱尝试的综合数据集，涵盖七个LLM，系统地从100个攻击模板和50个有害查询构建，并用37个精心设计的人类可读提示特征进行标注。</p>
 <p>通过联合训练基于LLM的提示编码和基于GNN的因果图学习，我们重建了将提示特征与越狱响应联系起来的因果路径。我们的分析揭示了特定特征(如”积极角色”和”任务步骤数”)是越狱的直接因果驱动因素。我们通过两个应用演示了这些见解的实用性：(1)<strong>越狱增强器</strong>针对已识别的因果特征显著提高公共基准测试的攻击成功率；(2)<strong>防护顾问</strong>利用学习到的因果图从混淆查询中提取真实恶意意图。</p>
 <p>包括基线比较和因果结构验证在内的广泛实验证实了我们因果分析的鲁棒性及其优于非因果方法的优势。我们的结果表明，从因果角度分析越狱特征是提高LLM可靠性的有效且可解释的方法。</p>
-<p><strong>📄 下载</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/a-causal-perspective-for-enhancing-jailbreak-attack-and-defense/">NDSS 2026 Paper</a></p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/a-causal-perspective-for-enhancing-jailbreak-attack-and-defense/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
 <h3 id="2-ACE-A-Security-Architecture-for-LLM-Integrated-App-Systems"><a href="#2-ACE-A-Security-Architecture-for-LLM-Integrated-App-Systems" class="headerlink" title="2. ACE: A Security Architecture for LLM-Integrated App Systems"></a>2. ACE: A Security Architecture for LLM-Integrated App Systems</h3><p><strong>Authors</strong>: Evan Li, Tushin Mallick, Evan Rose, William Robertson, Alina Oprea, Cristina Nita-Rotaru (Northeastern University)</p>
 <p><strong>Abstract</strong></p>
@@ -120,14 +120,14 @@
 <p><strong>摘要</strong></p>
 <p>LLM集成应用系统通过第三方应用扩展了大型语言模型(LLM)的实用性，系统LLM使用交织的计划和执行阶段调用这些应用来回答用户查询。这些系统引入了新的攻击向量，恶意应用可能导致计划或执行的完整性违规、可用性崩溃或执行期间的隐私泄露。</p>
 <p>在这项工作中，我们识别了影响LLM集成应用中计划完整性以及执行完整性和可用性的新攻击，并针对IsolateGPT(一个旨在缓解恶意应用攻击的最新解决方案)进行了演示。我们提出了**抽象-具体-执行(ACE)**架构，这是一个为LLM集成应用系统提供计划和执行安全保证的新型安全架构。具体而言，ACE将计划解耦为两个阶段：首先仅使用可信信息创建抽象执行计划，然后使用已安装的系统应用将抽象计划映射到具体计划。我们通过对结构化计划输出的静态分析验证系统生成的计划满足用户指定的安全信息流约束。在执行期间，ACE在应用之间实施数据和能力屏障，并确保执行按照可信的抽象计划进行。我们通过实验表明，ACE能够抵御InjecAgent和Agent Security Bench基准测试中的间接提示注入攻击以及我们新引入的攻击。我们还使用LangChain基准测试的工具使用套件评估了ACE在现实环境中的实用性。我们的架构代表了使用系统安全原则加固基于LLM系统的重大进展。</p>
-<p><strong>📄 下载</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/ace-a-security-architecture-for-llm-integrated-app-systems/">NDSS 2026 Paper</a></p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/ace-a-security-architecture-for-llm-integrated-app-systems/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
 <h3 id="3-Attention-is-All-You-Need-to-Defend-Against-Indirect-Prompt-Injection-Attacks-in-LLMs"><a href="#3-Attention-is-All-You-Need-to-Defend-Against-Indirect-Prompt-Injection-Attacks-in-LLMs" class="headerlink" title="3. Attention is All You Need to Defend Against Indirect Prompt Injection Attacks in LLMs"></a>3. Attention is All You Need to Defend Against Indirect Prompt Injection Attacks in LLMs</h3><p><strong>Authors</strong>: Yinan Zhong, Qianhao Miao, Yanjiao Chen, Jiangyi Deng, Yushi Cheng, Wenyuan Xu (Zhejiang University)</p>
 <p><strong>Abstract</strong></p>
 <p>Large Language Models (LLMs) have been integrated into many applications (e.g., web agents) to perform more sophisticated tasks. However, LLM-empowered applications are vulnerable to Indirect Prompt Injection (IPI) attacks, where instructions are injected via untrustworthy external data sources. This paper presents <strong>Rennervate</strong>, a defense framework to detect and prevent IPI attacks. Rennervate leverages attention features to detect the covert injection at a fine-grained token level, enabling precise sanitization that neutralizes IPI attacks while maintaining LLM functionalities. Specifically, the token-level detector is materialized with a 2-step attentive pooling mechanism, which aggregates attention heads and response tokens for IPI detection and sanitization. Moreover, we establish a fine-grained IPI dataset, FIPI, to be open-sourced to support further research. Extensive experiments verify that Rennervate outperforms 15 commercial and academic IPI defense methods, achieving high precision on 5 LLMs and 6 datasets. We also demonstrate that Rennervate is transferable to unseen attacks and robust against adaptive adversaries.</p>
 <p><strong>摘要</strong></p>
 <p>大型语言模型(LLM)已被集成到许多应用程序(例如Web代理)中以执行更复杂的任务。然而，LLM赋能的应用程序容易受到间接提示注入(IPI)攻击，其中指令通过不可信的外部数据源注入。本文提出了<strong>Rennervate</strong>防御框架来检测和防止IPI攻击。Rennervate利用注意力特征在细粒度token级别检测隐蔽注入，实现精确清理以中和IPI攻击同时保持LLM功能。具体而言，token级检测器通过两步注意力池化机制实现，该机制聚合注意力头和响应token进行IPI检测和清理。此外，我们建立了细粒度IPI数据集FIPI，将开源以支持进一步研究。广泛的实验验证了Rennervate优于15种商业和学术IPI防御方法，在5个LLM和6个数据集上实现了高精度。我们还证明了Rennervate对未见攻击具有可迁移性，对自适应对手具有鲁棒性。</p>
-<p><strong>📄 下载</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/attention-is-all-you-need-to-defend-against-indirect-prompt-injection-attacks-in-llms/">NDSS 2026 Paper</a></p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/attention-is-all-you-need-to-defend-against-indirect-prompt-injection-attacks-in-llms/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
 <h3 id="4-Beyond-Jailbreak-Unveiling-Risks-from-Blurred-Capability-Boundaries"><a href="#4-Beyond-Jailbreak-Unveiling-Risks-from-Blurred-Capability-Boundaries" class="headerlink" title="4. Beyond Jailbreak: Unveiling Risks from Blurred Capability Boundaries"></a>4. Beyond Jailbreak: Unveiling Risks from Blurred Capability Boundaries</h3><p><strong>Authors</strong>: Yunyi Zhang, Shibo Cui, Baojun Liu, Jingkai Yu (Tsinghua University), Min Zhang, Fan Shi (NUDT), Han Zheng (TrustAl)</p>
 <p><strong>Abstract</strong></p>
@@ -136,7 +136,7 @@
 <p><strong>摘要</strong></p>
 <p>LLM应用程序利用LLM的强大功能为用户提供定制服务，彻底改变了传统的应用程序开发。虽然LLM驱动应用程序的日益普及为用户提供了前所未有的便利，但它也带来了新的安全挑战。对于这样一个新兴的生态系统，安全社区对LLM应用程序生态系统缺乏足够的了解，特别是关于应用程序本身的能力边界。</p>
 <p>在本文中，我们系统地分析了新的开发范式并定义了LLM应用能力空间的概念。我们还揭示了在现实场景中由于模糊的能力边界而产生的超越越狱的潜在新风险，即能力降级和升级。为了评估这些风险的影响，我们设计并实现了LLM应用能力评估框架<strong>LLMApp-Eval</strong>。首先，我们收集了4个平台的应用程序元数据并进行了跨平台生态系统分析。然后，我们评估了4个平台和6个开源LLM中199个流行应用程序的风险。我们发现178个(89.45%)潜在受影响的应用程序可以执行来自15个以上场景的任务或具有恶意性。我们甚至在研究中发现17个应用程序直接执行恶意任务，而无需应用任何对抗性重写。此外，我们的实验还揭示了提示设计质量与应用程序鲁棒性之间的正相关关系。我们发现精心设计的提示增强了安全性，而设计不良的提示可能促进滥用。我们希望我们的工作能激发社区关注LLM应用程序的真实世界风险，并促进更强大的LLM应用程序生态系统的发展。</p>
-<p><strong>📄 下载</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/beyond-jailbreak-unveiling-risks-in-llm-applications-arising-from-blurred-capability-boundaries/">NDSS 2026 Paper</a></p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/beyond-jailbreak-unveiling-risks-in-llm-applications-arising-from-blurred-capability-boundaries/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
 <h3 id="5-Bleeding-Pathways-Vanishing-Discriminability-in-LLM-Hidden-States-Fuels-Jailbreak-Attacks"><a href="#5-Bleeding-Pathways-Vanishing-Discriminability-in-LLM-Hidden-States-Fuels-Jailbreak-Attacks" class="headerlink" title="5. Bleeding Pathways: Vanishing Discriminability in LLM Hidden States Fuels Jailbreak Attacks"></a>5. Bleeding Pathways: Vanishing Discriminability in LLM Hidden States Fuels Jailbreak Attacks</h3><p><strong>Authors</strong>: Yingjie Zhang, Tong Liu (IIE, CAS), Zhe Zhao (Ant Group), Guozhu Meng, Kai Chen (IIE, CAS)</p>
 <p><strong>Abstract</strong></p>
@@ -145,7 +145,7 @@
 <p><strong>摘要</strong></p>
 <p>大型语言模型(LLM)仍然容易受到利用对抗性提示规避安全措施的越狱攻击。当前的安全微调方法面临两个关键限制。首先，它们往往无法在安全性和实用性之间取得平衡，更强的安全措施往往会过度拒绝无害的用户请求。其次，它们经常遗漏隐藏在看似良性任务中的恶意意图，使模型暴露于利用之下。我们的工作确定了这些问题的根本原因：在响应生成期间，LLM区分有害和安全输出的能力会恶化。实验证据证实了这一点，揭示了随着生成的进行，安全和有害响应的隐藏状态之间的可分离性会减弱。这种减弱的辨别力迫使模型在生成过程的早期做出合规性判断，限制了它们识别发展中的有害意图的能力，并导致上述两个失败。</p>
 <p>为了缓解这一漏洞，我们引入了<strong>DEEPALIGN</strong>——一个增强LLM安全性的固有防御框架。通过在响应生成的中点应用对比隐藏状态引导，DEEPALIGN放大了有害和良性隐藏状态之间的分离，在整个生成过程中实现持续的内在毒性检测和干预。此外，它促进了对有害查询的上下文适当的安全响应，从而扩展了安全响应的可行空间。评估证明了DEEPALIGN的有效性。在跨越不同架构和规模的各种LLM中，它将九种不同越狱攻击的攻击成功率降低到接近零或最小。至关重要的是，它在减少过度拒绝的同时保留了模型能力。配备DEEPALIGN的模型在拒绝具有挑战性的良性查询时表现出高达3.5%的较低错误率，并在标准任务性能上保持不到1%的下降。</p>
-<p><strong>📄 下载</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/bleeding-pathways-vanishing-discriminability-in-llm-hidden-states-fuels-jailbreak-attacks/">NDSS 2026 Paper</a></p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/bleeding-pathways-vanishing-discriminability-in-llm-hidden-states-fuels-jailbreak-attacks/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
 <h3 id="6-Cache-Me-Catch-You-Cache-Related-Security-Threats-in-LLM-Serving-Frameworks"><a href="#6-Cache-Me-Catch-You-Cache-Related-Security-Threats-in-LLM-Serving-Frameworks" class="headerlink" title="6. Cache Me, Catch You: Cache Related Security Threats in LLM Serving Frameworks"></a>6. Cache Me, Catch You: Cache Related Security Threats in LLM Serving Frameworks</h3><p><strong>Authors</strong>: XiangFan Wu (Ocean University of China; QI-ANXIN), Lingyun Ying, Guoqiang Chen (QI-ANXIN), Yacong Gu (Tsinghua), Haipeng Qu (Ocean University of China)</p>
 <p><strong>Abstract</strong></p>
@@ -156,7 +156,7 @@
 <p>大型语言模型(LLM)正在迅速重塑数字交互。它们的性能和效率严重依赖于高级缓存机制，如前缀缓存和语义缓存。然而，这些机制引入了新的攻击面。与之前专注于训练阶段LLM中毒攻击的工作不同，本文首次全面调查了LLM推理时出现的与缓存相关的安全风险。</p>
 <p>我们对主流LLM服务框架中的缓存实现进行了系统研究，然后确定了六种新的攻击向量，分类为：(1)面向用户的欺诈攻击，通过前缀缓存冲突和语义模糊中毒操纵缓存条目向用户传递恶意内容；(2)系统完整性攻击，利用缓存漏洞绕过安全检查，例如使用块级或多模态冲突来逃避内容审核。</p>
 <p>我们在领先的开源框架上的实验验证了这些攻击向量并评估了它们的影响和成本。此外，我们提出了五种多层防御策略并评估了它们的有效性。我们负责任地向受影响的供应商披露了我们的发现，包括vLLM、SGLang、GPTCache、AIBrix、rtp-llm和LMDeploy。所有这些供应商都已确认漏洞，值得注意的是，vLLM、GPTCache和AIBrix已采用我们提出的缓解方法并修复了他们的漏洞。</p>
-<p><strong>📄 下载</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/cache-me-catch-you-cache-related-security-threats-in-llm-serving-frameworks/">NDSS 2026 Paper</a></p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/cache-me-catch-you-cache-related-security-threats-in-llm-serving-frameworks/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
 <h3 id="7-Character-Level-Perturbations-Disrupt-LLM-Watermarks"><a href="#7-Character-Level-Perturbations-Disrupt-LLM-Watermarks" class="headerlink" title="7. Character-Level Perturbations Disrupt LLM Watermarks"></a>7. Character-Level Perturbations Disrupt LLM Watermarks</h3><p><strong>Authors</strong>: Zhaoxi Zhang (UTS), Xiaomei Zhang (Griffith), Yanjun Zhang (UTS), He Zhang (RMIT), Shirui Pan (Griffith), Bo Liu (UTS), Asif Qumer Gill (UTS), Leo Zhang (Griffith)</p>
 <p><strong>Abstract</strong></p>
@@ -165,7 +165,7 @@
 <p><strong>摘要</strong></p>
 <p>大型语言模型(LLM)水印已成为版权保护、防止滥用和机器生成内容检测的一种有前途的技术。它在LLM生成过程中注入可检测的信号，允许后续通过相应的检测器进行识别。为了评估水印方案的鲁棒性，现有研究通常采用水印移除攻击，旨在通过修改水印文本来擦除嵌入的信号。然而，我们揭示了现有的水印移除攻击是次优的，这导致了一个误解，即有效的水印移除需要大量的扰动预算或强大的对手能力。</p>
 <p>我们首先形式化了LLM水印的系统模型，并描述了受限于对水印检测器有限访问的两种现实威胁模型。然后我们分析了不同类型的扰动在攻击范围上的差异。我们观察到字符级扰动(例如拼写错误、交换、删除、同形异义字)可以通过破坏分词过程同时影响多个token。我们证明了在最严格的威胁模型下，与token级或句子级方法相比，字符级扰动对于水印移除显著更有效。我们进一步提出了基于遗传算法(GA)的引导移除攻击，该算法使用参考检测器进行优化。在对水印检测器进行有限黑盒查询的实际威胁模型下，我们的方法表现出强大的移除性能。在五种代表性水印方案和两种广泛使用的LLM上的实验一致证实了字符级扰动的优越性。此外，我们提出了一种自适应复合字符级攻击，可以有效地击败防御。我们的发现突出了现有LLM水印方案中的重大漏洞，并强调了开发新的健壮机制的紧迫性。</p>
-<p><strong>📄 下载</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/character-level-perturbations-disrupt-llm-watermarks/">NDSS 2026 Paper</a></p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/character-level-perturbations-disrupt-llm-watermarks/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
 <h3 id="8-Characterizing-Censorship-in-Chinese-LLM-Services"><a href="#8-Characterizing-Censorship-in-Chinese-LLM-Services" class="headerlink" title="8. Characterizing Censorship in Chinese LLM Services"></a>8. Characterizing Censorship in Chinese LLM Services</h3><p><strong>Authors</strong>: Anna Ablove, Shreyas Chandrashekaran (University of Michigan), Xiao Qiang (UC Berkeley), Roya Ensafi (University of Michigan)</p>
 <p><strong>Abstract</strong></p>
@@ -176,7 +176,7 @@
 <p>从长城防火墙的网络级审查到TOM-Skype和微信等第三方服务实施的特定于平台的机制，中国的互联网审查不断响应新技术而演进。在当前的AI时代，大型语言模型(LLM)等新兴工具也不例外。然而，确保符合中国严格的、法律规定的审查标准对服务提供商来说是一个独特而复杂的挑战。虽然当前关于LLM内容审核的研究主要集中在对齐技术上，但它们缺乏可靠性，无法充分符合严格执行的信息控制。</p>
 <p>在这项工作中，我们提出了对嵌入在中国LLM服务中的公开阻止的首次研究。我们利用活动聊天会话期间服务器和客户端之间通信中的信息泄露，旨在提取阻止决策嵌入在LLM服务工作流程中的位置。我们观察到在知名服务中持续依赖传统的、过时的阻止策略：百度聊天、DeepSeek、豆包、Kimi和通义千问。我们发现在输入、输出和搜索阶段进行阻止放置，后两者向客户端机器泄露不同数量的审查信息，包括近乎完整的响应和浏览器中未呈现的搜索引用。</p>
 <p>看到在全球舞台上竞争与本土审查限制之间需要平衡，我们实时观察服务提供商托管与自身交战的模型所做的让步。通过这项工作，我们强调了LLM内容可访问性的更全面威胁模型的重要性，整合实时部署以研究与现实世界使用相关的访问，特别是在严格审查的地区。</p>
-<p><strong>📄 下载</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/characterizing-the-implementation-of-censorship-policies-in-chinese-llm-services/">NDSS 2026 Paper</a></p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/characterizing-the-implementation-of-censorship-policies-in-chinese-llm-services/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
 <h3 id="9-Chasing-Shadows-Pitfalls-in-LLM-Security-Research"><a href="#9-Chasing-Shadows-Pitfalls-in-LLM-Security-Research" class="headerlink" title="9. Chasing Shadows: Pitfalls in LLM Security Research"></a>9. Chasing Shadows: Pitfalls in LLM Security Research</h3><p><strong>Authors</strong>: Jonathan Evertz (CISPA), Niklas Risse (Max Planck), Nicolai Neuer (KIT), Andreas Müller (Ruhr University), Philipp Normann (TU Wien), Gaetano Sapia (Max Planck), Srishti Gupta (Sapienza), David Pape, Soumya Shaw, Devansh Srivastav (CISPA), Christian Wressnegger (KIT), Erwin Quiring (_fbeta), Thorsten Eisenhofer (CISPA), Daniel Arp (TU Wien), Lea Schönherr (CISPA)</p>
 <p><strong>Abstract</strong></p>
@@ -185,7 +185,7 @@
 <p><strong>摘要</strong></p>
 <p>大型语言模型(LLM)在安全研究中越来越普遍。然而，它们的独特特性引入了破坏可重现性、严谨性和评估的既定范式的挑战。先前的工作已经确定了传统机器学习研究中的常见陷阱，但这些研究早于LLM的出现。在本文中，我们确定了<strong>九个</strong>随着LLM的出现而变得(更加)相关的常见陷阱，这些陷阱可能会损害涉及它们的研究的有效性。这些陷阱跨越整个计算过程，从数据收集、预训练和微调到提示和评估。</p>
 <p>我们评估了这些陷阱在2023年至2024年间在领先的安全和软件工程场所发表的所有72篇同行评审论文中的普遍性。我们发现每篇论文至少包含一个陷阱，并且每个陷阱都出现在多篇论文中。然而，只有15.7%的现有陷阱被明确讨论，这表明大多数仍未被识别。为了了解它们的实际影响，我们进行了四个实证案例研究，展示了单个陷阱如何误导评估、夸大性能或损害可重现性。基于我们的发现，我们提供了可操作的指南，以支持社区在未来的工作中。</p>
-<p><strong>📄 下载</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/chasing-shadows-pitfalls-in-llm-security-research/">NDSS 2026 Paper</a></p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/chasing-shadows-pitfalls-in-llm-security-research/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
 <h3 id="10-DUALBREACH-Efficient-Dual-Jailbreaking"><a href="#10-DUALBREACH-Efficient-Dual-Jailbreaking" class="headerlink" title="10. DUALBREACH: Efficient Dual-Jailbreaking"></a>10. DUALBREACH: Efficient Dual-Jailbreaking</h3><p><strong>Authors</strong>: Xinzhe Huang, Kedong Xiu, Tianhang Zheng, Churui Zeng, Wangze Ni, Zhan Qin, Kui Ren, Chun Chen (Zhejiang University)</p>
 <p><strong>Abstract</strong></p>
@@ -194,7 +194,7 @@
 <p><strong>摘要</strong></p>
 <p>最近的研究集中于探索大型语言模型(LLM)的漏洞，旨在从LLM中引出有害和&#x2F;或敏感内容。然而，由于对双重越狱(针对LLM和防护栏的攻击)的研究不足，当试图绕过受防护栏保护的安全对齐LLM时，现有攻击的有效性是有限的。因此，在本文中，我们提出了<strong>DualBreach</strong>，一个用于双重越狱的目标驱动框架。DualBreach采用<strong>目标驱动初始化</strong>(TDI)策略来动态构建初始提示，结合<strong>多目标优化</strong>(MTO)方法，该方法利用近似梯度在防护栏和LLM之间联合调整提示，可以同时节省查询次数并实现高双重越狱成功率。对于黑盒防护栏，DualBreach要么使用强大的开源防护栏，要么通过训练代理模型模仿目标黑盒防护栏，以将防护栏纳入MTO过程。</p>
 <p>我们通过对几个广泛使用的数据集进行广泛评估，证明了DualBreach在双重越狱场景中的有效性。实验结果表明，DualBreach以较少的查询次数优于最先进的方法，在所有设置下实现了显著更高的成功率。更具体地说，DualBreach针对具有Llama-Guard-3保护的GPT-4实现了93.67%的平均双重越狱成功率，而其他方法实现的最佳成功率为88.33%。此外，DualBreach每次成功的双重越狱平均只使用1.77次查询，优于其他最先进的方法。对于防御，我们提出了一个基于XGBoost的集成防御机制<strong>EGuard</strong>，它整合了多个防护栏的优势，与Llama-Guard-3相比表现出卓越的性能。</p>
-<p><strong>📄 下载</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/dualbreach-efficient-dual-jailbreaking-via-target-driven-initialization-and-multi-target-optimization/">NDSS 2026 Paper</a></p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/dualbreach-efficient-dual-jailbreaking-via-target-driven-initialization-and-multi-target-optimization/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
 <h2 id="二、机器学习模型安全"><a href="#二、机器学习模型安全" class="headerlink" title="二、机器学习模型安全"></a>二、机器学习模型安全</h2><h3 id="11-A-Hard-Label-Black-Box-Evasion-Attack-Against-ML-Traffic-Detection"><a href="#11-A-Hard-Label-Black-Box-Evasion-Attack-Against-ML-Traffic-Detection" class="headerlink" title="11. A Hard-Label Black-Box Evasion Attack Against ML Traffic Detection"></a>11. A Hard-Label Black-Box Evasion Attack Against ML Traffic Detection</h3><p><strong>Authors</strong>: Zixuan Liu, Yi Zhao (Beijing Institute of Technology), Zhuotao Liu, Qi Li, Chuanpu Fu, Guangmeng Zhou, Ke Xu (Tsinghua University)</p>
 <p><strong>Abstract</strong></p>
@@ -203,14 +203,14 @@
 <p><strong>摘要</strong></p>
 <p>基于机器学习(ML)的恶意流量检测是一种有前途的安全范式。它通过识别各种高级攻击优于基于规则的传统检测。然而，这些ML模型的鲁棒性在很大程度上尚未探索，从而允许攻击者制作逃避检测的对抗性流量示例。现有的逃避攻击通常依赖于过度限制性条件(例如加密协议、Tor或专门设置)，或者需要目标的详细先验知识(例如训练数据和模型参数)，这在现实的黑盒场景中是不切实际的。因此，硬标签黑盒逃避攻击(即适用于各种任务和协议而无需内部目标洞察)的可行性仍然是一个开放的挑战。</p>
 <p>为此，我们开发了<strong>NetMasquerade</strong>，它利用强化学习(RL)来操纵攻击流以模仿良性流量并逃避检测。具体而言，我们建立了一个名为Traffic-BERT的定制预训练模型，利用网络专用分词器和注意力机制来提取不同的良性流量模式。随后，我们将Traffic-BERT集成到RL框架中，允许NetMasquerade基于良性流量模式有效地以最小修改操纵恶意数据包序列。实验结果表明，NetMasquerade使暴力和隐蔽攻击在80个攻击场景下逃避6种现有检测方法，实现了超过96.65%的攻击成功率。值得注意的是，它可以逃避经验上或可证明对现有逃避攻击具有鲁棒性的方法。最后，NetMasquerade实现了低延迟对抗性流量生成，证明了其在现实场景中的实用性。</p>
-<p><strong>📄 下载</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/a-hard-label-black-box-evasion-attack-against-ml-based-malicious-traffic-detection-systems/">NDSS 2026 Paper</a></p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/a-hard-label-black-box-evasion-attack-against-ml-based-malicious-traffic-detection-systems/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
 <h3 id="12-Achieving-Zen-Model-Attribution-and-Reuse"><a href="#12-Achieving-Zen-Model-Attribution-and-Reuse" class="headerlink" title="12. Achieving Zen: Model Attribution and Reuse"></a>12. Achieving Zen: Model Attribution and Reuse</h3><p><strong>Authors</strong>: David Oygenblik, Dinko Dermendzhiev, Filippos Sofias, Mingxuan Yao, Haichuan Xu, Runze Zhang (Georgia Tech), Jeman Park (Kyung Hee University), Amit Kumar Sikder (Iowa State), Brendan Saltaformaggio (Georgia Tech)</p>
 <p><strong>Abstract</strong></p>
 <p>Prior work has developed techniques capable of extracting deep learning (DL) models in universal formats from system memory or program binaries for security analysis. Unfortunately, such techniques ignore the recovery of the DL model’s programmatic representation required for model reuse and any white-box analysis techniques. Addressing this, we propose a novel recovery methodology, and prototype <strong>ZEN</strong>, that automatically recovers the DL model programmatic representation complementing the recovery of the mathematical representation by prior work. ZEN identifies novel code in an unknown DL system relative to a base model and generates patches such that the recovered DL model can be reused. We evaluated ZEN on 21 SOTA DL models, including models across the language and vision domains, such as Llama 3 and YoloV10. ZEN successfully attributed custom models to their base models with 100% accuracy, enabling model reuse.</p>
 <p><strong>摘要</strong></p>
 <p>先前的工作已经开发了能够从系统内存或程序二进制文件中以通用格式提取深度学习(DL)模型以进行安全分析的技术。不幸的是，这些技术忽略了模型重用和任何白盒分析技术所需的DL模型程序表示的恢复。为了解决这个问题，我们提出了一种新的恢复方法，并原型化了<strong>ZEN</strong>，它自动恢复DL模型程序表示，补充了先前工作对数学表示的恢复。ZEN相对于基本模型识别未知DL系统中的新代码，并生成补丁，使恢复的DL模型可以重用。我们在21个SOTA DL模型上评估了ZEN，包括跨语言和视觉域的模型，如Llama 3和YoloV10。ZEN成功地以100%的准确率将自定义模型归属于其基本模型，实现模型重用。</p>
-<p><strong>📄 下载</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/achieving-zen-combining-mathematical-and-programmatic-deep-learning-model-representations-for-attribution-and-reuse/">NDSS 2026 Paper</a></p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/achieving-zen-combining-mathematical-and-programmatic-deep-learning-model-representations-for-attribution-and-reuse/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
 <h3 id="13-Unified-Defense-Against-Membership-Inference-in-Federated-Learning"><a href="#13-Unified-Defense-Against-Membership-Inference-in-Federated-Learning" class="headerlink" title="13. Unified Defense Against Membership Inference in Federated Learning"></a>13. Unified Defense Against Membership Inference in Federated Learning</h3><p><strong>Authors</strong>: Liwei Zhang, Linghui Li, Xiaotian Si, Ziduo Guo, Xingwu Wang, Kaiguo Yuan (Beijing University of Posts and Telecommunications), Bingyu Li (Beihang University)</p>
 <p><strong>Abstract</strong></p>
@@ -219,7 +219,7 @@
 <p><strong>摘要</strong></p>
 <p>联邦学习实现了在不暴露原始数据的情况下进行分散模型训练，使其成为隐私保护机器学习的有前途的范式。然而，它仍然容易受到成员推理攻击(MIA)的影响，其中对手推断特定数据点是否包含在训练集中，构成严重的隐私风险并损害数据局部性。针对MIA的现有防御存在重大局限性：一些导致性能显著下降，而另一些无法针对被动和主动攻击向量提供保护。</p>
 <p>为了解决这些挑战，在本文中，我们提出了一个统一的防御框架，在保持目标模型实用性的同时，同时缓解联邦学习中的被动和主动MIA。首先，我们在教师模型训练期间加入修改的熵正则化，以增强成员数据的不确定性，提供比标准正则化更强的抗推理攻击能力。其次，我们利用条件变分自编码器(CVAE)生成类条件合成数据用于监督学生训练，这避免了敏感数据的直接暴露，并提供了比未标记替代方案更好的实用性。最后，我们设计了一个贡献感知聚合策略，根据本地模型的实用性调整其影响，在模型聚合期间缓解恶意客户端的影响。在四个基准数据集上的实验结果表明，所提出的方法显著降低了各种成员推理攻击的成功率，优于现有最先进的防御。此外，它始终保持高模型准确性，证明了其在现实世界联邦学习部署中的实用性。</p>
-<p><strong>📄 下载</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/a-unified-defense-framework-against-membership-inference-in-federated-learning-via-distillation-and-contribution-aware-aggregation/">NDSS 2026 Paper</a></p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/a-unified-defense-framework-against-membership-inference-in-federated-learning-via-distillation-and-contribution-aware-aggregation/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
 <h3 id="14-Beyond-Raw-Bytes-Towards-Large-Malware-Language-Models"><a href="#14-Beyond-Raw-Bytes-Towards-Large-Malware-Language-Models" class="headerlink" title="14. Beyond Raw Bytes: Towards Large Malware Language Models"></a>14. Beyond Raw Bytes: Towards Large Malware Language Models</h3><p><strong>Authors</strong>: Luke Kurlandski, Harel Berger (Ariel University), Yin Pan, Matthew Wright (Rochester Institute of Technology)</p>
 <p><strong>Abstract</strong></p>
@@ -228,7 +228,7 @@
 <p><strong>摘要</strong></p>
 <p>恶意软件对关键计算基础设施构成越来越大的威胁，推动了对更高级检测和分析方法的需求。虽然原始二进制恶意软件分类器显示出希望，但它们在功能上受到限制，并且在建模长序列的挑战上苦苦挣扎。与此同时，自然语言处理中大型语言模型(LLM)的兴起展示了在异构数据集上训练的大规模自监督模型的力量，为众多下游任务提供了灵活的表示。这些模型背后的成功植根于其训练数据的规模和质量、其神经架构的表现力和可扩展性，以及它们以自监督方式从未标记数据中学习的能力。</p>
 <p>在这项工作中，我们朝着开发<strong>大型恶意软件语言模型(LMLM)</strong>(LLM的恶意软件类比)迈出了第一步。我们解决了这一目标的核心方面，即关于数据、模型、预训练和微调的问题。通过使用语言建模目标预训练恶意软件分类模型，我们能够将不同实际恶意软件分类任务的下游性能平均提高1.1%，最高提高28.6%，表明这些模型可能会成功取代原始二进制恶意软件分类器。</p>
-<p><strong>📄 下载</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/beyond-raw-bytes-towards-large-malware-language-models/">NDSS 2026 Paper</a></p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/beyond-raw-bytes-towards-large-malware-language-models/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
 <h3 id="15-Cascading-and-Proxy-Membership-Inference-Attacks"><a href="#15-Cascading-and-Proxy-Membership-Inference-Attacks" class="headerlink" title="15. Cascading and Proxy Membership Inference Attacks"></a>15. Cascading and Proxy Membership Inference Attacks</h3><p><strong>Authors</strong>: Yuntao Du, Jiacheng Li, Yuetian Chen, Kaiyuan Zhang, Zhizhen Yuan, Hanshen Xiao, Bruno Ribeiro, Ninghui Li (Purdue University)</p>
 <p><strong>Abstract</strong></p>
@@ -237,7 +237,7 @@
 <p><strong>摘要</strong></p>
 <p>成员推理攻击(MIA)通过确定特定查询实例是否包含在数据集中来评估训练的机器学习模型对其训练数据透露了多少信息。我们将现有的MIA分类为自适应或非自适应，具体取决于对手是否被允许在成员查询上训练影子模型。在自适应设置中，对手可以在访问查询实例后训练影子模型，我们强调了利用实例之间的成员依赖关系的重要性，并提出了一个攻击无关的框架，称为<strong>级联成员推理攻击(CMIA)</strong>，它通过条件影子训练整合成员依赖关系以提高成员推理性能。</p>
 <p>在非自适应设置中，对手被限制在获得成员查询之前训练影子模型，我们引入了<strong>代理成员推理攻击(PMIA)</strong>。PMIA采用代理选择策略，识别与查询实例具有相似行为的样本，并使用它们在影子模型中的行为执行成员后验赔率测试以进行成员推理。我们为两种攻击提供了理论分析，广泛的实验结果表明，CMIA和PMIA在两种设置中都大大优于现有的MIA，特别是在低假阳性区域，这对于评估隐私风险至关重要。</p>
-<p><strong>📄 下载</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/cascading-and-proxy-membership-inference-attacks/">NDSS 2026 Paper</a></p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/cascading-and-proxy-membership-inference-attacks/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
 <hr>
 <h2 id="研究趋势总结"><a href="#研究趋势总结" class="headerlink" title="研究趋势总结"></a>研究趋势总结</h2><p><strong>NDSS 2026 AI&#x2F;ML安全研究呈现五大趋势:</strong></p>
 <ol>
@@ -260,7 +260,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-ai-ml-perspective/" data-id="cuidXn_kBqj5F_TCzRnb-4tqw" data-title="NDSS 2026 论文精选 - AI 与机器学习安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-ai-ml-perspective/" data-id="cuidYSSBo_MC6OWaDAJpSJg2M" data-title="NDSS 2026 论文精选 - AI 与机器学习安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -472,7 +472,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-crypto-privacy-perspective/" data-id="cuidBZxy818R1gV2wXO9Xmalt" data-title="NDSS 2026 论文精选 - 密码学与隐私视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-crypto-privacy-perspective/" data-id="cuid-uhyGBKewdB751f26DcbC" data-title="NDSS 2026 论文精选 - 密码学与隐私视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -655,7 +655,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-network-infrastructure-perspective/" data-id="cuidKiqUy367gM1pZJTlFVhUR" data-title="NDSS 2026 论文精选 - 网络与基础设施视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-network-infrastructure-perspective/" data-id="cuide0yUs7sYdusaC_i55_5Lj" data-title="NDSS 2026 论文精选 - 网络与基础设施视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -813,7 +813,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-iot-embedded-perspective/" data-id="cuidLJBukEmTca-REasPPwZA_" data-title="NDSS 2026 论文精选 - IoT 与嵌入式系统视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-iot-embedded-perspective/" data-id="cuidPMDKWgi1_BsgkNdAU3e61" data-title="NDSS 2026 论文精选 - IoT 与嵌入式系统视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -966,7 +966,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-system-security-perspective/" data-id="cuidPmc6QPJr2VY2qG0AU9ZN3" data-title="NDSS 2026 论文精选 - 系统安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-system-security-perspective/" data-id="cuidISY1iuPRGTKbeGUek_19d" data-title="NDSS 2026 论文精选 - 系统安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1091,7 +1091,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-ai-ml-perspective-backup/" data-id="cuidNkeXp9F9bQDj6CESH501B" data-title="NDSS 2026 论文精选 - AI 与机器学习安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-ai-ml-perspective-backup/" data-id="cuidbH2XoP-axAzxsfMK1Mpgm" data-title="NDSS 2026 论文精选 - AI 与机器学习安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1160,7 +1160,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-ai-ml-perspective-v2/" data-id="cuidhqnLSrOszxLNcHB1V1Y1_" data-title="NDSS 2026 论文精选 - AI 与机器学习安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-ai-ml-perspective-v2/" data-id="cuid38t2F7V4JgvvG1I23-e44" data-title="NDSS 2026 论文精选 - AI 与机器学习安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1283,7 +1283,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/02/latest-cybersecurity-research-march-2026/" data-id="cuidzbiHrOy9VUCKchxXI5lEc" data-title="Latest Cybersecurity Research Highlights - March 2026" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/02/latest-cybersecurity-research-march-2026/" data-id="cuid4m6gbN83C2gwHZ1gKHQ6e" data-title="Latest Cybersecurity Research Highlights - March 2026" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1343,7 +1343,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2024/10/09/cybersec-Journal-and-Conference/" data-id="cuidqeazJpB2I9JboXKZR099w" data-title="Cybersec Journal and Conference" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2024/10/09/cybersec-Journal-and-Conference/" data-id="cuideUj702O-9wXPy-L9vIMzm" data-title="Cybersec Journal and Conference" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
