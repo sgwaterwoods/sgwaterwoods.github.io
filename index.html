@@ -71,6 +71,229 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-ndss-2026-network-infrastructure-perspective" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/03/03/ndss-2026-network-infrastructure-perspective/" class="article-date">
+  <time class="dt-published" datetime="2026-03-03T07:15:00.000Z" itemprop="datePublished">2026-03-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Research/">Research</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2026/03/03/ndss-2026-network-infrastructure-perspective/">NDSS 2026 论文精选 - 网络与基础设施视角</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>从网络&#x2F;基础设施视角看 NDSS 2026</strong>: 完整摘要深度解读 | 14 papers with full abstracts</p>
+</blockquote>
+<p><strong>Conference</strong>: NDSS 2026 | <strong>Perspective</strong>: Network &amp; Infrastructure Security<br><strong>Total Papers</strong>: 14 papers with complete NDSS abstracts</p>
+<hr>
+<h2 id="一、路由与互联网基础设施"><a href="#一、路由与互联网基础设施" class="headerlink" title="一、路由与互联网基础设施"></a>一、路由与互联网基础设施</h2><h3 id="1-Crack-in-the-Armor-RPKI-Publication-Point-Reachability"><a href="#1-Crack-in-the-Armor-RPKI-Publication-Point-Reachability" class="headerlink" title="1. Crack in the Armor: RPKI Publication Point Reachability"></a>1. Crack in the Armor: RPKI Publication Point Reachability</h3><p><strong>Authors</strong>: Yunhao Liu, Jessie Hui Wang, Yangyang Wang, Jilong Wang (Tsinghua &amp; Zhongguancun Lab), Yuedong Xu (Fudan), Zongpeng Li (Tsinghua)</p>
+<p><strong>Abstract</strong></p>
+<p>The effectiveness of the RPKI in preventing BGP prefix hijacking relies not only on the presence of valid ROAs but also on the successful retrieval of ROAs from publication points (PPs) by relying parties (RPs). Guaranteeing the integrity of data and uninterrupted connectivity during this retrieval process necessitates the proper implementation of security measures in the underlying infrastructure, <em>i.e.</em>, the DNS and routing infrastructures.</p>
+<p>In this paper, we collect information on the specific DNS and routing infrastructures used during the information retrieval process and analyze the infrastructure threats to the reachability of RPKI PPs. Regarding the DNS infrastructure, we report that 31 PPs (48.4%) are susceptible to DNS spoofing attacks and pinpoint the reasons for the appearance of DNSSEC-unprotected zones, such as CNAME redirections to unprotected zones and NS delegations to third-party insecure DNS servers. Regarding the routing infrastructure for communicating with nameservers, our analysis shows that a significant 55 PPs (85.9%) have at least one ROA-unprotected nameserver on their resolution paths, and highlights that the absence of ROA registration for gTLD nameservers accounts for vulnerabilities in 44 of these 55 PPs. Regarding the routing infrastructure for RP-PP communications, we report that 5 PPs fail to register ROAs for the IP addresses of their PP servers. Simulations of routing hijack attacks show that, in the case of the most vulnerable PP, up to 65% to 83% of ASes may experience a loss of connectivity to the PP.</p>
+<p>Furthermore, we investigate the deterministic and probabilistic dependencies among publication points and uncover a critical issue: some RIR-operated PPs rely on less secure lower-level PPs, which can significantly amplify the impact of vulnerabilities within insecure PPs, potentially leading to cascading failures.</p>
+<p><strong>摘要</strong></p>
+<p>RPKI在防止BGP前缀劫持方面的有效性不仅依赖于有效ROA的存在，还依赖于依赖方(RP)从发布点(PP)成功检索ROA。在此检索过程中保证数据完整性和不间断连接需要在底层基础设施(即DNS和路由基础设施)中正确实施安全措施。</p>
+<p>在本文中，我们收集有关信息检索过程中使用的特定DNS和路由基础设施的信息，并分析对RPKI PP可达性的基础设施威胁。关于DNS基础设施，我们报告31个PP(48.4%)易受DNS欺骗攻击，并指出DNSSEC未保护区域出现的原因，例如CNAME重定向到未保护区域和NS委托给第三方不安全的DNS服务器。关于与名称服务器通信的路由基础设施，我们的分析显示，显著的55个PP(85.9%)在其解析路径上至少有一个未受ROA保护的名称服务器，并强调gTLD名称服务器缺少ROA注册导致这55个PP中44个存在漏洞。关于RP-PP通信的路由基础设施，我们报告5个PP未能为其PP服务器的IP地址注册ROA。路由劫持攻击的模拟显示，在最脆弱的PP情况下，高达65%至83%的AS可能会经历与PP的连接丢失。</p>
+<p>此外，我们调查发布点之间的确定性和概率依赖关系，揭示了一个关键问题：一些RIR运营的PP依赖于不太安全的较低级别PP，这可能会显著放大不安全PP内漏洞的影响，可能导致级联故障。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/crack-in-the-armor-underlying-infrastructure-threats-to-rpki-publication-point-reachability/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h3 id="2-Demystifying-RPKI-Invalid-Prefixes"><a href="#2-Demystifying-RPKI-Invalid-Prefixes" class="headerlink" title="2. Demystifying RPKI-Invalid Prefixes"></a>2. Demystifying RPKI-Invalid Prefixes</h3><p><strong>Authors</strong>: Weitong Li, Tijay Chung (Virginia Tech), Tao Wan (CableLabs)</p>
+<p><strong>Abstract</strong></p>
+<p>The Resource Public Key Infrastructure (RPKI) enhances Internet routing security by utilizing Route Origin Authorization (ROA) objects to link IP prefixes with their rightful origin ASNs. Despite the rapid deployment of RPKI—over 51.3% of Internet routes now covered by ROAs, there are still 6,802 RPKI-invalid prefixes as of today. This work provides the first comprehensive study to understand and classify the hidden causes of RPKI-invalid prefixes, revealing that ROA misconfigurations often occur during IP leasing and IP transit services. We identify scenarios explaining these misconfigurations and attribute 96.9% of the RPKI-invalid prefixes to such misconfigurations.</p>
+<p>We further show their cascading impacts on the data plane, noting that while most prefixes exhibit negligible effects, 3.1% result in full connectivity loss and 7.1% degrade routing by adding latency and extra hop counts—and, in some cases, bypassing intended security mechanisms; additionally, we find that such misconfigurations have been triggering false alarms in hijack detection systems. To validate our findings, we build a ground-truth dataset of 294 misconfigured prefixes through direct engagement with 174 network operators. We also interviewed 16 large ISPs and major leasing brokers about their ROA management practices, and we propose suggestions to avert ROA misconfigurations.</p>
+<p>Taken together, this study not only fills gaps left by previous research but also offers actionable recommendations to network operators for improving ROA management and minimizing the occurrence of RPKI-invalid announcements.</p>
+<p><strong>摘要</strong></p>
+<p>资源公钥基础设施(RPKI)通过利用路由起源授权(ROA)对象将IP前缀与其合法起源ASN链接来增强互联网路由安全性。尽管RPKI部署迅速——目前超过51.3%的互联网路由被ROA覆盖，但截至今天仍有6,802个RPKI无效前缀。这项工作提供了第一个全面的研究，以理解和分类RPKI无效前缀的隐藏原因，揭示ROA错误配置经常发生在IP租赁和IP传输服务期间。我们识别解释这些错误配置的场景，并将96.9%的RPKI无效前缀归因于此类错误配置。</p>
+<p>我们进一步展示了它们对数据平面的级联影响，注意到虽然大多数前缀表现出微不足道的影响，但3.1%导致完全连接丢失，7.1%通过增加延迟和额外跳数降低路由性能——在某些情况下，绕过预期的安全机制；此外，我们发现此类错误配置一直在劫持检测系统中触发误报。为了验证我们的发现，我们通过与174个网络运营商的直接接触构建了294个错误配置前缀的真实数据集。我们还采访了16个大型ISP和主要租赁经纪人关于他们的ROA管理实践，并提出避免ROA错误配置的建议。</p>
+<p>总的来说，这项研究不仅填补了先前研究留下的空白，还为网络运营商改进ROA管理和最小化RPKI无效公告的发生提供了可操作的建议。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/demystifying-rpki-invalid-prefixes-hidden-causes-and-security-risks/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h3 id="3-Aliens-Among-Us-Bogon-Traffic-on-the-Public-Internet"><a href="#3-Aliens-Among-Us-Bogon-Traffic-on-the-Public-Internet" class="headerlink" title="3. Aliens Among Us: Bogon Traffic on the Public Internet"></a>3. Aliens Among Us: Bogon Traffic on the Public Internet</h3><p><strong>Authors</strong>: Radu Anghel, Yury Zhauniarovich (TU Delft), Carlos Gañán (ICANN), Qasim Lone (RIPE NCC), Matthew Luckie (CAIDA)</p>
+<p><strong>Abstract</strong></p>
+<p>Spoofed traffic remains a major network hygiene concern, as it enables Distributed Denial-of-Service (DDoS) attacks by obscuring attack origins and hindering forensic analysis. A key indicator of poor hygiene is the presence of <em>Bogon</em> traffic—packets carrying invalid or non-routable source addresses—in the public Internet, arising from misconfigurations or insufficient filtering. Despite long-standing Source Address Validation (SAV) recommendations such as BCP 38 and BCP 84, Bogon filtering remains inconsistently deployed.</p>
+<p>In this work, we analyze eight years (2017–2024) of traceroute measurements from the CAIDA Ark platform, enriched with historical BGP data from RIPE RIS and RouteViews, to quantify the prevalence and characteristics of Bogon addresses in the data plane. We observe widespread non-compliance with best practices: between 82.69% and 97.83% of Ark vantage points encounter traceroute paths containing Bogon IPs, predominantly RFC1918 addresses. Overall, 21.11% of traceroutes include RFC1918 addresses, with smaller fractions involving RFC6598 (1.68%) and RFC3927 (0.08%). We identify over 15,500 Autonomous Systems (ASes) that transit Bogon traffic, although only 11.88% do so in more than half of the measurements.</p>
+<p>Cross-referencing with the Spoofer project and MANRS reveals a significant gap between control- and data-plane assurances: 52.71% of ASes forwarding Bogon-sourced packets are classified as non-spoofable, indicating incomplete or ineffective SAV deployment.</p>
+<p><strong>摘要</strong></p>
+<p>欺骗流量仍然是一个主要的网络卫生问题，因为它通过掩盖攻击来源和阻碍取证分析来启用分布式拒绝服务(DDoS)攻击。不良卫生的关键指标是公共互联网中存在<em>Bogon</em>流量——携带无效或不可路由源地址的数据包——由错误配置或过滤不足引起。尽管有长期的源地址验证(SAV)建议，如BCP 38和BCP 84，Bogon过滤仍然部署不一致。</p>
+<p>在这项工作中，我们分析了来自CAIDA Ark平台的八年(2017-2024)traceroute测量数据，并用来自RIPE RIS和RouteViews的历史BGP数据丰富，以量化数据平面中Bogon地址的流行程度和特征。我们观察到普遍不遵守最佳实践：82.69%至97.83%的Ark观察点遇到包含Bogon IP的traceroute路径，主要是RFC1918地址。总体而言，21.11%的traceroute包括RFC1918地址，较小部分涉及RFC6598(1.68%)和RFC3927(0.08%)。我们识别出超过15,500个自治系统(AS)传输Bogon流量，尽管只有11.88%在超过一半的测量中这样做。</p>
+<p>与Spoofer项目和MANRS的交叉参照显示控制平面和数据平面保证之间存在显著差距：52.71%转发Bogon源数据包的AS被归类为不可欺骗，表明SAV部署不完整或无效。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/aliens-among-us-observing-private-or-reserved-ips-on-the-public-internet/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h2 id="二、DNS-与-Email-安全"><a href="#二、DNS-与-Email-安全" class="headerlink" title="二、DNS 与 Email 安全"></a>二、DNS 与 Email 安全</h2><h3 id="4-DNS-Cache-Timing-Attacks-for-Continuous-Monitoring"><a href="#4-DNS-Cache-Timing-Attacks-for-Continuous-Monitoring" class="headerlink" title="4. DNS Cache Timing Attacks for Continuous Monitoring"></a>4. DNS Cache Timing Attacks for Continuous Monitoring</h3><p><strong>Authors</strong>: Hannes Weissteiner, Roland Czerny, Simone Franza, Stefan Gast (Graz University of Technology), Johanna Ullrich (University of Vienna), Daniel Gruss (Graz University of Technology)</p>
+<p><strong>Abstract</strong></p>
+<p>The Domain Name System (DNS) is a core component of the Internet. Clients query DNS servers to translate domain names to IP addresses. Local DNS caches alleviate the time it takes to query a DNS server, thereby reducing delays to connection attempts. Prior work showed that DNS caches can be exploited via timing attacks to test whether a user has visited a specific website recently but lacked eviction capabilities, i.e., could not monitor when precisely a user accessed a website, others focused on DNS caches in routers. All prior attacks required some form of code execution (e.g., native code, Java, or JavaScript) on the victim’s system, which is also not always possible.</p>
+<p>We introduce <strong>DMT</strong>, a novel Evict+Reload attack to continuously monitor a victim’s Internet accesses through the local, system-wide DNS cache. The foundation of DMT is reliable DNS cache eviction: We present 4 DNS cache eviction techniques to evict the local DNS cache in unprivileged and sandboxed native attacks, virtualized cross-VM attacks, as well as browser-based attacks, i.e., a website with JavaScript and a scriptless attack exploiting the serial loading of fonts integrated in websites. Our attack works both in default settings and when using DNS-over-TLS, DNSSEC, or non-default DNS forwarders for security.</p>
+<p>We observe eviction times of 77.267 ms on average across all contexts, using our fastest eviction primitive and reload and measurement times of 685.86 ms on average in the best case (cross-VM attack) for 100 domains and 14.710 s on average in the worst case (JavaScript-based attack). Hence, the blind spot of our attack for a granularity of five minutes is smaller than 0.26% in the best case, and 4.92% in the worst case, resulting in a reliable attack. In an end-to-end cross-VM attack, we can detect website visits from a list of 103 websites (in an open-world scenario) reliably with an F1 score of 92.48% within less than one second. In our JavaScript-based attack, we achieve F1 scores of 82.86% and 78.89% for detecting accesses to 10 websites, with and without DNSSEC, respectively.</p>
+<p>We argue that DMT leaks information valuable for extortion and scam campaigns, or to serve exploits tailored to the victim’s EDR solution.</p>
+<p><strong>摘要</strong></p>
+<p>域名系统(DNS)是互联网的核心组件。客户端查询DNS服务器以将域名转换为IP地址。本地DNS缓存减轻了查询DNS服务器所需的时间，从而减少连接尝试的延迟。先前的工作表明DNS缓存可以通过时序攻击利用以测试用户最近是否访问过特定网站，但缺乏驱逐功能，即无法监控用户何时精确访问网站，其他工作关注路由器中的DNS缓存。所有先前的攻击都需要受害者系统上的某种形式的代码执行(例如本机代码、Java或JavaScript)，这也并不总是可能的。</p>
+<p>我们引入了<strong>DMT</strong>，这是一种新颖的Evict+Reload攻击，通过本地系统范围的DNS缓存持续监控受害者的互联网访问。DMT的基础是可靠的DNS缓存驱逐：我们提出4种DNS缓存驱逐技术，在非特权和沙盒本机攻击、虚拟化跨VM攻击以及基于浏览器的攻击中驱逐本地DNS缓存，即具有JavaScript的网站和利用网站中集成的字体串行加载的无脚本攻击。我们的攻击在默认设置和使用DNS-over-TLS、DNSSEC或非默认DNS转发器进行安全时都有效。</p>
+<p>我们在所有上下文中观察到平均77.267 ms的驱逐时间，使用我们最快的驱逐原语，在最佳情况下(跨VM攻击)对100个域的重新加载和测量时间平均为685.86 ms，在最坏情况下(基于JavaScript的攻击)平均为14.710秒。因此，我们的攻击对于五分钟粒度的盲点在最佳情况下小于0.26%，在最坏情况下为4.92%，导致可靠的攻击。在端到端跨VM攻击中，我们可以在不到一秒的时间内从103个网站列表(在开放世界场景中)可靠地检测网站访问，F1分数为92.48%。在我们基于JavaScript的攻击中，我们在检测访问10个网站时分别实现82.86%和78.89%的F1分数，有和没有DNSSEC。</p>
+<p>我们认为DMT泄露对勒索和诈骗活动有价值的信息,或提供针对受害者EDR解决方案定制的漏洞利用。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/continuous-user-behavior-monitoring-using-dns-cache-timing-attacks/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h3 id="5-CoordMail-SMTP-Convergence-Amplification-Attack"><a href="#5-CoordMail-SMTP-Convergence-Amplification-Attack" class="headerlink" title="5. CoordMail: SMTP Convergence Amplification Attack"></a>5. CoordMail: SMTP Convergence Amplification Attack</h3><p><strong>Authors</strong>: Ruixuan Li, Baojun Liu (Tsinghua), Chaoyi Lu (Zhongguancun Lab), Yanzhong Lin, Qingfeng Pan (Coremail), Jun Shao (Zhejiang Gongshang University)</p>
+<p><strong>Abstract</strong></p>
+<p>This paper introduces a novel and powerful email convergence amplification attack, named <strong>COORDMAIL</strong>. Traditional email DoS attacks primarily send spam to targeted mailboxes, with little ability to affect email servers’ operation. In contrast, COORDMAIL exploits the inherent properties of the SMTP protocol, i.e., long session timeouts and client-controlled interactions, to cleverly coordinate reflected emails from various email middleware and eventually direct them to an incoming mail server simultaneously. As a result, the amplification capabilities of different email middleware are concentrated to form highly amplified attack traffic.</p>
+<p>From the SMTP session state machine and email reflection behaviors, we identify many real-world email middleware suitable for COORDMAIL, including 10,079 bounce servers, 584 open email relays, and 6 email forwarding providers. By building SMTP command sequences, COORDMAIL can maintain prolonged SMTP communications with these middleware at an extremely low rate and control them to reflect emails steadily at any given moment. We show that COORDMAIL is effective at a low cost: 1000 SMTP connections can achieve more than 30,000 times of bandwidth amplification.</p>
+<p>While most existing security mechanisms are ineffective against COORDMAIL, we propose feasible mitigations that reduce the convergence amplification power of COORDMAIL by tens of times. We have responsibly reported COORDMAIL to email middleware and popular email providers, some of which have accepted our recommendations.</p>
+<p><strong>摘要</strong></p>
+<p>本文介绍了一种新颖且强大的电子邮件收敛放大攻击，名为<strong>COORDMAIL</strong>。传统的电子邮件DoS攻击主要向目标邮箱发送垃圾邮件，几乎无法影响电子邮件服务器的运行。相比之下，COORDMAIL利用SMTP协议的固有属性，即长会话超时和客户端控制的交互，巧妙地协调来自各种电子邮件中间件的反射电子邮件，最终同时将它们定向到传入邮件服务器。因此，不同电子邮件中间件的放大能力集中形成高度放大的攻击流量。</p>
+<p>从SMTP会话状态机和电子邮件反射行为，我们识别了许多适合COORDMAIL的真实世界电子邮件中间件，包括10,079个退信服务器、584个开放电子邮件中继和6个电子邮件转发提供商。通过构建SMTP命令序列，COORDMAIL可以以极低的速率与这些中间件保持长时间的SMTP通信，并控制它们在任何给定时刻稳定地反射电子邮件。我们展示COORDMAIL在低成本下有效：1000个SMTP连接可以实现超过30,000倍的带宽放大。</p>
+<p>虽然大多数现有安全机制对COORDMAIL无效，但我们提出可行的缓解措施，将COORDMAIL的收敛放大能力降低数十倍。我们已负责任地向电子邮件中间件和流行的电子邮件提供商报告COORDMAIL，其中一些已接受我们的建议。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/coordmail-exploiting-smtp-timeout-and-command-interaction-to-coordinate-email-middleware-for-convergence-amplification-attack/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h2 id="三、Web-安全"><a href="#三、Web-安全" class="headerlink" title="三、Web 安全"></a>三、Web 安全</h2><h3 id="6-DOM-XSS-Detection-via-Webpage-Interaction-Fuzzing"><a href="#6-DOM-XSS-Detection-via-Webpage-Interaction-Fuzzing" class="headerlink" title="6. DOM-XSS Detection via Webpage Interaction Fuzzing"></a>6. DOM-XSS Detection via Webpage Interaction Fuzzing</h3><p><strong>Authors</strong>: Nuno Sabino (CMU, IST Lisboa, IT), Darion Cassel (CMU), Rui Abreu (Porto, INESC-ID), Pedro Adão (IST Lisboa, IT), Lujo Bauer, Limin Jia (CMU)</p>
+<p><strong>Abstract</strong></p>
+<p>DOM-based cross-site scripting (DOM-XSS) is a prevalent form of web vulnerability. Prior work on automated detection and confirmation of such vulnerabilities at scale has several limitations. First, prior work does not interact with the page and thus misses vulnerabilities in event handlers whose execution depends on user actions. Second, prior work does not find URL components, such as GET parameters and fragment values that, when instantiated with specific keys&#x2F;values, execute more code paths.</p>
+<p>To address this, we introduce <strong>SWIPE</strong>, a DOM-XSS analysis infrastructure that uses fuzzing to generate user interactions to trigger event handlers and leverages dynamic symbolic execution (DSE) to automatically synthesize URL parameters and fragments. We run SWIPE on 44,480 URLs found in pages from the Tranco top 30,000 popular domains. Compared to prior work, SWIPE’s fuzzer finds 15% more vulnerabilities. Additionally, we find that a lack of parameters and fragments in URLs significantly hinders DOM-XSS detection, and show that SWIPE’s DSE engine can synthesize previously unseen URL parameters and fragments that trigger 20 new vulnerabilities.</p>
+<p><strong>摘要</strong></p>
+<p>基于DOM的跨站脚本(DOM-XSS)是一种普遍存在的Web漏洞形式。先前关于大规模自动检测和确认此类漏洞的工作存在若干限制。首先，先前的工作不与页面交互，因此会遗漏执行依赖于用户操作的事件处理程序中的漏洞。其次，先前的工作没有找到URL组件，例如GET参数和片段值，当用特定键&#x2F;值实例化时，执行更多代码路径。</p>
+<p>为了解决这个问题，我们引入了<strong>SWIPE</strong>，这是一个DOM-XSS分析基础设施，使用模糊测试生成用户交互以触发事件处理程序，并利用动态符号执行(DSE)自动合成URL参数和片段。我们在来自Tranco前30,000个流行域的页面中找到的44,480个URL上运行SWIPE。与先前的工作相比，SWIPE的模糊器发现了15%更多的漏洞。此外，我们发现URL中缺少参数和片段显著阻碍了DOM-XSS检测，并展示SWIPE的DSE引擎可以合成以前未见过的URL参数和片段，触发20个新漏洞。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/dom-xss-detection-via-webpage-interaction-fuzzing-and-url-component-synthesis/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h3 id="7-WebSpotter-Interpretable-Web-Attack-Detection"><a href="#7-WebSpotter-Interpretable-Web-Attack-Detection" class="headerlink" title="7. WebSpotter: Interpretable Web Attack Detection"></a>7. WebSpotter: Interpretable Web Attack Detection</h3><p><strong>Authors</strong>: Peiyang Li (Tsinghua &amp; Ant), Fukun Mei, Ye Wang, Zhuotao Liu, Ke Xu (Tsinghua &amp; Zhongguancun Lab), Chao Shen (Xi’an Jiaotong), Qian Wang (Wuhan), Qi Li (Tsinghua &amp; Zhongguancun Lab)</p>
+<p><strong>Abstract</strong></p>
+<p>Web attacks pose a significant threat to Web applications. While deep learning-based systems have emerged as promising solutions for detecting Web attacks, the lack of interpretability hinders their deployment in production. Existing interpretability methods are unable to explain Web attacks because they overlook the structure information of HTTP requests. They merely identify some important features, which are not understandable by security operators and fail to guide them toward effective responses.</p>
+<p>In this paper, we propose <strong>WebSpotter</strong> that achieves interpretable Web attack detection, which enhances existing deep learning-based detection methods by locating malicious payloads of the HTTP requests. It is inspired by the observation that malicious payloads often have a significant impact on the predictions of detection models. WebSpotter identifies the importance of each field of HTTP requests, and then utilizes a machine learning model to learn the correlation between the importance and malicious payloads. In addition, we demonstrate how WebSpotter can assist security operators in mitigating attacks by automatically generating WAF rules.</p>
+<p>Extensive evaluations on two public datasets and our newly constructed dataset demonstrate that WebSpotter significantly outperforms existing methods, achieving at least a 22% improvement in localization accuracy compared to baselines. We also conduct evaluations on real-world attacks collected from CVEs and real-world Web applications to illustrate the effectiveness of WebSpotter in practical scenarios.</p>
+<p><strong>摘要</strong></p>
+<p>Web攻击对Web应用程序构成重大威胁。虽然基于深度学习的系统已成为检测Web攻击的有前途的解决方案，但缺乏可解释性阻碍了它们在生产中的部署。现有的可解释性方法无法解释Web攻击，因为它们忽略了HTTP请求的结构信息。它们仅识别一些重要特征，这些特征对安全操作员来说不可理解，并且无法指导他们进行有效响应。</p>
+<p>在本文中，我们提出了<strong>WebSpotter</strong>，它实现了可解释的Web攻击检测，通过定位HTTP请求的恶意载荷来增强现有的基于深度学习的检测方法。它受到恶意载荷通常对检测模型的预测具有重大影响这一观察的启发。WebSpotter识别HTTP请求每个字段的重要性，然后利用机器学习模型学习重要性与恶意载荷之间的相关性。此外，我们展示WebSpotter如何通过自动生成WAF规则协助安全操作员缓解攻击。</p>
+<p>在两个公共数据集和我们新构建的数据集上的广泛评估表明，WebSpotter显著优于现有方法，与基线相比定位准确率至少提高22%。我们还对从CVE和真实世界Web应用程序收集的真实世界攻击进行评估，以说明WebSpotter在实际场景中的有效性。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/achieving-interpretable-dl-based-web-attack-detection-through-malicious-payload-localization/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h3 id="8-ACTS-Attestations-of-Contents-in-TLS-Sessions"><a href="#8-ACTS-Attestations-of-Contents-in-TLS-Sessions" class="headerlink" title="8. ACTS: Attestations of Contents in TLS Sessions"></a>8. ACTS: Attestations of Contents in TLS Sessions</h3><p><strong>Authors</strong>: Pierpaolo Della Monica, Ivan Visconti, Andrea Vitaletti, Marco Zecchini (Sapienza University of Rome)</p>
+<p><strong>Abstract</strong></p>
+<p>An essential requirement for the large-scale adoption of Web3 is enabling users to benefit from their data even within already deployed systems. This raises an important open question: how can existing, widely adopted software verify that a user has retrieved specific data from a TLS server?</p>
+<p>Impressive scientific results (e.g., DECO [CCS20] and the work of Xie et al. [USENIX24]) and industrial products (TLSNotary) have recently made progress in the above challenging direction. However, while they nicely leave TLS servers untouched, the retrieved data is then used in computations with verifiers that are required to run some advanced non-standardized cryptographic schemes (e.g., ZK-SNARKs), which clearly limits the large-scale adoption of the proposed technologies.</p>
+<p>In this paper, building on top of previous approaches and relying on the recent concept of Predicate Blind Signatures of Fuchsbauer and Wolf [Eurocrypt24], we bypass the limits of prior work by presenting <strong>ACTS</strong> a distributed architecture that, while still leaving TLS servers untouched, it allows a user to show possession of data retrieved from TLS servers simply requiring that the software of the verifier can check a standard signature.</p>
+<p>Our contributions include a round-optimal predicate blind signature protocol that produces standard RSA-PSS signatures. We show how this primitive can be integrated into the DECO architecture (and its successors) to certify data retrieved from TLS servers. Furthermore, we have optimized our construction to make it practical on commodity hardware for a large and significant class of policies implemented by the notary (i.e., the actor that is in charge of obliviously certifying TLS data, therefore preserving data confidentiality). We provide an experimental evaluation on the simple but powerful enough use case of a PDF document downloaded from a TLS server and encoded into an AES-GCM ciphertext. The user will then get a certified PDF through a standard PADES signature added obliviously to the PDF along with some metadata by a notary service. The resulting standard signed PDF document can be transparently verified using off-the-shelf PDF readers. Our experimental validation demonstrates that our architecture is suitable for real-world deployment in concrete scenarios.</p>
+<p><strong>摘要</strong></p>
+<p>Web3大规模采用的一个基本要求是使用户能够从他们的数据中受益，即使在已部署的系统中。这引发了一个重要的开放问题：现有的、广泛采用的软件如何验证用户已从TLS服务器检索特定数据？</p>
+<p>令人印象深刻的科学成果(例如DECO [CCS20]和Xie等人的工作[USENIX24])和工业产品(TLSNotary)最近在上述具有挑战性的方向上取得了进展。然而，虽然它们很好地保持TLS服务器不变,检索的数据然后用于与验证器的计算，这些验证器需要运行一些高级非标准化加密方案(例如ZK-SNARK)，这显然限制了所提议技术的大规模采用。</p>
+<p>在本文中，基于先前的方法并依赖Fuchsbauer和Wolf [Eurocrypt24]的谓词盲签名的最新概念，我们通过提出<strong>ACTS</strong>来绕过先前工作的限制，这是一个分布式架构，虽然仍然保持TLS服务器不变，但它允许用户简单地要求验证器的软件可以检查标准签名来展示从TLS服务器检索的数据的拥有。</p>
+<p>我们的贡献包括一个产生标准RSA-PSS签名的轮次最优谓词盲签名协议。我们展示如何将这个原语集成到DECO架构(及其后继者)中以认证从TLS服务器检索的数据。此外，我们已优化我们的构造，使其在商品硬件上对公证人实施的大量重要策略类别实用(即负责无意识地认证TLS数据的参与者，从而保护数据机密性)。我们提供了一个简单但足够强大的用例的实验评估，即从TLS服务器下载并编码为AES-GCM密文的PDF文档。然后，用户将通过公证服务向PDF无意识地添加标准PADES签名以及一些元数据来获得认证的PDF。结果标准签名的PDF文档可以使用现成的PDF阅读器透明地验证。我们的实验验证表明，我们的架构适合在具体场景中进行真实世界部署。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/acts-attestations-of-contents-in-tls-sessions/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h2 id="四、Wi-Fi-与无线网络安全"><a href="#四、Wi-Fi-与无线网络安全" class="headerlink" title="四、Wi-Fi 与无线网络安全"></a>四、Wi-Fi 与无线网络安全</h2><h3 id="9-AirSnitch-Breaking-Wi-Fi-Client-Isolation"><a href="#9-AirSnitch-Breaking-Wi-Fi-Client-Isolation" class="headerlink" title="9. AirSnitch: Breaking Wi-Fi Client Isolation"></a>9. AirSnitch: Breaking Wi-Fi Client Isolation</h3><p><strong>Authors</strong>: Xin’an Zhou, Juefei Pu, Zhutian Liu, Zhiyun Qian, Zhaowei Tan, Srikanth V. Krishnamurthy (UC Riverside), Mathy Vanhoef (DistriNet, KU Leuven)</p>
+<p><strong>Abstract</strong></p>
+<p>To prevent malicious Wi-Fi clients from attacking other clients on the same network, vendors have introduced client isolation, a combination of mechanisms that block direct communication between clients. However, client isolation is not a standardized feature, making its security guarantees unclear.</p>
+<p>In this paper, we undertake a structured security analysis of Wi-Fi client isolation and uncover new classes of attacks that bypass this protection. We identify several root causes behind these weaknesses. First, Wi-Fi keys that protect broadcast frames are improperly managed and can be abused to bypass client isolation. Second, isolation is often only enforced at the MAC or IP layer, but not both. Third, weak synchronization of a client’s identity across the network stack allows one to bypass Wi-Fi client isolation at the network layer instead, enabling the interception of uplink and downlink traffic of other clients as well as internal backend devices. Every tested router and network was vulnerable to at least one attack. More broadly, the lack of standardization leads to inconsistent, ad hoc, and often incomplete implementations of isolation across vendors.</p>
+<p>Building on these insights, we design and evaluate end-to-end attacks that enable full machine-in-the-middle capabilities in modern Wi-Fi networks. Although client isolation effectively mitigates legacy attacks like ARP spoofing, which has long been considered the only universal method for achieving machine-in-the-middle positioning in local area networks, our attack introduces a general and practical alternative that restores this capability, even in the presence of client isolation.</p>
+<p><strong>摘要</strong></p>
+<p>为了防止恶意Wi-Fi客户端攻击同一网络上的其他客户端，供应商引入了客户端隔离，这是阻止客户端之间直接通信的机制组合。然而，客户端隔离不是标准化功能，使其安全保证不明确。</p>
+<p>在本文中，我们对Wi-Fi客户端隔离进行结构化安全分析，并发现绕过此保护的新类攻击。我们识别这些弱点背后的几个根本原因。首先，保护广播帧的Wi-Fi密钥管理不当，可以被滥用以绕过客户端隔离。其次，隔离通常仅在MAC或IP层强制执行，但不是两者都执行。第三，客户端身份在网络堆栈中的弱同步允许在网络层绕过Wi-Fi客户端隔离，使得能够拦截其他客户端以及内部后端设备的上行和下行流量。每个测试的路由器和网络都容易受到至少一种攻击。更广泛地说，缺乏标准化导致供应商之间的隔离实现不一致、临时且通常不完整。</p>
+<p>基于这些见解，我们设计并评估端到端攻击，在现代Wi-Fi网络中启用完整的中间机器能力。虽然客户端隔离有效地缓解了像ARP欺骗这样的遗留攻击，这长期以来被认为是在局域网中实现中间机器定位的唯一通用方法，但我们的攻击引入了一个通用且实用的替代方案，即使在存在客户端隔离的情况下也能恢复此功能。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/airsnitch-demystifying-and-breaking-client-isolation-in-wi-fi-networks/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h2 id="五、流量分析与机器学习安全"><a href="#五、流量分析与机器学习安全" class="headerlink" title="五、流量分析与机器学习安全"></a>五、流量分析与机器学习安全</h2><h3 id="10-NetMasquerade-ML-based-Traffic-Evasion-Attack"><a href="#10-NetMasquerade-ML-based-Traffic-Evasion-Attack" class="headerlink" title="10. NetMasquerade: ML-based Traffic Evasion Attack"></a>10. NetMasquerade: ML-based Traffic Evasion Attack</h3><p><strong>Authors</strong>: Zixuan Liu, Zhuotao Liu, Qi Li, Ke Xu (Tsinghua), Yi Zhao (Beijing IT), Chuanpu Fu, Guangmeng Zhou (Tsinghua)</p>
+<p><strong>Abstract</strong></p>
+<p>Machine Learning (ML)-based malicious traffic detection is a promising security paradigm. It outperforms rule-based traditional detection by identifying various advanced attacks. However, the robustness of these ML models is largely unexplored, thereby allowing attackers to craft adversarial traffic examples that evade detection. Existing evasion attacks typically rely on overly restrictive conditions (e.g., encrypted protocols, Tor, or specialized setups), or require detailed prior knowledge of the target (e.g., training data and model parameters), which is impractical in realistic black-box scenarios. The feasibility of a hard-label black-box evasion attack (i.e., applicable across diverse tasks and protocols without internal target insights) thus remains an open challenge.</p>
+<p>To this end, we develop <strong>NetMasquerade</strong>, which leverages reinforcement learning (RL) to manipulate attack flows to mimic benign traffic and evade detection. Specifically, we establish a tailored pre-trained model called Traffic-BERT, utilizing a network-specialized tokenizer and an attention mechanism to extract diverse benign traffic patterns. Subsequently, we integrate Traffic-BERT into the RL framework, allowing NetMasquerade to effectively manipulate malicious packet sequences based on benign traffic patterns with minimal modifications.</p>
+<p>Experimental results demonstrate that NetMasquerade enables both brute-force and stealthy attacks to evade 6 existing detection methods under 80 attack scenarios, achieving over 96.65% attack success rate. Notably, it can evade the methods that are either empirically or certifiably robust against existing evasion attacks. Finally, NetMasquerade achieves low-latency adversarial traffic generation, demonstrating its practicality in real-world scenarios.</p>
+<p><strong>摘要</strong></p>
+<p>基于机器学习(ML)的恶意流量检测是一种有前途的安全范式。它通过识别各种高级攻击优于基于规则的传统检测。然而，这些ML模型的鲁棒性在很大程度上未被探索，从而允许攻击者制作逃避检测的对抗性流量示例。现有的逃避攻击通常依赖于过度限制性条件(例如加密协议、Tor或专门设置)，或需要目标的详细先验知识(例如训练数据和模型参数)，这在现实的黑盒场景中是不切实际的。硬标签黑盒逃避攻击的可行性(即适用于不同任务和协议而无需内部目标洞察)因此仍然是一个开放的挑战。</p>
+<p>为此，我们开发了<strong>NetMasquerade</strong>，它利用强化学习(RL)操纵攻击流以模仿良性流量并逃避检测。具体而言，我们建立了一个名为Traffic-BERT的定制预训练模型，利用网络专用分词器和注意力机制提取多样化的良性流量模式。随后，我们将Traffic-BERT集成到RL框架中，允许NetMasquerade基于良性流量模式以最小修改有效地操纵恶意数据包序列。</p>
+<p>实验结果表明，NetMasquerade使暴力和隐蔽攻击能够在80个攻击场景下逃避6种现有检测方法，实现超过96.65%的攻击成功率。值得注意的是，它可以逃避那些在经验上或可证明地对现有逃避攻击具有鲁棒性的方法。最后，NetMasquerade实现低延迟对抗性流量生成，证明了其在现实世界场景中的实用性。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/a-hard-label-black-box-evasion-attack-against-ml-based-malicious-traffic-detection-systems/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h3 id="11-Proteus-Adaptive-Website-Fingerprinting-Attack"><a href="#11-Proteus-Adaptive-Website-Fingerprinting-Attack" class="headerlink" title="11. Proteus: Adaptive Website Fingerprinting Attack"></a>11. Proteus: Adaptive Website Fingerprinting Attack</h3><p><strong>Authors</strong>: Xinhao Deng (Tsinghua &amp; Ant), Yixiang Zhang, Qi Li, Zhuotao Liu, Ke Xu (Tsinghua &amp; Zhongguancun Lab), Yabo Wang (Tsinghua)</p>
+<p><strong>Abstract</strong></p>
+<p>Anonymous communication systems, e.g., Tor, are vulnerable to various website fingerprinting (WF) attacks, which analyze network traffic patterns to compromise user privacy. In particular, sophisticated attacks employ deep learning (DL) models to identify distinctive traffic patterns associated with specific websites, allowing the adversary to determine which websites users have visited. However, these attacks are not designed to handle traffic drift, such as changes in website content and network conditions. Since traffic drift is common in real-world, the effectiveness of these attacks diminishes significantly in real-world deployment.</p>
+<p>To address this limitation, we develop <strong>Proteus</strong>, the first adaptive WF attack framework to effectively mitigate the impact of traffic drift while maintaining robust performance in real-world scenarios. The key design rationale of Proteus is to continuously fine-tune the WF model using only drifted traffic without ground-truth labels collected while deploying the model, enabling the model to adapt to complex traffic drift in near real time. Specifically, Proteus aligns the feature distributions of original and drifted traffic by minimizing the maximum mean discrepancy and thus enhances model confidence by optimizing the entropy distribution of its predictions. Furthermore, it utilizes a Gaussian mixture model to obtain reliable pseudo labels, which are subsequently used in supervised fine-tuning to further enhance its robustness against drifted traffic.</p>
+<p>Notably, Proteus can be seamlessly integrated with existing DL-based WF attacks to enhance their resilience to traffic drift. We evaluate Proteus on large-scale datasets containing over 350,000 real-world Tor browsing traces across six traffic drift scenarios. The results demonstrate that Proteus achieves an average 94.24% relative improvement in F1-score over eight state-of-the-art WF attacks for identifying drifted traffic.</p>
+<p><strong>摘要</strong></p>
+<p>匿名通信系统(例如Tor)容易受到各种网站指纹(WF)攻击，这些攻击分析网络流量模式以损害用户隐私。特别是，复杂的攻击采用深度学习(DL)模型来识别与特定网站相关的独特流量模式，允许对手确定用户访问了哪些网站。然而，这些攻击不是为处理流量漂移而设计的，例如网站内容和网络条件的变化。由于流量漂移在现实世界中很常见，这些攻击的有效性在现实世界部署中显著降低。</p>
+<p>为了解决这一限制，我们开发了<strong>Proteus</strong>，这是第一个自适应WF攻击框架，在现实世界场景中有效缓解流量漂移的影响同时保持强大的性能。Proteus的关键设计原理是仅使用部署模型时收集的没有真实标签的漂移流量持续微调WF模型，使模型能够近实时适应复杂的流量漂移。具体而言，Proteus通过最小化最大平均差异来对齐原始和漂移流量的特征分布，从而通过优化其预测的熵分布来增强模型置信度。此外，它利用高斯混合模型获得可靠的伪标签，随后用于监督微调以进一步增强其对漂移流量的鲁棒性。</p>
+<p>值得注意的是，Proteus可以无缝集成现有的基于DL的WF攻击以增强其对流量漂移的弹性。我们在包含超过350,000个真实世界Tor浏览痕迹的大规模数据集上评估Proteus，涵盖六个流量漂移场景。结果表明，Proteus在识别漂移流量方面在八个最先进的WF攻击上平均实现94.24%的F1分数相对改进。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/enhancing-website-fingerprinting-attacks-against-traffic-drift/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h3 id="12-FRUGAL-Efficient-Website-Fingerprinting-Defense"><a href="#12-FRUGAL-Efficient-Website-Fingerprinting-Defense" class="headerlink" title="12. FRUGAL: Efficient Website Fingerprinting Defense"></a>12. FRUGAL: Efficient Website Fingerprinting Defense</h3><p><strong>Authors</strong>: Rong Wang, Zhen Ling, Guangchi Liu, Shaofeng Li, Junzhou Luo (Southeast University), Xinwen Fu (UMass Lowell)</p>
+<p><strong>Abstract</strong></p>
+<p>In response to growing online privacy threats, the Tor network offers essential protection against surveillance by routing traffic through a decentralized, encrypted infrastructure. However, Website Fingerprinting Attacks (WFA) present a formidable challenge to Tor’s anonymity. This paper introduces <strong>FRUGAL</strong>, a traffic obfuscation method that leverages the mutual information (MI) reduction between website traffic and labels as an optimization goal, advancing a novel perspective for Website Fingerprinting Defense (WFD).</p>
+<p>By strategically injecting dummy packets at positions within website traffic that contribute most to cumulative MI reduction, FRUGAL achieves notable performance compared to state-of-the-art (SOTA) defense mechanisms. It effectively reduces attack success rates (ASR) across diverse attack models while maintaining minimal bandwidth overhead (BWO) and mitigating the impact of adversarial training. Extensive experiments validate the efficacy of FRUGAL across a comprehensive set of scenarios, including closed-world, open-world, and real-world simulation settings.</p>
+<p>For example, in the closed-world setting, FRUGAL reduces the ASR of the DF model to 2.68% with a 30% BWO, substantially outperforming previous SOTA defenses, such as Palette (11.54% with 87% BWO). When the BWO of FRUGAL is increased to a comparable level of 80%, the ASR further drops below 1%, demonstrating significant resilience by remaining low at 9.42% even after adversarial training, compared to 20.27% for Palette. This work not only introduces a fresh perspective on WFD research but also establishes FRUGAL as a robust and universal defense framework against WFA.</p>
+<p><strong>摘要</strong></p>
+<p>为应对日益增长的在线隐私威胁，Tor网络通过分散的加密基础设施路由流量，提供对监视的基本保护。然而，网站指纹攻击(WFA)对Tor的匿名性提出了严峻挑战。本文介绍了<strong>FRUGAL</strong>，这是一种流量混淆方法，利用网站流量和标签之间的互信息(MI)减少作为优化目标，为网站指纹防御(WFD)推进了一个新颖的视角。</p>
+<p>通过在网站流量中对累积MI减少贡献最大的位置策略性地注入虚拟数据包，FRUGAL与最先进(SOTA)的防御机制相比取得了显著的性能。它有效地降低了不同攻击模型的攻击成功率(ASR)，同时保持最小的带宽开销(BWO)并减轻对抗训练的影响。广泛的实验验证了FRUGAL在包括封闭世界、开放世界和真实世界模拟设置在内的综合场景集中的有效性。</p>
+<p>例如，在封闭世界设置中，FRUGAL将DF模型的ASR降低到2.68%，BWO为30%，大大优于以前的SOTA防御，如Palette(11.54%，BWO 87%)。当FRUGAL的BWO增加到可比水平的80%时，ASR进一步下降到1%以下，通过在对抗训练后仍保持低至9.42%来展示显著的弹性，相比之下Palette为20.27%。这项工作不仅为WFD研究引入了新的视角，而且将FRUGAL确立为针对WFA的强大且通用的防御框架。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/cease-at-the-ultimate-goodness-towards-efficient-website-fingerprinting-defense-via-iterative-mutual-information-minimization/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h2 id="六、入侵检测系统"><a href="#六、入侵检测系统" class="headerlink" title="六、入侵检测系统"></a>六、入侵检测系统</h2><h3 id="13-CoLD-Collaborative-Label-Denoising-for-Network-IDS"><a href="#13-CoLD-Collaborative-Label-Denoising-for-Network-IDS" class="headerlink" title="13. CoLD: Collaborative Label Denoising for Network IDS"></a>13. CoLD: Collaborative Label Denoising for Network IDS</h3><p><strong>Authors</strong>: Shuo Yang, Jinze Li, Jinfeng Xu, Edith C. H. Ngai (HKU), Xinran Zheng (UCL)</p>
+<p><strong>Abstract</strong></p>
+<p>Label noise presents a significant challenge in network intrusion detection, leading to erroneous classifications and decreased detection accuracy. Existing methods for handling noisy labels often lack deep insight into network traffic and blindly reconstruct the label distribution to filter samples with noisy labels, resulting in sub-optimal performance.</p>
+<p>In this paper, we reveal the impact of noisy labels on intrusion detection models from the perspective of causal associations, attributing performance degradation to local consistency of features across categories in network traffic. Motivated by this, we propose <strong>CoLD</strong>, a <strong>Co</strong>llaborative <strong>L</strong>abel <strong>D</strong>enoising framework for network intrusion detection. CoLD partitions the original feature set into multiple subsets and employs Local Joint Learning to disrupt local consistency, compelling the encoder to learn fine-grained and robust representations. It further applies Causal Collaborative Denoising to detect and filter noisy labels by analyzing causal divergences between multiple representations and their potentially true label, yielding a purified dataset for training a noise-resilient classifier.</p>
+<p>Experiments on several benchmark datasets demonstrate that CoLD effectively improves classification performance and robustness to label noise, highlighting its potential for enhancing network intrusion detection systems in noisy environments.</p>
+<p><strong>摘要</strong></p>
+<p>标签噪声在网络入侵检测中提出了重大挑战，导致错误分类和检测准确性下降。现有处理噪声标签的方法通常缺乏对网络流量的深入洞察，盲目重建标签分布以过滤具有噪声标签的样本，导致次优性能。</p>
+<p>在本文中，我们从因果关联的角度揭示噪声标签对入侵检测模型的影响，将性能下降归因于网络流量中跨类别特征的局部一致性。受此启发，我们提出了<strong>CoLD</strong>，一个用于网络入侵检测的<strong>协作标签去噪</strong>框架。CoLD将原始特征集划分为多个子集，并采用局部联合学习来破坏局部一致性，迫使编码器学习细粒度和鲁棒的表示。它进一步应用因果协作去噪，通过分析多个表示与其潜在真实标签之间的因果差异来检测和过滤噪声标签，产生用于训练抗噪声分类器的纯化数据集。</p>
+<p>在几个基准数据集上的实验表明，CoLD有效地提高了分类性能和对标签噪声的鲁棒性，突出了其在噪声环境中增强网络入侵检测系统的潜力。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/cold-collaborative-label-denoising-framework-for-network-intrusion-detection/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h3 id="14-Entente-Federated-Learning-for-Cross-Silo-IDS"><a href="#14-Entente-Federated-Learning-for-Cross-Silo-IDS" class="headerlink" title="14. Entente: Federated Learning for Cross-Silo IDS"></a>14. Entente: Federated Learning for Cross-Silo IDS</h3><p><strong>Authors</strong>: Jiacen Xu (Microsoft), Chenang Li, Yu Zheng, Zhou Li (UC Irvine)</p>
+<p><strong>Abstract</strong></p>
+<p>Graph-based Network Intrusion Detection Systems (GNIDS) have gained significant momentum in detecting sophisticated cyber-attacks, such as Advanced Persistent Threats (APTs), within and across organizational boundaries. Though achieving satisfying detection accuracy and demonstrating adaptability to ever-changing attacks and normal patterns, existing GNIDS predominantly assume a centralized data setting. However, flexible data collection is not always realistic or achievable due to increasing constraints by privacy regulations and operational limitations.</p>
+<p>We argue that the practical development of GNIDS requires accounting for distributed collection settings and we leverage Federated Learning (FL) as a viable paradigm to address this prominent challenge. We observe that naively applying FL to GNIDS is unlikely to be effective, due to issues like graph heterogeneity over clients and the diverse design choices taken by different GNIDS. We address these issues with a set of novel techniques tailored to the graph datasets, including reference graph synthesis, graph sketching and adaptive contribution scaling, eventually developing a new system <strong>ENTENTE</strong>.</p>
+<p>By leveraging the domain knowledge, ENTENTE can achieve effectiveness, scalability and robustness simultaneously. Empirical evaluation on the large-scale LANL, OpTC and Pivoting datasets shows that ENTENTE outperforms the SOTA FL baselines. We also evaluate ENTENTE under FL poisoning attacks tailored to the GNIDS setting, showing the robustness by bounding the attack success rate to low values. Overall, our study suggests a promising direction to build cross-silo GNIDS.</p>
+<p><strong>摘要</strong></p>
+<p>基于图的网络入侵检测系统(GNIDS)在组织边界内和跨组织边界检测复杂的网络攻击(如高级持续威胁APT)方面获得了显著的动力。虽然实现了令人满意的检测准确性并展示了对不断变化的攻击和正常模式的适应性，但现有的GNIDS主要假设集中式数据设置。然而，由于隐私法规和操作限制的日益增加的约束，灵活的数据收集并不总是现实或可实现的。</p>
+<p>我们认为GNIDS的实际开发需要考虑分布式收集设置，我们利用联邦学习(FL)作为解决这一突出挑战的可行范式。我们观察到天真地将FL应用于GNIDS不太可能有效，因为诸如客户端之间的图异构性和不同GNIDS采取的多样化设计选择等问题。我们用一组针对图数据集定制的新颖技术解决这些问题，包括参考图合成、图草图和自适应贡献缩放，最终开发了一个新系统<strong>ENTENTE</strong>。</p>
+<p>通过利用领域知识，ENTENTE可以同时实现有效性、可扩展性和鲁棒性。在大规模LANL、OpTC和Pivoting数据集上的经验评估表明，ENTENTE优于SOTA FL基线。我们还在针对GNIDS设置定制的FL投毒攻击下评估ENTENTE，通过将攻击成功率限制在低值来显示鲁棒性。总的来说，我们的研究为构建跨筒仓GNIDS提供了一个有前途的方向。</p>
+<p><strong>📄 论文</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/entente-cross-silo-intrusion-detection-on-network-log-graphs-with-federated-learning/">NDSS 2026 Paper Page</a> ← <em>PDF available here</em></p>
+<hr>
+<h2 id="研究趋势总结"><a href="#研究趋势总结" class="headerlink" title="研究趋势总结"></a>研究趋势总结</h2><p><strong>NDSS 2026 网络&#x2F;基础设施安全研究呈现六大趋势:</strong></p>
+<ol>
+<li><strong>RPKI 安全深化</strong> - 基础设施威胁、无效前缀、级联故障成为研究重点</li>
+<li><strong>流量分析对抗</strong> - 网站指纹攻击&#x2F;防御、ML流量检测逃避技术持续演进</li>
+<li><strong>Web 应用安全自动化</strong> - 基于模糊测试和符号执行的DOM-XSS检测、可解释AI检测</li>
+<li><strong>无线网络新型攻击</strong> - Wi-Fi客户端隔离绕过、中间人攻击复现</li>
+<li><strong>协议级放大攻击</strong> - SMTP、DNS等协议的新型DoS威胁</li>
+<li><strong>联邦学习入侵检测</strong> - 隐私保护下的跨组织协作检测</li>
+</ol>
+<hr>
+<p><strong>其他视角系列</strong>:</p>
+<ul>
+<li><a href="./ndss-2026-ai-ml-perspective.html">AI与机器学习安全视角</a> ✅ 已发布</li>
+<li><a href="./ndss-2026-system-security-perspective.html">系统安全视角</a> ✅ 已发布</li>
+<li><a href="./ndss-2026-iot-embedded-perspective.html">IoT与嵌入式系统视角</a> ✅ 已发布</li>
+<li><a href="#">密码学与隐私视角</a> (即将发布)</li>
+</ul>
+<p><strong>完整论文列表</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/accepted-papers/">NDSS 2026 Accepted Papers</a><br><strong>会议官网</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/">NDSS Symposium 2026</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-network-infrastructure-perspective/" data-id="cuidJBK_0ElPKdCZGLwawqnYZ" data-title="NDSS 2026 论文精选 - 网络与基础设施视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BGP/" rel="tag">BGP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DNS/" rel="tag">DNS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RPKI/" rel="tag">RPKI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TLS/" rel="tag">TLS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/intrusion-detection/" rel="tag">intrusion detection</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/network-security/" rel="tag">network security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/routing/" rel="tag">routing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-security/" rel="tag">web security</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-ndss-2026-iot-embedded-perspective" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2026/03/03/ndss-2026-iot-embedded-perspective/" class="article-date">
@@ -247,7 +470,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-iot-embedded-perspective/" data-id="cuid37TUD8BQAcK-4m3U-CGmt" data-title="NDSS 2026 论文精选 - IoT 与嵌入式系统视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-iot-embedded-perspective/" data-id="cuidcK4Vs9ysHP6Zv9qzZnWiT" data-title="NDSS 2026 论文精选 - IoT 与嵌入式系统视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -436,7 +659,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-system-security-perspective/" data-id="cuidhLAcav3DWwMngteliyp3_" data-title="NDSS 2026 论文精选 - 系统安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-system-security-perspective/" data-id="cuidpmjrHswJLF4JG5bQ0NI8t" data-title="NDSS 2026 论文精选 - 系统安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -639,7 +862,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-ai-ml-perspective/" data-id="cuidY9IfMYE2WlCGApdpxDx-r" data-title="NDSS 2026 论文精选 - AI 与机器学习安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-ai-ml-perspective/" data-id="cuidXi9rIQLpwhvb3gYoQnk-4" data-title="NDSS 2026 论文精选 - AI 与机器学习安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -851,263 +1074,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-crypto-privacy-perspective/" data-id="cuidPwc3tcKDQYm_fcks4C6sA" data-title="NDSS 2026 论文精选 - 密码学与隐私视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-crypto-privacy-perspective/" data-id="cuidBGbrWRKvjp610YjG9ZEMk" data-title="NDSS 2026 论文精选 - 密码学与隐私视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blockchain/" rel="tag">blockchain</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cryptography/" rel="tag">cryptography</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/encryption/" rel="tag">encryption</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/privacy/" rel="tag">privacy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zero-knowledge/" rel="tag">zero-knowledge</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-ndss-2026-network-infrastructure-perspective" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2026/03/03/ndss-2026-network-infrastructure-perspective/" class="article-date">
-  <time class="dt-published" datetime="2026-03-03T01:45:00.000Z" itemprop="datePublished">2026-03-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Research/">Research</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2026/03/03/ndss-2026-network-infrastructure-perspective/">NDSS 2026 论文精选 - 网络与基础设施视角</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p><strong>从网络&#x2F;基础设施视角看 NDSS 2026</strong>: 涵盖互联网路由、DNS、Web 安全、电子邮件协议</p>
-</blockquote>
-<p><strong>📄 Complete Paper List with Download Links</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/accepted-papers/">NDSS 2026 Accepted Papers</a></p>
-<p><strong>Perspective</strong>: Network &amp; Infrastructure Security | <strong>Focus</strong>: Routing, DNS, Web, Email, Wi-Fi</p>
-<hr>
-<h2 id="一、互联网路由安全-RPKI"><a href="#一、互联网路由安全-RPKI" class="headerlink" title="一、互联网路由安全 (RPKI)"></a>一、互联网路由安全 (RPKI)</h2><h3 id="1-Crack-in-the-Armor-Infrastructure-Threats-to-RPKI-Publication-Points"><a href="#1-Crack-in-the-Armor-Infrastructure-Threats-to-RPKI-Publication-Points" class="headerlink" title="1. Crack in the Armor: Infrastructure Threats to RPKI Publication Points"></a>1. Crack in the Armor: Infrastructure Threats to RPKI Publication Points</h3><p><strong>Authors</strong>: Yunhao Liu et al. (Tsinghua University, Fudan University)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/crack-in-the-armor-underlying-infrastructure-threats-to-rpki-publication-point-reachability/">NDSS 2026</a></p>
-<p><strong>English</strong>: Identifies underlying infrastructure threats to RPKI publication point reachability that could undermine internet routing security.</p>
-<p><strong>中文</strong>: 识别对 RPKI 发布点可达性的底层基础设施威胁，可能破坏互联网路由安全。</p>
-<hr>
-<h3 id="2-Demystifying-RPKI-Invalid-Prefixes-Hidden-Causes-and-Risks"><a href="#2-Demystifying-RPKI-Invalid-Prefixes-Hidden-Causes-and-Risks" class="headerlink" title="2. Demystifying RPKI-Invalid Prefixes: Hidden Causes and Risks"></a>2. Demystifying RPKI-Invalid Prefixes: Hidden Causes and Risks</h3><p><strong>Authors</strong>: Weitong Li et al. (Virginia Tech, CableLabs)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/demystifying-rpki-invalid-prefixes-hidden-causes-and-security-risks/">NDSS 2026</a></p>
-<p><strong>English</strong>: Uncovers hidden causes of RPKI-invalid prefixes and analyzes their security risks in global routing systems.</p>
-<p><strong>中文</strong>: 揭示 RPKI 无效前缀的隐藏原因并分析其在全球路由系统中的安全风险。</p>
-<hr>
-<h2 id="二、DNS-与缓存攻击"><a href="#二、DNS-与缓存攻击" class="headerlink" title="二、DNS 与缓存攻击"></a>二、DNS 与缓存攻击</h2><h3 id="3-Continuous-User-Behavior-Monitoring-via-DNS-Cache-Timing-Attacks"><a href="#3-Continuous-User-Behavior-Monitoring-via-DNS-Cache-Timing-Attacks" class="headerlink" title="3. Continuous User Behavior Monitoring via DNS Cache Timing Attacks"></a>3. Continuous User Behavior Monitoring via DNS Cache Timing Attacks</h3><p><strong>Authors</strong>: Hannes Weissteiner et al. (Graz University of Technology, University of Vienna)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/continuous-user-behavior-monitoring-using-dns-cache-timing-attacks/">NDSS 2026</a></p>
-<p><strong>English</strong>: Demonstrates continuous user behavior monitoring through DNS cache timing attacks without network access or malware.</p>
-<p><strong>中文</strong>: 展示通过 DNS 缓存时序攻击进行持续用户行为监控，无需网络访问或恶意软件。</p>
-<hr>
-<h2 id="三、Web-应用安全"><a href="#三、Web-应用安全" class="headerlink" title="三、Web 应用安全"></a>三、Web 应用安全</h2><h3 id="4-Achieving-Interpretable-DL-based-Web-Attack-Detection"><a href="#4-Achieving-Interpretable-DL-based-Web-Attack-Detection" class="headerlink" title="4. Achieving Interpretable DL-based Web Attack Detection"></a>4. Achieving Interpretable DL-based Web Attack Detection</h3><p><strong>Authors</strong>: Peiyang Li et al. (Tsinghua University, Ant Group, et al.)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/achieving-interpretable-dl-based-web-attack-detection-through-malicious-payload-localization/">NDSS 2026</a></p>
-<p><strong>English</strong>: Achieves interpretable deep learning-based web attack detection by localizing malicious payloads for analyst verification.</p>
-<p><strong>中文</strong>: 通过定位恶意载荷实现可解释的基于深度学习的 Web 攻击检测，供分析师验证。</p>
-<hr>
-<h3 id="5-DOM-XSS-Detection-via-Webpage-Interaction-Fuzzing"><a href="#5-DOM-XSS-Detection-via-Webpage-Interaction-Fuzzing" class="headerlink" title="5. DOM-XSS Detection via Webpage Interaction Fuzzing"></a>5. DOM-XSS Detection via Webpage Interaction Fuzzing</h3><p><strong>Authors</strong>: Nuno Sabino et al. (CMU, IST Lisbon, et al.)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/dom-xss-detection-via-webpage-interaction-fuzzing-and-url-component-synthesis/">NDSS 2026</a></p>
-<p><strong>English</strong>: Detects DOM-based XSS vulnerabilities through automated webpage interaction fuzzing and URL component synthesis.</p>
-<p><strong>中文</strong>: 通过自动化网页交互模糊测试和 URL 组件合成检测基于 DOM 的 XSS 漏洞。</p>
-<hr>
-<h3 id="6-Anota-Identifying-Business-Logic-Vulnerabilities"><a href="#6-Anota-Identifying-Business-Logic-Vulnerabilities" class="headerlink" title="6. Anota: Identifying Business Logic Vulnerabilities"></a>6. Anota: Identifying Business Logic Vulnerabilities</h3><p><strong>Authors</strong>: Meng Wang et al. (CISPA, Max Planck, UESTC)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/anota-identifying-business-logic-vulnerabilities-via-annotation-based-sanitization/">NDSS 2026</a></p>
-<p><strong>English</strong>: Identifies business logic vulnerabilities via annotation-based sanitization in web applications.</p>
-<p><strong>中文</strong>: 通过 Web 应用中基于注释的清理识别业务逻辑漏洞。</p>
-<hr>
-<h3 id="7-Bullseye-Detecting-Prototype-Pollution-in-NPM-Packages"><a href="#7-Bullseye-Detecting-Prototype-Pollution-in-NPM-Packages" class="headerlink" title="7. Bullseye: Detecting Prototype Pollution in NPM Packages"></a>7. Bullseye: Detecting Prototype Pollution in NPM Packages</h3><p><strong>Authors</strong>: Tariq Houis et al. (Concordia University)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/bullseye-detecting-prototype-pollution-in-npm-packages-with-proof-of-concept-exploits/">NDSS 2026</a></p>
-<p><strong>English</strong>: Detects prototype pollution vulnerabilities in NPM packages with proof-of-concept exploits.</p>
-<p><strong>中文</strong>: 检测 NPM 包中的原型污染漏洞并提供概念验证利用。</p>
-<hr>
-<h2 id="四、电子邮件安全"><a href="#四、电子邮件安全" class="headerlink" title="四、电子邮件安全"></a>四、电子邮件安全</h2><h3 id="8-CoordMail-SMTP-Timeout-Coordination-for-Amplification-Attacks"><a href="#8-CoordMail-SMTP-Timeout-Coordination-for-Amplification-Attacks" class="headerlink" title="8. CoordMail: SMTP Timeout Coordination for Amplification Attacks"></a>8. CoordMail: SMTP Timeout Coordination for Amplification Attacks</h3><p><strong>Authors</strong>: Ruixuan Li et al. (Tsinghua, Zhongguancun Lab, Coremail)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/coordmail-exploiting-smtp-timeout-and-command-interaction-to-coordinate-email-middleware-for-convergence-amplification-attack/">NDSS 2026</a></p>
-<p><strong>English</strong>: Exploits SMTP timeout and command interaction to coordinate email middleware for convergence amplification attacks.</p>
-<p><strong>中文</strong>: 利用 SMTP 超时和命令交互协调电子邮件中间件进行收敛放大攻击。</p>
-<hr>
-<h2 id="五、Wi-Fi-与无线安全"><a href="#五、Wi-Fi-与无线安全" class="headerlink" title="五、Wi-Fi 与无线安全"></a>五、Wi-Fi 与无线安全</h2><h3 id="9-AirSnitch-Breaking-Client-Isolation-in-Wi-Fi-Networks"><a href="#9-AirSnitch-Breaking-Client-Isolation-in-Wi-Fi-Networks" class="headerlink" title="9. AirSnitch: Breaking Client Isolation in Wi-Fi Networks"></a>9. AirSnitch: Breaking Client Isolation in Wi-Fi Networks</h3><p><strong>Authors</strong>: Xin’an Zhou et al. (UC Riverside, KU Leuven)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/airsnitch-demystifying-and-breaking-client-isolation-in-wi-fi-networks/">NDSS 2026</a></p>
-<p><strong>English</strong>: Demystifies and breaks Wi-Fi client isolation mechanisms, exposing vulnerabilities in public Wi-Fi security.</p>
-<p><strong>中文</strong>: 揭秘并打破 Wi-Fi 客户端隔离机制，暴露公共 Wi-Fi 安全漏洞。</p>
-<hr>
-<h2 id="六、网络测量与分析"><a href="#六、网络测量与分析" class="headerlink" title="六、网络测量与分析"></a>六、网络测量与分析</h2><h3 id="10-Aliens-Among-Us-Observing-Private-IPs-on-the-Public-Internet"><a href="#10-Aliens-Among-Us-Observing-Private-IPs-on-the-Public-Internet" class="headerlink" title="10. Aliens Among Us: Observing Private IPs on the Public Internet"></a>10. Aliens Among Us: Observing Private IPs on the Public Internet</h3><p><strong>Authors</strong>: Radu Anghel et al. (TU Delft, ICANN, RIPE NCC, CAIDA)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/aliens-among-us-observing-private-or-reserved-ips-on-the-public-internet/">NDSS 2026</a></p>
-<p><strong>English</strong>: Measurement study observing prevalence of private&#x2F;reserved IP addresses on the public internet and their security implications.</p>
-<p><strong>中文</strong>: 测量研究观察公共互联网上私有&#x2F;保留 IP 地址的流行度及其安全影响。</p>
-<hr>
-<h3 id="11-Enhancing-Website-Fingerprinting-Attacks-Against-Traffic-Drift"><a href="#11-Enhancing-Website-Fingerprinting-Attacks-Against-Traffic-Drift" class="headerlink" title="11. Enhancing Website Fingerprinting Attacks Against Traffic Drift"></a>11. Enhancing Website Fingerprinting Attacks Against Traffic Drift</h3><p><strong>Authors</strong>: Xinhao Deng et al. (Tsinghua University, Ant Group)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/enhancing-website-fingerprinting-attacks-against-traffic-drift/">NDSS 2026</a></p>
-<p><strong>English</strong>: Enhances website fingerprinting attacks to remain effective even when traffic patterns change over time.</p>
-<p><strong>中文</strong>: 增强网站指纹攻击以在流量模式随时间变化时保持有效。</p>
-<hr>
-<h3 id="12-Cease-at-the-Ultimate-Goodness-Efficient-Website-Fingerprinting-Defense"><a href="#12-Cease-at-the-Ultimate-Goodness-Efficient-Website-Fingerprinting-Defense" class="headerlink" title="12. Cease at the Ultimate Goodness: Efficient Website Fingerprinting Defense"></a>12. Cease at the Ultimate Goodness: Efficient Website Fingerprinting Defense</h3><p><strong>Authors</strong>: Rong Wang et al. (Southeast University, UMass Lowell)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/cease-at-the-ultimate-goodness-towards-efficient-website-fingerprinting-defense-via-iterative-mutual-information-minimization/">NDSS 2026</a></p>
-<p><strong>English</strong>: Efficient website fingerprinting defense via iterative mutual information minimization.</p>
-<p><strong>中文</strong>: 通过迭代互信息最小化实现高效的网站指纹防御。</p>
-<hr>
-<h2 id="七、网络隐私"><a href="#七、网络隐私" class="headerlink" title="七、网络隐私"></a>七、网络隐私</h2><h3 id="13-Beyond-RTT-Adversarially-Robust-Residential-Proxy-Detection"><a href="#13-Beyond-RTT-Adversarially-Robust-Residential-Proxy-Detection" class="headerlink" title="13. Beyond RTT: Adversarially Robust Residential Proxy Detection"></a>13. Beyond RTT: Adversarially Robust Residential Proxy Detection</h3><p><strong>Authors</strong>: Temoor Ali et al. (Qatar Computing Research Institute, HBKU)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/beyond-rtt-an-adversarially-robust-two-tiered-approach-for-residential-proxy-detection/">NDSS 2026</a></p>
-<p><strong>English</strong>: Adversarially robust two-tiered approach for residential proxy detection beyond simple RTT measurements.</p>
-<p><strong>中文</strong>: 超越简单 RTT 测量的对抗鲁棒双层住宅代理检测方法。</p>
-<hr>
-<h3 id="14-Connecting-the-Dots-Linking-Private-Data-Across-Messaging-Apps"><a href="#14-Connecting-the-Dots-Linking-Private-Data-Across-Messaging-Apps" class="headerlink" title="14. Connecting the Dots: Linking Private Data Across Messaging Apps"></a>14. Connecting the Dots: Linking Private Data Across Messaging Apps</h3><p><strong>Authors</strong>: Junkyu Kang et al. (KAIST, University of Maryland)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/connecting-the-dots-an-investigative-study-on-linking-private-user-data-across-messaging-apps/">NDSS 2026</a></p>
-<p><strong>English</strong>: Investigative study on linking private user data across different messaging applications.</p>
-<p><strong>中文</strong>: 跨不同消息应用链接私有用户数据的调查研究。</p>
-<hr>
-<h2 id="八、网络协议与标准"><a href="#八、网络协议与标准" class="headerlink" title="八、网络协议与标准"></a>八、网络协议与标准</h2><h3 id="15-ACTS-Attestations-of-Contents-in-TLS-Sessions"><a href="#15-ACTS-Attestations-of-Contents-in-TLS-Sessions" class="headerlink" title="15. ACTS: Attestations of Contents in TLS Sessions"></a>15. ACTS: Attestations of Contents in TLS Sessions</h3><p><strong>Authors</strong>: Pierpaolo Della Monica et al. (Sapienza University of Rome)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/acts-attestations-of-contents-in-tls-sessions/">NDSS 2026</a></p>
-<p><strong>English</strong>: Enables attestations of contents in TLS sessions for verifiable secure communications.</p>
-<p><strong>中文</strong>: 为 TLS 会话中的内容启用证明以实现可验证的安全通信。</p>
-<hr>
-<h3 id="16-CTng-Secure-Certificate-and-Revocation-Transparency"><a href="#16-CTng-Secure-Certificate-and-Revocation-Transparency" class="headerlink" title="16. CTng: Secure Certificate and Revocation Transparency"></a>16. CTng: Secure Certificate and Revocation Transparency</h3><p><strong>Authors</strong>: Jie Kong et al. (University of Connecticut, et al.)</p>
-<p><strong>📄 Paper</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/ctng-secure-certificate-and-revocation-transparency/">NDSS 2026</a></p>
-<p><strong>English</strong>: Improves certificate transparency with stronger security guarantees against malicious certificate authorities.</p>
-<p><strong>中文</strong>: 通过针对恶意证书颁发机构的更强安全保证改进证书透明度。</p>
-<hr>
-<h2 id="研究趋势"><a href="#研究趋势" class="headerlink" title="研究趋势"></a>研究趋势</h2><h3 id="🌐-互联网基础设施"><a href="#🌐-互联网基础设施" class="headerlink" title="🌐 互联网基础设施"></a>🌐 互联网基础设施</h3><ol>
-<li><strong>RPKI 部署与安全</strong>: 全球 RPKI 部署增加,但底层基础设施威胁不容忽视</li>
-<li><strong>DNS 仍是攻击向量</strong>: 缓存时序攻击等新型 DNS 利用方式持续出现</li>
-<li><strong>证书透明度进化</strong>: CT 日志安全性和可靠性持续改进</li>
-</ol>
-<h3 id="🔒-Web-安全"><a href="#🔒-Web-安全" class="headerlink" title="🔒 Web 安全"></a>🔒 Web 安全</h3><ol>
-<li><strong>可解释性需求</strong>: 从黑盒检测转向可解释的威胁分析</li>
-<li><strong>业务逻辑漏洞</strong>: 超越传统注入攻击,关注业务逻辑缺陷</li>
-<li><strong>供应链安全</strong>: NPM、开源包中的漏洞成为重点</li>
-<li><strong>DOM-XSS 持续</strong>: 客户端漏洞仍然是主要威胁</li>
-</ol>
-<h3 id="📧-电子邮件与通信"><a href="#📧-电子邮件与通信" class="headerlink" title="📧 电子邮件与通信"></a>📧 电子邮件与通信</h3><ol>
-<li><strong>协议级攻击</strong>: SMTP 等老协议的新型利用方式</li>
-<li><strong>放大攻击</strong>: 利用协议机制实现流量放大</li>
-</ol>
-<h3 id="📶-无线网络"><a href="#📶-无线网络" class="headerlink" title="📶 无线网络"></a>📶 无线网络</h3><ol>
-<li><strong>隔离机制失效</strong>: Wi-Fi 客户端隔离等安全边界被突破</li>
-<li><strong>隐私威胁</strong>: 网站指纹、流量分析等隐私攻击持续演进</li>
-</ol>
-<h3 id="💡-技术洞察"><a href="#💡-技术洞察" class="headerlink" title="💡 技术洞察"></a>💡 技术洞察</h3><ul>
-<li><strong>基础设施脆弱性</strong>: 互联网关键基础设施(路由、DNS、PKI)仍存在系统性风险</li>
-<li><strong>隐私与安全矛盾</strong>: 网站指纹等攻击凸显隐私保护的挑战</li>
-<li><strong>协议老化问题</strong>: SMTP、BACnet 等老协议难以修复</li>
-<li><strong>测量研究价值</strong>: 大规模测量研究揭示真实世界的安全态势</li>
-</ul>
-<h3 id="🏢-实际影响"><a href="#🏢-实际影响" class="headerlink" title="🏢 实际影响"></a>🏢 实际影响</h3><p><strong>企业</strong>:</p>
-<ul>
-<li>Web 应用安全检测工具的可解释性需求</li>
-<li>供应链安全(NPM、开源包)管理</li>
-</ul>
-<p><strong>ISP&#x2F;运营商</strong>:</p>
-<ul>
-<li>RPKI 部署和基础设施安全</li>
-<li>DNS 服务的抗攻击能力</li>
-</ul>
-<p><strong>用户隐私</strong>:</p>
-<ul>
-<li>网站指纹威胁浏览隐私</li>
-<li>DNS 缓存攻击泄露行为</li>
-</ul>
-<p><strong>公共场所</strong>:</p>
-<ul>
-<li>Wi-Fi 客户端隔离失效影响咖啡馆、机场等场所安全</li>
-</ul>
-<hr>
-<p><strong>其他视角</strong>:</p>
-<ul>
-<li><a href="#">AI 与机器学习安全视角</a></li>
-<li><a href="#">系统安全视角</a></li>
-<li><a href="#">IoT 与嵌入式系统视角</a></li>
-<li><a href="#">密码学与隐私视角</a></li>
-</ul>
-<p><strong>完整论文列表</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/accepted-papers/">NDSS 2026 Accepted Papers</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-network-infrastructure-perspective/" data-id="cuidvQJ9LpNJvTRemdIcrB65f" data-title="NDSS 2026 论文精选 - 网络与基础设施视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DNS/" rel="tag">DNS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RPKI/" rel="tag">RPKI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web-security/" rel="tag">Web security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/email/" rel="tag">email</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/network-security/" rel="tag">network security</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-ndss-2026-ai-ml-perspective-v2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2026/03/03/ndss-2026-ai-ml-perspective-v2/" class="article-date">
-  <time class="dt-published" datetime="2026-03-03T01:30:00.000Z" itemprop="datePublished">2026-03-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Research/">Research</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2026/03/03/ndss-2026-ai-ml-perspective-v2/">NDSS 2026 论文精选 - AI 与机器学习安全视角</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p><strong>从 AI&#x2F;ML 视角看 NDSS 2026</strong>: 涵盖 LLM 安全、机器学习攻防、AI 驱动的安全分析</p>
-</blockquote>
-<p><strong>Conference</strong>: NDSS 2026 | <strong>Perspective</strong>: AI &amp; Machine Learning Security<br><strong>Total Papers in this perspective</strong>: 25+ papers</p>
-<hr>
-<h2 id="一、大型语言模型-LLM-安全"><a href="#一、大型语言模型-LLM-安全" class="headerlink" title="一、大型语言模型 (LLM) 安全"></a>一、大型语言模型 (LLM) 安全</h2><h3 id="1-A-Causal-Perspective-for-Enhancing-Jailbreak-Attack-and-Defense"><a href="#1-A-Causal-Perspective-for-Enhancing-Jailbreak-Attack-and-Defense" class="headerlink" title="1. A Causal Perspective for Enhancing Jailbreak Attack and Defense"></a>1. A Causal Perspective for Enhancing Jailbreak Attack and Defense</h3><p><strong>Authors</strong>: Licheng Pan (Zhejiang University), Yunsheng Lu (University of Chicago), Jiexi Liu (Alibaba Group), Jialing Tao (Alibaba Group), Haozhe Feng (Zhejiang University), Hui Xue (Alibaba Group), Zhixuan Chu (Zhejiang University), Kui Ren (Zhejiang University)</p>
-<p><strong>Abstract</strong></p>
-<p>Uncovering the mechanisms behind “jailbreaks” in large language models (LLMs) is crucial for enhancing their safety and reliability, yet these mechanisms remain poorly understood. Existing studies predominantly analyze jailbreak prompts by probing latent representations, often overlooking the causal relationships between interpretable prompt features and jailbreak occurrences. In this work, we propose <strong>Causal Analyst</strong>, a framework that integrates LLMs into data-driven causal discovery to identify the direct causes of jailbreaks and leverage them for both attack and defense. We introduce a comprehensive dataset comprising 35k jailbreak attempts across seven LLMs, systematically constructed from 100 attack templates and 50 harmful queries, annotated with 37 meticulously designed human-readable prompt features.</p>
-<p>By jointly training LLM-based prompt encoding and GNN-based causal graph learning, we reconstruct causal pathways linking prompt features to jailbreak responses. Our analysis reveals that specific features, such as “Positive Character” and “Number of Task Steps”, act as direct causal drivers of jailbreaks. We demonstrate the practical utility of these insights through two applications: (1) a <strong>Jailbreaking Enhancer</strong> that targets identified causal features to significantly boost attack success rates on public benchmarks, and (2) a <strong>Guardrail Advisor</strong> that utilizes the learned causal graph to extract true malicious intent from obfuscated queries.</p>
-<p>Extensive experiments, including baseline comparisons and causal structure validation, confirm the robustness of our causal analysis and its superiority over non-causal approaches. Our results suggest that analyzing jailbreak features from a causal perspective is an effective and interpretable approach for improving LLM reliability.</p>
-<p><strong>摘要</strong></p>
-<p>揭示大型语言模型(LLM)中”越狱”背后的机制对于增强其安全性和可靠性至关重要，但这些机制仍然知之甚少。现有研究主要通过探测潜在表示来分析越狱提示，往往忽略了可解释提示特征与越狱发生之间的因果关系。在这项工作中，我们提出了<strong>因果分析师(Causal Analyst)</strong>，这是一个将LLM集成到数据驱动的因果发现中的框架，用于识别越狱的直接原因并将其用于攻击和防御。我们引入了一个包含35k次越狱尝试的综合数据集，涵盖七个LLM，系统地从100个攻击模板和50个有害查询构建，并用37个精心设计的人类可读提示特征进行标注。</p>
-<p>通过联合训练基于LLM的提示编码和基于GNN的因果图学习，我们重建了将提示特征与越狱响应联系起来的因果路径。我们的分析揭示了特定特征，如”积极角色”和”任务步骤数”，是越狱的直接因果驱动因素。我们通过两个应用演示了这些见解的实用性：(1)<strong>越狱增强器</strong>，针对已识别的因果特征，显著提高公共基准测试的攻击成功率；(2)<strong>防护顾问</strong>，利用学习到的因果图从混淆查询中提取真实恶意意图。</p>
-<p>包括基线比较和因果结构验证在内的广泛实验证实了我们因果分析的鲁棒性及其优于非因果方法。我们的结果表明，从因果角度分析越狱特征是提高LLM可靠性的有效且可解释的方法。</p>
-<p><strong>📄 下载链接</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/a-causal-perspective-for-enhancing-jailbreak-attack-and-defense/">NDSS 2026 Paper</a> | <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/wp-content/uploads/2026-f2198-paper.pdf">PDF Direct</a></p>
-<hr>
-<h3 id="2-ACE-A-Security-Architecture-for-LLM-Integrated-App-Systems"><a href="#2-ACE-A-Security-Architecture-for-LLM-Integrated-App-Systems" class="headerlink" title="2. ACE: A Security Architecture for LLM-Integrated App Systems"></a>2. ACE: A Security Architecture for LLM-Integrated App Systems</h3><p><strong>Authors</strong>: Evan Li, Tushin Mallick, Evan Rose, William Robertson, Alina Oprea, Cristina Nita-Rotaru (Northeastern University)</p>
-<p><strong>Abstract</strong> <em>(需从NDSS网站获取完整摘要)</em></p>
-<p>ACE proposes a comprehensive security architecture for applications that integrate large language models. The framework addresses unique security challenges arising from LLM integration, including data leakage, prompt injection, and unauthorized access to sensitive APIs through a principled design that separates concerns and enforces security policies at multiple layers.</p>
-<p><strong>摘要</strong></p>
-<p>ACE 为集成大型语言模型的应用程序提出了全面的安全架构。该框架通过分离关注点并在多个层次执行安全策略的原则性设计，解决了LLM集成带来的独特安全挑战，包括数据泄露、提示注入和对敏感API的未授权访问。</p>
-<p><strong>📄 下载链接</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/ace-a-security-architecture-for-llm-integrated-app-systems/">NDSS 2026 Paper</a></p>
-<hr>
-<p><em>[More papers will follow the same format…]</em></p>
-<p><strong>完整论文列表</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/accepted-papers/">NDSS 2026 Accepted Papers</a><br><strong>会议官网</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/">NDSS Symposium 2026</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-ai-ml-perspective-v2/" data-id="cuid3bFzWfux12OtESl-shafD" data-title="NDSS 2026 论文精选 - AI 与机器学习安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI-security/" rel="tag">AI security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deep-learning/" rel="tag">deep learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/machine-learning/" rel="tag">machine learning</a></li></ul>
 
     </footer>
   </div>
@@ -1228,7 +1199,76 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-ai-ml-perspective-backup/" data-id="cuid_fRUQt_HCw6yGdxVcGj17" data-title="NDSS 2026 论文精选 - AI 与机器学习安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-ai-ml-perspective-backup/" data-id="cuidsfzsL6w0P80Z451vN4wD9" data-title="NDSS 2026 论文精选 - AI 与机器学习安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI-security/" rel="tag">AI security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deep-learning/" rel="tag">deep learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/machine-learning/" rel="tag">machine learning</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-ndss-2026-ai-ml-perspective-v2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/03/03/ndss-2026-ai-ml-perspective-v2/" class="article-date">
+  <time class="dt-published" datetime="2026-03-03T01:30:00.000Z" itemprop="datePublished">2026-03-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Research/">Research</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2026/03/03/ndss-2026-ai-ml-perspective-v2/">NDSS 2026 论文精选 - AI 与机器学习安全视角</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>从 AI&#x2F;ML 视角看 NDSS 2026</strong>: 涵盖 LLM 安全、机器学习攻防、AI 驱动的安全分析</p>
+</blockquote>
+<p><strong>Conference</strong>: NDSS 2026 | <strong>Perspective</strong>: AI &amp; Machine Learning Security<br><strong>Total Papers in this perspective</strong>: 25+ papers</p>
+<hr>
+<h2 id="一、大型语言模型-LLM-安全"><a href="#一、大型语言模型-LLM-安全" class="headerlink" title="一、大型语言模型 (LLM) 安全"></a>一、大型语言模型 (LLM) 安全</h2><h3 id="1-A-Causal-Perspective-for-Enhancing-Jailbreak-Attack-and-Defense"><a href="#1-A-Causal-Perspective-for-Enhancing-Jailbreak-Attack-and-Defense" class="headerlink" title="1. A Causal Perspective for Enhancing Jailbreak Attack and Defense"></a>1. A Causal Perspective for Enhancing Jailbreak Attack and Defense</h3><p><strong>Authors</strong>: Licheng Pan (Zhejiang University), Yunsheng Lu (University of Chicago), Jiexi Liu (Alibaba Group), Jialing Tao (Alibaba Group), Haozhe Feng (Zhejiang University), Hui Xue (Alibaba Group), Zhixuan Chu (Zhejiang University), Kui Ren (Zhejiang University)</p>
+<p><strong>Abstract</strong></p>
+<p>Uncovering the mechanisms behind “jailbreaks” in large language models (LLMs) is crucial for enhancing their safety and reliability, yet these mechanisms remain poorly understood. Existing studies predominantly analyze jailbreak prompts by probing latent representations, often overlooking the causal relationships between interpretable prompt features and jailbreak occurrences. In this work, we propose <strong>Causal Analyst</strong>, a framework that integrates LLMs into data-driven causal discovery to identify the direct causes of jailbreaks and leverage them for both attack and defense. We introduce a comprehensive dataset comprising 35k jailbreak attempts across seven LLMs, systematically constructed from 100 attack templates and 50 harmful queries, annotated with 37 meticulously designed human-readable prompt features.</p>
+<p>By jointly training LLM-based prompt encoding and GNN-based causal graph learning, we reconstruct causal pathways linking prompt features to jailbreak responses. Our analysis reveals that specific features, such as “Positive Character” and “Number of Task Steps”, act as direct causal drivers of jailbreaks. We demonstrate the practical utility of these insights through two applications: (1) a <strong>Jailbreaking Enhancer</strong> that targets identified causal features to significantly boost attack success rates on public benchmarks, and (2) a <strong>Guardrail Advisor</strong> that utilizes the learned causal graph to extract true malicious intent from obfuscated queries.</p>
+<p>Extensive experiments, including baseline comparisons and causal structure validation, confirm the robustness of our causal analysis and its superiority over non-causal approaches. Our results suggest that analyzing jailbreak features from a causal perspective is an effective and interpretable approach for improving LLM reliability.</p>
+<p><strong>摘要</strong></p>
+<p>揭示大型语言模型(LLM)中”越狱”背后的机制对于增强其安全性和可靠性至关重要，但这些机制仍然知之甚少。现有研究主要通过探测潜在表示来分析越狱提示，往往忽略了可解释提示特征与越狱发生之间的因果关系。在这项工作中，我们提出了<strong>因果分析师(Causal Analyst)</strong>，这是一个将LLM集成到数据驱动的因果发现中的框架，用于识别越狱的直接原因并将其用于攻击和防御。我们引入了一个包含35k次越狱尝试的综合数据集，涵盖七个LLM，系统地从100个攻击模板和50个有害查询构建，并用37个精心设计的人类可读提示特征进行标注。</p>
+<p>通过联合训练基于LLM的提示编码和基于GNN的因果图学习，我们重建了将提示特征与越狱响应联系起来的因果路径。我们的分析揭示了特定特征，如”积极角色”和”任务步骤数”，是越狱的直接因果驱动因素。我们通过两个应用演示了这些见解的实用性：(1)<strong>越狱增强器</strong>，针对已识别的因果特征，显著提高公共基准测试的攻击成功率；(2)<strong>防护顾问</strong>，利用学习到的因果图从混淆查询中提取真实恶意意图。</p>
+<p>包括基线比较和因果结构验证在内的广泛实验证实了我们因果分析的鲁棒性及其优于非因果方法。我们的结果表明，从因果角度分析越狱特征是提高LLM可靠性的有效且可解释的方法。</p>
+<p><strong>📄 下载链接</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/a-causal-perspective-for-enhancing-jailbreak-attack-and-defense/">NDSS 2026 Paper</a> | <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/wp-content/uploads/2026-f2198-paper.pdf">PDF Direct</a></p>
+<hr>
+<h3 id="2-ACE-A-Security-Architecture-for-LLM-Integrated-App-Systems"><a href="#2-ACE-A-Security-Architecture-for-LLM-Integrated-App-Systems" class="headerlink" title="2. ACE: A Security Architecture for LLM-Integrated App Systems"></a>2. ACE: A Security Architecture for LLM-Integrated App Systems</h3><p><strong>Authors</strong>: Evan Li, Tushin Mallick, Evan Rose, William Robertson, Alina Oprea, Cristina Nita-Rotaru (Northeastern University)</p>
+<p><strong>Abstract</strong> <em>(需从NDSS网站获取完整摘要)</em></p>
+<p>ACE proposes a comprehensive security architecture for applications that integrate large language models. The framework addresses unique security challenges arising from LLM integration, including data leakage, prompt injection, and unauthorized access to sensitive APIs through a principled design that separates concerns and enforces security policies at multiple layers.</p>
+<p><strong>摘要</strong></p>
+<p>ACE 为集成大型语言模型的应用程序提出了全面的安全架构。该框架通过分离关注点并在多个层次执行安全策略的原则性设计，解决了LLM集成带来的独特安全挑战，包括数据泄露、提示注入和对敏感API的未授权访问。</p>
+<p><strong>📄 下载链接</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss-paper/ace-a-security-architecture-for-llm-integrated-app-systems/">NDSS 2026 Paper</a></p>
+<hr>
+<p><em>[More papers will follow the same format…]</em></p>
+<p><strong>完整论文列表</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/accepted-papers/">NDSS 2026 Accepted Papers</a><br><strong>会议官网</strong>: <a target="_blank" rel="noopener" href="https://www.ndss-symposium.org/ndss2026/">NDSS Symposium 2026</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-ai-ml-perspective-v2/" data-id="cuidMCgFen54-cBvBwCww-PsQ" data-title="NDSS 2026 论文精选 - AI 与机器学习安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1351,7 +1391,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/02/latest-cybersecurity-research-march-2026/" data-id="cuidcpr6TQ-_Z9nwnREDOuzbq" data-title="Latest Cybersecurity Research Highlights - March 2026" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/02/latest-cybersecurity-research-march-2026/" data-id="cuidPFHZk3XUzX-S4Ly2kv5MH" data-title="Latest Cybersecurity Research Highlights - March 2026" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1411,7 +1451,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2024/10/09/cybersec-Journal-and-Conference/" data-id="cuids9b-DsaSGMUXxVj91ThV1" data-title="Cybersec Journal and Conference" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2024/10/09/cybersec-Journal-and-Conference/" data-id="cuidh55aTTksBqXWXa_zW8qS4" data-title="Cybersec Journal and Conference" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1445,7 +1485,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI-security/" rel="tag">AI security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BLE/" rel="tag">BLE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/" rel="tag">DNS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/" rel="tag">Deep Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IoT/" rel="tag">IoT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM-security/" rel="tag">LLM security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PLC/" rel="tag">PLC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RPKI/" rel="tag">RPKI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web-security/" rel="tag">Web security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automotive/" rel="tag">automotive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/binary-analysis/" rel="tag">binary analysis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blockchain/" rel="tag">blockchain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cryptography/" rel="tag">cryptography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cybersecurity/" rel="tag">cybersecurity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deep-learning/" rel="tag">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/email/" rel="tag">email</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/embedded-systems/" rel="tag">embedded systems</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/encryption/" rel="tag">encryption</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firmware/" rel="tag">firmware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kernel/" rel="tag">kernel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/" rel="tag">machine learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/memory-safety/" rel="tag">memory safety</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network-security/" rel="tag">network security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/privacy/" rel="tag">privacy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/research/" rel="tag">research</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scam-detection/" rel="tag">scam detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system-security/" rel="tag">system security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/virtualization/" rel="tag">virtualization</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zero-knowledge/" rel="tag">zero-knowledge</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI-security/" rel="tag">AI security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BGP/" rel="tag">BGP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BLE/" rel="tag">BLE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/" rel="tag">DNS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/" rel="tag">Deep Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IoT/" rel="tag">IoT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM-security/" rel="tag">LLM security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PLC/" rel="tag">PLC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RPKI/" rel="tag">RPKI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TLS/" rel="tag">TLS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automotive/" rel="tag">automotive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/binary-analysis/" rel="tag">binary analysis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blockchain/" rel="tag">blockchain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cryptography/" rel="tag">cryptography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cybersecurity/" rel="tag">cybersecurity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deep-learning/" rel="tag">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/embedded-systems/" rel="tag">embedded systems</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/encryption/" rel="tag">encryption</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firmware/" rel="tag">firmware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/intrusion-detection/" rel="tag">intrusion detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kernel/" rel="tag">kernel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/" rel="tag">machine learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/memory-safety/" rel="tag">memory safety</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network-security/" rel="tag">network security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/privacy/" rel="tag">privacy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/research/" rel="tag">research</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/routing/" rel="tag">routing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scam-detection/" rel="tag">scam detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system-security/" rel="tag">system security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/virtualization/" rel="tag">virtualization</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web-security/" rel="tag">web security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zero-knowledge/" rel="tag">zero-knowledge</a></li></ul>
     </div>
   </div>
 
@@ -1455,7 +1495,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/AI-security/" style="font-size: 16.67px;">AI security</a> <a href="/tags/BLE/" style="font-size: 10px;">BLE</a> <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/Deep-Learning/" style="font-size: 10px;">Deep Learning</a> <a href="/tags/IoT/" style="font-size: 13.33px;">IoT</a> <a href="/tags/LLM/" style="font-size: 16.67px;">LLM</a> <a href="/tags/LLM-security/" style="font-size: 10px;">LLM security</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/NDSS/" style="font-size: 20px;">NDSS</a> <a href="/tags/PLC/" style="font-size: 10px;">PLC</a> <a href="/tags/RPKI/" style="font-size: 10px;">RPKI</a> <a href="/tags/Web-security/" style="font-size: 10px;">Web security</a> <a href="/tags/automotive/" style="font-size: 10px;">automotive</a> <a href="/tags/binary-analysis/" style="font-size: 10px;">binary analysis</a> <a href="/tags/blockchain/" style="font-size: 10px;">blockchain</a> <a href="/tags/cryptography/" style="font-size: 10px;">cryptography</a> <a href="/tags/cybersecurity/" style="font-size: 10px;">cybersecurity</a> <a href="/tags/deep-learning/" style="font-size: 16.67px;">deep learning</a> <a href="/tags/email/" style="font-size: 10px;">email</a> <a href="/tags/embedded-systems/" style="font-size: 10px;">embedded systems</a> <a href="/tags/encryption/" style="font-size: 10px;">encryption</a> <a href="/tags/firmware/" style="font-size: 10px;">firmware</a> <a href="/tags/kernel/" style="font-size: 10px;">kernel</a> <a href="/tags/machine-learning/" style="font-size: 16.67px;">machine learning</a> <a href="/tags/memory-safety/" style="font-size: 10px;">memory safety</a> <a href="/tags/network-security/" style="font-size: 10px;">network security</a> <a href="/tags/privacy/" style="font-size: 10px;">privacy</a> <a href="/tags/research/" style="font-size: 10px;">research</a> <a href="/tags/scam-detection/" style="font-size: 10px;">scam detection</a> <a href="/tags/system-security/" style="font-size: 10px;">system security</a> <a href="/tags/virtualization/" style="font-size: 10px;">virtualization</a> <a href="/tags/zero-knowledge/" style="font-size: 10px;">zero-knowledge</a>
+      <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/AI-security/" style="font-size: 16.67px;">AI security</a> <a href="/tags/BGP/" style="font-size: 10px;">BGP</a> <a href="/tags/BLE/" style="font-size: 10px;">BLE</a> <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/Deep-Learning/" style="font-size: 10px;">Deep Learning</a> <a href="/tags/IoT/" style="font-size: 13.33px;">IoT</a> <a href="/tags/LLM/" style="font-size: 16.67px;">LLM</a> <a href="/tags/LLM-security/" style="font-size: 10px;">LLM security</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/NDSS/" style="font-size: 20px;">NDSS</a> <a href="/tags/PLC/" style="font-size: 10px;">PLC</a> <a href="/tags/RPKI/" style="font-size: 10px;">RPKI</a> <a href="/tags/TLS/" style="font-size: 10px;">TLS</a> <a href="/tags/automotive/" style="font-size: 10px;">automotive</a> <a href="/tags/binary-analysis/" style="font-size: 10px;">binary analysis</a> <a href="/tags/blockchain/" style="font-size: 10px;">blockchain</a> <a href="/tags/cryptography/" style="font-size: 10px;">cryptography</a> <a href="/tags/cybersecurity/" style="font-size: 10px;">cybersecurity</a> <a href="/tags/deep-learning/" style="font-size: 16.67px;">deep learning</a> <a href="/tags/embedded-systems/" style="font-size: 10px;">embedded systems</a> <a href="/tags/encryption/" style="font-size: 10px;">encryption</a> <a href="/tags/firmware/" style="font-size: 10px;">firmware</a> <a href="/tags/intrusion-detection/" style="font-size: 10px;">intrusion detection</a> <a href="/tags/kernel/" style="font-size: 10px;">kernel</a> <a href="/tags/machine-learning/" style="font-size: 16.67px;">machine learning</a> <a href="/tags/memory-safety/" style="font-size: 10px;">memory safety</a> <a href="/tags/network-security/" style="font-size: 10px;">network security</a> <a href="/tags/privacy/" style="font-size: 10px;">privacy</a> <a href="/tags/research/" style="font-size: 10px;">research</a> <a href="/tags/routing/" style="font-size: 10px;">routing</a> <a href="/tags/scam-detection/" style="font-size: 10px;">scam detection</a> <a href="/tags/system-security/" style="font-size: 10px;">system security</a> <a href="/tags/virtualization/" style="font-size: 10px;">virtualization</a> <a href="/tags/web-security/" style="font-size: 10px;">web security</a> <a href="/tags/zero-knowledge/" style="font-size: 10px;">zero-knowledge</a>
     </div>
   </div>
 
@@ -1477,6 +1517,10 @@
       <ul>
         
           <li>
+            <a href="/2026/03/03/ndss-2026-network-infrastructure-perspective/">NDSS 2026 论文精选 - 网络与基础设施视角</a>
+          </li>
+        
+          <li>
             <a href="/2026/03/03/ndss-2026-iot-embedded-perspective/">NDSS 2026 论文精选 - IoT 与嵌入式系统视角</a>
           </li>
         
@@ -1490,10 +1534,6 @@
         
           <li>
             <a href="/2026/03/03/ndss-2026-crypto-privacy-perspective/">NDSS 2026 论文精选 - 密码学与隐私视角</a>
-          </li>
-        
-          <li>
-            <a href="/2026/03/03/ndss-2026-network-infrastructure-perspective/">NDSS 2026 论文精选 - 网络与基础设施视角</a>
           </li>
         
       </ul>
