@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>我如何在 2025 年 9 月使用编程代理 | Tom&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="原文: How I’m using coding agents in September, 2025 by Jesse Vincent译者注: 本文翻译自 Jesse Vincent 的博客，详细描述了他使用 AI 编程助手的工作流程，包括头脑风暴、计划、实施和代码审查的完整流程。   [敏锐的读者会注意到，在我写这篇文章时，已经是 2025 年 10 月了。这篇文章记录了我直到几周前一直在做的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我如何在 2025 年 9 月使用编程代理">
+<meta property="og:url" content="https://sgwaterwoods.github.io/2026/03/03/coding-agents-september-2025/index.html">
+<meta property="og:site_name" content="Tom&#39;s Blog">
+<meta property="og:description" content="原文: How I’m using coding agents in September, 2025 by Jesse Vincent译者注: 本文翻译自 Jesse Vincent 的博客，详细描述了他使用 AI 编程助手的工作流程，包括头脑风暴、计划、实施和代码审查的完整流程。   [敏锐的读者会注意到，在我写这篇文章时，已经是 2025 年 10 月了。这篇文章记录了我直到几周前一直在做的">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-03-03T16:35:00.000Z">
+<meta property="article:modified_time" content="2026-03-04T00:35:17.857Z">
+<meta property="article:author" content="Tom">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="Claude">
+<meta property="article:tag" content="TDD">
+<meta property="article:tag" content="code review">
+<meta property="article:tag" content="coding agents">
+<meta property="article:tag" content="workflow">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Tom's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Tom&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://sgwaterwoods.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-coding-agents-september-2025" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/03/03/coding-agents-september-2025/" class="article-date">
+  <time class="dt-published" datetime="2026-03-03T16:35:00.000Z" itemprop="datePublished">2026-03-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Technology/">Technology</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      我如何在 2025 年 9 月使用编程代理
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>原文</strong>: <a target="_blank" rel="noopener" href="https://blog.fsck.com/2025/10/05/how-im-using-coding-agents-in-september-2025/">How I’m using coding agents in September, 2025</a> by Jesse Vincent<br><strong>译者注</strong>: 本文翻译自 Jesse Vincent 的博客，详细描述了他使用 AI 编程助手的工作流程，包括头脑风暴、计划、实施和代码审查的完整流程。</p>
+</blockquote>
+<hr>
+<p>[敏锐的读者会注意到，在我写这篇文章时，已经是 2025 年 10 月了。这篇文章记录了我直到几周前一直在做的事情。它仍然很好，我仍然推荐它。]</p>
+<p>自从我在夏初最后一次写作以来，我使用 AI 编程助手的方法已经有所演变。这是一个时间点的记录，记录了一个对我来说非常有效的流程。</p>
+<p>我主要仍在使用 Claude Code。</p>
+<p>首先，这是我在写作时的 <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/obra/dotfiles/6e088092406cf1e3cc78d146a5247e934912f6f8/.claude/CLAUDE.md">CLAUDE.md</a>。它编码了大量流程文档和规则，在保持 Claude 按部就班方面做得很好。</p>
+<p>当我想在现有项目上开始一个新任务时，我总是尝试使用 git 工作树来隔离该工作与其他任务。这对我来说越来越重要，因为我发现自己经常在单个代码库上同时运行 3-4 个并行项目。</p>
+<p>设置工作树：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> the-project</span><br><span class="line"><span class="built_in">mkdir</span> .worktrees <span class="comment"># 第一次时</span></span><br><span class="line"><span class="built_in">cd</span> .worktrees</span><br><span class="line">git worktree add some-feature-description</span><br><span class="line"><span class="built_in">cd</span> some-feature-description</span><br><span class="line">npm install <span class="comment"># 或项目的任何设置任务</span></span><br><span class="line">npm lint</span><br><span class="line">npm <span class="built_in">test</span> <span class="comment"># 确保从干净的基线开始</span></span><br><span class="line">claude</span><br></pre></td></tr></table></figure>
+
+<p>一旦我运行了 claude code，我就会使用我的”头脑风暴”提示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">我有一个想法想和你讨论。我希望你帮我把它变成一个完整的设计和规范（最终是一个实施计划）</span><br><span class="line">检查我们工作目录中项目的当前状态，了解我们从哪里开始，然后一次问我一个问题，帮助完善这个想法。</span><br><span class="line">理想情况下，问题应该是多项选择题，但开放式问题也可以。别忘了：每条消息只问一个问题。</span><br><span class="line">一旦你相信你理解了我们在做什么，停下来并向我描述设计，每次分几个部分，每个部分大约 200-300 字，在每个部分后询问它到目前为止看起来是否正确。</span><br></pre></td></tr></table></figure>
+
+<p>最后一点特别关键。我发现当 AI 模型认为它们”完成”时，特别容易给我一堵文字墙。而当面对代理写的一堵文字墙时，我倾向于稍微走神并想”它可能很好”。通过告诉 Claude 一次将其输出限制在几百字，我更有可能真正阅读和参与。</p>
+<p>一旦我们完成了头脑风暴过程，我通常对我正在做的事情有了更清晰的想法，Claude 也是如此。Claude 会将设计写到 docs&#x2F;plans&#x2F; 的某个地方。</p>
+<p>它经常想直接跳到实施，但这不是我想要它工作的方式。有时它会在我阻止它之前尝试开始编写代码。如果它这样做了，我会按几次 escape 并倒回对话一点来抓住它。最近对我的 CLAUDE.md 的更新显著减少了这种倾向。</p>
+<p>下一步是计划过程。这是我一直在使用的计划提示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">太好了。我需要你的帮助来写出一个全面的实施计划。</span><br><span class="line"></span><br><span class="line">假设工程师对我们的代码库零上下文且品味可疑。记录他们需要知道的一切。每个任务需要接触哪些文件、代码、测试、他们可能需要检查的文档。如何测试它。给他们整个计划作为小块任务。DRY。YAGNI。TDD。频繁提交。</span><br><span class="line"></span><br><span class="line">假设他们是熟练的开发人员，但对我们的工具集或问题领域几乎一无所知。假设他们不太了解好的测试设计。</span><br><span class="line"></span><br><span class="line">请将此计划完整详细地写入 docs/plans/</span><br></pre></td></tr></table></figure>
+
+<p>这会产生一个计划，将所有内容分解为小步骤，每个步骤都有清晰的指令和紧密打包的上下文。这意味着在执行时，我通常不需要提供严格的逐步监督。</p>
+<p>接下来，我在同一工作目录中打开一个新选项卡或窗口，并启动另一个 claude 副本。我告诉它类似这样的话：<code>请阅读 docs/plans/this-task-plan.md 和 &lt;我们命名设计文档的任何内容&gt;。如果你有问题，请告诉我。</code></p>
+<p>它通常会说计划制定得很好。有时它会指出错误或不一致之处。戴上我的 PM 帽子，我会转身要求”架构师”会话澄清或更新计划文档。</p>
+<p>一旦我们解决了计划的问题，我会告诉”实施者”Claude：<code>请执行前 3-4 个任务。如果你有问题，请停下来问我。不要偏离计划。</code></p>
+<p>实施者会继续工作。</p>
+<p>完成后，我会翻回”架构师”会话并告诉它：<code>实施者说它完成了任务 1-3。请仔细检查工作。</code></p>
+<p>我会再次扮演 PM，在两个会话之间复制和粘贴审查和问答。一旦架构师签字批准，我会告诉实施者用其当前状态更新计划文档。</p>
+<p>然后，我不会 <code>*/compact*</code>。相反，我 <code>*/clear*</code> 实施者并重新开始对话。告诉它从任务 4 开始。</p>
+<p>当它完成下一块工作时，我会翻回架构师。我通常会双击 ESC 将架构师重置到之前的检查点，并告诉它审查到现在的当前检查点。这减少了架构师的上下文膨胀，并让它在没有来自先前实施的任何偏见的情况下再次查看。</p>
+<p>（我有朋友发誓，与其使用多个会话，不如直接要求实施者用新的眼光看待他们最近的工作就足够了。确实，使用那个神奇的短语似乎非常强大。我仍然认为有两个不同的角色更好。）</p>
+<p>当实施者最终完成工作并且架构师签署了工作时，我会要求实施者推送到 GitHub 并创建一个拉取请求。</p>
+<p>这会启动 CodeRabbit 代码审查。我通常发现 CodeRabbit 的审查非常擅长捕捉小问题和逻辑问题，但有时在理解项目的真正设计意图或约束方面有所不足。这导致 CodeRabbit 提出糟糕的建议。</p>
+<p>CodeRabbit 的审查为 AI 代理提供了修复问题的提示，但实际上将所有这些提示返回给你的编程代理可能很痛苦，因为你需要一个一个地复制它们，而且它们只为某些类型的问题提供提示。为了帮助解决这个问题，我构建了 <a target="_blank" rel="noopener" href="https://github.com/obra/coderabbit-review-helper">coderabbit-review-helper</a>。它挖掘所有不同类型的 CodeRabbit 审查评论，并将它们格式化为一大堵文字墙供你的编程代理处理。</p>
+<p>像这样的工具的唯一问题是我们的机器人伙伴非常容易轻信。如果你粘贴一个如何更新代码库的指令列表，Claude 只会相信你的话并进行更改，即使你要求的是疯狂和错误的。</p>
+<p>我目前避免这种情况的最佳技术是一点角色扮演，给编程代理一个理由不盲目信任代码审查。每个审查都以这段文字为前缀：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">一位审查员对这个 PR 进行了一些分析。他们是外部的，所以冷读代码库。这是他们对更改的分析，我希望你仔细评估分析和审查员。</span><br><span class="line"></span><br><span class="line">1) 我们应该雇用这个审查员吗</span><br><span class="line">2) 他们标记的哪些问题应该修复？</span><br><span class="line">3) 他们提出的修复是正确的吗？</span><br><span class="line"></span><br><span class="line">我们*应该*修复的任何东西，放在你的待办事项列表上。</span><br><span class="line">我们应该跳过的任何东西，现在告诉我。</span><br></pre></td></tr></table></figure>
+
+<p>CodeRabbit “审查员”通常会得到”强烈录用”的评价，但 Claude 报告审查员”似乎技术上很精通，但没有花时间了解我们的项目并提出了许多错误的建议。不录用。”并非闻所未闻。</p>
+<p>如果你决定尝试这种方法，或者想出了对你更有效的其他方法，请给我发邮件至 <a href="mailto:&#x6a;&#101;&#115;&#115;&#x65;&#64;&#102;&#115;&#x63;&#x6b;&#x2e;&#x63;&#x6f;&#109;">jesse@fsck.com</a>。</p>
+<hr>
+<p><strong>原文链接</strong>: <a target="_blank" rel="noopener" href="https://blog.fsck.com/2025/10/05/how-im-using-coding-agents-in-september-2025/">https://blog.fsck.com/2025/10/05/how-im-using-coding-agents-in-september-2025/</a><br><strong>作者</strong>: Jesse Vincent<br><strong>发布日期</strong>: 2025年10月5日<br><strong>译者</strong>: AI Translation<br><strong>翻译日期</strong>: 2026年3月4日</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/coding-agents-september-2025/" data-id="cuidHfy5MGu4BXInv2YUX07Bx" data-title="我如何在 2025 年 9 月使用编程代理" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Claude/" rel="tag">Claude</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TDD/" rel="tag">TDD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code-review/" rel="tag">code review</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coding-agents/" rel="tag">coding agents</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/workflow/" rel="tag">workflow</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2026/03/03/superpowers-coding-agents-2025/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">超能力：我如何在 2025 年 10 月使用编程代理</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technology/">Technology</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI-security/" rel="tag">AI security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BGP/" rel="tag">BGP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BLE/" rel="tag">BLE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Claude/" rel="tag">Claude</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/" rel="tag">DNS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/" rel="tag">Deep Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IoT/" rel="tag">IoT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM-security/" rel="tag">LLM security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MPC/" rel="tag">MPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PLC/" rel="tag">PLC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RPKI/" rel="tag">RPKI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TDD/" rel="tag">TDD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TLS/" rel="tag">TLS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automation/" rel="tag">automation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automotive/" rel="tag">automotive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/binary-analysis/" rel="tag">binary analysis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blockchain/" rel="tag">blockchain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code-review/" rel="tag">code review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coding-agents/" rel="tag">coding agents</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/consensus/" rel="tag">consensus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cryptography/" rel="tag">cryptography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cybersecurity/" rel="tag">cybersecurity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deep-learning/" rel="tag">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/differential-privacy/" rel="tag">differential privacy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/embedded-systems/" rel="tag">embedded systems</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firmware/" rel="tag">firmware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/homomorphic-encryption/" rel="tag">homomorphic encryption</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/intrusion-detection/" rel="tag">intrusion detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kernel/" rel="tag">kernel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/" rel="tag">machine learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/memory-safety/" rel="tag">memory safety</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network-security/" rel="tag">network security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/privacy/" rel="tag">privacy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/research/" rel="tag">research</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/routing/" rel="tag">routing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scam-detection/" rel="tag">scam detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/skills/" rel="tag">skills</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system-security/" rel="tag">system security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/virtualization/" rel="tag">virtualization</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web-security/" rel="tag">web security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/workflow/" rel="tag">workflow</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AI/" style="font-size: 16.67px;">AI</a> <a href="/tags/AI-security/" style="font-size: 10px;">AI security</a> <a href="/tags/BGP/" style="font-size: 10px;">BGP</a> <a href="/tags/BLE/" style="font-size: 10px;">BLE</a> <a href="/tags/Claude/" style="font-size: 13.33px;">Claude</a> <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/Deep-Learning/" style="font-size: 10px;">Deep Learning</a> <a href="/tags/IoT/" style="font-size: 13.33px;">IoT</a> <a href="/tags/LLM/" style="font-size: 13.33px;">LLM</a> <a href="/tags/LLM-security/" style="font-size: 10px;">LLM security</a> <a href="/tags/MPC/" style="font-size: 10px;">MPC</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/NDSS/" style="font-size: 20px;">NDSS</a> <a href="/tags/PLC/" style="font-size: 10px;">PLC</a> <a href="/tags/RPKI/" style="font-size: 10px;">RPKI</a> <a href="/tags/TDD/" style="font-size: 10px;">TDD</a> <a href="/tags/TLS/" style="font-size: 10px;">TLS</a> <a href="/tags/automation/" style="font-size: 10px;">automation</a> <a href="/tags/automotive/" style="font-size: 10px;">automotive</a> <a href="/tags/binary-analysis/" style="font-size: 10px;">binary analysis</a> <a href="/tags/blockchain/" style="font-size: 10px;">blockchain</a> <a href="/tags/code-review/" style="font-size: 10px;">code review</a> <a href="/tags/coding-agents/" style="font-size: 13.33px;">coding agents</a> <a href="/tags/consensus/" style="font-size: 10px;">consensus</a> <a href="/tags/cryptography/" style="font-size: 10px;">cryptography</a> <a href="/tags/cybersecurity/" style="font-size: 10px;">cybersecurity</a> <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/tags/differential-privacy/" style="font-size: 10px;">differential privacy</a> <a href="/tags/embedded-systems/" style="font-size: 10px;">embedded systems</a> <a href="/tags/firmware/" style="font-size: 10px;">firmware</a> <a href="/tags/homomorphic-encryption/" style="font-size: 10px;">homomorphic encryption</a> <a href="/tags/intrusion-detection/" style="font-size: 10px;">intrusion detection</a> <a href="/tags/kernel/" style="font-size: 10px;">kernel</a> <a href="/tags/machine-learning/" style="font-size: 10px;">machine learning</a> <a href="/tags/memory-safety/" style="font-size: 10px;">memory safety</a> <a href="/tags/network-security/" style="font-size: 10px;">network security</a> <a href="/tags/privacy/" style="font-size: 10px;">privacy</a> <a href="/tags/research/" style="font-size: 10px;">research</a> <a href="/tags/routing/" style="font-size: 10px;">routing</a> <a href="/tags/scam-detection/" style="font-size: 10px;">scam detection</a> <a href="/tags/skills/" style="font-size: 10px;">skills</a> <a href="/tags/system-security/" style="font-size: 10px;">system security</a> <a href="/tags/virtualization/" style="font-size: 10px;">virtualization</a> <a href="/tags/web-security/" style="font-size: 10px;">web security</a> <a href="/tags/workflow/" style="font-size: 10px;">workflow</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/03/">March 2026</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/03/03/coding-agents-september-2025/">我如何在 2025 年 9 月使用编程代理</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/superpowers-coding-agents-2025/">超能力：我如何在 2025 年 10 月使用编程代理</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-crypto-privacy-perspective/">NDSS 2026 论文精选 - 密码学与隐私视角</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-network-infrastructure-perspective/">NDSS 2026 论文精选 - 网络与基础设施视角</a>
+          </li>
+        
+          <li>
+            <a href="/2026/03/03/ndss-2026-iot-embedded-perspective/">NDSS 2026 论文精选 - IoT 与嵌入式系统视角</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 Tom<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
