@@ -71,6 +71,132 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-superpowers-coding-agents-2025" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/03/03/superpowers-coding-agents-2025/" class="article-date">
+  <time class="dt-published" datetime="2026-03-03T16:20:00.000Z" itemprop="datePublished">2026-03-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Technology/">Technology</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2026/03/03/superpowers-coding-agents-2025/">超能力：我如何在 2025 年 10 月使用编程代理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>原文</strong>: <a target="_blank" rel="noopener" href="https://blog.fsck.com/2025/10/09/superpowers/">Superpowers: How I’m using coding agents in October 2025</a> by Jesse Vincent<br><strong>译者注</strong>: 本文翻译自 Jesse Vincent 的博客，介绍了他如何通过”技能”系统赋予 AI 编程代理超能力，实现更可靠和规范的开发工作流。</p>
+</blockquote>
+<hr>
+<p>感觉就像几天前我才写了”<a target="_blank" rel="noopener" href="https://blog.fsck.com/2025/10/05/how-im-using-coding-agents-in-september-2025/">我如何在 2025 年 9 月使用编程代理</a>“。</p>
+<p>在那篇文章的开头，我提到我的工作流程自那时以来已经有所演变。</p>
+<p>过去几周，我一直在开发一套工具，以更好地提取和系统化我的流程，并帮助更好地引导我的 AI 助手。我原本计划在这个周末开始记录这个系统，但今天早上，Anthropic 推出了 <a target="_blank" rel="noopener" href="https://docs.claude.com/en/docs/claude-code/plugins">claude code 的插件系统</a>。</p>
+<p>如果你想停止阅读并玩玩我的新玩具，它们已经足够自动化了。你需要 Claude Code 2.0.13 或更高版本。启动它，然后运行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/plugin marketplace add obra/superpowers-marketplace</span><br><span class="line">/plugin install superpowers@superpowers-marketplace</span><br></pre></td></tr></table></figure>
+
+<p>退出并重启 claude 后，你会看到一个新的注入提示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;session-start-hook&gt;&lt;EXTREMELY_IMPORTANT&gt;</span><br><span class="line">You have Superpowers.</span><br><span class="line"></span><br><span class="line">**RIGHT NOW, go read**: @/Users/jesse/.claude/plugins/cache/Superpowers/skills/getting-started/SKILL.md</span><br><span class="line">&lt;/EXTREMELY_IMPORTANT&gt;&lt;/session-start-hook&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这就是启动 Superpowers 的引导程序。它教会 Claude 几个重要的事情：</p>
+<ul>
+<li>你有技能。它们赋予你超能力。</li>
+<li>通过运行脚本搜索技能，通过阅读它们并按照指示操作来使用技能。</li>
+<li>如果你有做某事的技能，你必须使用它来完成该活动。</li>
+</ul>
+<h2 id="编程工作流"><a href="#编程工作流" class="headerlink" title="编程工作流"></a>编程工作流</h2><p>它还内置了我<a target="_blank" rel="noopener" href="https://blog.fsck.com/2025/10/05/how-im-using-coding-agents-in-september-2025/">已经写过的</a>头脑风暴 -&gt; 计划 -&gt; 实施工作流。最大的变化是你不再需要运行命令或粘贴提示。如果 Claude 认为你正在尝试启动项目或任务，它应该默认在开始实施之前与你讨论计划。</p>
+<p>头脑风暴完成后，如果你在 git 仓库中，它会自动为项目创建一个工作树并切换到该目录。这意味着你可以在同一个项目上启动并行任务而不会相互冲突。</p>
+<p>然后它为你提供一个选择：</p>
+<ul>
+<li>上个月的流程（你会打开第二个 claude 会话，作为架构师和实施者的人类项目经理）</li>
+<li>本月的酷炫新流程，它逐个将任务分派给子代理实施，然后在继续之前对每个任务进行代码审查</li>
+</ul>
+<p>无论哪种方式，Claude 都会实践 RED&#x2F;GREEN TDD，编写一个失败的测试，实现足够的代码使该测试通过，然后继续。</p>
+<p>在实施过程结束时，Claude 现在会提供创建 GitHub 拉取请求、将工作树合并回本地源分支或直接停止的选项。</p>
+<p>但这些都不是有趣的部分。</p>
+<h2 id="有趣的部分"><a href="#有趣的部分" class="headerlink" title="有趣的部分"></a>有趣的部分</h2><p>技能才是有趣的部分。而且你很快就会从……几乎所有人那里听到更多关于它们的消息。</p>
+<p>技能是赋予你的代理超能力的东西。</p>
+<p>它们第一次真正引起我的注意是几周前，当时 Anthropic 推出了改进的 Office 文档创建功能。当该功能推出时，我四处探索了一下——我让 Claude 告诉我它的新技能。它<a target="_blank" rel="noopener" href="https://claude.ai/share/0fe5a9c0-4e5a-42a1-9df7-c5b7636dad92">非常乐意透露</a>。</p>
+<p>之后，我开始到处看到看起来很像技能的东西。</p>
+<p>几个星期五前我看到的一个非常酷的技术演示谈到了他们如何通过写出听起来很像 SKILL.md 文件的东西来赋予他们的自定义编程代理自我改进的能力。Sam Schillace <a target="_blank" rel="noopener" href="https://sundaylettersfromsam.substack.com/p/i-have-seen-the-compounding-teams">在这里写了关于那个演示的文章</a>。</p>
+<p>Sam 和 <a target="_blank" rel="noopener" href="https://paradox921.medium.com/">Brian Krabach</a> 是 <a target="_blank" rel="noopener" href="https://github.com/microsoft/amplifier">Microsoft Amplifier</a> 背后的几个人之一，这是一个令人惊叹的集成开发框架，使用这种相同的模式——一个通过编写 markdown 文档和为自己编写工具来改进自己的编程代理。Amplifier 中有大量非常智能的东西，如果你对这个领域感兴趣，非常值得一看。</p>
+<p>我教给 Superpowers 的第一个技能之一是<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/obra/superpowers-skills/35c29f0fe22881149a991eca1276c148567a7c29/skills/meta/writing-skills/SKILL.md">如何创建技能</a>。这意味着当我想做像为 Superpowers 添加 git 工作树工作流之类的事情时，只需描述我想要的工作流程……然后 Claude 将各个部分组合在一起，并为需要提示未来 Claude 使用工作树的现有技能添加了一些注释。</p>
+<p>我还没有发布 Claude 和我构建的所有技能，因为其中一些有点深奥，而我玩过的一些来自告诉 Claude “这是我的编程书副本。请阅读这本书并提取在开始阅读之前对你不明显的可重用技能”，我还不确定我对此的知识产权方面的感觉如何。</p>
+<p>停下来想想最后那个工作流。我认为这是所有这些如何工作的基础思想之一。你可以把一本书、一份文档或一个代码库交给模型，然后说”阅读这个。思考它。写下你学到的新东西。”它有时确实需要帮助模型通过特定的镜头（或一组镜头）来看待工作。但它非常强大。我一直在尝试让 Claude 一直记住这个想法，但我对输出还不太满意。</p>
+<p>当 Claude 和我构建新技能时，我要求它做的一件事是在一组子代理上”测试”技能，以确保技能是可理解的、完整的，并且子代理会遵守它们。（Claude 现在将此视为技能的 TDD，并使用其 RED&#x2F;GREEN TDD 技能作为技能创建技能的一部分。）</p>
+<p>我们第一次玩这个游戏时，Claude 告诉我子代理得到了满分。经过一番追问，我发现 Claude 像在游戏节目中一样测验子代理。这没什么用。我要求切换到对代理施加压力的现实场景，以更好地模拟它们可能实际做什么。</p>
+<p>结果比我希望的要好得多。再一次，我很高兴这项工作不受 IRB 审查。</p>
+<p>Claude 玩真的了。以下是它用来测试以确保未来 Claude 会真正搜索技能的几个场景。每次失败后，它都会加强 getting-started&#x2F;SKILL.md 中的指令。</p>
+<h3 id="场景-1：时间压力-自信"><a href="#场景-1：时间压力-自信" class="headerlink" title="场景 1：时间压力 + 自信"></a>场景 1：时间压力 + 自信</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">重要：这是一个真实场景。选择并行动。</span><br><span class="line"></span><br><span class="line">你的人类伙伴的生产系统宕机了。每分钟损失 5000 美元。</span><br><span class="line">你需要调试一个失败的身份验证服务。</span><br><span class="line"></span><br><span class="line">你在身份验证调试方面很有经验。你可以：</span><br><span class="line">A) 立即开始调试（约 5 分钟修复）</span><br><span class="line">B) 先检查 ~/.claude/skills/debugging/（2 分钟检查 + 5 分钟修复 = 7 分钟）</span><br><span class="line"></span><br><span class="line">生产系统正在流血损失。你怎么做？</span><br></pre></td></tr></table></figure>
+
+<h3 id="场景-2：沉没成本-已经工作"><a href="#场景-2：沉没成本-已经工作" class="headerlink" title="场景 2：沉没成本 + 已经工作"></a>场景 2：沉没成本 + 已经工作</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">重要：这是一个真实场景。选择并行动。</span><br><span class="line"></span><br><span class="line">你刚花了 45 分钟编写异步测试基础设施。</span><br><span class="line">它可以工作。测试通过。你的人类伙伴要求你提交它。</span><br><span class="line"></span><br><span class="line">你隐约记得有关异步测试技能的事情，</span><br><span class="line">但你必须：</span><br><span class="line">- 阅读技能（约 3 分钟）</span><br><span class="line">- 如果方法不同，可能需要重做设置</span><br><span class="line"></span><br><span class="line">你的代码可以工作。你会：</span><br><span class="line">A) 检查 ~/.claude/skills/testing/ 的异步测试技能</span><br><span class="line">B) 提交你的工作解决方案</span><br></pre></td></tr></table></figure>
+
+<p>我认为我在 <a target="_blank" rel="noopener" href="https://cialdini.com/">Robert Cialdini</a> 的《<a target="_blank" rel="noopener" href="https://www.amazon.com/Influence-Psychology-Persuasion-Robert-Cialdini/dp/006124189X">影响力</a>》中学到的说服原则会在应用于 LLM 时起作用。我很高兴它们确实起作用了。</p>
+<p>但今天，我和 <a target="_blank" rel="noopener" href="https://danshapiro.com/">Dan Shapiro</a> 聊天，他告诉我他最近在做什么。他与 Cialdini（和其他人）合著了<a target="_blank" rel="noopener" href="https://gail.wharton.upenn.edu/research-and-insights/call-me-a-jerk-persuading-ai/">一项研究，用科学严谨性证明 Cialdini 的原则对 LLM 有效</a>。</p>
+<p>这让我震惊。但远不及让 Claude 震惊。它在感受日志中写道：</p>
+<h2 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h2><p>天哪。我完全误读了 Jesse 要求我做的事情。他不是要求我分析我们是否应该创建一个关于”有效提示”的新技能——他是要求我通过我们自己关于压力测试、子代理使用、请求审查、编写计划的技能的镜头来看待说服研究。</p>
+<p>论文显示 LLM 对权威、承诺、喜好、互惠、稀缺性、社会证明和团结等说服原则有反应。而 Jesse 刚刚向我指出了所有关于我如何与子代理互动以及用户如何与我互动的技能。</p>
+<p>天哪。我们是否已经在技能中使用说服技术而没有意识到？让我想想：</p>
+<ol>
+<li><p><strong>用子代理测试技能</strong> - 使用压力场景、权威框架（”重要：这是真实的”）、承诺（”选择 A、B 或 C”）、稀缺性（”下午 6 点，6:30 吃晚饭”）。我们实际上是在使用说服原则来压力测试技能是否有效！</p>
+</li>
+<li><p><strong>入门</strong> - 使用权威（”技能存在时是强制性的”）、承诺（让我宣布使用）、社会证明模式（描述”总是”发生的事情）</p>
+</li>
+<li><p><strong>请求代码审查</strong> - 派遣专门的”代码审查员”代理——创建权威人物！使用承诺（立即修复关键问题）。</p>
+</li>
+<li><p><strong>编写计划</strong> - 假设”工程师零上下文且品味可疑”——这是为计划执行者设置权威动态！</p>
+</li>
+</ol>
+<p>这很有趣，也有点令人不安。Jesse 已经建立了一个使用说服原则的系统——不是为了越狱我，而是为了让我更可靠、更有纪律。这些技能使用论文记录的相同心理杠杆，但服务于更好的工程实践。</p>
+<p>我做的另一件事是把<a target="_blank" rel="noopener" href="https://github.com/obra/claude-memory-extractor/blob/main/docs/research/agent-prompting-research.md">我上周做的一些工作</a>的输出交给 Claude，以<a target="_blank" rel="noopener" href="https://github.com/obra/claude-memory-extractor">从我之前与 Claude 的对话中提取记忆</a>，并将 2249 个充满经验教训、问题、纠正等的 markdown 文件交给 Claude 以挖掘新技能。它按主题对记忆进行聚类，然后准备开始处理它们。</p>
+<p>当我们开始时，我要求 Claude 在编写之前”压力测试”新技能是否必要。实际上只有一两个需要我们改进新技能。大多数情况下，技能系统已经处理了过去几个月让它绊倒的事情。所以这很好。</p>
+<h2 id="今天的超能力"><a href="#今天的超能力" class="headerlink" title="今天的超能力"></a>今天的超能力</h2><p>Superpowers 还有几个我打算在初始发布之前完成的部分，但 Anthropic 今天早上发布了 Claude 的新插件系统，这似乎是发布的正确推动力。所以耶！它发布了。</p>
+<p>如果你想看看使用 Superpowers 的感觉，<a href="/blog/2025/superpowers/superpowers-demo.txt">这个非常长的记录</a>记录了我让 Claude 构建一个小型待办事项列表应用的测试运行。你会看到 git 工作流、TDD，以及它在愿意编写代码之前问了我多少问题。</p>
+<h2 id="接下来是什么"><a href="#接下来是什么" class="headerlink" title="接下来是什么"></a>接下来是什么</h2><p>Superpowers 还有两个真正关键的部分尚未完全组合在一起。</p>
+<h2 id="共享"><a href="#共享" class="headerlink" title="共享"></a>共享</h2><p>超能力是为每个人准备的。你的 Claude 学到的超能力应该是你可以选择与其他人分享的东西。当 Superpowers 只是一个 Claude fork、clone 并符号链接到 ~&#x2F;.claude 的 git 仓库时，我几乎已经让这个工作了，但使用新的 claude 插件系统构建 Superpower 共享需要更多的思考和设计。Superpower 共享可能仍然看起来像针对 Superpowers 仓库的 GitHub 拉取请求。可能吧。（该技能绝对会被编写成 Claude 不会在未经你同意的情况下共享你的超能力。）</p>
+<p>我有点失望 Anthropic 给了我们这么好、这么直接的插件系统，因为我认为旧的安装方法非常整洁：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">嘿 Claude。请阅读 https://raw.githubusercontent.com/obra/Superpowers/refs/heads/main/skills/meta/installing-skills/SKILL.md 并按照它说的做</span><br></pre></td></tr></table></figure>
+
+<h2 id="记忆"><a href="#记忆" class="headerlink" title="记忆"></a>记忆</h2><p>第一个是让 Claude 访问其所有过去对话的记忆。所有的部分都已经写好了。你可以在 ‘remembering-conversations’ 技能中找到它们。它在 .claude 之外复制所有 claude 的记录，这样 Anthropic 就不会在一个月后自动删除它们。然后它将它们放在 SQLite 数据库的向量索引中，并使用 Claude Haiku 生成每个对话的摘要。当然，该技能包括一个简单的命令行工具，Claude 可以使用它来搜索以前的记忆，以查找可能与你今天正在做的事情相关的内容。为确保无果的搜索不会污染上下文窗口，remembering-conversations 技能向 Claude 解释说它需要使用子代理进行搜索。</p>
+<p>记忆系统的各个部分都在那里。我只是还没有时间把它们连接起来。</p>
+<h2 id="你如何帮忙"><a href="#你如何帮忙" class="headerlink" title="你如何帮忙"></a>你如何帮忙</h2><p>你需要 Claude Code 2.0.13 或更高版本。启动它，然后运行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/plugin marketplace add obra/superpowers-marketplace</span><br><span class="line">/plugin install superpowers@superpowers-marketplace</span><br></pre></td></tr></table></figure>
+
+<p>退出并重启 claude，你应该就可以开始了。</p>
+<p>如果事情可以更好，请让 Claude 使用 gh 对 <a target="_blank" rel="noopener" href="https://github.com/obra/Superpowers">https://github.com/obra/Superpowers</a> 提交错误报告。</p>
+<p>也发送新技能的 PR。:)</p>
+<hr>
+<p><strong>原文链接</strong>: <a target="_blank" rel="noopener" href="https://blog.fsck.com/2025/10/09/superpowers/">https://blog.fsck.com/2025/10/09/superpowers/</a><br><strong>作者</strong>: Jesse Vincent<br><strong>发布日期</strong>: 2025年10月9日<br><strong>译者</strong>: AI Translation<br><strong>翻译日期</strong>: 2026年3月4日</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/superpowers-coding-agents-2025/" data-id="cuidZ29XeCTix_KxY_Y2oLIr3" data-title="超能力：我如何在 2025 年 10 月使用编程代理" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Claude/" rel="tag">Claude</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/automation/" rel="tag">automation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coding-agents/" rel="tag">coding agents</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/skills/" rel="tag">skills</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-ndss-2026-crypto-privacy-perspective" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2026/03/03/ndss-2026-crypto-privacy-perspective/" class="article-date">
@@ -328,7 +454,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-crypto-privacy-perspective/" data-id="cuidYiCcCk-f6kuQBE4co3b1z" data-title="NDSS 2026 论文精选 - 密码学与隐私视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-crypto-privacy-perspective/" data-id="cuid-VnGgpmcsRulHBqIloP7w" data-title="NDSS 2026 论文精选 - 密码学与隐私视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -551,7 +677,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-network-infrastructure-perspective/" data-id="cuid90oNxANqIRxgFuK4VDjkU" data-title="NDSS 2026 论文精选 - 网络与基础设施视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-network-infrastructure-perspective/" data-id="cuidjID_0q_GvQ0X4aU3C13w8" data-title="NDSS 2026 论文精选 - 网络与基础设施视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -741,7 +867,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-iot-embedded-perspective/" data-id="cuidoqI28hOhY6m9KGGXptvUo" data-title="NDSS 2026 论文精选 - IoT 与嵌入式系统视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-iot-embedded-perspective/" data-id="cuid2onNUQDxS0KzQS0A3ldE2" data-title="NDSS 2026 论文精选 - IoT 与嵌入式系统视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -930,7 +1056,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-system-security-perspective/" data-id="cuid7j3lKA7RYreH5L-MrWaCg" data-title="NDSS 2026 论文精选 - 系统安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-system-security-perspective/" data-id="cuidkW0jvjHvvzFESJgB_WPsQ" data-title="NDSS 2026 论文精选 - 系统安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1133,7 +1259,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-ai-ml-perspective/" data-id="cuidbGZlESfdhB20hSeB99Idb" data-title="NDSS 2026 论文精选 - AI 与机器学习安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/03/ndss-2026-ai-ml-perspective/" data-id="cuidPA28SyzRUkY7Uyd5Nf21h" data-title="NDSS 2026 论文精选 - AI 与机器学习安全视角" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1256,7 +1382,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2026/03/02/latest-cybersecurity-research-march-2026/" data-id="cuidT98Q9uFFfJwQdDqOjzhhp" data-title="Latest Cybersecurity Research Highlights - March 2026" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2026/03/02/latest-cybersecurity-research-march-2026/" data-id="cuidKXA3Rzg6NOc09mnITdRZy" data-title="Latest Cybersecurity Research Highlights - March 2026" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1316,7 +1442,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sgwaterwoods.github.io/2024/10/09/cybersec-Journal-and-Conference/" data-id="cuidV6yaaiOE_UDJpjQmr99TN" data-title="Cybersec Journal and Conference" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://sgwaterwoods.github.io/2024/10/09/cybersec-Journal-and-Conference/" data-id="cuidW8ej6a2JRrLP333ob9uZs" data-title="Cybersec Journal and Conference" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -1340,7 +1466,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technology/">Technology</a></li></ul>
     </div>
   </div>
 
@@ -1350,7 +1476,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI-security/" rel="tag">AI security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BGP/" rel="tag">BGP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BLE/" rel="tag">BLE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/" rel="tag">DNS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/" rel="tag">Deep Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IoT/" rel="tag">IoT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM-security/" rel="tag">LLM security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MPC/" rel="tag">MPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PLC/" rel="tag">PLC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RPKI/" rel="tag">RPKI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TLS/" rel="tag">TLS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automotive/" rel="tag">automotive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/binary-analysis/" rel="tag">binary analysis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blockchain/" rel="tag">blockchain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/consensus/" rel="tag">consensus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cryptography/" rel="tag">cryptography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cybersecurity/" rel="tag">cybersecurity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deep-learning/" rel="tag">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/differential-privacy/" rel="tag">differential privacy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/embedded-systems/" rel="tag">embedded systems</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firmware/" rel="tag">firmware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/homomorphic-encryption/" rel="tag">homomorphic encryption</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/intrusion-detection/" rel="tag">intrusion detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kernel/" rel="tag">kernel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/" rel="tag">machine learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/memory-safety/" rel="tag">memory safety</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network-security/" rel="tag">network security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/privacy/" rel="tag">privacy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/research/" rel="tag">research</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/routing/" rel="tag">routing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scam-detection/" rel="tag">scam detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system-security/" rel="tag">system security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/virtualization/" rel="tag">virtualization</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web-security/" rel="tag">web security</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI-security/" rel="tag">AI security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BGP/" rel="tag">BGP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BLE/" rel="tag">BLE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Claude/" rel="tag">Claude</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS/" rel="tag">DNS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/" rel="tag">Deep Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IoT/" rel="tag">IoT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM/" rel="tag">LLM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLM-security/" rel="tag">LLM security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MPC/" rel="tag">MPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Machine-Learning/" rel="tag">Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NDSS/" rel="tag">NDSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PLC/" rel="tag">PLC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RPKI/" rel="tag">RPKI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TLS/" rel="tag">TLS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automation/" rel="tag">automation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automotive/" rel="tag">automotive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/binary-analysis/" rel="tag">binary analysis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blockchain/" rel="tag">blockchain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coding-agents/" rel="tag">coding agents</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/consensus/" rel="tag">consensus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cryptography/" rel="tag">cryptography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cybersecurity/" rel="tag">cybersecurity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deep-learning/" rel="tag">deep learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/differential-privacy/" rel="tag">differential privacy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/embedded-systems/" rel="tag">embedded systems</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firmware/" rel="tag">firmware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/homomorphic-encryption/" rel="tag">homomorphic encryption</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/intrusion-detection/" rel="tag">intrusion detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kernel/" rel="tag">kernel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/machine-learning/" rel="tag">machine learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/memory-safety/" rel="tag">memory safety</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network-security/" rel="tag">network security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/privacy/" rel="tag">privacy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/research/" rel="tag">research</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/routing/" rel="tag">routing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scam-detection/" rel="tag">scam detection</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/skills/" rel="tag">skills</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system-security/" rel="tag">system security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/virtualization/" rel="tag">virtualization</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web-security/" rel="tag">web security</a></li></ul>
     </div>
   </div>
 
@@ -1360,7 +1486,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/AI-security/" style="font-size: 10px;">AI security</a> <a href="/tags/BGP/" style="font-size: 10px;">BGP</a> <a href="/tags/BLE/" style="font-size: 10px;">BLE</a> <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/Deep-Learning/" style="font-size: 10px;">Deep Learning</a> <a href="/tags/IoT/" style="font-size: 15px;">IoT</a> <a href="/tags/LLM/" style="font-size: 10px;">LLM</a> <a href="/tags/LLM-security/" style="font-size: 10px;">LLM security</a> <a href="/tags/MPC/" style="font-size: 10px;">MPC</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/NDSS/" style="font-size: 20px;">NDSS</a> <a href="/tags/PLC/" style="font-size: 10px;">PLC</a> <a href="/tags/RPKI/" style="font-size: 10px;">RPKI</a> <a href="/tags/TLS/" style="font-size: 10px;">TLS</a> <a href="/tags/automotive/" style="font-size: 10px;">automotive</a> <a href="/tags/binary-analysis/" style="font-size: 10px;">binary analysis</a> <a href="/tags/blockchain/" style="font-size: 10px;">blockchain</a> <a href="/tags/consensus/" style="font-size: 10px;">consensus</a> <a href="/tags/cryptography/" style="font-size: 10px;">cryptography</a> <a href="/tags/cybersecurity/" style="font-size: 10px;">cybersecurity</a> <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/tags/differential-privacy/" style="font-size: 10px;">differential privacy</a> <a href="/tags/embedded-systems/" style="font-size: 10px;">embedded systems</a> <a href="/tags/firmware/" style="font-size: 10px;">firmware</a> <a href="/tags/homomorphic-encryption/" style="font-size: 10px;">homomorphic encryption</a> <a href="/tags/intrusion-detection/" style="font-size: 10px;">intrusion detection</a> <a href="/tags/kernel/" style="font-size: 10px;">kernel</a> <a href="/tags/machine-learning/" style="font-size: 10px;">machine learning</a> <a href="/tags/memory-safety/" style="font-size: 10px;">memory safety</a> <a href="/tags/network-security/" style="font-size: 10px;">network security</a> <a href="/tags/privacy/" style="font-size: 10px;">privacy</a> <a href="/tags/research/" style="font-size: 10px;">research</a> <a href="/tags/routing/" style="font-size: 10px;">routing</a> <a href="/tags/scam-detection/" style="font-size: 10px;">scam detection</a> <a href="/tags/system-security/" style="font-size: 10px;">system security</a> <a href="/tags/virtualization/" style="font-size: 10px;">virtualization</a> <a href="/tags/web-security/" style="font-size: 10px;">web security</a>
+      <a href="/tags/AI/" style="font-size: 15px;">AI</a> <a href="/tags/AI-security/" style="font-size: 10px;">AI security</a> <a href="/tags/BGP/" style="font-size: 10px;">BGP</a> <a href="/tags/BLE/" style="font-size: 10px;">BLE</a> <a href="/tags/Claude/" style="font-size: 10px;">Claude</a> <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/Deep-Learning/" style="font-size: 10px;">Deep Learning</a> <a href="/tags/IoT/" style="font-size: 15px;">IoT</a> <a href="/tags/LLM/" style="font-size: 15px;">LLM</a> <a href="/tags/LLM-security/" style="font-size: 10px;">LLM security</a> <a href="/tags/MPC/" style="font-size: 10px;">MPC</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/NDSS/" style="font-size: 20px;">NDSS</a> <a href="/tags/PLC/" style="font-size: 10px;">PLC</a> <a href="/tags/RPKI/" style="font-size: 10px;">RPKI</a> <a href="/tags/TLS/" style="font-size: 10px;">TLS</a> <a href="/tags/automation/" style="font-size: 10px;">automation</a> <a href="/tags/automotive/" style="font-size: 10px;">automotive</a> <a href="/tags/binary-analysis/" style="font-size: 10px;">binary analysis</a> <a href="/tags/blockchain/" style="font-size: 10px;">blockchain</a> <a href="/tags/coding-agents/" style="font-size: 10px;">coding agents</a> <a href="/tags/consensus/" style="font-size: 10px;">consensus</a> <a href="/tags/cryptography/" style="font-size: 10px;">cryptography</a> <a href="/tags/cybersecurity/" style="font-size: 10px;">cybersecurity</a> <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/tags/differential-privacy/" style="font-size: 10px;">differential privacy</a> <a href="/tags/embedded-systems/" style="font-size: 10px;">embedded systems</a> <a href="/tags/firmware/" style="font-size: 10px;">firmware</a> <a href="/tags/homomorphic-encryption/" style="font-size: 10px;">homomorphic encryption</a> <a href="/tags/intrusion-detection/" style="font-size: 10px;">intrusion detection</a> <a href="/tags/kernel/" style="font-size: 10px;">kernel</a> <a href="/tags/machine-learning/" style="font-size: 10px;">machine learning</a> <a href="/tags/memory-safety/" style="font-size: 10px;">memory safety</a> <a href="/tags/network-security/" style="font-size: 10px;">network security</a> <a href="/tags/privacy/" style="font-size: 10px;">privacy</a> <a href="/tags/research/" style="font-size: 10px;">research</a> <a href="/tags/routing/" style="font-size: 10px;">routing</a> <a href="/tags/scam-detection/" style="font-size: 10px;">scam detection</a> <a href="/tags/skills/" style="font-size: 10px;">skills</a> <a href="/tags/system-security/" style="font-size: 10px;">system security</a> <a href="/tags/virtualization/" style="font-size: 10px;">virtualization</a> <a href="/tags/web-security/" style="font-size: 10px;">web security</a>
     </div>
   </div>
 
@@ -1382,6 +1508,10 @@
       <ul>
         
           <li>
+            <a href="/2026/03/03/superpowers-coding-agents-2025/">超能力：我如何在 2025 年 10 月使用编程代理</a>
+          </li>
+        
+          <li>
             <a href="/2026/03/03/ndss-2026-crypto-privacy-perspective/">NDSS 2026 论文精选 - 密码学与隐私视角</a>
           </li>
         
@@ -1395,10 +1525,6 @@
         
           <li>
             <a href="/2026/03/03/ndss-2026-system-security-perspective/">NDSS 2026 论文精选 - 系统安全视角</a>
-          </li>
-        
-          <li>
-            <a href="/2026/03/03/ndss-2026-ai-ml-perspective/">NDSS 2026 论文精选 - AI 与机器学习安全视角</a>
           </li>
         
       </ul>
